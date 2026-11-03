@@ -5,9 +5,14 @@ context: |
   All artifacts must be written in zh-TW.
   Keep OpenSpec structural headings and SHALL/MUST keywords in English.
 
-  專案:新聞首頁區塊排版系統。專案規則見 CLAUDE.md,產品規格在 docs/spec/(01~05)。
-  docs/spec/ 與 openspec/specs/ 的分工,由 change resolve-spec-ambiguities 的 P1 決定;決定前以 docs/spec/ 為唯一依據。
+  專案:新聞首頁區塊排版系統。專案規則見 CLAUDE.md。
+  規格的唯一依據是 openspec/specs/;docs/spec/(01~05)是發想與資料收集。
+  決策紀錄在 archive 裡的 resolve-spec-ambiguities/design.md。
+  一個開發階段 = 一個 change = 一個 PR。
   規格沒寫或互相矛盾時,先問使用者,不要自行假設。
+
+  方向:headless、CLI 先行,用 JSON 定義一切;核心先用 Node.js,
+  但要能移植到 Python、C#(JSON Schema 當合約、測試寫成 JSON fixture、核心不依賴 Node 專屬 API)。
 
   WIP 上限:同時最多 5 個未 archive 的 change(含任務已全部完成、但還沒 archive 的)。
   已有 5 個時,不得再開新 change,必須先 archive 一個。CI 會檢查這條。
