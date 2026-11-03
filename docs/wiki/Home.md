@@ -4,14 +4,26 @@
 
 用 JSON 定義版面:網站設定、展示類型、區塊範本與實例、新聞則。核心程式在存檔時做規則檢查,再估算高度,在 6 種寬度渲染量測,最後依 8 個面向給 0~100 分並提出改善建議。同樣的輸入一定得到同樣的結果。
 
-## 頁面
+## 規格(白話版)
+
+wiki 的原則:**用白話描述 [`openspec/specs/`](../../openspec/specs/) 的規格**。條文以 spec 為準;spec 改了,對應的 wiki 頁也要跟著改。
+
+| 頁面 | 對應的 capability |
+| --- | --- |
+| [規格總覽](規格.md) | 18 個 capability 一覽、9 種 prototype、關鍵決定 |
+| [資料模型](資料模型.md) | site-profile、layout-patterns、content-model、image-ratio-policy、block-composition、page-layout、sample-data |
+| [規則檢查](規則檢查.md) | rule-check、core-library |
+| [估算與渲染](估算與渲染.md) | height-estimation、html-rendering、render-measurement |
+| [評估](評估.md) | template-evaluation、page-evaluation、evaluation-report |
+| [改進與生成](改進與生成.md) | improvement-suggestions、ai-review、layout-generation |
+
+## 進度與證據
 
 | 頁面 | 內容 |
 | --- | --- |
 | [成果](成果.md) | 目前完成了什麼、各 POC 的結論與數字 |
-| [評估系統](評估系統.md) | Lighthouse 式評估:21 個項目、8 個面向、計分方式、報表格式 |
-| [範例](範例.md) | 10 個頁面範例的 V1 → V2 對照(分數、驗收、截圖) |
-| [規格](規格.md) | 18 個 capability 導覽、決策紀錄 |
+| [評估系統](評估系統.md) | POC 2 的做法:21 個項目、計分、報表格式 |
+| [範例](範例.md) | 10 個頁面範例的 V1 → V2 對照 |
 | [發現與型式限制](發現與型式限制.md) | 評估器揭露、靠參數解不了的問題 |
 | [待確認](待確認.md) | 需要使用者決定或確認的事項 |
 
