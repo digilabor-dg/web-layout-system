@@ -4,6 +4,10 @@
 
 用 JSON 定義版面:網站設定、展示類型、區塊範本與實例、新聞則。核心程式在存檔時做規則檢查,再估算高度,在 6 種寬度渲染量測,最後依 8 個面向給 0~100 分並提出改善建議。同樣的輸入一定得到同樣的結果。
 
+## 文件分層
+
+**發想(規格前)→ 規格 → wiki(規格後)。**還沒決定的構想放在 [`docs/brainstorm/`](../brainstorm/README.md);決定要做時開 OpenSpec change,archive 後併入 [`openspec/specs/`](../../openspec/specs/);wiki 再用白話說明。
+
 ## 規格(白話版)
 
 wiki 的原則:**用白話描述 [`openspec/specs/`](../../openspec/specs/) 的規格**。條文以 spec 為準;spec 改了,對應的 wiki 頁也要跟著改。
