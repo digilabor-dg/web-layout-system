@@ -1,0 +1,139 @@
+{
+  "set": "default",
+  "rater": "persona-ux-a11y",
+  "source": "ai-persona",
+  "round": 1,
+  "persona": "可用性與無障礙專家(專家)",
+  "ratings": [
+    {
+      "ref": "inst-gen-headline",
+      "code": "A",
+      "score": 6,
+      "comment": "白字疊在漸層淺處,手機第一行對比偏弱;字級夠大但閱讀吃力。"
+    },
+    {
+      "ref": "inst-gen-subheadline",
+      "code": "B",
+      "score": 5,
+      "comment": "手機3張排2欄最後落單,電腦右側空一欄,版面不完整。"
+    },
+    {
+      "ref": "inst-gen-flash",
+      "code": "C",
+      "score": 7,
+      "comment": "單行標題好掃讀,但時間軸看不到時間,「更多」連結太小。"
+    },
+    {
+      "ref": "inst-gen-popular",
+      "code": "D",
+      "score": 4,
+      "comment": "排行卻看不到名次數字,大方圖把列表拉很長,文字下方空白。"
+    },
+    {
+      "ref": "inst-gen-video",
+      "code": "E",
+      "score": 4,
+      "comment": "手機只露一小條下一張且標題被截,沒點點;電腦箭頭壓在圖上。"
+    },
+    {
+      "ref": "inst-gen-world",
+      "code": "F",
+      "score": 6,
+      "comment": "手機2欄整齊;電腦4+2,第二列右半全空,節奏斷掉。"
+    },
+    {
+      "ref": "inst-gen-politics",
+      "code": "G",
+      "score": 6,
+      "comment": "手機易讀;電腦標題只佔一行,圖旁大片空白,摘要灰字偏小。"
+    },
+    {
+      "ref": "inst-gen-finance",
+      "code": "H",
+      "score": 6,
+      "comment": "同國際:電腦第二列只有兩張、右半空白;手機排滿好掃讀。"
+    },
+    {
+      "ref": "inst-gen-feature",
+      "code": "I",
+      "score": 6,
+      "comment": "電腦標題剩「園」一字斷行,右欄下方空一大塊,主次不夠強。"
+    },
+    {
+      "ref": "inst-gen-society",
+      "code": "J",
+      "score": 5,
+      "comment": "電腦每列只有一行標題配大圖,右側與下方大量留白,密度失衡。"
+    },
+    {
+      "ref": "inst-gen-opinion",
+      "code": "K",
+      "score": 3,
+      "comment": "作者卡看不到作者名與頭像;電腦單欄四張大方圖,捲很久。"
+    },
+    {
+      "ref": "inst-gen-tech",
+      "code": "L",
+      "score": 8,
+      "comment": "兩種寬度都排滿,標題完整不截斷,間距一致,掃讀輕鬆。"
+    },
+    {
+      "ref": "inst-gen-shorts",
+      "code": "M",
+      "score": 6,
+      "comment": "手機露出第三張,看得出可滑;電腦箭頭壓圖、沒有頁數提示。"
+    }
+  ],
+  "ab": [
+    {
+      "pair": 1,
+      "winner": "A",
+      "reason": "B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。"
+    },
+    {
+      "pair": 2,
+      "winner": "A",
+      "reason": "焦點新聞 2 欄 3 列排滿;B 版 3 欄只放 4 則,最後一張落單。"
+    },
+    {
+      "pair": 3,
+      "winner": "B",
+      "reason": "A 版頭條標題被截成「…」看不完整;B 版標題完整呈現。"
+    },
+    {
+      "pair": 4,
+      "winner": "A",
+      "reason": "短影音 4 張撐滿整列、箭頭貼著內容;B 版右側空一大塊,箭頭懸空。"
+    },
+    {
+      "pair": 5,
+      "winner": "B",
+      "reason": "熱門排行用編號文字清單,好掃讀又短;A 版改成方圖網格,名次不明顯且很長。"
+    },
+    {
+      "pair": 6,
+      "winner": "tie",
+      "reason": "整體感覺差不多,看不出影響可讀性的明顯差異。"
+    },
+    {
+      "pair": 7,
+      "winner": "A",
+      "reason": "社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。"
+    },
+    {
+      "pair": 8,
+      "winner": "A",
+      "reason": "B 版多塞一個全寬第二頭條,巨圖打斷節奏、頭條層級混淆,捲動更長。"
+    },
+    {
+      "pair": 9,
+      "winner": "B",
+      "reason": "A 版底部連續 6 塊同名「更多國際」,重複單調又拉長頁面,難以定位。"
+    },
+    {
+      "pair": 10,
+      "winner": "A",
+      "reason": "頭條一行完整、焦點新聞 6 張排滿、短影音撐滿整列;B 有斷字與空白。"
+    }
+  ]
+}

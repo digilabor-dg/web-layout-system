@@ -117,9 +117,9 @@
       "pattern": "P17",
       "kind": "grid",
       "blockWidth": 344,
-      "estRatio": 548,
-      "estGreedy": 548,
-      "measured": 548
+      "estRatio": 598,
+      "estGreedy": 598,
+      "measured": 598
     },
     {
       "width": 360,
@@ -260,9 +260,9 @@
       "pattern": "P17",
       "kind": "grid",
       "blockWidth": 374,
-      "estRatio": 578,
-      "estGreedy": 578,
-      "measured": 578
+      "estRatio": 628,
+      "estGreedy": 628,
+      "measured": 628
     },
     {
       "width": 390,
@@ -403,9 +403,9 @@
       "pattern": "P17",
       "kind": "grid",
       "blockWidth": 704,
-      "estRatio": 3132,
-      "estGreedy": 3132,
-      "measured": 3132
+      "estRatio": 3232,
+      "estGreedy": 3232,
+      "measured": 3232
     },
     {
       "width": 768,
@@ -546,9 +546,9 @@
       "pattern": "P17",
       "kind": "list-card",
       "blockWidth": 309.33,
-      "estRatio": 1556.33,
-      "estGreedy": 1556.33,
-      "measured": 1556.38
+      "estRatio": 1656.33,
+      "estGreedy": 1656.33,
+      "measured": 1656.38
     },
     {
       "width": 1024,
@@ -689,9 +689,9 @@
       "pattern": "P17",
       "kind": "list-card",
       "blockWidth": 369.33,
-      "estRatio": 1769.33,
-      "estGreedy": 1769.33,
-      "measured": 1769.38
+      "estRatio": 1869.33,
+      "estGreedy": 1869.33,
+      "measured": 1869.38
     },
     {
       "width": 1280,
@@ -832,9 +832,9 @@
       "pattern": "P17",
       "kind": "list-card",
       "blockWidth": 429.33,
-      "estRatio": 2009.33,
-      "estGreedy": 2009.33,
-      "measured": 2009.38
+      "estRatio": 2109.33,
+      "estGreedy": 2109.33,
+      "measured": 2109.38
     },
     {
       "width": 1440,

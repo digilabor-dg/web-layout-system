@@ -1,10 +1,12 @@
 // 人評對齊的測試:區塊分數換算、等級相關、A/B 一致率、反饋覆蓋率。
 
+import { mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { judge, runFiles, summarize } from '../feedback/coverage.js';
 import { spearman } from './analyze.js';
-import { align } from './align.js';
+import { align, load } from './align.js';
 import { blockScore, type Layout } from './collect.js';
 
 describe('區塊的程式分數(0~10)', () => {
@@ -41,6 +43,21 @@ describe('A/B 一致率', () => {
     ]);
     expect(r.ab).toMatchObject({ total: 2, agree: 1 });
     expect(r.ab.perPair[0]).toMatchObject({ agree: 1, disagree: 1, tie: 1 });
+  });
+});
+
+describe('評分檔的輪次', () => {
+  it('有 round 時,評分者名稱加上輪次,兩輪分開計算', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'rating-'));
+    const file = (round: number | undefined) => {
+      const f = join(dir, `r${round ?? 0}.json`);
+      const body = { set: 'default', rater: 'persona-x', source: 'ai-persona', ...(round ? { round } : {}), ratings: [{ ref: 'r1', code: 'A', score: 5, comment: '' }] };
+      writeFileSync(f, JSON.stringify(body));
+      return f;
+    };
+    expect(load(file(undefined), []).ratings[0]!.rater).toBe('persona-x');
+    expect(load(file(1), []).ratings[0]!.rater).toBe('persona-x · 第 1 輪');
+    expect(load(file(2), []).ratings[0]).toMatchObject({ rater: 'persona-x · 第 2 輪', layout: 'gen-default' });
   });
 });
 

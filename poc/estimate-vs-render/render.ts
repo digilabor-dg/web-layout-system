@@ -34,7 +34,13 @@ function titleTag(b: Block, i: number, size: number, lh: number, clamp = false):
   return `<h3 class="t" data-tid="${esc(`${b.instance.id}#${i}`)}"${attrs} style="font-size:${size}px;line-height:${size * lh}px">${esc(b.items[i]!.title)}</h3>`;
 }
 
-/** 卡片:圖 + 文字區(標題、摘要) */
+/** 作者名(觀點類有 author 時顯示一行) */
+function authorTag(b: Block, i: number): string {
+  const a = b.items[i]!.author;
+  return a ? `<p class="au">${esc(a.name)}</p>` : '';
+}
+
+/** 卡片:圖 + 文字區(標題、作者、摘要) */
 function card(world: World, b: Block, i: number, size: number): string {
   const t = world.profile.typography;
   const item = b.items[i]!;
@@ -42,7 +48,7 @@ function card(world: World, b: Block, i: number, size: number): string {
     item.summary && b.pattern.textAmount !== 'headline'
       ? `<p class="s">${esc(item.summary)}</p>`
       : '';
-  return `<div class="card">${placeholder(b)}<div class="txt">${titleTag(b, i, size, t.lineHeight)}${sum}</div></div>`;
+  return `<div class="card">${placeholder(b)}<div class="txt">${titleTag(b, i, size, t.lineHeight)}${authorTag(b, i)}${sum}</div></div>`;
 }
 
 /** 依排法種類輸出一塊的內容 DOM(同一塊在各裝置的 DOM 相同,只有 CSS 不同) */
@@ -75,7 +81,8 @@ function body(world: World, b: Block, sample: BlockLayout): string {
       return `<ul class="list side">${b.items
         .map((item, i) => {
           const sum = item.summary && b.pattern.textAmount !== 'headline' ? `<p class="s">${esc(item.summary)}</p>` : '';
-          return `<li>${placeholder(b)}<div class="tx">${titleTag(b, i, size, t.lineHeight)}${sum}</div></li>`;
+          const num = sample.numbered ? `<span class="n">${i + 1}</span>` : '';
+          return `<li>${num}${placeholder(b)}<div class="tx">${titleTag(b, i, size, t.lineHeight)}${authorTag(b, i)}${sum}</div></li>`;
         })
         .join('')}</ul>`;
     case 'list-number':
@@ -90,7 +97,7 @@ function body(world: World, b: Block, sample: BlockLayout): string {
       return `<div class="feats">${b.items
         .map((item, i) => {
           const sum = item.summary ? `<p class="s">${esc(item.summary)}</p>` : '';
-          return `<div class="feat" data-split="${(sample.split ?? []).join(':')}">${placeholder(b)}<div class="txt">${titleTag(b, i, size, t.lineHeight)}${sum}</div></div>`;
+          return `<div class="feat" data-split="${(sample.split ?? []).join(':')}">${placeholder(b)}<div class="txt">${titleTag(b, i, size, t.lineHeight)}${authorTag(b, i)}${sum}</div></div>`;
         })
         .join('')}</div>`;
     case 'carousel':
@@ -185,6 +192,9 @@ ${containerCss}
 .list.num .t{flex:1;min-width:0}
 .list.side li{display:flex;gap:${g}px;align-items:flex-start}
 .list.side .tx{flex:1;min-width:0}
+.list.side .n{flex:0 0 ${BOX.numberCol}px}
+.n{font-weight:700;color:#c33}
+.au{margin-top:${BOX.authorGap}px;font-size:${BOX.authorSize}px;line-height:${BOX.authorSize * t.lineHeight}px;color:#666;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .list.tl li{border-left:2px solid #c33;padding-left:${BOX.timelineInset - 2}px}
 .ov{position:relative}
 .ovt{position:absolute;left:0;right:0;bottom:0;padding:${BOX.overlayPadding}px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}

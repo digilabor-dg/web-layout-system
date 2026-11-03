@@ -45,6 +45,8 @@ export interface BlockLayout {
   split?: [number, number];
   /** 左圖右文時縮圖佔區塊寬的比例 */
   thumb?: number;
+  /** 左圖右文的清單是否在縮圖前加名次(編號排行 P05 帶縮圖時) */
+  numbered?: boolean;
 }
 
 /** 一塊的完整資訊 */
@@ -131,7 +133,9 @@ export function blockLayout(b: Block, device: DeviceClass): BlockLayout {
     case 'list':
       // 清單依圖片與型決定樣式
       if (!noImage && p.imageText === 'stacked') return { kind: 'list-card' };
-      if (!noImage && p.imageText === 'side') return { kind: 'list-side', thumb: usesDesktopStructure(device) ? 1 / 4 : 1 / 3 };
+      // 編號排行帶縮圖時仍要顯示名次(第一輪角色評分發現的渲染器漏洞)
+      if (!noImage && p.imageText === 'side')
+        return { kind: 'list-side', thumb: usesDesktopStructure(device) ? 1 / 4 : 1 / 3, ...(p.id === 'P05' ? { numbered: true } : {}) };
       if (p.id === 'P05') return { kind: 'list-number' };
       if (p.id === 'P06') return { kind: 'list-timeline' };
       return { kind: 'list-text' };

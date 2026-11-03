@@ -344,8 +344,8 @@
       "target": "J",
       "width": 360,
       "verdict": "pass",
-      "value": 0.69875,
-      "display": "0.70 屏",
+      "value": 0.76125,
+      "display": "0.76 屏",
       "suggestion": "",
       "ref": "inst-gen-opinion"
     },

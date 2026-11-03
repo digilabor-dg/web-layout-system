@@ -2,7 +2,7 @@
   "blocks": [
     {
       "layout": "gen-default",
-      "rater": "persona-desktop-reader",
+      "rater": "persona-desktop-reader · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.06519259448972395,
@@ -38,7 +38,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-frontend-engineer",
+      "rater": "persona-frontend-engineer · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.06708888547894579,
@@ -68,7 +68,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-mobile-commuter",
+      "rater": "persona-mobile-commuter · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.18230739473093205,
@@ -104,7 +104,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-news-editor",
+      "rater": "persona-news-editor · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.21970309693064258,
@@ -134,7 +134,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-senior-reader",
+      "rater": "persona-senior-reader · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.011442308538632321,
@@ -158,7 +158,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-skimmer",
+      "rater": "persona-skimmer · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.17585403562541235,
@@ -200,7 +200,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-ux-a11y",
+      "rater": "persona-ux-a11y · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": -0.18474154263400147,
@@ -242,7 +242,7 @@
     },
     {
       "layout": "gen-default",
-      "rater": "persona-visual-designer",
+      "rater": "persona-visual-designer · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
       "spearman": 0.13398918650635608,
@@ -282,49 +282,49 @@
     "agree": 57,
     "byRater": [
       {
-        "rater": "persona-desktop-reader",
+        "rater": "persona-desktop-reader · 第 1 輪",
         "answered": 10,
         "decided": 9,
         "agree": 6
       },
       {
-        "rater": "persona-frontend-engineer",
+        "rater": "persona-frontend-engineer · 第 1 輪",
         "answered": 10,
         "decided": 10,
         "agree": 8
       },
       {
-        "rater": "persona-mobile-commuter",
+        "rater": "persona-mobile-commuter · 第 1 輪",
         "answered": 10,
         "decided": 10,
         "agree": 6
       },
       {
-        "rater": "persona-news-editor",
+        "rater": "persona-news-editor · 第 1 輪",
         "answered": 10,
         "decided": 10,
         "agree": 9
       },
       {
-        "rater": "persona-senior-reader",
+        "rater": "persona-senior-reader · 第 1 輪",
         "answered": 10,
         "decided": 9,
         "agree": 8
       },
       {
-        "rater": "persona-skimmer",
+        "rater": "persona-skimmer · 第 1 輪",
         "answered": 10,
         "decided": 9,
         "agree": 5
       },
       {
-        "rater": "persona-ux-a11y",
+        "rater": "persona-ux-a11y · 第 1 輪",
         "answered": 10,
         "decided": 9,
         "agree": 7
       },
       {
-        "rater": "persona-visual-designer",
+        "rater": "persona-visual-designer · 第 1 輪",
         "answered": 10,
         "decided": 9,
         "agree": 8
@@ -339,11 +339,11 @@
         "disagree": 5,
         "tie": 0,
         "reasons": [
-          "persona-desktop-reader:A 的政治區塊大圖配清單比較緊湊;B 一列只一行字,右邊空很大",
-          "persona-frontend-engineer:B 的側欄提早結束,下方兩個區塊右側空一大欄;A 空欄較短",
-          "persona-mobile-commuter:政治區大圖加列表好掃;B 改成六張小圖一長串,右邊空白多又要多滑",
-          "persona-skimmer:政治區用大圖加標題列表,比一排排小圖拉長好掃,整頁也比較短",
-          "persona-ux-a11y:B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。"
+          "persona-desktop-reader · 第 1 輪:A 的政治區塊大圖配清單比較緊湊;B 一列只一行字,右邊空很大",
+          "persona-frontend-engineer · 第 1 輪:B 的側欄提早結束,下方兩個區塊右側空一大欄;A 空欄較短",
+          "persona-mobile-commuter · 第 1 輪:政治區大圖加列表好掃;B 改成六張小圖一長串,右邊空白多又要多滑",
+          "persona-skimmer · 第 1 輪:政治區用大圖加標題列表,比一排排小圖拉長好掃,整頁也比較短",
+          "persona-ux-a11y · 第 1 輪:B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。"
         ]
       },
       {
@@ -354,7 +354,7 @@
         "disagree": 1,
         "tie": 0,
         "reasons": [
-          "persona-skimmer:焦點區短很多,能早點滑到即時和排行;雖然第二排落單一張有點空"
+          "persona-skimmer · 第 1 輪:焦點區短很多,能早點滑到即時和排行;雖然第二排落單一張有點空"
         ]
       },
       {
@@ -392,7 +392,7 @@
         "disagree": 1,
         "tie": 5,
         "reasons": [
-          "persona-mobile-commuter:區塊標題和內容貼得較緊,整頁短一點;差異很小"
+          "persona-mobile-commuter · 第 1 輪:區塊標題和內容貼得較緊,整頁短一點;差異很小"
         ]
       },
       {
@@ -403,14 +403,14 @@
         "disagree": 8,
         "tie": 0,
         "reasons": [
-          "persona-desktop-reader:A 的短影音排滿整排、右邊不空,內容也比較多",
-          "persona-frontend-engineer:A 補足則數,網格與短影音輪播都排滿整列;B 輪播右半空掉",
-          "persona-mobile-commuter:短影音排滿、多幾則可看;不過社會區右側的空白也跟著拉長",
-          "persona-news-editor:A 短影音補到整列排滿,不再空半排;不過社會區多一列補充稿,右側空白跟著變長",
-          "persona-senior-reader:短影音整排排滿不空;B 右邊空一大塊,像沒做完。",
-          "persona-skimmer:短影音一排填滿、標題多幾則;B 右半邊空著像沒排完",
-          "persona-ux-a11y:社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。",
-          "persona-visual-designer:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻"
+          "persona-desktop-reader · 第 1 輪:A 的短影音排滿整排、右邊不空,內容也比較多",
+          "persona-frontend-engineer · 第 1 輪:A 補足則數,網格與短影音輪播都排滿整列;B 輪播右半空掉",
+          "persona-mobile-commuter · 第 1 輪:短影音排滿、多幾則可看;不過社會區右側的空白也跟著拉長",
+          "persona-news-editor · 第 1 輪:A 短影音補到整列排滿,不再空半排;不過社會區多一列補充稿,右側空白跟著變長",
+          "persona-senior-reader · 第 1 輪:短影音整排排滿不空;B 右邊空一大塊,像沒做完。",
+          "persona-skimmer · 第 1 輪:短影音一排填滿、標題多幾則;B 右半邊空著像沒排完",
+          "persona-ux-a11y · 第 1 輪:社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。",
+          "persona-visual-designer · 第 1 輪:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻"
         ]
       },
       {
@@ -439,9 +439,9 @@
         "disagree": 3,
         "tie": 0,
         "reasons": [
-          "persona-desktop-reader:A 的政治清單一行字配大片空白、整頁拉長;B 比較緊湊",
-          "persona-mobile-commuter:整頁短很多,政治區大圖加列表好掃;A 政治改成一長串小圖要多滑",
-          "persona-skimmer:政治區用大圖加列表比較緊湊,整頁短很多;A 小圖列表拉太長"
+          "persona-desktop-reader · 第 1 輪:A 的政治清單一行字配大片空白、整頁拉長;B 比較緊湊",
+          "persona-mobile-commuter · 第 1 輪:整頁短很多,政治區大圖加列表好掃;A 政治改成一長串小圖要多滑",
+          "persona-skimmer · 第 1 輪:政治區用大圖加列表比較緊湊,整頁短很多;A 小圖列表拉太長"
         ]
       }
     ]

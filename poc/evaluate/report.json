@@ -43,9 +43,9 @@
       "target": "section sections",
       "width": 1024,
       "verdict": "fail",
-      "value": 0.4407936761418078,
-      "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)",
-      "suggestion": "section sections 的左欄(F、G、H、I、J)比另一欄高 44%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊",
+      "value": 0.4048626636857235,
+      "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)",
+      "suggestion": "section sections 的左欄(F、G、H、I、J)比另一欄高 40%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊",
       "ref": "section sections"
     },
     {
@@ -872,8 +872,8 @@
       "target": "K",
       "width": 360,
       "verdict": "pass",
-      "value": 0.685,
-      "display": "0.69 屏",
+      "value": 0.7475,
+      "display": "0.75 屏",
       "suggestion": "",
       "ref": "inst-home-opinion"
     },

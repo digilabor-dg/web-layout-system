@@ -18,7 +18,9 @@ interface AbAnswer { rater: string; source: string; a: string; b: string; winner
 /** 讀評分檔:檢視工具匯出(tool = layout-review)或角色 agent 的格式(set + ratings + ab) */
 export function load(file: string, key: { pair: number; A: string; B: string }[]) {
   const j = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>;
-  const rater = String(j.rater ?? basename(file));
+  // 同一位評分者可以評好幾輪(例如修正渲染器後重評):輪次接在評分者名稱後面,分開計算
+  const round = typeof j.round === 'number' ? j.round : null;
+  const rater = String(j.rater ?? basename(file)) + (round === null ? '' : ` · 第 ${round} 輪`);
   const source = String(j.source ?? 'human');
   const ratings: BlockRating[] = [];
   const ab: AbAnswer[] = [];

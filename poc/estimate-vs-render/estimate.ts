@@ -43,6 +43,10 @@ export const BOX = {
   summaryGap: 4,
   /** 疊字區的內距 */
   overlayPadding: 16,
+  /** 作者名與標題的間距 */
+  authorGap: 4,
+  /** 作者名字級(一行,超過寬度以刪節號截斷) */
+  authorSize: 14,
 };
 
 /** 估算一塊在某個視窗寬度的高度 */
@@ -75,14 +79,16 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
     if (!text || b.pattern.textAmount === 'headline') return 0;
     return BOX.summaryGap + lines(text, t.baseFontSize, avail) * lh(t.baseFontSize);
   };
+  /** 作者名高:內容有作者時顯示一行(固定一行,所以高度只看字級與行高) */
+  const author = (i: number) => (b.items[i]!.author ? BOX.authorGap + BOX.authorSize * t.lineHeight : 0);
   // 一般標題字級依文字量;首則用放大字級
   const size = t.headingFontSize[b.pattern.textAmount];
   const leadSize = t.headingFontSize.lead;
   const ratio = b.ratio ?? 1;
 
-  /** 圖上文下的卡片高:圖 + 圖文間距 + 標題 + 摘要 + 卡片下內距 */
+  /** 圖上文下的卡片高:圖 + 圖文間距 + 標題 + 作者 + 摘要 + 卡片下內距 */
   const card = (i: number, cardW: number, titleSize = size) =>
-    cardW / ratio + s.imageTextGap + title(i, titleSize, cardW) + summary(i, cardW) + s.cardPadding;
+    cardW / ratio + s.imageTextGap + title(i, titleSize, cardW) + author(i) + summary(i, cardW) + s.cardPadding;
   /** 純文字清單:每則的標題高加總,中間夾則間距 */
   const textList = (from: number, avail: number) => {
     let h = 0;
@@ -120,9 +126,11 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
     case 'list-side': {
       // 左圖右文:縮圖寬 = 區塊寬 × 比例(手機結構 1/3、電腦結構 1/4),文字區 = 其餘寬度扣欄距
       const thumbW = W * layout.thumb!;
-      const textW = W - thumbW - g;
+      // 有名次時,名次欄與縮圖之間再多一個欄距
+      const textW = W - thumbW - g - (layout.numbered ? BOX.numberCol + g : 0);
       body = b.items.reduce(
-        (h, _, i) => h + Math.max(thumbW / ratio, title(i, size, textW) + summary(i, textW)) + (i > 0 ? s.itemGap : 0),
+        (h, _, i) =>
+          h + Math.max(thumbW / ratio, title(i, size, textW) + author(i) + summary(i, textW)) + (i > 0 ? s.itemGap : 0),
         0,
       );
       parts.imageHeight = thumbW / ratio;
@@ -162,7 +170,7 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
       parts.fill = [];
       parts.imageHeight = lw / ratio;
       body = b.items.reduce((h, _, i) => {
-        const words = title(i, size, rw) + summary(i, rw);
+        const words = title(i, size, rw) + author(i) + summary(i, rw);
         parts.fill!.push(words / (lw / ratio));
         const text = s.imageTextGap + words + s.cardPadding;
         return h + Math.max(lw / ratio, text) + (i > 0 ? s.itemGap : 0);

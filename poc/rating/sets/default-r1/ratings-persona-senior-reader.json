@@ -1,0 +1,139 @@
+{
+  "set": "default",
+  "rater": "persona-senior-reader",
+  "source": "ai-persona",
+  "round": 1,
+  "persona": "年長讀者(使用者)",
+  "ratings": [
+    {
+      "ref": "inst-gen-headline",
+      "code": "A",
+      "score": 9,
+      "comment": "大圖配大字標題,一眼就看到重點,簡單清楚,我很喜歡。"
+    },
+    {
+      "ref": "inst-gen-subheadline",
+      "code": "B",
+      "score": 5,
+      "comment": "才三則,電腦版右邊空一大塊,手機第三則孤零零的。"
+    },
+    {
+      "ref": "inst-gen-flash",
+      "code": "C",
+      "score": 8,
+      "comment": "一行一則、行距寬,很好讀;只是「更多」字太小不好按。"
+    },
+    {
+      "ref": "inst-gen-popular",
+      "code": "D",
+      "score": 5,
+      "comment": "說是排行卻看不到 1、2、3 號碼,字旁邊還空一大截。"
+    },
+    {
+      "ref": "inst-gen-video",
+      "code": "E",
+      "score": 6,
+      "comment": "電腦版箭頭夠大好按;手機只露半張,看不出要往旁邊滑。"
+    },
+    {
+      "ref": "inst-gen-world",
+      "code": "F",
+      "score": 6,
+      "comment": "手機兩欄整齊好讀;電腦版第二排只有兩張,右邊空空的。"
+    },
+    {
+      "ref": "inst-gen-politics",
+      "code": "G",
+      "score": 6,
+      "comment": "標題字大好讀,但灰色摘要字太小;電腦版圖右邊很空。"
+    },
+    {
+      "ref": "inst-gen-finance",
+      "code": "H",
+      "score": 6,
+      "comment": "跟國際一樣,手機順眼;電腦版下排缺兩格,看起來不完整。"
+    },
+    {
+      "ref": "inst-gen-feature",
+      "code": "I",
+      "score": 8,
+      "comment": "一張大圖一個標題,很單純;摘要灰字再大一點會更好。"
+    },
+    {
+      "ref": "inst-gen-society",
+      "code": "J",
+      "score": 7,
+      "comment": "每則一行標題,字清楚好點;電腦版圖右邊空白太多。"
+    },
+    {
+      "ref": "inst-gen-opinion",
+      "code": "K",
+      "score": 4,
+      "comment": "電腦版四張大方圖要一直滑,標題字小,也看不到作者是誰。"
+    },
+    {
+      "ref": "inst-gen-tech",
+      "code": "L",
+      "score": 8,
+      "comment": "電腦版三欄排滿、圖大字清楚,整齊不亂,看得舒服。"
+    },
+    {
+      "ref": "inst-gen-shorts",
+      "code": "M",
+      "score": 6,
+      "comment": "電腦版有大箭頭;手機卡片被切一半,不知道還能滑。"
+    }
+  ],
+  "ab": [
+    {
+      "pair": 1,
+      "winner": "B",
+      "reason": "政治改成一則一行的清單,比較好點;A 連三段都是大圖加密密小字。"
+    },
+    {
+      "pair": 2,
+      "winner": "A",
+      "reason": "焦點新聞兩欄排得整齊;B 第二排只剩一張,旁邊空空的,短影音卡片也比較小。"
+    },
+    {
+      "pair": 3,
+      "winner": "B",
+      "reason": "頭條標題整句看得完;A 的標題被切成「…」,看不懂在說什麼。"
+    },
+    {
+      "pair": 4,
+      "winner": "A",
+      "reason": "短影音四張大圖排滿一整行;B 圖變小、右邊空一塊。"
+    },
+    {
+      "pair": 5,
+      "winner": "B",
+      "reason": "熱門排行有 1 到 10 的號碼,一看就懂,也不用滑那麼久。"
+    },
+    {
+      "pair": 6,
+      "winner": "tie",
+      "reason": "兩版看起來幾乎一樣,分不出差別,整體感覺差不多。"
+    },
+    {
+      "pair": 7,
+      "winner": "A",
+      "reason": "短影音整排排滿不空;B 右邊空一大塊,像沒做完。"
+    },
+    {
+      "pair": 8,
+      "winner": "A",
+      "reason": "B 中間又冒出一個大頭條,搞不清哪個最重要,還要多滑很久。"
+    },
+    {
+      "pair": 9,
+      "winner": "B",
+      "reason": "A 後面一直重複「更多國際」,滑不完又看不出差別,很累。"
+    },
+    {
+      "pair": 10,
+      "winner": "A",
+      "reason": "頭條一行看完,焦點新聞圖變大,短影音排滿,比較好讀。"
+    }
+  ]
+}

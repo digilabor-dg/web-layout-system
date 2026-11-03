@@ -356,8 +356,8 @@
       "target": "K",
       "width": 360,
       "verdict": "pass",
-      "value": 0.685,
-      "display": "0.69 屏",
+      "value": 0.7475,
+      "display": "0.75 屏",
       "suggestion": "",
       "ref": "inst-gen-opinion"
     },
@@ -525,9 +525,9 @@
       "target": "section s3",
       "width": 1024,
       "verdict": "fail",
-      "value": 0.34432343028336027,
-      "display": "右欄底部留白 817px(2374px / 1556px,差 34%)",
-      "suggestion": "section s3 的左欄(F、G、H、I、J)比另一欄高 34%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊",
+      "value": 0.3021938584446385,
+      "display": "右欄底部留白 717px(2374px / 1656px,差 30%)",
+      "suggestion": "section s3 的左欄(F、G、H、I、J)比另一欄高 30%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊",
       "ref": "section s3"
     },
     {

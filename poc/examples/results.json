@@ -194,8 +194,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4989148580968281,
-        "display": "右欄底部留白 1550px(3106px / 1556px,差 50%)"
+        "value": 0.4667183400906273,
+        "display": "右欄底部留白 1450px(3106px / 1656px,差 47%)"
       },
       {
         "item": "填充率",
@@ -421,8 +421,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -648,8 +648,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -891,8 +891,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -1126,8 +1126,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -1281,8 +1281,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.44588318639798497,
-        "display": "右欄底部留白 1259px(2823px / 1564px,差 45%)"
+        "value": 0.41046127204030236,
+        "display": "右欄底部留白 1159px(2823px / 1664px,差 41%)"
       },
       {
         "item": "放大型不相鄰",
@@ -1524,8 +1524,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -1767,8 +1767,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -2010,8 +2010,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.4407936761418078,
-        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+        "value": 0.4048626636857235,
+        "display": "右欄底部留白 1127px(2783px / 1656px,差 40%)"
       },
       {
         "item": "放大型不相鄰",
@@ -2148,8 +2148,8 @@
         "verdict": "fail",
         "target": "section sections",
         "width": 1024,
-        "value": 0.5027431127854957,
-        "display": "右欄底部留白 1582px(3146px / 1564px,差 50%)"
+        "value": 0.47095596891923713,
+        "display": "右欄底部留白 1482px(3146px / 1664px,差 47%)"
       },
       {
         "item": "填充率",
