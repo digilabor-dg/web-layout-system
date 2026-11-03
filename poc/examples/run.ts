@@ -163,6 +163,11 @@ function summary(r: CaseResult) {
     scores: [r.v1.evaluation.scores, r.v2.evaluation.scores],
     verdict: [r.v1.evaluation.pageVerdict, r.v2.evaluation.pageVerdict],
     checks: r.checks,
+    // V2 仍有的問題:不合格在前,每項列出對象與量到的數字
+    remaining: r.v2.evaluation.findings
+      .filter((f) => f.verdict !== 'pass')
+      .sort((a, b) => (a.verdict === b.verdict ? a.item.localeCompare(b.item, 'zh-Hant') : a.verdict === 'fail' ? -1 : 1))
+      .map((f) => ({ item: f.item, verdict: f.verdict, target: f.target, width: f.width, value: f.value, display: f.display })),
   };
 }
 

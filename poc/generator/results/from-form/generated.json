@@ -48,7 +48,7 @@
     },
     {
       "block": "flash",
-      "option": "P06 3 則"
+      "option": "P06 4 則"
     },
     {
       "block": "video",
@@ -60,7 +60,7 @@
     },
     {
       "block": "politics",
-      "option": "P03 6 則(main)"
+      "option": "P03 4 則(main)"
     },
     {
       "block": "finance",
@@ -108,48 +108,48 @@
         "total": null
       },
       {
-        "note": "第 4 步:flash 保留前 3 名,最好是 P06 3 則",
-        "objective": 77686.22826592089,
+        "note": "第 4 步:flash 保留前 3 名,最好是 P06 4 則",
+        "objective": 77630.20033049617,
         "total": 78
       },
       {
         "note": "第 5 步:video 保留前 3 名,最好是 P12 4 則、一次 4 張",
-        "objective": 77686.22826592089,
+        "objective": 77630.20033049617,
         "total": 78
       },
       {
         "note": "第 6 步:world 保留前 3 名,最好是 P07 6 則 3 欄",
-        "objective": 81766.5123126135,
+        "objective": 81717.50121545192,
         "total": 82
       },
       {
-        "note": "第 7 步:politics 保留前 3 名,最好是 P03 6 則(main)",
-        "objective": 82836.86483059911,
+        "note": "第 7 步:politics 保留前 3 名,最好是 P03 4 則(main)",
+        "objective": 82796.80210040767,
         "total": 83
       },
       {
         "note": "第 8 步:finance 保留前 3 名,最好是 P07 6 則 3 欄",
-        "objective": 82908.14887729171,
+        "objective": 82875.10298536342,
         "total": 83
       },
       {
         "note": "第 9 步:feature 保留前 3 名,最好是 P14 2 則",
-        "objective": 82908.14887729171,
+        "objective": 82875.10298536342,
         "total": 83
       },
       {
         "note": "第 10 步:society 保留前 3 名,最好是 P07 6 則 3 欄",
-        "objective": 89975.18000569638,
+        "objective": 89954.40387031918,
         "total": 90
       },
       {
         "note": "第 11 步:opinion 保留前 3 名,最好是 P17 4 則、電腦清單",
-        "objective": 89975.18000569638,
+        "objective": 89954.40387031918,
         "total": 90
       },
       {
         "note": "第 12 步:shorts 保留前 3 名,最好是 P13 4 則、一次 4 張",
-        "objective": 91976.18000569638,
+        "objective": 91955.40387031918,
         "total": 92
       }
     ]
@@ -307,7 +307,7 @@
         "ref": "flash"
       },
       "pattern": "P06",
-      "itemCount": 3,
+      "itemCount": 4,
       "selection": {
         "mode": "latest"
       },
@@ -377,7 +377,7 @@
         "category": "politics"
       },
       "pattern": "P03",
-      "itemCount": 6,
+      "itemCount": 4,
       "imageRole": "main",
       "selection": {
         "mode": "latest"
@@ -534,13 +534,13 @@
       "overrides": {},
       "items": [
         "art-20261103-0019",
+        "art-20261103-0023",
+        "art-20261103-0024",
         "art-20261103-0025",
         "art-20261103-0031",
         "art-20261103-0032",
         "art-20261103-0033",
-        "art-20261103-0034",
-        "art-20261103-0035",
-        "art-20261103-0036"
+        "art-20261103-0034"
       ]
     },
     {
@@ -551,7 +551,8 @@
       "items": [
         "art-20261103-0044",
         "art-20261103-0045",
-        "art-20261103-0046"
+        "art-20261103-0046",
+        "art-20261103-0047"
       ]
     },
     {
@@ -589,9 +590,7 @@
         "art-20261103-0001",
         "art-20261103-0020",
         "art-20261103-0021",
-        "art-20261103-0022",
-        "art-20261103-0023",
-        "art-20261103-0024"
+        "art-20261103-0022"
       ]
     },
     {

@@ -44,6 +44,7 @@ function examplesPage(): string {
   const results = JSON.parse(readFileSync(join(REPO, 'poc', 'examples', 'results.json'), 'utf8')) as {
     id: string; title: string; pass: boolean; total: [number, number]; verdict: [string, string];
     scores: [Record<string, number | null>, Record<string, number | null>]; checks: { name: string; pass: boolean; detail: string }[];
+    remaining: { item: string; verdict: string; target: string; width: number | null; value: number; display: string }[];
   }[];
   const cases = new Map(
     readdirSync(join(REPO, 'poc', 'examples', 'cases')).map((f) => {
@@ -68,7 +69,22 @@ function examplesPage(): string {
     md.push(`| V1 | ${facets.map((f) => r.scores[0][f] ?? '—').join(' | ')} | ${r.total[0]} |`);
     md.push(`| V2 | ${facets.map((f) => r.scores[1][f] ?? '—').join(' | ')} | **${r.total[1]}** |`, '');
     md.push(r.checks.map((x) => `${x.pass ? '✅' : '❌'} ${x.name}:${x.detail}`).join('<br>'), '');
-    md.push(`| V1(${c.shotWidth}px) | V2(${c.shotWidth}px) |`, '| --- | --- |', `| ![V1](../../poc/examples/screenshots/${r.id}-v1.jpg) | ![V2](../../poc/examples/screenshots/${r.id}-v2.jpg) |`, '');
+    // 依項目分組:一個項目一行,列出所有對象,數字取最嚴重的那一個(清單已依不合格在前排序)
+    const groups = new Map<string, typeof r.remaining>();
+    for (const f of r.remaining) groups.set(f.item, [...(groups.get(f.item) ?? []), f]);
+    md.push(`**V2 仍有的問題(${groups.size} 個項目)**:這些不是本範例的目標,多半是[參數內無解的型式限制](發現與型式限制.md)或網站設定。`, '');
+    for (const [item, fs] of groups) {
+      // 最嚴重的對象:不合格優先;同樣判定時取數值最差的(觸控目標等越小越差,其餘越大越差)
+      const smallerWorse = ['觸控目標', '列距', '間距節奏', '輪播填滿'].includes(item);
+      const worst = [...fs].sort(
+        (a, b) => (a.verdict === b.verdict ? (smallerWorse ? a.value - b.value : b.value - a.value) : a.verdict === 'fail' ? -1 : 1),
+      )[0]!;
+      const targets = fs.length > 3 ? `${fs.slice(0, 3).map((f) => f.target).join('、')} 等 ${fs.length} 個` : fs.map((f) => f.target).join('、');
+      md.push(`- ${worst.verdict === 'fail' ? '❌' : '⚠️'} **${item}**(${targets}):${worst.display}${worst.width ? `(${worst.width}px)` : ''}`);
+    }
+    md.push('');
+    // 用 HTML 表格讓兩張截圖頂端對齊(Markdown 表格會垂直置中)
+    md.push(`<table><tr><th>V1(${c.shotWidth}px)</th><th>V2(${c.shotWidth}px)</th></tr><tr><td valign="top"><img src="../../poc/examples/screenshots/${r.id}-v1.jpg" alt="V1"></td><td valign="top"><img src="../../poc/examples/screenshots/${r.id}-v2.jpg" alt="V2"></td></tr></table>`, '');
   }
   return md.join('\n');
 }

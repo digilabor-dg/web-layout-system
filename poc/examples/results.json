@@ -59,6 +59,168 @@
         "pass": true,
         "detail": "無"
       }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33597425105224066,
+        "display": "右欄底部留白 302px(898px / 596px,差 34%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4989148580968281,
+        "display": "右欄底部留白 1550px(3106px / 1556px,差 50%)"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "J",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
+      }
     ]
   },
   {
@@ -115,6 +277,176 @@
         "name": "沒有新的不合格",
         "pass": true,
         "detail": "無"
+      }
+    ],
+    "remaining": [
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.5161755862898376,
+        "display": "右欄底部留白 636px(1232px / 596px,差 52%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
       }
     ]
   },
@@ -173,6 +505,184 @@
         "pass": true,
         "detail": "無"
       }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33597425105224066,
+        "display": "右欄底部留白 302px(898px / 596px,差 34%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
+      }
     ]
   },
   {
@@ -229,6 +739,184 @@
         "name": "沒有新的不合格",
         "pass": true,
         "detail": "無"
+      }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33597425105224066,
+        "display": "右欄底部留白 302px(898px / 596px,差 34%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
       }
     ]
   },
@@ -287,6 +975,192 @@
         "pass": true,
         "detail": "無"
       }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.24015845506313444,
+        "display": "右欄底部留白 216px(898px / 682px,差 24%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
+      }
     ]
   },
   {
@@ -343,6 +1217,104 @@
         "name": "沒有新的不合格",
         "pass": true,
         "detail": "無"
+      }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33009000243249814,
+        "display": "右欄底部留白 302px(914px / 612px,差 33%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.44588318639798497,
+        "display": "右欄底部留白 1259px(2823px / 1564px,差 45%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
       }
     ]
   },
@@ -401,6 +1373,192 @@
         "pass": true,
         "detail": "無"
       }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33597425105224066,
+        "display": "右欄底部留白 302px(898px / 596px,差 34%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
+      }
     ]
   },
   {
@@ -458,6 +1616,192 @@
         "pass": true,
         "detail": "無"
       }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33597425105224066,
+        "display": "右欄底部留白 302px(898px / 596px,差 34%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
+      }
     ]
   },
   {
@@ -514,6 +1858,192 @@
         "name": "沒有新的不合格",
         "pass": true,
         "detail": "無"
+      }
+    ],
+    "remaining": [
+      {
+        "item": "末列不落單",
+        "verdict": "fail",
+        "target": "B",
+        "width": 768,
+        "value": 1,
+        "display": "4 則 ÷ 3 欄,餘 1"
+      },
+      {
+        "item": "同型不連續",
+        "verdict": "fail",
+        "target": "F、G、H",
+        "width": null,
+        "value": 3,
+        "display": "F、G、H 連續 3 塊都是 P09"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "fail",
+        "target": "A(疊字)",
+        "width": 360,
+        "value": 3,
+        "display": "疊字標題 3 行"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "C",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "D",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "E",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "F",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "G",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "H",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "I",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "J",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "K",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "L",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "觸控目標",
+        "verdict": "fail",
+        "target": "M",
+        "width": 360,
+        "value": 37,
+        "display": "最小觸控目標 37px(「更多 ›」)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "G",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.33597425105224066,
+        "display": "右欄底部留白 302px(898px / 596px,差 34%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.4407936761418078,
+        "display": "右欄底部留白 1227px(2783px / 1556px,差 44%)"
+      },
+      {
+        "item": "放大型不相鄰",
+        "verdict": "warn",
+        "target": "F、G;G、H;H、I",
+        "width": null,
+        "value": 3,
+        "display": "相鄰的放大型 3 組"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "I",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
+      },
+      {
+        "item": "標題行數",
+        "verdict": "warn",
+        "target": "B",
+        "width": 1280,
+        "value": 3,
+        "display": "最多 3 行"
+      },
+      {
+        "item": "輪播填滿",
+        "verdict": "warn",
+        "target": "M",
+        "width": 1024,
+        "value": 4,
+        "display": "4 則,一次顯示 6 張"
       }
     ]
   },
@@ -586,6 +2116,48 @@
         "name": "沒有新的不合格",
         "pass": true,
         "detail": "無"
+      }
+    ],
+    "remaining": [
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "F",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄底對齊",
+        "verdict": "fail",
+        "target": "H",
+        "width": 1440,
+        "value": 0.3643854044055826,
+        "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section top",
+        "width": 1440,
+        "value": 0.5095571649056155,
+        "display": "右欄底部留白 636px(1248px / 612px,差 51%)"
+      },
+      {
+        "item": "欄高",
+        "verdict": "fail",
+        "target": "section sections",
+        "width": 1024,
+        "value": 0.5027431127854957,
+        "display": "右欄底部留白 1582px(3146px / 1564px,差 50%)"
+      },
+      {
+        "item": "填充率",
+        "verdict": "warn",
+        "target": "J",
+        "width": 1024,
+        "value": 0.47787610619469034,
+        "display": "文字區 ÷ 圖高 = 48%"
       }
     ]
   }

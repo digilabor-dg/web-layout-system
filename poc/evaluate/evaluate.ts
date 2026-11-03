@@ -139,7 +139,8 @@ export function jsonFindings(world: World): Finding[] {
         const shorter = l < r ? '左欄' : '右欄';
         add({
           item: '欄底對齊', layer: 2, facet: '對齊', target: b.code, width,
-          verdict: lowerBetter(diff, 0.05, 0.1), value: diff, display: `兩欄高差 ${pct(diff)}(左 ${Math.round(l)}px、右 ${Math.round(r)}px)`,
+          verdict: lowerBetter(diff, 0.05, 0.1), value: diff,
+          display: `${shorter}底部留白 ${Math.round(Math.abs(l - r))}px(左 ${Math.round(l)}px、右 ${Math.round(r)}px,差 ${pct(diff)})`,
           suggestion: `${b.code} 的${shorter}較短 ${pct(diff)};調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型`,
         });
       }
@@ -209,10 +210,11 @@ export function jsonFindings(world: World): Finding[] {
         const diff = (hi - lo) / hi;
         const tallCol = hs.indexOf(hi);
         const codes = (ci: number) => sec.columns[ci]!.blocks.map((id) => byInstance.get(id)!.code).join('、');
+        const shortCol = hs.indexOf(lo) === 0 ? '左欄' : '右欄';
         add({
           item: '欄高', layer: 3, facet: '對齊', target: `section ${sec.id}`, width,
           verdict: lowerBetter(diff, 0.05, 0.1), value: diff,
-          display: `${hs.map((h) => `${Math.round(h)}px`).join(' / ')},差 ${pct(diff)}`,
+          display: `${shortCol}底部留白 ${Math.round(hi - lo)}px(${hs.map((h) => `${Math.round(h)}px`).join(' / ')},差 ${pct(diff)})`,
           suggestion: `section ${sec.id} 的${tallCol === 0 ? '左欄' : '右欄'}(${codes(tallCol)})比另一欄高 ${pct(diff)};把較高那欄的一塊移到另一欄,或在較矮的欄加一塊`,
         });
       });
@@ -315,13 +317,22 @@ export function refOf(world: World, target: string): string {
     .join('+');
 }
 
-/** 依「項目 + 參照」取最差的那次(同樣差時取第一次出現的寬度) */
+/** 數值越大越差的項目:同樣判定時取數值最大的寬度,報告才會顯示最嚴重的那次 */
+const LARGER_IS_WORSE = new Set(['欄高', '欄底對齊', '區塊長度', '標題行數', '圖片比例', '同列對齊', '欄寬照格線', '水平捲動']);
+/** 數值越小越差的項目 */
+const SMALLER_IS_WORSE = new Set(['觸控目標', '列距', '間距節奏', '輪播填滿']);
+
+/** 依「項目 + 參照」取最差的那次:先比判定;判定相同時比數值;再相同時取第一次出現的寬度 */
 export function mergeWorst(raw: Finding[]): Finding[] {
   const merged = new Map<string, Finding>();
   for (const f of raw) {
     const key = `${f.item}|${f.ref}`;
     const prev = merged.get(key);
-    if (!prev || RANK[f.verdict] > RANK[prev.verdict]) merged.set(key, f);
+    const worseValue =
+      prev !== undefined &&
+      RANK[f.verdict] === RANK[prev.verdict] &&
+      ((LARGER_IS_WORSE.has(f.item) && f.value > prev.value + 1e-9) || (SMALLER_IS_WORSE.has(f.item) && f.value < prev.value - 1e-9));
+    if (!prev || RANK[f.verdict] > RANK[prev.verdict] || worseValue) merged.set(key, f);
   }
   return [...merged.values()];
 }
