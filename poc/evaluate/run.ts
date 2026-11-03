@@ -5,6 +5,8 @@ import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadWorld } from '../estimate-vs-render/model.js';
 import { type Evaluation, FACETS, type Finding, evaluatePage, sortFindings } from './evaluate.js';
+import { renderAudit } from './render-audit.js';
+import { renderReportHtml } from './report-html.js';
 
 const HERE = import.meta.dirname;
 const REPO = join(HERE, '..', '..');
@@ -23,7 +25,7 @@ export function toMarkdown(ev: Evaluation, title: string): string {
   const sorted = sortFindings(ev.findings);
   const bad = sorted.filter((f) => f.verdict !== 'pass');
   md.push(`# ${title}`, '');
-  md.push('> 由 `npm run poc:2` 產生。只含可由 JSON 估算的項目;比例與可用性需要渲染量測(第 4 階段),這裡不給分。', '');
+  md.push('> 由 `npm run poc:2` 產生。JSON 估算 + 渲染量測(Chromium、Noto Sans TC、6 種寬度)。', '');
   md.push(`## 總分 ${ev.total}(${LABEL[ev.pageVerdict]})`, '');
   md.push('| 面向 | 分數 | 不合格 | 警告 | 合格 |', '| --- | --- | --- | --- | --- |');
   for (const facet of FACETS) {
@@ -52,11 +54,14 @@ async function main() {
   const dir = args.find((a) => !a.startsWith('--')) ?? join(REPO, 'data');
   // 【第一步】評分
   const world = loadWorld(dir);
-  const ev = evaluatePage(world);
+  const jsonOnly = args.includes('--json-only');
+  const out = join(HERE, 'out');
+  const rendered = jsonOnly ? undefined : await renderAudit(world, out, join(HERE, 'screenshots'));
+  const ev = evaluatePage(world, rendered);
   const json = JSON.stringify({ ...ev, findings: sortFindings(ev.findings) }, null, 2) + '\n';
   // 【第二步】確定性檢查:再算一次,逐字比較
   if (args.includes('--check-determinism')) {
-    const again = evaluatePage(loadWorld(dir));
+    const again = evaluatePage(loadWorld(dir), jsonOnly ? undefined : await renderAudit(world, out));
     const same = JSON.stringify({ ...again, findings: sortFindings(again.findings) }, null, 2) + '\n' === json;
     console.log(same ? '確定性檢查通過:兩次結果逐字相同' : '確定性檢查失敗');
     if (!same) process.exitCode = 1;
@@ -65,8 +70,16 @@ async function main() {
   // 【第三步】寫報告
   writeFileSync(join(HERE, 'report.json'), json);
   writeFileSync(join(HERE, 'REPORT.md'), toMarkdown(ev, `POC 2 評分報告:${world.page.name}`));
+  writeFileSync(
+    join(HERE, 'report.html'),
+    renderReportHtml(ev, {
+      title: `版面評估報表:${world.page.name}`,
+      subtitle: '第 2、3 層:JSON 估算 + 渲染量測(Chromium、Noto Sans TC、360~1440px 六種寬度)',
+      screenshots: jsonOnly ? [] : [{ label: '390px', src: 'screenshots/page-390.jpg' }, { label: '1280px', src: 'screenshots/page-1280.jpg' }],
+    }),
+  );
   const bad = ev.findings.filter((f) => f.verdict !== 'pass');
-  console.log(`總分 ${ev.total},整頁 ${ev.pageVerdict};不合格 ${bad.filter((f) => f.verdict === 'fail').length} 項、警告 ${bad.filter((f) => f.verdict === 'warn').length} 項`);
+  console.log(`總分 ${ev.total},整頁 ${ev.pageVerdict};有問題的對象:不合格 ${bad.filter((f) => f.verdict === "fail").length}、警告 ${bad.filter((f) => f.verdict === "warn").length}`);
   for (const f of sortFindings(bad)) console.log(`  ${f.verdict}  ${f.facet}  ${f.item}  ${f.target}  ${f.width ?? '-'}  ${f.display}`);
 }
 

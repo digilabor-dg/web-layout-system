@@ -58,8 +58,16 @@ const pct = (x: number) => `${Math.round(x * 100)}%`;
 /** 每次扣分:不合格 30 分、警告 10 分(經驗值,之後用數據校正) */
 export const PENALTY: Record<Verdict, number> = { pass: 0, warn: 10, fail: 30 };
 
-/** 對一個頁面評分 */
-export function evaluatePage(world: World): Evaluation {
+/**
+ * 對一個頁面評分。
+ * rendered 是渲染量測的結果(render-audit.ts);沒傳時,比例與可用性兩個面向不給分。
+ */
+export function evaluatePage(world: World, rendered?: Finding[]): Evaluation {
+  return scoreFindings([...jsonFindings(world), ...(rendered ?? [])], rendered !== undefined);
+}
+
+/** 可由 JSON 估算的項目 */
+export function jsonFindings(world: World): Finding[] {
   const { profile, site, page, blocks } = world;
   const s = profile.spacing;
   const byCode = new Map(blocks.map((b) => [b.code, b]));
@@ -282,30 +290,49 @@ export function evaluatePage(world: World): Evaluation {
     });
   }
 
-  // 【第三步】依「項目 + 對象」取最差的那次(同樣差時取第一次出現的寬度)
+  return mergeWorst(raw);
+}
+
+/** 依「項目 + 對象」取最差的那次(同樣差時取第一次出現的寬度) */
+export function mergeWorst(raw: Finding[]): Finding[] {
   const merged = new Map<string, Finding>();
   for (const f of raw) {
     const key = `${f.item}|${f.target}`;
     const prev = merged.get(key);
     if (!prev || RANK[f.verdict] > RANK[prev.verdict]) merged.set(key, f);
   }
-  const findings = [...merged.values()];
+  return [...merged.values()];
+}
 
-  // 【第四步】面向分數:100 − 每項扣分;需要渲染的面向不給分
+/** 由判定結果算分數與整頁判定;rendered 為 false 時,需要渲染的面向不給分 */
+export function scoreFindings(findings: Finding[], rendered: boolean): Evaluation {
+  // 【第四步】面向分數:100 − 各項目的扣分;沒有渲染量測時,需要渲染的面向不給分。
+  // 同 Lighthouse:一個項目只扣一次(取最差的對象),有問題的對象列在明細裡,分數不因區塊多而放大
   const scores = Object.fromEntries(
     FACETS.map((facet) => {
-      if (RENDER_ONLY.includes(facet)) return [facet, null];
-      const penalty = findings.filter((f) => f.facet === facet).reduce((p, f) => p + PENALTY[f.verdict], 0);
+      if (!rendered && RENDER_ONLY.includes(facet)) return [facet, null];
+      const penalty = itemVerdicts(findings.filter((f) => f.facet === facet)).reduce((p, [, v]) => p + PENALTY[v], 0);
       return [facet, Math.max(0, 100 - penalty)];
     }),
   ) as Record<Facet, number | null>;
   const valid = Object.values(scores).filter((v): v is number => v !== null);
   const total = Math.round(valid.reduce((a, b) => a + b, 0) / valid.length);
-  // 【第五步】整頁判定:任一不合格,或警告 3 項以上,即不合格
-  const fails = findings.filter((f) => f.verdict === 'fail').length;
-  const warns = findings.filter((f) => f.verdict === 'warn').length;
+  // 【第五步】整頁判定:任一項目不合格,或 3 個以上項目警告,即不合格
+  const items = itemVerdicts(findings);
+  const fails = items.filter(([, v]) => v === 'fail').length;
+  const warns = items.filter(([, v]) => v === 'warn').length;
   const pageVerdict: Verdict = fails > 0 || warns >= 3 ? 'fail' : warns > 0 ? 'warn' : 'pass';
   return { findings, scores, total, pageVerdict };
+}
+
+/** 每個項目的最終判定:取所有對象中最差的那個 */
+export function itemVerdicts(findings: Finding[]): [string, Verdict][] {
+  const m = new Map<string, Verdict>();
+  for (const f of findings) {
+    const prev = m.get(f.item);
+    if (!prev || RANK[f.verdict] > RANK[prev]) m.set(f.item, f.verdict);
+  }
+  return [...m];
 }
 
 /** 排序:不合格 → 警告 → 合格;同級依面向、項目、對象 */

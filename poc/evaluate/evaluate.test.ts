@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadWorld } from '../estimate-vs-render/model.js';
 import { blockCount, fillRate, lastRow, lowerBetter, higherBetter, pageItems, sameTypeRun, titleLines, worse } from './checks.js';
-import { evaluatePage, PENALTY } from './evaluate.js';
+import { evaluatePage, itemVerdicts, PENALTY } from './evaluate.js';
 import { SPEC_ITEMS } from './run.js';
 
 describe('門檻邊界', () => {
@@ -76,16 +76,32 @@ describe('範例首頁', () => {
     expect(ev.total).toBe(Math.round(valid.reduce((a, b) => a + b, 0) / valid.length));
   });
 
-  it('面向分數 = 100 − 扣分,最低 0', () => {
+  it('面向分數 = 100 − 各項目扣分(一個項目只扣一次),最低 0', () => {
     for (const [facet, score] of Object.entries(ev.scores)) {
       if (score === null) continue;
-      const penalty = ev.findings.filter((f) => f.facet === facet).reduce((p, f) => p + PENALTY[f.verdict], 0);
+      const penalty = itemVerdicts(ev.findings.filter((f) => f.facet === facet)).reduce((p, [, v]) => p + PENALTY[v], 0);
       expect(score).toBe(Math.max(0, 100 - penalty));
     }
+  });
+
+  it('同一項目多個對象不合格,只扣一次', () => {
+    const fake = (target: string) => ({ ...ev.findings[0]!, item: '測試', facet: '完整' as const, target, verdict: 'fail' as const });
+    expect(itemVerdicts([fake('A'), fake('B'), fake('C')])).toEqual([['測試', 'fail']]);
   });
 
   it('確定性:同樣輸入得到同樣結果', () => {
     const again = evaluatePage(loadWorld(join(import.meta.dirname, '..', '..', 'data')));
     expect(JSON.stringify(again)).toBe(JSON.stringify(ev));
+  });
+});
+
+describe('report.json 的格式', () => {
+  it('符合 report.schema.json', async () => {
+    const { Ajv2020 } = await import('ajv/dist/2020.js');
+    const { readFileSync } = await import('node:fs');
+    const schema = JSON.parse(readFileSync(join(import.meta.dirname, 'report.schema.json'), 'utf8')) as object;
+    const report = JSON.parse(readFileSync(join(import.meta.dirname, 'report.json'), 'utf8')) as unknown;
+    const validate = new Ajv2020({ allErrors: true }).compile(schema);
+    expect(validate(report), JSON.stringify(validate.errors)).toBe(true);
   });
 });

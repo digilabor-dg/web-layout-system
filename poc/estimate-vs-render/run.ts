@@ -2,8 +2,7 @@
 // 用法:npm run poc:1            一般執行
 //       npm run poc:1 -- --check-determinism   連跑兩次,確認結果逐字相同
 
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { createRequire } from 'node:module';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { deviceClass } from '../../src/index.js';
@@ -11,26 +10,12 @@ import { estimateBlock, type TitleMethod } from './estimate.js';
 import { blockLayout, blockWidth, loadWorld } from './model.js';
 import { renderPage } from './render.js';
 import { writeReport } from './report.js';
+import { launch, notoFontCss } from '../shared/browser.js';
 
-// 【第零步】路徑與 Playwright(環境已預裝,用 require 取得)
+// 【第零步】路徑
 const HERE = import.meta.dirname;
 const REPO = join(HERE, '..', '..');
 const OUT = join(HERE, 'out');
-const require = createRequire(import.meta.url);
-
-/** 只用到的 Playwright 介面 */
-interface PwPage {
-  goto(url: string): Promise<unknown>;
-  evaluate<T>(fn: () => T | Promise<T>): Promise<T>;
-  screenshot(opts: { path: string; fullPage: boolean; type: 'jpeg'; quality: number }): Promise<unknown>;
-  close(): Promise<void>;
-}
-interface PwBrowser {
-  newPage(opts: { viewport: { width: number; height: number }; deviceScaleFactor: number }): Promise<PwPage>;
-  close(): Promise<void>;
-}
-const { chromium } = require('playwright') as { chromium: { launch(): Promise<PwBrowser> } };
-
 /** 瀏覽器裡量到的東西 */
 interface Measured {
   blocks: Record<string, number>;
@@ -65,13 +50,6 @@ export interface TitleRow {
 /** 四捨五入到小數 2 位,讓 JSON 輸出穩定 */
 const r2 = (n: number) => Math.round(n * 100) / 100;
 
-/** 字型的 @font-face:把相對路徑換成本機絕對路徑 */
-function fontCss(): string {
-  const dir = join(REPO, 'node_modules', '@fontsource', 'noto-sans-tc');
-  const css = readFileSync(join(dir, '400.css'), 'utf8');
-  return css.replace(/url\(\.\/files\//g, `url(${pathToFileURL(join(dir, 'files')).href}/`);
-}
-
 /** 渲染用的字型:預設 Noto Sans TC;敏感度實驗改用系統的文泉驛正黑,估算參數不變 */
 export type FontChoice = 'noto' | 'wqy';
 const FAMILY: Record<FontChoice, string> = { noto: "'Noto Sans TC'", wqy: "'WenQuanYi Zen Hei'" };
@@ -82,9 +60,9 @@ async function runOnce(screenshots: boolean, font: FontChoice = 'noto') {
   const world = loadWorld(join(REPO, 'data'));
   mkdirSync(OUT, { recursive: true });
   const htmlPath = join(OUT, `home-${font}.html`);
-  writeFileSync(htmlPath, renderPage(world, font === 'noto' ? fontCss() : '', FAMILY[font]));
+  writeFileSync(htmlPath, renderPage(world, font === 'noto' ? notoFontCss() : '', FAMILY[font]));
   // 【第二步】逐一寬度量測
-  const browser = await chromium.launch();
+  const browser = await launch();
   const rows: Row[] = [];
   const titleRows: TitleRow[] = [];
   const checks: { width: number; scrollOverflow: number; badFrames: number; probe: Measured['probe'] }[] = [];

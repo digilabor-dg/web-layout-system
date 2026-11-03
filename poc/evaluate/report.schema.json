@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation-report.schema.json",
+  "title": "評估報告(POC 2;日後 skill 與 MCP 的輸出格式)",
+  "type": "object",
+  "required": ["findings", "scores", "total", "pageVerdict"],
+  "additionalProperties": false,
+  "$defs": {
+    "verdict": { "enum": ["pass", "warn", "fail"] },
+    "score": { "oneOf": [{ "type": "integer", "minimum": 0, "maximum": 100 }, { "type": "null" }] }
+  },
+  "properties": {
+    "total": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "pageVerdict": { "$ref": "#/$defs/verdict" },
+    "scores": {
+      "type": "object",
+      "required": ["比例", "對齊", "完整", "密度", "節奏", "層級", "文字", "可用性"],
+      "additionalProperties": false,
+      "properties": {
+        "比例": { "$ref": "#/$defs/score" },
+        "對齊": { "$ref": "#/$defs/score" },
+        "完整": { "$ref": "#/$defs/score" },
+        "密度": { "$ref": "#/$defs/score" },
+        "節奏": { "$ref": "#/$defs/score" },
+        "層級": { "$ref": "#/$defs/score" },
+        "文字": { "$ref": "#/$defs/score" },
+        "可用性": { "$ref": "#/$defs/score" }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item", "layer", "facet", "target", "verdict", "width", "value", "display", "suggestion"],
+        "additionalProperties": false,
+        "properties": {
+          "item": { "type": "string" },
+          "layer": { "enum": [2, 3] },
+          "facet": { "enum": ["比例", "對齊", "完整", "密度", "節奏", "層級", "文字", "可用性"] },
+          "target": { "type": "string" },
+          "verdict": { "$ref": "#/$defs/verdict" },
+          "width": { "oneOf": [{ "enum": [360, 390, 768, 1024, 1280, 1440] }, { "type": "null" }] },
+          "value": { "type": "number" },
+          "display": { "type": "string" },
+          "suggestion": { "type": "string" },
+          "poc": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

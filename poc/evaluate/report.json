@@ -89,6 +89,127 @@
       "suggestion": "A 的疊字標題在 360px 估 3 行,超過上限 2 行;標題縮到約 22 字以內,或手機改用 P02 大圖下文"
     },
     {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "C",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "C 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "D",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "D 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "E",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "E 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "F",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "F 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "G",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "G 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "H",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "H 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "I",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "I 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "J",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "J 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "K",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "K 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "L",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "L 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
+      "item": "觸控目標",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "M",
+      "width": 360,
+      "value": 37,
+      "verdict": "fail",
+      "display": "最小觸控目標 37px(「更多 ›」)",
+      "suggestion": "M 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+    },
+    {
       "item": "填充率",
       "layer": 2,
       "facet": "密度",
@@ -132,6 +253,259 @@
       "value": 3,
       "display": "最多 3 行",
       "suggestion": "B 在 1280px 有標題 3 行;限制字數、加寬欄或降低文字量"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "A",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "A 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "B",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "B 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "E",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.01%",
+      "suggestion": "E 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "F",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "F 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "G",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "G 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "H",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "H 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "I",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "I 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "J",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "J 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "K",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "K 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "L",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "L 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "圖片比例",
+      "layer": 2,
+      "facet": "比例",
+      "target": "M",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "顯示比例誤差 0.00%",
+      "suggestion": "M 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+    },
+    {
+      "item": "同列對齊",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "B",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "同列頂端差 0px、高度差 0px",
+      "suggestion": "B 同列卡片對不齊;統一文字量或限制標題行數"
+    },
+    {
+      "item": "同列對齊",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "E",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "同列頂端差 0px、高度差 0px",
+      "suggestion": "E 同列卡片對不齊;統一文字量或限制標題行數"
+    },
+    {
+      "item": "同列對齊",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "J",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "同列頂端差 0px、高度差 0px",
+      "suggestion": "J 同列卡片對不齊;統一文字量或限制標題行數"
+    },
+    {
+      "item": "同列對齊",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "K",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "同列頂端差 0px、高度差 0px",
+      "suggestion": "K 同列卡片對不齊;統一文字量或限制標題行數"
+    },
+    {
+      "item": "同列對齊",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "L",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "同列頂端差 0px、高度差 0px",
+      "suggestion": "L 同列卡片對不齊;統一文字量或限制標題行數"
+    },
+    {
+      "item": "同列對齊",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "M",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "同列頂端差 0px、高度差 0px",
+      "suggestion": "M 同列卡片對不齊;統一文字量或限制標題行數"
+    },
+    {
+      "item": "欄寬照格線",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "F",
+      "width": 1024,
+      "value": 0,
+      "verdict": "pass",
+      "display": "欄寬比 2.000(設計 2.000),差 0.0%",
+      "suggestion": "F 的欄寬沒照格線;檢查欄距與固定寬度"
+    },
+    {
+      "item": "欄寬照格線",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "G",
+      "width": 1024,
+      "value": 0,
+      "verdict": "pass",
+      "display": "欄寬比 2.000(設計 2.000),差 0.0%",
+      "suggestion": "G 的欄寬沒照格線;檢查欄距與固定寬度"
+    },
+    {
+      "item": "欄寬照格線",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "H",
+      "width": 1024,
+      "value": 0,
+      "verdict": "pass",
+      "display": "欄寬比 2.000(設計 2.000),差 0.0%",
+      "suggestion": "H 的欄寬沒照格線;檢查欄距與固定寬度"
+    },
+    {
+      "item": "欄寬照格線",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "I",
+      "width": 1024,
+      "value": 0,
+      "verdict": "pass",
+      "display": "欄寬比 1.400(設計 1.400),差 0.0%",
+      "suggestion": "I 的欄寬沒照格線;檢查欄距與固定寬度"
+    },
+    {
+      "item": "欄寬照格線",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "section sections",
+      "width": 1024,
+      "value": 0,
+      "verdict": "pass",
+      "display": "欄寬比 2.000(設計 2.000),差 0.0%",
+      "suggestion": "section sections 的欄寬沒照格線;檢查欄距與固定寬度"
+    },
+    {
+      "item": "欄寬照格線",
+      "layer": 2,
+      "facet": "對齊",
+      "target": "section top",
+      "width": 1024,
+      "value": 0,
+      "verdict": "pass",
+      "display": "欄寬比 2.000(設計 2.000),差 0.0%",
+      "suggestion": "section top 的欄寬沒照格線;檢查欄距與固定寬度"
     },
     {
       "item": "末列不落單",
@@ -727,18 +1101,29 @@
       "value": 2,
       "display": "最多 2 行",
       "suggestion": ""
+    },
+    {
+      "item": "水平捲動",
+      "layer": 2,
+      "facet": "可用性",
+      "target": "整頁",
+      "width": 360,
+      "value": 0,
+      "verdict": "pass",
+      "display": "沒有水平捲動",
+      "suggestion": "移除固定的最小寬度,讓內容不超出視窗"
     }
   ],
   "scores": {
-    "比例": null,
-    "對齊": 0,
+    "比例": 100,
+    "對齊": 40,
     "完整": 70,
     "密度": 80,
     "節奏": 70,
     "層級": 90,
-    "文字": 60,
-    "可用性": null
+    "文字": 70,
+    "可用性": 70
   },
-  "total": 62,
+  "total": 74,
   "pageVerdict": "fail"
 }

@@ -25,7 +25,7 @@ function aspect(ratio: number): string {
 /** 佔位圖:比例正確的框,標示角色與比例 */
 function placeholder(b: Block): string {
   const r = b.ratio ?? 1;
-  return `<div class="ph" style="aspect-ratio:${aspect(r)}"><span>${esc(b.template.imageRole ?? b.pattern.slots[0]!.image[0]!)} ${aspect(r).replace(/ /g, '')}</span></div>`;
+  return `<div class="ph" data-ratio="${r}" style="aspect-ratio:${aspect(r)}"><span>${esc(b.template.imageRole ?? b.pattern.slots[0]!.image[0]!)} ${aspect(r).replace(/ /g, '')}</span></div>`;
 }
 
 /** 標題元素:字級與行高都寫成 px,data-tid 供量測比對 */
@@ -77,17 +77,18 @@ function body(world: World, b: Block, sample: BlockLayout): string {
       return list(0, 'tl');
     case 'lead-stack':
     case 'lead-split':
-      return `<div class="ls"><div class="lead">${card(world, b, 0, lead)}</div>${list(1, '')}</div>`;
+      return `<div class="ls" data-split="${(sample.split ?? []).join(':')}"><div class="lead">${card(world, b, 0, lead)}</div>${list(1, '')}</div>`;
     case 'feature-stack':
     case 'feature-split':
       return `<div class="feats">${b.items
         .map((item, i) => {
           const sum = item.summary ? `<p class="s">${esc(item.summary)}</p>` : '';
-          return `<div class="feat">${placeholder(b)}<div class="txt">${titleTag(b, i, size, t.lineHeight)}${sum}</div></div>`;
+          return `<div class="feat" data-split="${(sample.split ?? []).join(':')}">${placeholder(b)}<div class="txt">${titleTag(b, i, size, t.lineHeight)}${sum}</div></div>`;
         })
         .join('')}</div>`;
     case 'carousel':
-      return `<div class="car">${b.items.map((_, i) => card(world, b, i, size)).join('')}</div>`;
+      // 輪播:電腦結構才顯示左右箭頭(觸控目標)
+      return `<div class="carw"><div class="car">${b.items.map((_, i) => card(world, b, i, size)).join('')}</div><button class="arr prev" aria-label="上一張">‹</button><button class="arr next" aria-label="下一張">›</button></div>`;
   }
 }
 
@@ -180,12 +181,18 @@ ${containerCss}
 .ovt .s{color:#eee}
 .feats{display:flex;flex-direction:column;gap:${s.itemGap}px}
 .car{display:flex;gap:${g}px;overflow-x:auto;scrollbar-width:none}
+.carw{position:relative}
+.arr{display:none;position:absolute;top:30%;width:44px;height:44px;border:0;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:24px;cursor:pointer}
+.arr.prev{left:4px}.arr.next{right:4px}
+@media (min-width:${bp.tabletH}px){.arr{display:block}}
+.bh{display:flex;justify-content:space-between}
+.more{font-size:14px;color:#c33;text-decoration:none;padding:0 4px}
 ${sectionCss}
 ${perBlock}
 `;
   // 【第五步】HTML:section → 欄 → 區塊
   const blockHtml = (b: Block) =>
-    `<section class="block" id="b-${b.code}" data-block="${b.code}" data-instance="${esc(b.instance.id)}" data-pattern="${b.pattern.id}"><h2 class="bh">${b.code} · ${esc(b.template.heading.title)}</h2>${body(world, b, blockLayout(b, 'desktop'))}</section>`;
+    `<section class="block" id="b-${b.code}" data-block="${b.code}" data-instance="${esc(b.instance.id)}" data-pattern="${b.pattern.id}"><h2 class="bh"><span>${b.code} · ${esc(b.template.heading.title)}</span>${b.template.heading.moreLink ? `<a class="more" href="${esc(b.template.heading.moreLink)}">更多 ›</a>` : ''}</h2>${body(world, b, blockLayout(b, 'desktop'))}</section>`;
   const sections = page.sections
     .map((sec, i) => {
       const inSec = blocks.filter((b) => b.sectionIndex === i);
@@ -193,9 +200,9 @@ ${perBlock}
         const cols = sec.columns
           .map((_, ci) => `<div class="col">${inSec.filter((b) => b.columnIndex === ci).map(blockHtml).join('')}</div>`)
           .join('');
-        return `<div class="sec" id="s-${i}">${cols}</div>`;
+        return `<div class="sec" id="s-${i}" data-section="${esc(sec.id)}" data-cols="${sec.columns.map((c) => c.width).join(':')}">${cols}</div>`;
       }
-      return `<div class="sec" id="s-${i}">${inSec.map(blockHtml).join('')}</div>`;
+      return `<div class="sec" id="s-${i}" data-section="${esc(sec.id)}">${inSec.map(blockHtml).join('')}</div>`;
     })
     .join('');
   return `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>POC 1 · 首頁</title><style>${css}</style></head><body><div class="container">${sections}</div></body></html>\n`;
