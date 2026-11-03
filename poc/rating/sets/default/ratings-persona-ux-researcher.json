@@ -1,0 +1,33 @@
+{
+  "set": "default",
+  "rater": "persona-ux-researcher",
+  "source": "ai-persona",
+  "persona": "UX 研究員(專家)",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 8, "heuristic": "美感與極簡設計", "severity": 1, "comment": "[美感與極簡] 主次分明、疊字有漸層好讀;電腦版大圖略高,標題只佔底部一行" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 4, "heuristic": "美感與極簡設計", "severity": 2, "comment": "[美感與極簡] 3 則排 4 欄,電腦右側空一格;手機第三張落單、右邊空白" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 7, "heuristic": "系統狀態的可見性", "severity": 2, "comment": "[系統狀態] 清單簡潔好掃,但即時新聞沒標時間,看不出有多新" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 4, "heuristic": "美感與極簡設計", "severity": 2, "comment": "[美感與極簡] 排行配大方圖,文字只兩行、下方大片留白,手機拉很長" },
+    { "ref": "inst-gen-video", "code": "E", "score": 7, "heuristic": "系統狀態的可見性", "severity": 2, "comment": "[系統狀態] 手機露出下一張好懂;電腦第一張就有左箭頭,也沒頁碼" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "heuristic": "美感與極簡設計", "severity": 2, "comment": "[美感與極簡] 電腦版 6 則排 4 欄,第二列只兩張,右半空白" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 5, "heuristic": "美感與極簡設計", "severity": 2, "comment": "[美感與極簡] 電腦版標題只一行,右側與圖下大片留白,列距鬆散" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 4, "heuristic": "一致性與標準", "severity": 2, "comment": "[一致性] 與國際同款網格、同樣第二列落單,分不出是哪個分類" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 7, "heuristic": "美感與極簡設計", "severity": 1, "comment": "[美感與極簡] 大圖配摘要有專題感;電腦右下文字少、留白偏多" },
+    { "ref": "inst-gen-society", "code": "J", "score": 4, "heuristic": "美感與極簡設計", "severity": 2, "comment": "[美感與極簡] 與政治同款卻無主次,四則一樣大,電腦右側空一大片" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 3, "heuristic": "美感與極簡設計", "severity": 3, "comment": "[美感與極簡] 電腦版四張大方圖直排整塊超長;作者名太小,不像作者卡" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 6, "heuristic": "一致性與標準", "severity": 2, "comment": "[一致性] 電腦 3×2 排得滿;但與國際、財經同款網格,分類難區分" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 6, "heuristic": "系統狀態的可見性", "severity": 2, "comment": "[系統狀態] 電腦剛好四張不露邊,看不出還有幾支,第一張就有左箭頭" }
+  ],
+  "ab": [
+    { "pair": 1, "winner": "B", "reason": "B 的政治改成條列,打破國際/政治/財經三塊同款,分類較好辨識、節奏較好" },
+    { "pair": 2, "winner": "A", "reason": "B 的焦點新聞 3+1 排,第二列一張落單、右側空兩格;A 排得整齊" },
+    { "pair": 3, "winner": "B", "reason": "A 頭條標題被截成「…」,要點進去才知道內容;B 標題完整顯示" },
+    { "pair": 4, "winner": "A", "reason": "B 短影音只佔三分之二寬,右側空白、右箭頭離內容很遠;A 填滿整列" },
+    { "pair": 5, "winner": "B", "reason": "A 熱門排行 10 則都配方圖,整塊拉得很長;B 純文字編號清單好掃讀" },
+    { "pair": 6, "winner": "tie", "reason": "手機寬度下兩版幾乎一樣,說不出具體差異,整體感覺" },
+    { "pair": 7, "winner": "A", "reason": "A 短影音填滿整列較完整;但補充新聞讓社會區旁右欄空白更長,只小勝" },
+    { "pair": 8, "winner": "A", "reason": "B 中段多一塊全寬「頭條」,與頂部頭條重複,主次混亂又佔一整屏" },
+    { "pair": 9, "winner": "B", "reason": "A 尾端連續六塊「更多國際」同款網格,標題重複、冗長單調" },
+    { "pair": 10, "winner": "A", "reason": "A 頭條標題完整、短影音滿版、版型有變化;只有政治條列略空" }
+  ]
+}

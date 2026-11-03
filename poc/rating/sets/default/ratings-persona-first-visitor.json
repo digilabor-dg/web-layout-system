@@ -1,0 +1,33 @@
+{
+  "set": "default",
+  "rater": "persona-first-visitor",
+  "source": "ai-persona",
+  "persona": "初次造訪者(使用者)",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 8, "comment": "一眼就看到頭條,大圖疊字很有份量" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 3, "comment": "三張排不滿,手機像少一張,電腦右邊空一塊" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 7, "comment": "清單整齊好掃,但看不到時間,不太像即時" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 5, "comment": "編號離圖太遠,手機拉很長,第一名不突出" },
+    { "ref": "inst-gen-video", "code": "E", "score": 8, "comment": "露出下一張,一看就知道能滑,很整齊" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "comment": "手機整齊,電腦第二排只有兩張,像沒排完" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "第一則有摘要看得出重點,電腦右半邊有點空" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 4, "comment": "跟國際一模一樣,第二排又缺兩張,像模板拼的" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 7, "comment": "大圖配標題有專題感,電腦文字下方空了些" },
+    { "ref": "inst-gen-society", "code": "J", "score": 5, "comment": "四則一樣大,不知先看哪則,電腦右邊很空" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 3, "comment": "電腦變成一長條大方塊,看半天才知是評論" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 8, "comment": "排得滿又整齊,電腦三乘二很完整" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 7, "comment": "整齊好滑,但第一眼看不出是影片" }
+  ],
+  "ab": [
+    { "pair": 1, "winner": "B", "reason": "政治換成小圖清單,不會連三塊長得一樣" },
+    { "pair": 2, "winner": "A", "reason": "焦點新聞格子排滿;B 第二排只剩一張" },
+    { "pair": 3, "winner": "B", "reason": "頭條標題完整;A 被截成刪節號" },
+    { "pair": 4, "winner": "A", "reason": "短影音排滿整行;B 右邊空一塊" },
+    { "pair": 5, "winner": "B", "reason": "排行只有文字較緊湊;A 每則配圖拉太長" },
+    { "pair": 6, "winner": "tie", "reason": "整體感覺差不多,第一眼看不出差別" },
+    { "pair": 7, "winner": "A", "reason": "最底下短影音排滿;B 結尾右邊空著" },
+    { "pair": 8, "winner": "A", "reason": "B 中間又冒出一個大頭條,不知該先看哪個" },
+    { "pair": 9, "winner": "B", "reason": "A 底下一直重複「更多國際」,像模板拼湊" },
+    { "pair": 10, "winner": "A", "reason": "頭條一行乾淨,焦點排滿,底部收得完整" }
+  ]
+}

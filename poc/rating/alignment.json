@@ -74,6 +74,30 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-first-visitor",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.15903660629071606,
+      "meanAbsDiff": 1.7692307692307692,
+      "mean": 5.846153846153846,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "三張排不滿,手機像少一張,電腦右邊空一塊"
+        },
+        {
+          "code": "K",
+          "score": 3,
+          "program": 7,
+          "comment": "電腦變成一長條大方塊,看半天才知是評論"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-frontend-engineer · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -428,6 +452,49 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-tablet-reader",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": -0.1498254871225309,
+      "meanAbsDiff": 1.8461538461538463,
+      "mean": 6.230769230769231,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 7,
+          "program": 10,
+          "comment": "頭條大圖撐滿寬度很有氣勢,疊字夠大,但一屏幾乎只有這則"
+        },
+        {
+          "code": "D",
+          "score": 3,
+          "program": 7,
+          "comment": "每則配一張大方圖,一屏只看兩三則,標題下空一大片"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "每張作者卡都是整屏大方圖,一屏只看一則,作者名好小"
+        }
+      ],
+      "falsePositives": [
+        {
+          "code": "F",
+          "score": 9,
+          "program": 6,
+          "comment": "三欄兩列剛剛好,一屏看得到六則,字大小舒服"
+        },
+        {
+          "code": "H",
+          "score": 9,
+          "program": 6,
+          "comment": "三欄兩列整齊,卡片大小適中,一屏六則很好掃"
+        }
+      ]
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-ux-a11y · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -488,6 +555,42 @@
           "score": 3,
           "program": 7,
           "comment": "桌機窄欄變單欄巨大方圖,四則要捲近兩千像素,比手機還難掃。"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-ux-researcher",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.11132044457021516,
+      "meanAbsDiff": 1.9230769230769231,
+      "mean": 5.384615384615385,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 4,
+          "program": 9,
+          "comment": "[美感與極簡] 3 則排 4 欄,電腦右側空一格;手機第三張落單、右邊空白"
+        },
+        {
+          "code": "D",
+          "score": 4,
+          "program": 7,
+          "comment": "[美感與極簡] 排行配大方圖,文字只兩行、下方大片留白,手機拉很長"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "[美感與極簡] 與政治同款卻無主次,四則一樣大,電腦右側空一大片"
+        },
+        {
+          "code": "K",
+          "score": 3,
+          "program": 7,
+          "comment": "[美感與極簡] 電腦版四張大方圖直排整塊超長;作者名太小,不像作者卡"
         }
       ],
       "falsePositives": []
@@ -566,14 +669,20 @@
     }
   ],
   "ab": {
-    "total": 75,
-    "agree": 57,
+    "total": 93,
+    "agree": 73,
     "byRater": [
       {
         "rater": "persona-desktop-reader · 第 1 輪",
         "answered": 10,
         "decided": 9,
         "agree": 6
+      },
+      {
+        "rater": "persona-first-visitor",
+        "answered": 10,
+        "decided": 9,
+        "agree": 8
       },
       {
         "rater": "persona-frontend-engineer · 第 1 輪",
@@ -612,6 +721,12 @@
         "agree": 7
       },
       {
+        "rater": "persona-ux-researcher",
+        "answered": 10,
+        "decided": 9,
+        "agree": 8
+      },
+      {
         "rater": "persona-visual-designer · 第 1 輪",
         "answered": 10,
         "decided": 9,
@@ -622,8 +737,8 @@
       {
         "pair": "ex01-v1|ex01-v2",
         "program": "ex01-v2",
-        "votes": 8,
-        "agree": 3,
+        "votes": 10,
+        "agree": 5,
         "disagree": 5,
         "tie": 0,
         "reasons": [
@@ -637,8 +752,8 @@
       {
         "pair": "ex02-v2|ex02-v1",
         "program": "ex02-v2",
-        "votes": 8,
-        "agree": 7,
+        "votes": 10,
+        "agree": 9,
         "disagree": 1,
         "tie": 0,
         "reasons": [
@@ -648,8 +763,8 @@
       {
         "pair": "ex03-v1|ex03-v2",
         "program": "ex03-v2",
-        "votes": 8,
-        "agree": 8,
+        "votes": 10,
+        "agree": 10,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -657,8 +772,8 @@
       {
         "pair": "ex04-v2|ex04-v1",
         "program": "ex04-v2",
-        "votes": 8,
-        "agree": 8,
+        "votes": 10,
+        "agree": 10,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -666,8 +781,8 @@
       {
         "pair": "ex05-v1|ex05-v2",
         "program": "ex05-v2",
-        "votes": 8,
-        "agree": 8,
+        "votes": 10,
+        "agree": 10,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -675,10 +790,10 @@
       {
         "pair": "ex06-v2|ex06-v1",
         "program": "ex06-v2",
-        "votes": 8,
+        "votes": 10,
         "agree": 2,
         "disagree": 1,
-        "tie": 5,
+        "tie": 7,
         "reasons": [
           "persona-mobile-commuter · 第 1 輪:區塊標題和內容貼得較緊,整頁短一點;差異很小"
         ]
@@ -686,9 +801,9 @@
       {
         "pair": "ex07-v1|ex07-v2",
         "program": "ex07-v2",
-        "votes": 8,
+        "votes": 10,
         "agree": 0,
-        "disagree": 8,
+        "disagree": 10,
         "tie": 0,
         "reasons": [
           "persona-desktop-reader · 第 1 輪:A 的短影音排滿整排、右邊不空,內容也比較多",
@@ -698,14 +813,16 @@
           "persona-senior-reader · 第 1 輪:短影音整排排滿不空;B 右邊空一大塊,像沒做完。",
           "persona-skimmer · 第 1 輪:短影音一排填滿、標題多幾則;B 右半邊空著像沒排完",
           "persona-ux-a11y · 第 1 輪:社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。",
-          "persona-visual-designer · 第 1 輪:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻"
+          "persona-visual-designer · 第 1 輪:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻",
+          "persona-first-visitor:最底下短影音排滿;B 結尾右邊空著",
+          "persona-ux-researcher:A 短影音填滿整列較完整;但補充新聞讓社會區旁右欄空白更長,只小勝"
         ]
       },
       {
         "pair": "ex08-v2|ex08-v1",
         "program": "ex08-v2",
-        "votes": 8,
-        "agree": 8,
+        "votes": 10,
+        "agree": 10,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -713,8 +830,8 @@
       {
         "pair": "ex09-v1|ex09-v2",
         "program": "ex09-v2",
-        "votes": 8,
-        "agree": 8,
+        "votes": 10,
+        "agree": 10,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -722,8 +839,8 @@
       {
         "pair": "ex10-v2|ex10-v1",
         "program": "ex10-v2",
-        "votes": 8,
-        "agree": 5,
+        "votes": 10,
+        "agree": 7,
         "disagree": 3,
         "tie": 0,
         "reasons": [

@@ -1,36 +1,38 @@
 # 雙評分對齊
 
-> 由 `npm run poc:align` 產生。評分檔 16 份:`ratings-persona-desktop-reader.json`、`ratings-persona-frontend-engineer.json`、`ratings-persona-mobile-commuter.json`、`ratings-persona-news-editor.json`、`ratings-persona-senior-reader.json`、`ratings-persona-skimmer.json`、`ratings-persona-ux-a11y.json`、`ratings-persona-visual-designer.json`、`ratings-persona-desktop-reader.json`、`ratings-persona-frontend-engineer.json`、`ratings-persona-mobile-commuter.json`、`ratings-persona-news-editor.json`、`ratings-persona-senior-reader.json`、`ratings-persona-skimmer.json`、`ratings-persona-ux-a11y.json`、`ratings-persona-visual-designer.json`。
+> 由 `npm run poc:align` 產生。評分檔 20 份:`ratings-persona-desktop-reader.json`、`ratings-persona-frontend-engineer.json`、`ratings-persona-mobile-commuter.json`、`ratings-persona-news-editor.json`、`ratings-persona-senior-reader.json`、`ratings-persona-skimmer.json`、`ratings-persona-ux-a11y.json`、`ratings-persona-visual-designer.json`、`ratings-persona-desktop-reader.json`、`ratings-persona-first-visitor.json`、`ratings-persona-frontend-engineer.json`、`ratings-persona-mobile-commuter.json`、`ratings-persona-news-editor.json`、`ratings-persona-senior-reader.json`、`ratings-persona-skimmer.json`、`ratings-persona-tablet-reader.json`、`ratings-persona-trained-panelist.json`、`ratings-persona-ux-a11y.json`、`ratings-persona-ux-researcher.json`、`ratings-persona-visual-designer.json`。
 
 來源:`human` 是真人(檢視工具匯出);`ai-persona` 是角色 agent 的擬人評分,只用來找盲點,不能取代真人。
 
 ## A/B:程式分數較高的那一版,評分者是否也選它
 
-整體一致率:**57 / 75**(76%)(不含「差不多」與程式同分的題目)。
+整體一致率:**73 / 93**(78%)(不含「差不多」與程式同分的題目)。
 
 | 評分者 | 作答 | 有分出勝負 | 與程式一致 |
 | --- | --- | --- | --- |
 | persona-desktop-reader · 第 1 輪 | 10 | 9 | 6 |
+| persona-first-visitor | 10 | 9 | 8 |
 | persona-frontend-engineer · 第 1 輪 | 10 | 10 | 8 |
 | persona-mobile-commuter · 第 1 輪 | 10 | 10 | 6 |
 | persona-news-editor · 第 1 輪 | 10 | 10 | 9 |
 | persona-senior-reader · 第 1 輪 | 10 | 9 | 8 |
 | persona-skimmer · 第 1 輪 | 10 | 9 | 5 |
 | persona-ux-a11y · 第 1 輪 | 10 | 9 | 7 |
+| persona-ux-researcher | 10 | 9 | 8 |
 | persona-visual-designer · 第 1 輪 | 10 | 9 | 8 |
 
 | 配對 | 程式選 | 同意 | 不同意 | 差不多 | 不同意的原因 |
 | --- | --- | --- | --- | --- | --- |
-| 範例 01 同型連續與放大型相鄰 · V1 vs 範例 01 同型連續與放大型相鄰 · V2 | 範例 01 同型連續與放大型相鄰 · V2 | 3 | 5 | 0 | persona-desktop-reader · 第 1 輪:A 的政治區塊大圖配清單比較緊湊;B 一列只一行字,右邊空很大 / persona-frontend-engineer · 第 1 輪:B 的側欄提早結束,下方兩個區塊右側空一大欄;A 空欄較短 / persona-mobile-commuter · 第 1 輪:政治區大圖加列表好掃;B 改成六張小圖一長串,右邊空白多又要多滑 / persona-skimmer · 第 1 輪:政治區用大圖加標題列表,比一排排小圖拉長好掃,整頁也比較短 / persona-ux-a11y · 第 1 輪:B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。 |
-| 範例 02 末列落單 · V2 vs 範例 02 末列落單 · V1 | 範例 02 末列落單 · V2 | 7 | 1 | 0 | persona-skimmer · 第 1 輪:焦點區短很多,能早點滑到即時和排行;雖然第二排落單一張有點空 |
-| 範例 03 疊字標題過長 · V1 vs 範例 03 疊字標題過長 · V2 | 範例 03 疊字標題過長 · V2 | 8 | 0 | 0 | — |
-| 範例 04 輪播右側留白 · V2 vs 範例 04 輪播右側留白 · V1 | 範例 04 輪播右側留白 · V2 | 8 | 0 | 0 | — |
-| 範例 05 手機區塊太長 · V1 vs 範例 05 手機區塊太長 · V2 | 範例 05 手機區塊太長 · V2 | 8 | 0 | 0 | — |
-| 範例 06 觸控目標太小 · V2 vs 範例 06 觸控目標太小 · V1 | 範例 06 觸控目標太小 · V2 | 2 | 1 | 5 | persona-mobile-commuter · 第 1 輪:區塊標題和內容貼得較緊,整頁短一點;差異很小 |
-| 範例 07 整頁則數太多 · V1 vs 範例 07 整頁則數太多 · V2 | 範例 07 整頁則數太多 · V2 | 0 | 8 | 0 | persona-desktop-reader · 第 1 輪:A 的短影音排滿整排、右邊不空,內容也比較多 / persona-frontend-engineer · 第 1 輪:A 補足則數,網格與短影音輪播都排滿整列;B 輪播右半空掉 / persona-mobile-commuter · 第 1 輪:短影音排滿、多幾則可看;不過社會區右側的空白也跟著拉長 / persona-news-editor · 第 1 輪:A 短影音補到整列排滿,不再空半排;不過社會區多一列補充稿,右側空白跟著變長 / persona-senior-reader · 第 1 輪:短影音整排排滿不空;B 右邊空一大塊,像沒做完。 / persona-skimmer · 第 1 輪:短影音一排填滿、標題多幾則;B 右半邊空著像沒排完 / persona-ux-a11y · 第 1 輪:社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。 / persona-visual-designer · 第 1 輪:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻 |
-| 範例 08 頭條重複 · V2 vs 範例 08 頭條重複 · V1 | 範例 08 頭條重複 · V2 | 8 | 0 | 0 | — |
-| 範例 09 區塊太多 · V1 vs 範例 09 區塊太多 · V2 | 範例 09 區塊太多 · V2 | 8 | 0 | 0 | — |
-| 範例 10 貪婪法組合改法 · V2 vs 範例 10 貪婪法組合改法 · V1 | 範例 10 貪婪法組合改法 · V2 | 5 | 3 | 0 | persona-desktop-reader · 第 1 輪:A 的政治清單一行字配大片空白、整頁拉長;B 比較緊湊 / persona-mobile-commuter · 第 1 輪:整頁短很多,政治區大圖加列表好掃;A 政治改成一長串小圖要多滑 / persona-skimmer · 第 1 輪:政治區用大圖加列表比較緊湊,整頁短很多;A 小圖列表拉太長 |
+| 範例 01 同型連續與放大型相鄰 · V1 vs 範例 01 同型連續與放大型相鄰 · V2 | 範例 01 同型連續與放大型相鄰 · V2 | 5 | 5 | 0 | persona-desktop-reader · 第 1 輪:A 的政治區塊大圖配清單比較緊湊;B 一列只一行字,右邊空很大 / persona-frontend-engineer · 第 1 輪:B 的側欄提早結束,下方兩個區塊右側空一大欄;A 空欄較短 / persona-mobile-commuter · 第 1 輪:政治區大圖加列表好掃;B 改成六張小圖一長串,右邊空白多又要多滑 / persona-skimmer · 第 1 輪:政治區用大圖加標題列表,比一排排小圖拉長好掃,整頁也比較短 / persona-ux-a11y · 第 1 輪:B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。 |
+| 範例 02 末列落單 · V2 vs 範例 02 末列落單 · V1 | 範例 02 末列落單 · V2 | 9 | 1 | 0 | persona-skimmer · 第 1 輪:焦點區短很多,能早點滑到即時和排行;雖然第二排落單一張有點空 |
+| 範例 03 疊字標題過長 · V1 vs 範例 03 疊字標題過長 · V2 | 範例 03 疊字標題過長 · V2 | 10 | 0 | 0 | — |
+| 範例 04 輪播右側留白 · V2 vs 範例 04 輪播右側留白 · V1 | 範例 04 輪播右側留白 · V2 | 10 | 0 | 0 | — |
+| 範例 05 手機區塊太長 · V1 vs 範例 05 手機區塊太長 · V2 | 範例 05 手機區塊太長 · V2 | 10 | 0 | 0 | — |
+| 範例 06 觸控目標太小 · V2 vs 範例 06 觸控目標太小 · V1 | 範例 06 觸控目標太小 · V2 | 2 | 1 | 7 | persona-mobile-commuter · 第 1 輪:區塊標題和內容貼得較緊,整頁短一點;差異很小 |
+| 範例 07 整頁則數太多 · V1 vs 範例 07 整頁則數太多 · V2 | 範例 07 整頁則數太多 · V2 | 0 | 10 | 0 | persona-desktop-reader · 第 1 輪:A 的短影音排滿整排、右邊不空,內容也比較多 / persona-frontend-engineer · 第 1 輪:A 補足則數,網格與短影音輪播都排滿整列;B 輪播右半空掉 / persona-mobile-commuter · 第 1 輪:短影音排滿、多幾則可看;不過社會區右側的空白也跟著拉長 / persona-news-editor · 第 1 輪:A 短影音補到整列排滿,不再空半排;不過社會區多一列補充稿,右側空白跟著變長 / persona-senior-reader · 第 1 輪:短影音整排排滿不空;B 右邊空一大塊,像沒做完。 / persona-skimmer · 第 1 輪:短影音一排填滿、標題多幾則;B 右半邊空著像沒排完 / persona-ux-a11y · 第 1 輪:社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。 / persona-visual-designer · 第 1 輪:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻 / persona-first-visitor:最底下短影音排滿;B 結尾右邊空著 / persona-ux-researcher:A 短影音填滿整列較完整;但補充新聞讓社會區旁右欄空白更長,只小勝 |
+| 範例 08 頭條重複 · V2 vs 範例 08 頭條重複 · V1 | 範例 08 頭條重複 · V2 | 10 | 0 | 0 | — |
+| 範例 09 區塊太多 · V1 vs 範例 09 區塊太多 · V2 | 範例 09 區塊太多 · V2 | 10 | 0 | 0 | — |
+| 範例 10 貪婪法組合改法 · V2 vs 範例 10 貪婪法組合改法 · V1 | 範例 10 貪婪法組合改法 · V2 | 7 | 3 | 0 | persona-desktop-reader · 第 1 輪:A 的政治清單一行字配大片空白、整頁拉長;B 比較緊湊 / persona-mobile-commuter · 第 1 輪:整頁短很多,政治區大圖加列表好掃;A 政治改成一長串小圖要多滑 / persona-skimmer · 第 1 輪:政治區用大圖加列表比較緊湊,整頁短很多;A 小圖列表拉太長 |
 
 ## 區塊評分:和程式分數比
 
@@ -40,6 +42,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 示意首頁(預設參數) | persona-desktop-reader · 第 1 輪 | 13 | 5.31 | 0.07 | 2.00 | A、B、J、K | — |
 | 示意首頁(預設參數) | persona-desktop-reader · 第 2 輪 | 13 | 5.08 | 0.07 | 2.38 | A、B、J、K | — |
+| 示意首頁(預設參數) | persona-first-visitor | 13 | 5.85 | 0.16 | 1.77 | B、K | — |
 | 示意首頁(預設參數) | persona-frontend-engineer · 第 1 輪 | 13 | 5.69 | 0.07 | 1.92 | B、D、K | — |
 | 示意首頁(預設參數) | persona-frontend-engineer · 第 2 輪 | 13 | 5.69 | 0.03 | 2.08 | B、D、J、K | — |
 | 示意首頁(預設參數) | persona-mobile-commuter · 第 1 輪 | 13 | 6.08 | 0.18 | 1.38 | A、B、D、K | — |
@@ -50,8 +53,10 @@
 | 示意首頁(預設參數) | persona-senior-reader · 第 2 輪 | 13 | 6.31 | 0.16 | 1.46 | B、K | — |
 | 示意首頁(預設參數) | persona-skimmer · 第 1 輪 | 13 | 4.85 | 0.18 | 2.62 | A、B、D、I、K | — |
 | 示意首頁(預設參數) | persona-skimmer · 第 2 輪 | 13 | 4.69 | 0.28 | 2.77 | A、B、D、I、K、L | — |
+| 示意首頁(預設參數) | persona-tablet-reader | 13 | 6.23 | -0.15 | 1.85 | A、D、K | F、H |
 | 示意首頁(預設參數) | persona-ux-a11y · 第 1 輪 | 13 | 5.54 | -0.18 | 1.77 | A、B、D、E、K | — |
 | 示意首頁(預設參數) | persona-ux-a11y · 第 2 輪 | 13 | 5.85 | 0.12 | 1.62 | B、K | — |
+| 示意首頁(預設參數) | persona-ux-researcher | 13 | 5.38 | 0.11 | 1.92 | B、D、J、K | — |
 | 示意首頁(預設參數) | persona-visual-designer · 第 1 輪 | 13 | 5.31 | 0.13 | 2.00 | B、D、J、K | — |
 | 示意首頁(預設參數) | persona-visual-designer · 第 2 輪 | 13 | 5.31 | 0.16 | 1.85 | B、D、J、K | — |
 
@@ -67,6 +72,8 @@
 | 示意首頁(預設參數) | B | persona-desktop-reader · 第 2 輪 | 3 / 9 | 桌機四欄只放三張,右邊空四分之一;手機第三張落單 |
 | 示意首頁(預設參數) | J | persona-desktop-reader · 第 2 輪 | 4 / 7 | 圖高字短,每列只一行標題又沒摘要,右側大片空白 |
 | 示意首頁(預設參數) | K | persona-desktop-reader · 第 2 輪 | 2 / 7 | 桌機側欄四張大方圖直排,拉得超長,比主欄長太多 |
+| 示意首頁(預設參數) | B | persona-first-visitor | 3 / 9 | 三張排不滿,手機像少一張,電腦右邊空一塊 |
+| 示意首頁(預設參數) | K | persona-first-visitor | 3 / 7 | 電腦變成一長條大方塊,看半天才知是評論 |
 | 示意首頁(預設參數) | B | persona-frontend-engineer · 第 1 輪 | 3 / 9 | 3 則卻排手機 2 欄、電腦 4 欄,兩個寬度都留洞,右邊空一塊 |
 | 示意首頁(預設參數) | D | persona-frontend-engineer · 第 1 輪 | 4 / 7 | 排行沒有編號;手機方圖太大,文字只佔上半,下面空一截 |
 | 示意首頁(預設參數) | K | persona-frontend-engineer · 第 1 輪 | 2 / 7 | 手機 2 欄、電腦反而變 1 欄巨大方圖,拉得超長,欄數邏輯顛倒 |
@@ -106,6 +113,9 @@
 | 示意首頁(預設參數) | I | persona-skimmer · 第 2 輪 | 3 / 6 | 一大張圖只換一個標題,電腦版「園」字單獨掉一行,下方空一大片 |
 | 示意首頁(預設參數) | K | persona-skimmer · 第 2 輪 | 2 / 7 | 電腦版單欄超大方圖,四個標題要滑三屏,圖完全壓過標題 |
 | 示意首頁(預設參數) | L | persona-skimmer · 第 2 輪 | 4 / 7 | 第四次圖卡網格;電腦版標題一行好讀,但圖大到一屏只見三則 |
+| 示意首頁(預設參數) | A | persona-tablet-reader | 7 / 10 | 頭條大圖撐滿寬度很有氣勢,疊字夠大,但一屏幾乎只有這則 |
+| 示意首頁(預設參數) | D | persona-tablet-reader | 3 / 7 | 每則配一張大方圖,一屏只看兩三則,標題下空一大片 |
+| 示意首頁(預設參數) | K | persona-tablet-reader | 2 / 7 | 每張作者卡都是整屏大方圖,一屏只看一則,作者名好小 |
 | 示意首頁(預設參數) | A | persona-ux-a11y · 第 1 輪 | 6 / 10 | 白字疊在漸層淺處,手機第一行對比偏弱;字級夠大但閱讀吃力。 |
 | 示意首頁(預設參數) | B | persona-ux-a11y · 第 1 輪 | 5 / 9 | 手機3張排2欄最後落單,電腦右側空一欄,版面不完整。 |
 | 示意首頁(預設參數) | D | persona-ux-a11y · 第 1 輪 | 4 / 7 | 排行卻看不到名次數字,大方圖把列表拉很長,文字下方空白。 |
@@ -113,6 +123,10 @@
 | 示意首頁(預設參數) | K | persona-ux-a11y · 第 1 輪 | 3 / 7 | 作者卡看不到作者名與頭像;電腦單欄四張大方圖,捲很久。 |
 | 示意首頁(預設參數) | B | persona-ux-a11y · 第 2 輪 | 4 / 9 | 三則放四欄,右邊空一大塊;手機第三張落單,看起來像缺件。 |
 | 示意首頁(預設參數) | K | persona-ux-a11y · 第 2 輪 | 3 / 7 | 桌機窄欄變單欄巨大方圖,四則要捲近兩千像素,比手機還難掃。 |
+| 示意首頁(預設參數) | B | persona-ux-researcher | 4 / 9 | [美感與極簡] 3 則排 4 欄,電腦右側空一格;手機第三張落單、右邊空白 |
+| 示意首頁(預設參數) | D | persona-ux-researcher | 4 / 7 | [美感與極簡] 排行配大方圖,文字只兩行、下方大片留白,手機拉很長 |
+| 示意首頁(預設參數) | J | persona-ux-researcher | 4 / 7 | [美感與極簡] 與政治同款卻無主次,四則一樣大,電腦右側空一大片 |
+| 示意首頁(預設參數) | K | persona-ux-researcher | 3 / 7 | [美感與極簡] 電腦版四張大方圖直排整塊超長;作者名太小,不像作者卡 |
 | 示意首頁(預設參數) | B | persona-visual-designer · 第 1 輪 | 3 / 9 | 只有三則:手機第二列落單一張,桌機右側空出四分之一,欄底不齊 |
 | 示意首頁(預設參數) | D | persona-visual-designer · 第 1 輪 | 3 / 7 | 排行卻看不到名次編號;方圖偏大,文字只佔上半,每列下方空 |
 | 示意首頁(預設參數) | J | persona-visual-designer · 第 1 輪 | 4 / 7 | 又是左圖右文,桌機標題一行就結束、列間鬆散,右邊很空 |
