@@ -38,6 +38,36 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-frontend-engineer",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.06708888547894579,
+      "meanAbsDiff": 1.9230769230769231,
+      "mean": 5.6923076923076925,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "3 則卻排手機 2 欄、電腦 4 欄,兩個寬度都留洞,右邊空一塊"
+        },
+        {
+          "code": "D",
+          "score": 4,
+          "program": 7,
+          "comment": "排行沒有編號;手機方圖太大,文字只佔上半,下面空一截"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "手機 2 欄、電腦反而變 1 欄巨大方圖,拉得超長,欄數邏輯顛倒"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-mobile-commuter",
       "source": "ai-persona",
       "n": 13,
@@ -248,14 +278,20 @@
     }
   ],
   "ab": {
-    "total": 65,
-    "agree": 49,
+    "total": 75,
+    "agree": 57,
     "byRater": [
       {
         "rater": "persona-desktop-reader",
         "answered": 10,
         "decided": 9,
         "agree": 6
+      },
+      {
+        "rater": "persona-frontend-engineer",
+        "answered": 10,
+        "decided": 10,
+        "agree": 8
       },
       {
         "rater": "persona-mobile-commuter",
@@ -298,12 +334,13 @@
       {
         "pair": "ex01-v1|ex01-v2",
         "program": "ex01-v2",
-        "votes": 7,
+        "votes": 8,
         "agree": 3,
-        "disagree": 4,
+        "disagree": 5,
         "tie": 0,
         "reasons": [
           "persona-desktop-reader:A 的政治區塊大圖配清單比較緊湊;B 一列只一行字,右邊空很大",
+          "persona-frontend-engineer:B 的側欄提早結束,下方兩個區塊右側空一大欄;A 空欄較短",
           "persona-mobile-commuter:政治區大圖加列表好掃;B 改成六張小圖一長串,右邊空白多又要多滑",
           "persona-skimmer:政治區用大圖加標題列表,比一排排小圖拉長好掃,整頁也比較短",
           "persona-ux-a11y:B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。"
@@ -312,8 +349,8 @@
       {
         "pair": "ex02-v2|ex02-v1",
         "program": "ex02-v2",
-        "votes": 7,
-        "agree": 6,
+        "votes": 8,
+        "agree": 7,
         "disagree": 1,
         "tie": 0,
         "reasons": [
@@ -323,8 +360,8 @@
       {
         "pair": "ex03-v1|ex03-v2",
         "program": "ex03-v2",
-        "votes": 7,
-        "agree": 7,
+        "votes": 8,
+        "agree": 8,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -332,8 +369,8 @@
       {
         "pair": "ex04-v2|ex04-v1",
         "program": "ex04-v2",
-        "votes": 7,
-        "agree": 7,
+        "votes": 8,
+        "agree": 8,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -341,8 +378,8 @@
       {
         "pair": "ex05-v1|ex05-v2",
         "program": "ex05-v2",
-        "votes": 7,
-        "agree": 7,
+        "votes": 8,
+        "agree": 8,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -350,8 +387,8 @@
       {
         "pair": "ex06-v2|ex06-v1",
         "program": "ex06-v2",
-        "votes": 7,
-        "agree": 1,
+        "votes": 8,
+        "agree": 2,
         "disagree": 1,
         "tie": 5,
         "reasons": [
@@ -361,12 +398,13 @@
       {
         "pair": "ex07-v1|ex07-v2",
         "program": "ex07-v2",
-        "votes": 7,
+        "votes": 8,
         "agree": 0,
-        "disagree": 7,
+        "disagree": 8,
         "tie": 0,
         "reasons": [
           "persona-desktop-reader:A 的短影音排滿整排、右邊不空,內容也比較多",
+          "persona-frontend-engineer:A 補足則數,網格與短影音輪播都排滿整列;B 輪播右半空掉",
           "persona-mobile-commuter:短影音排滿、多幾則可看;不過社會區右側的空白也跟著拉長",
           "persona-news-editor:A 短影音補到整列排滿,不再空半排;不過社會區多一列補充稿,右側空白跟著變長",
           "persona-senior-reader:短影音整排排滿不空;B 右邊空一大塊,像沒做完。",
@@ -378,8 +416,8 @@
       {
         "pair": "ex08-v2|ex08-v1",
         "program": "ex08-v2",
-        "votes": 7,
-        "agree": 7,
+        "votes": 8,
+        "agree": 8,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -387,8 +425,8 @@
       {
         "pair": "ex09-v1|ex09-v2",
         "program": "ex09-v2",
-        "votes": 7,
-        "agree": 7,
+        "votes": 8,
+        "agree": 8,
         "disagree": 0,
         "tie": 0,
         "reasons": []
@@ -396,8 +434,8 @@
       {
         "pair": "ex10-v2|ex10-v1",
         "program": "ex10-v2",
-        "votes": 7,
-        "agree": 4,
+        "votes": 8,
+        "agree": 5,
         "disagree": 3,
         "tie": 0,
         "reasons": [
