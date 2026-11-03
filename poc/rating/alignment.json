@@ -1,0 +1,274 @@
+{
+  "blocks": [
+    {
+      "layout": "gen-default",
+      "rater": "persona-desktop-reader",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.06519259448972395,
+      "meanAbsDiff": 2,
+      "mean": 5.3076923076923075,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 6,
+          "program": 10,
+          "comment": "大圖撐滿主欄只配一行標題,桌機看有點空洞;手機版還好"
+        },
+        {
+          "code": "B",
+          "score": 4,
+          "program": 9,
+          "comment": "桌機三張卡只排到四分之三,右邊空一塊;手機剩一張落單"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "四則都只一行字,圖右邊大片留白,排得太鬆又沒重點"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "四張大方圖疊成一長條,每張只一行字,也看不到作者是誰"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-senior-reader",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.011442308538632321,
+      "meanAbsDiff": 1.3076923076923077,
+      "mean": 6.461538461538462,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 5,
+          "program": 9,
+          "comment": "才三則,電腦版右邊空一大塊,手機第三則孤零零的。"
+        },
+        {
+          "code": "K",
+          "score": 4,
+          "program": 7,
+          "comment": "電腦版四張大方圖要一直滑,標題字小,也看不到作者是誰。"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-ux-a11y",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": -0.18474154263400147,
+      "meanAbsDiff": 1.7692307692307692,
+      "mean": 5.538461538461538,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 6,
+          "program": 10,
+          "comment": "白字疊在漸層淺處,手機第一行對比偏弱;字級夠大但閱讀吃力。"
+        },
+        {
+          "code": "B",
+          "score": 5,
+          "program": 9,
+          "comment": "手機3張排2欄最後落單,電腦右側空一欄,版面不完整。"
+        },
+        {
+          "code": "D",
+          "score": 4,
+          "program": 7,
+          "comment": "排行卻看不到名次數字,大方圖把列表拉很長,文字下方空白。"
+        },
+        {
+          "code": "E",
+          "score": 4,
+          "program": 7,
+          "comment": "手機只露一小條下一張且標題被截,沒點點;電腦箭頭壓在圖上。"
+        },
+        {
+          "code": "K",
+          "score": 3,
+          "program": 7,
+          "comment": "作者卡看不到作者名與頭像;電腦單欄四張大方圖,捲很久。"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-visual-designer",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.13398918650635608,
+      "meanAbsDiff": 2,
+      "mean": 5.3076923076923075,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "只有三則:手機第二列落單一張,桌機右側空出四分之一,欄底不齊"
+        },
+        {
+          "code": "D",
+          "score": 3,
+          "program": 7,
+          "comment": "排行卻看不到名次編號;方圖偏大,文字只佔上半,每列下方空"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "又是左圖右文,桌機標題一行就結束、列間鬆散,右邊很空"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "桌機窄欄四張大方圖直疊,高度失控;作者卡看不到作者資訊"
+        }
+      ],
+      "falsePositives": []
+    }
+  ],
+  "ab": {
+    "total": 36,
+    "agree": 29,
+    "byRater": [
+      {
+        "rater": "persona-desktop-reader",
+        "answered": 10,
+        "decided": 9,
+        "agree": 6
+      },
+      {
+        "rater": "persona-senior-reader",
+        "answered": 10,
+        "decided": 9,
+        "agree": 8
+      },
+      {
+        "rater": "persona-ux-a11y",
+        "answered": 10,
+        "decided": 9,
+        "agree": 7
+      },
+      {
+        "rater": "persona-visual-designer",
+        "answered": 10,
+        "decided": 9,
+        "agree": 8
+      }
+    ],
+    "perPair": [
+      {
+        "pair": "ex01-v1|ex01-v2",
+        "program": "ex01-v2",
+        "votes": 4,
+        "agree": 2,
+        "disagree": 2,
+        "tie": 0,
+        "reasons": [
+          "persona-desktop-reader:A 的政治區塊大圖配清單比較緊湊;B 一列只一行字,右邊空很大",
+          "persona-ux-a11y:B 版政治改成小圖列表,每列一行字,右側大片空白,頁面也變長。"
+        ]
+      },
+      {
+        "pair": "ex02-v2|ex02-v1",
+        "program": "ex02-v2",
+        "votes": 4,
+        "agree": 4,
+        "disagree": 0,
+        "tie": 0,
+        "reasons": []
+      },
+      {
+        "pair": "ex03-v1|ex03-v2",
+        "program": "ex03-v2",
+        "votes": 4,
+        "agree": 4,
+        "disagree": 0,
+        "tie": 0,
+        "reasons": []
+      },
+      {
+        "pair": "ex04-v2|ex04-v1",
+        "program": "ex04-v2",
+        "votes": 4,
+        "agree": 4,
+        "disagree": 0,
+        "tie": 0,
+        "reasons": []
+      },
+      {
+        "pair": "ex05-v1|ex05-v2",
+        "program": "ex05-v2",
+        "votes": 4,
+        "agree": 4,
+        "disagree": 0,
+        "tie": 0,
+        "reasons": []
+      },
+      {
+        "pair": "ex06-v2|ex06-v1",
+        "program": "ex06-v2",
+        "votes": 4,
+        "agree": 0,
+        "disagree": 0,
+        "tie": 4,
+        "reasons": []
+      },
+      {
+        "pair": "ex07-v1|ex07-v2",
+        "program": "ex07-v2",
+        "votes": 4,
+        "agree": 0,
+        "disagree": 4,
+        "tie": 0,
+        "reasons": [
+          "persona-desktop-reader:A 的短影音排滿整排、右邊不空,內容也比較多",
+          "persona-senior-reader:短影音整排排滿不空;B 右邊空一大塊,像沒做完。",
+          "persona-ux-a11y:社會、科技網格與短影音都排滿沒有空洞,雖然頁面稍長。",
+          "persona-visual-designer:A 短影音撐滿全寬;社會、科技網格雖拉長,但沒有 B 輪播右側空一截的破綻"
+        ]
+      },
+      {
+        "pair": "ex08-v2|ex08-v1",
+        "program": "ex08-v2",
+        "votes": 4,
+        "agree": 4,
+        "disagree": 0,
+        "tie": 0,
+        "reasons": []
+      },
+      {
+        "pair": "ex09-v1|ex09-v2",
+        "program": "ex09-v2",
+        "votes": 4,
+        "agree": 4,
+        "disagree": 0,
+        "tie": 0,
+        "reasons": []
+      },
+      {
+        "pair": "ex10-v2|ex10-v1",
+        "program": "ex10-v2",
+        "votes": 4,
+        "agree": 3,
+        "disagree": 1,
+        "tie": 0,
+        "reasons": [
+          "persona-desktop-reader:A 的政治清單一行字配大片空白、整頁拉長;B 比較緊湊"
+        ]
+      }
+    ]
+  }
+}
