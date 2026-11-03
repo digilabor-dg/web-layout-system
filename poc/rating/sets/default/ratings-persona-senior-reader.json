@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "round": 2,
+  "rater": "persona-senior-reader",
+  "source": "ai-persona",
+  "persona": "年長讀者",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 9, "comment": "標題白字大又清楚,一眼就看到頭條,很舒服。" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 4, "comment": "手機第三則孤零零,電腦右邊空一大塊,看起來沒排好。" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 8, "comment": "純文字清單行距寬,紅線好認;只是「更多」字太小。" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 6, "comment": "號碼離標題太遠,方圖佔太多,標題擠在窄窄一欄。" },
+    { "ref": "inst-gen-video", "code": "E", "score": 6, "comment": "字還算大,但手機沒箭頭,我不知道要往旁邊滑。" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "comment": "手機兩欄好讀;電腦第二排只有兩則,右半邊空著。" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "標題夠大,但第一則下面灰色小字摘要看得很吃力。" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 5, "comment": "跟國際一樣,電腦第二排右邊空一半,看起來缺東西。" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 8, "comment": "一張大圖配大標題,簡單不亂,摘要灰字稍小。" },
+    { "ref": "inst-gen-society", "code": "J", "score": 7, "comment": "左圖右文整齊好點,電腦版右邊留白多了些。" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 4, "comment": "電腦版方圖巨大一張張疊下去,要滑好久,作者名太小。" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 8, "comment": "電腦三欄兩排整整齊齊,圖大字清楚,很好看。" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 6, "comment": "標題好讀,但手機沒箭頭,第三張被切一半有點亂。" }
+  ]
+}

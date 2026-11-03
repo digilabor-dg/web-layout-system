@@ -12,6 +12,7 @@
 - [x] 2.3 對齊分析 `poc:align`。驗證:`rating.test.ts`(等級相關、A/B 一致率)。
 - [x] 2.4 反饋覆蓋率 `poc:feedback`。驗證:範例 02 的擬人評估覆蓋率 1/3;同一塊剛好有別的問題不算覆蓋。
 - [x] 2.5 8 個角色 agent 跑完評分與 A/B,產生第一份 `ALIGNMENT.md`。驗證:A/B 一致率 57/75;盲點短評 30 則由 skill 對應,覆蓋率 10/33(`poc/feedback/entries/default-personas.json`)。
+- [x] 2.6 修正第一輪找到的渲染器 bug(排行名次、作者名)後,8 個角色重評同一版面。驗證:`render.test.ts`;相關抱怨 13 → 0 則;未修改區塊的重評變動 ≤ 0.5 分。
 
 ## Workflow follow-up
 

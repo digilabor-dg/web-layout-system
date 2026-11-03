@@ -38,6 +38,42 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-desktop-reader · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.06766312321662686,
+      "meanAbsDiff": 2.3846153846153846,
+      "mean": 5.076923076923077,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 5,
+          "program": 10,
+          "comment": "頭條大圖撐滿主欄,只有一行標題,沒摘要,桌機上一整片灰很空"
+        },
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "桌機四欄只放三張,右邊空四分之一;手機第三張落單"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "圖高字短,每列只一行標題又沒摘要,右側大片空白"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "桌機側欄四張大方圖直排,拉得超長,比主欄長太多"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-frontend-engineer · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -62,6 +98,42 @@
           "score": 2,
           "program": 7,
           "comment": "手機 2 欄、電腦反而變 1 欄巨大方圖,拉得超長,欄數邏輯顛倒"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-frontend-engineer · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.0322667955275986,
+      "meanAbsDiff": 2.076923076923077,
+      "mean": 5.6923076923076925,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "3 則塞 2 欄手機落單一張,桌機 4 欄格只放 3 張右邊空一欄"
+        },
+        {
+          "code": "D",
+          "score": 4,
+          "program": 7,
+          "comment": "手機方圖縮圖太大,標題兩行下方空一截;編號欄與圖間距過寬"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "桌機單欄每列只一行字,右側與下方三分之二都是空的,沒善用寬度"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "手機 2 欄桌機反變 1 欄,方圖撐到近 400px 高,作者卡長到失控"
         }
       ],
       "falsePositives": []
@@ -104,6 +176,42 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-mobile-commuter · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.16270115504343238,
+      "meanAbsDiff": 1.6153846153846154,
+      "mean": 6.461538461538462,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 7,
+          "program": 10,
+          "comment": "頭條疊字清楚,手機一屏一則剛好;電腦版大圖高到要滑一下。"
+        },
+        {
+          "code": "B",
+          "score": 5,
+          "program": 9,
+          "comment": "手機第三張落單,右邊空一塊;電腦版右側也空著一截。"
+        },
+        {
+          "code": "D",
+          "score": 3,
+          "program": 7,
+          "comment": "方圖太大、編號和圖中間空一截,五則要滑好久才看完。"
+        },
+        {
+          "code": "K",
+          "score": 4,
+          "program": 7,
+          "comment": "手機方圖偏大還能看;電腦版單欄巨大方圖,一屏才一則。"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-news-editor · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -134,6 +242,54 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-news-editor · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.2294676790164489,
+      "meanAbsDiff": 2.076923076923077,
+      "mean": 5.076923076923077,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 7,
+          "program": 10,
+          "comment": "大圖疊字夠份量,手機很好;電腦版標題一行偏小,沒摘要撐不起整張大圖"
+        },
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "焦點只有三則,電腦右邊空一格、手機落單一張;看起來跟一般分類沒兩樣"
+        },
+        {
+          "code": "D",
+          "score": 4,
+          "program": 7,
+          "comment": "排行配大方圖太佔高度,編號與標題之間隔太開,一眼掃不完前五名"
+        },
+        {
+          "code": "H",
+          "score": 3,
+          "program": 6,
+          "comment": "跟國際長得一模一樣,同樣四加二缺角,讀者分不出這是另一個分類"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "四則等重沒主稿,電腦標題只佔一行,右下大片空白,和政治重複"
+        },
+        {
+          "code": "K",
+          "score": 3,
+          "program": 7,
+          "comment": "電腦窄欄堆四張巨型方圖,拉得超長;作者該是小頭像,不是大圖"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-senior-reader · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -152,6 +308,30 @@
           "score": 4,
           "program": 7,
           "comment": "電腦版四張大方圖要一直滑,標題字小,也看不到作者是誰。"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-senior-reader · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.15972063786161306,
+      "meanAbsDiff": 1.4615384615384615,
+      "mean": 6.3076923076923075,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 4,
+          "program": 9,
+          "comment": "手機第三則孤零零,電腦右邊空一大塊,看起來沒排好。"
+        },
+        {
+          "code": "K",
+          "score": 4,
+          "program": 7,
+          "comment": "電腦版方圖巨大一張張疊下去,要滑好久,作者名太小。"
         }
       ],
       "falsePositives": []
@@ -200,6 +380,54 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-skimmer · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.2791077813137278,
+      "meanAbsDiff": 2.769230769230769,
+      "mean": 4.6923076923076925,
+      "blindSpots": [
+        {
+          "code": "A",
+          "score": 6,
+          "program": 10,
+          "comment": "疊字標題夠大好讀,但電腦版一張大圖佔滿一屏只換到一個標題"
+        },
+        {
+          "code": "B",
+          "score": 4,
+          "program": 9,
+          "comment": "手機第三張孤零零掉到下一行,電腦版右邊空一大格"
+        },
+        {
+          "code": "D",
+          "score": 3,
+          "program": 7,
+          "comment": "排行榜配大方圖,手機五則要滑快兩屏,號碼和圖中間還空一截"
+        },
+        {
+          "code": "I",
+          "score": 3,
+          "program": 6,
+          "comment": "一大張圖只換一個標題,電腦版「園」字單獨掉一行,下方空一大片"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "電腦版單欄超大方圖,四個標題要滑三屏,圖完全壓過標題"
+        },
+        {
+          "code": "L",
+          "score": 4,
+          "program": 7,
+          "comment": "第四次圖卡網格;電腦版標題一行好讀,但圖大到一屏只見三則"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-ux-a11y · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -242,6 +470,30 @@
     },
     {
       "layout": "gen-default",
+      "rater": "persona-ux-a11y · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.12100048322849473,
+      "meanAbsDiff": 1.6153846153846154,
+      "mean": 5.846153846153846,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 4,
+          "program": 9,
+          "comment": "三則放四欄,右邊空一大塊;手機第三張落單,看起來像缺件。"
+        },
+        {
+          "code": "K",
+          "score": 3,
+          "program": 7,
+          "comment": "桌機窄欄變單欄巨大方圖,四則要捲近兩千像素,比手機還難掃。"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
       "rater": "persona-visual-designer · 第 1 輪",
       "source": "ai-persona",
       "n": 13,
@@ -272,6 +524,42 @@
           "score": 2,
           "program": 7,
           "comment": "桌機窄欄四張大方圖直疊,高度失控;作者卡看不到作者資訊"
+        }
+      ],
+      "falsePositives": []
+    },
+    {
+      "layout": "gen-default",
+      "rater": "persona-visual-designer · 第 2 輪",
+      "source": "ai-persona",
+      "n": 13,
+      "spearman": 0.156269594095543,
+      "meanAbsDiff": 1.8461538461538463,
+      "mean": 5.3076923076923075,
+      "blindSpots": [
+        {
+          "code": "B",
+          "score": 3,
+          "program": 9,
+          "comment": "三則塞四欄,電腦版右邊空一整欄;手機版第二列落單,欄底參差"
+        },
+        {
+          "code": "D",
+          "score": 4,
+          "program": 7,
+          "comment": "編號和縮圖中間空一大段,方圖太大太重,文字下方大片空白,排行感被稀釋"
+        },
+        {
+          "code": "J",
+          "score": 4,
+          "program": 7,
+          "comment": "又一次左圖右文,電腦版一行標題配高圖,右邊三分之二空著,和政治重複"
+        },
+        {
+          "code": "K",
+          "score": 2,
+          "program": 7,
+          "comment": "電腦版窄欄四張大方圖直疊,高度近兩千像素,圖大得失控,作者卡不像作者卡"
         }
       ],
       "falsePositives": []

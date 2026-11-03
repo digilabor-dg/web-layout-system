@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "rater": "persona-news-editor",
+  "source": "ai-persona",
+  "persona": "新聞編輯(專家)",
+  "round": 2,
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 7, "comment": "大圖疊字夠份量,手機很好;電腦版標題一行偏小,沒摘要撐不起整張大圖" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 3, "comment": "焦點只有三則,電腦右邊空一格、手機落單一張;看起來跟一般分類沒兩樣" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 6, "comment": "清單簡潔好掃讀,但即時新聞沒標時間,時間軸名不副實" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 4, "comment": "排行配大方圖太佔高度,編號與標題之間隔太開,一眼掃不完前五名" },
+    { "ref": "inst-gen-video", "code": "E", "score": 7, "comment": "手機露出下一張有滑動感,電腦四張整齊;箭頭壓在圖上略擋畫面" },
+    { "ref": "inst-gen-world", "code": "F", "score": 4, "comment": "電腦四加二,第二排右半邊空一大塊;六則等大,沒有主稿" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "首則有摘要稍有主次,但圖都一樣大;電腦版標題右側與下方空太多" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 3, "comment": "跟國際長得一模一樣,同樣四加二缺角,讀者分不出這是另一個分類" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 6, "comment": "大圖有份量,但電腦文字下方空一大片,缺「看專題」入口和篇數標示" },
+    { "ref": "inst-gen-society", "code": "J", "score": 4, "comment": "四則等重沒主稿,電腦標題只佔一行,右下大片空白,和政治重複" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 3, "comment": "電腦窄欄堆四張巨型方圖,拉得超長;作者該是小頭像,不是大圖" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 6, "comment": "電腦三乘二填滿不缺角,但圖太大、無主稿,又是第三個同款網格" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 7, "comment": "方形輪播和影音焦點有區隔,手機露出下一張好滑;箭頭擋圖" }
+  ]
+}

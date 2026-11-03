@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "round": 2,
+  "rater": "persona-visual-designer",
+  "source": "ai-persona",
+  "persona": "視覺設計師(專家)",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 8, "comment": "滿版大圖疊字份量足,開場有力;電腦版標題只一行,字級可再放大壓得住圖" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 3, "comment": "三則塞四欄,電腦版右邊空一整欄;手機版第二列落單,欄底參差" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 7, "comment": "紅色短線對齊整齊、行距一致,乾淨好掃;少了時間點,時間軸節奏偏平" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 4, "comment": "編號和縮圖中間空一大段,方圖太大太重,文字下方大片空白,排行感被稀釋" },
+    { "ref": "inst-gen-video", "code": "E", "score": 7, "comment": "16:9 一排四張節奏穩,手機露出下一張有引導;箭頭壓在圖上略搶戲" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "comment": "手機 2x3 完整;電腦六則排四欄,第二列只到一半,右下空一大塊" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 5, "comment": "電腦版標題只一行,文字欄右側與下方大片空,圖比文重;手機版比例合宜" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 4, "comment": "和國際一模一樣的四欄缺半列,同型連續出現,整頁節奏開始單調" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 6, "comment": "大圖撐住專題份量;電腦版右欄文字只佔上方三分之一,下方空得不像刻意" },
+    { "ref": "inst-gen-society", "code": "J", "score": 4, "comment": "又一次左圖右文,電腦版一行標題配高圖,右邊三分之二空著,和政治重複" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 2, "comment": "電腦版窄欄四張大方圖直疊,高度近兩千像素,圖大得失控,作者卡不像作者卡" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 7, "comment": "電腦三欄兩列剛好排滿,欄底齊、格線清楚;圖略大,但整體平衡" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 7, "comment": "方圖輪播與上方 16:9 形成大小交錯,手機露出引導好;電腦版方圖偏高" }
+  ]
+}
