@@ -1,5 +1,6 @@
 // 人評測試系統之一:產生評分集(給角色 agent 用)。對一個產生的版面,每塊截一張手機圖與一張電腦圖,
 // 並把該塊的程式判定換算成 0~10(與人評同一個尺度);另存拿掉程式分數的盲評版。真人用的檢視工具見 review.ts。
+// 另截一張平板(768px)圖,給平板讀者用。
 // 用法:npm run poc:rating -- <產生結果名稱,例如 default>
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -23,7 +24,8 @@ export interface RatingBlock {
   pattern: string;
   heading: string;
   program: { score: number; findings: { item: string; verdict: string; display: string }[] };
-  images: { mobile: string; desktop: string };
+  /** 手機 390px、平板 768px、電腦 1280px 的截圖 */
+  images: { mobile: string; tablet: string; desktop: string };
 }
 
 /** 評分集 */
@@ -60,7 +62,8 @@ async function main() {
   mkdirSync(join(HERE, 'out'), { recursive: true });
   writeFileSync(html, renderPage(world, notoFontCss()));
   const browser = await launch();
-  for (const [label, width, height] of [['mobile', 390, 844], ['desktop', 1280, 800]] as const) {
+  // 平板 768px 給平板讀者用(手機結構、欄數由電腦推算),其他角色只看手機與電腦
+  for (const [label, width, height] of [['mobile', 390, 844], ['tablet', 768, 1024], ['desktop', 1280, 800]] as const) {
     const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
     await page.goto(pathToFileURL(html).href);
     const boxes = await page.evaluate(async () => {
@@ -98,7 +101,7 @@ async function main() {
         pattern: `${b.pattern.id} ${b.pattern.name}`,
         heading: b.template.heading.title,
         program: { score: blockScore(fs), findings: fs.map((f) => ({ item: f.item, verdict: f.verdict, display: f.display })) },
-        images: { mobile: `blocks/${b.code}-mobile.jpg`, desktop: `blocks/${b.code}-desktop.jpg` },
+        images: { mobile: `blocks/${b.code}-mobile.jpg`, tablet: `blocks/${b.code}-tablet.jpg`, desktop: `blocks/${b.code}-desktop.jpg` },
       };
     }),
   };

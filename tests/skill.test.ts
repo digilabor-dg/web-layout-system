@@ -38,8 +38,8 @@ describe('skill layout-tuner', () => {
 
 describe('角色 agent', () => {
   const files = readdirSync(join(REPO, 'agents')).filter((f) => f.endsWith('.md'));
-  it('有 8 個角色,並透過 .claude/agents 生效', () => {
-    expect(files).toHaveLength(8);
+  it('有 12 個角色,並透過 .claude/agents 生效', () => {
+    expect(files).toHaveLength(12);
     expect(existsSync(join(REPO, '.claude', 'agents', files[0]!))).toBe(true);
   });
   it.each(files)('%s:name 與檔名一致,只用 Read、Glob、Write', (f) => {

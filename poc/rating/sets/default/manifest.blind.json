@@ -9,6 +9,7 @@
       "heading": "頭條",
       "images": {
         "mobile": "blocks/A-mobile.jpg",
+        "tablet": "blocks/A-tablet.jpg",
         "desktop": "blocks/A-desktop.jpg"
       }
     },
@@ -19,6 +20,7 @@
       "heading": "焦點新聞",
       "images": {
         "mobile": "blocks/B-mobile.jpg",
+        "tablet": "blocks/B-tablet.jpg",
         "desktop": "blocks/B-desktop.jpg"
       }
     },
@@ -29,6 +31,7 @@
       "heading": "即時",
       "images": {
         "mobile": "blocks/C-mobile.jpg",
+        "tablet": "blocks/C-tablet.jpg",
         "desktop": "blocks/C-desktop.jpg"
       }
     },
@@ -39,6 +42,7 @@
       "heading": "熱門排行",
       "images": {
         "mobile": "blocks/D-mobile.jpg",
+        "tablet": "blocks/D-tablet.jpg",
         "desktop": "blocks/D-desktop.jpg"
       }
     },
@@ -49,6 +53,7 @@
       "heading": "影音焦點",
       "images": {
         "mobile": "blocks/E-mobile.jpg",
+        "tablet": "blocks/E-tablet.jpg",
         "desktop": "blocks/E-desktop.jpg"
       }
     },
@@ -59,6 +64,7 @@
       "heading": "國際",
       "images": {
         "mobile": "blocks/F-mobile.jpg",
+        "tablet": "blocks/F-tablet.jpg",
         "desktop": "blocks/F-desktop.jpg"
       }
     },
@@ -69,6 +75,7 @@
       "heading": "政治",
       "images": {
         "mobile": "blocks/G-mobile.jpg",
+        "tablet": "blocks/G-tablet.jpg",
         "desktop": "blocks/G-desktop.jpg"
       }
     },
@@ -79,6 +86,7 @@
       "heading": "財經",
       "images": {
         "mobile": "blocks/H-mobile.jpg",
+        "tablet": "blocks/H-tablet.jpg",
         "desktop": "blocks/H-desktop.jpg"
       }
     },
@@ -89,6 +97,7 @@
       "heading": "專題",
       "images": {
         "mobile": "blocks/I-mobile.jpg",
+        "tablet": "blocks/I-tablet.jpg",
         "desktop": "blocks/I-desktop.jpg"
       }
     },
@@ -99,6 +108,7 @@
       "heading": "社會",
       "images": {
         "mobile": "blocks/J-mobile.jpg",
+        "tablet": "blocks/J-tablet.jpg",
         "desktop": "blocks/J-desktop.jpg"
       }
     },
@@ -109,6 +119,7 @@
       "heading": "觀點評論",
       "images": {
         "mobile": "blocks/K-mobile.jpg",
+        "tablet": "blocks/K-tablet.jpg",
         "desktop": "blocks/K-desktop.jpg"
       }
     },
@@ -119,6 +130,7 @@
       "heading": "科技",
       "images": {
         "mobile": "blocks/L-mobile.jpg",
+        "tablet": "blocks/L-tablet.jpg",
         "desktop": "blocks/L-desktop.jpg"
       }
     },
@@ -129,6 +141,7 @@
       "heading": "短影音",
       "images": {
         "mobile": "blocks/M-mobile.jpg",
+        "tablet": "blocks/M-tablet.jpg",
         "desktop": "blocks/M-desktop.jpg"
       }
     }

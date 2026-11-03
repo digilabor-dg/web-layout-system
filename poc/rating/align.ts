@@ -33,7 +33,10 @@ export function load(file: string, key: { pair: number; A: string; B: string }[]
   } else {
     // 角色 agent:評分集名稱對應到產生結果的版面;A/B 用盲測題號查對照表
     const layout = `gen-${String(j.set)}`;
-    for (const r of j.ratings as { ref: string; code: string; score: number; comment: string }[]) ratings.push({ rater, source, layout, ref: r.ref, code: r.code, score: r.score, comment: r.comment });
+    // 受訓評估員只給各軸的強度(axes)、不給喜好分數;沒有分數的不參與區塊評分的對齊
+    for (const r of j.ratings as { ref: string; code: string; score?: number | null; comment: string }[]) {
+      if (typeof r.score === 'number') ratings.push({ rater, source, layout, ref: r.ref, code: r.code, score: r.score, comment: r.comment });
+    }
     for (const x of (j.ab ?? []) as { pair: number; winner: string; reason: string }[]) {
       const k = key.find((y) => y.pair === x.pair);
       if (k) ab.push({ rater, source, a: k.A, b: k.B, winner: x.winner === 'tie' ? 'tie' : x.winner === 'A' ? k.A : k.B, reason: x.reason });

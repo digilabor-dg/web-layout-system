@@ -108,7 +108,11 @@ npm run -s poc:compare -- <名稱> <名稱>-v2
 
   使用者下載 JSON 後,存到 `poc/rating/reviews/`。
 
-- **AI 擬人評分**:`agents/` 有 8 個角色(4 種專家、4 種讀者),各自用盲評版評分集(`poc/rating/sets/<名稱>/manifest.blind.json`)與 A/B 盲測圖(`poc/rating/ab-blind/`)評分。要評新的版面時,先產生評分集:
+- **AI 擬人評分**:`agents/` 有 12 個角色,各自用盲評版評分集(`poc/rating/sets/<名稱>/manifest.blind.json`)與 A/B 盲測圖(`poc/rating/ab-blind/`)評分:
+  - 專家 5 位:新聞編輯、視覺設計師、可用性與無障礙專家、前端工程師、UX 研究員(啟發式評估)。
+  - 讀者 6 種:通勤、電腦、年長、快速掃讀、平板(看 768px 截圖)、初次造訪(五秒測試)。
+  - 受訓評估員 1 位:不評喜好,只給 5 條軸的 −5~+5(JAR 量表),輸出 `axes` 而沒有 `score`。
+  - 剛新增的角色要到下一個 session 才會註冊成 agent;在那之前,請一般 agent 讀 `agents/<名稱>.md` 照著做。要評新的版面時,先產生評分集:
 
   ```bash
   npm run -s poc:rating -- <產生結果名稱>

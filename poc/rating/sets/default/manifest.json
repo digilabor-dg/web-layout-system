@@ -14,6 +14,7 @@
       },
       "images": {
         "mobile": "blocks/A-mobile.jpg",
+        "tablet": "blocks/A-tablet.jpg",
         "desktop": "blocks/A-desktop.jpg"
       }
     },
@@ -34,6 +35,7 @@
       },
       "images": {
         "mobile": "blocks/B-mobile.jpg",
+        "tablet": "blocks/B-tablet.jpg",
         "desktop": "blocks/B-desktop.jpg"
       }
     },
@@ -54,6 +56,7 @@
       },
       "images": {
         "mobile": "blocks/C-mobile.jpg",
+        "tablet": "blocks/C-tablet.jpg",
         "desktop": "blocks/C-desktop.jpg"
       }
     },
@@ -74,6 +77,7 @@
       },
       "images": {
         "mobile": "blocks/D-mobile.jpg",
+        "tablet": "blocks/D-tablet.jpg",
         "desktop": "blocks/D-desktop.jpg"
       }
     },
@@ -94,6 +98,7 @@
       },
       "images": {
         "mobile": "blocks/E-mobile.jpg",
+        "tablet": "blocks/E-tablet.jpg",
         "desktop": "blocks/E-desktop.jpg"
       }
     },
@@ -119,6 +124,7 @@
       },
       "images": {
         "mobile": "blocks/F-mobile.jpg",
+        "tablet": "blocks/F-tablet.jpg",
         "desktop": "blocks/F-desktop.jpg"
       }
     },
@@ -139,6 +145,7 @@
       },
       "images": {
         "mobile": "blocks/G-mobile.jpg",
+        "tablet": "blocks/G-tablet.jpg",
         "desktop": "blocks/G-desktop.jpg"
       }
     },
@@ -164,6 +171,7 @@
       },
       "images": {
         "mobile": "blocks/H-mobile.jpg",
+        "tablet": "blocks/H-tablet.jpg",
         "desktop": "blocks/H-desktop.jpg"
       }
     },
@@ -189,6 +197,7 @@
       },
       "images": {
         "mobile": "blocks/I-mobile.jpg",
+        "tablet": "blocks/I-tablet.jpg",
         "desktop": "blocks/I-desktop.jpg"
       }
     },
@@ -209,6 +218,7 @@
       },
       "images": {
         "mobile": "blocks/J-mobile.jpg",
+        "tablet": "blocks/J-tablet.jpg",
         "desktop": "blocks/J-desktop.jpg"
       }
     },
@@ -229,6 +239,7 @@
       },
       "images": {
         "mobile": "blocks/K-mobile.jpg",
+        "tablet": "blocks/K-tablet.jpg",
         "desktop": "blocks/K-desktop.jpg"
       }
     },
@@ -249,6 +260,7 @@
       },
       "images": {
         "mobile": "blocks/L-mobile.jpg",
+        "tablet": "blocks/L-tablet.jpg",
         "desktop": "blocks/L-desktop.jpg"
       }
     },
@@ -269,6 +281,7 @@
       },
       "images": {
         "mobile": "blocks/M-mobile.jpg",
+        "tablet": "blocks/M-tablet.jpg",
         "desktop": "blocks/M-desktop.jpg"
       }
     }

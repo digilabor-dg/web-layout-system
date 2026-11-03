@@ -59,6 +59,16 @@ describe('評分檔的輪次', () => {
     expect(load(file(1), []).ratings[0]!.rater).toBe('persona-x · 第 1 輪');
     expect(load(file(2), []).ratings[0]).toMatchObject({ rater: 'persona-x · 第 2 輪', layout: 'gen-default' });
   });
+  it('只給各軸強度、沒有喜好分數的評分(受訓評估員),不參與區塊評分的對齊', () => {
+    const f = join(mkdtempSync(join(tmpdir(), 'rating-')), 'panel.json');
+    const ratings = [
+      { ref: 'r1', code: 'A', axes: { 大小: 2 }, comment: '' },
+      { ref: 'r2', code: 'B', score: null, axes: { 數量: -1 }, comment: '' },
+      { ref: 'r3', code: 'C', score: 6, comment: '' },
+    ];
+    writeFileSync(f, JSON.stringify({ set: 'default', rater: 'persona-p', source: 'ai-persona', ratings }));
+    expect(load(f, []).ratings.map((r) => r.code)).toEqual(['C']);
+  });
 });
 
 describe('反饋覆蓋率', () => {
