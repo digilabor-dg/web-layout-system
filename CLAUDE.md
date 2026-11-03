@@ -52,6 +52,8 @@ tests/
 6. **AI skill**:讀報告與截圖,判斷不平衡是否刻意,寫出建議。
 7. **版面生成**:集束搜尋;仿生演算法暫不做。
 
+**持續主線:人評對齊(雙評分)**。從第 2 階段起持續進行:每個階段都用真人評分(以及 `agents/` 的 AI 擬人評分)校正評估器;A/B 一致率、反饋覆蓋率、程式分數與人評的等級相關,列為各階段的驗收指標之一。工具在 `poc/rating/`(檢視與評分)、`poc/feedback/`(覆蓋率),流程見 `skills/layout-tuner/SKILL.md`。正式規格(暫名 `score-calibration`)待 POC 確認後再寫。
+
 ## 工作流程(OpenSpec)
 
 - 變更用 [OpenSpec](https://github.com/Fission-AI/OpenSpec) 管理:每個 change 放在 `openspec/changes/<名稱>/`,內含 proposal、design、tasks 與 spec delta。指令:`/opsx:propose`、`/opsx:apply`、`/opsx:archive`。

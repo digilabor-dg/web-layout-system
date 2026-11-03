@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "feedback.schema.json",
+  "title": "版面反饋(真人或擬人評估)",
+  "description": "一份反饋檔可以有多筆;每筆指向一份評估報告與一個對象。skill 負責把原話對應到評估項目(mapped),對不上時提出新項目候選(candidate)。",
+  "type": "object",
+  "required": [
+    "entries"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "report",
+          "width",
+          "ref",
+          "sentiment",
+          "text"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source": {
+            "description": "human=真人;ai-persona=AI 以某種角色看截圖寫的意見(只用來找盲點,不打分數)",
+            "enum": [
+              "human",
+              "ai-persona"
+            ]
+          },
+          "persona": {
+            "description": "AI 扮演的角色,或真人的身分",
+            "type": "string"
+          },
+          "likelihood": {
+            "description": "擬人評估時,估計有多少比例的人會這樣說(0~1,主觀估計)",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "report": {
+            "description": "評估報告的路徑(相對於 repo 根目錄)",
+            "type": "string"
+          },
+          "width": {
+            "description": "看到問題的寬度;由整塊評分轉來時為 null",
+            "oneOf": [
+              {
+                "enum": [
+                  360,
+                  390,
+                  768,
+                  1024,
+                  1280,
+                  1440
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ref": {
+            "description": "對象的穩定參照:實例 id、section:<id> 或「整頁」",
+            "type": "string"
+          },
+          "target": {
+            "description": "人看到的版位代號(只供閱讀)",
+            "type": "string"
+          },
+          "sentiment": {
+            "enum": [
+              "like",
+              "dislike"
+            ]
+          },
+          "text": {
+            "description": "原話",
+            "type": "string",
+            "minLength": 1
+          },
+          "mapped": {
+            "description": "skill 對應到的現有評估項目",
+            "type": "string"
+          },
+          "candidate": {
+            "description": "對不上現有項目時,skill 提出的新項目候選",
+            "type": "object",
+            "required": [
+              "item",
+              "metric"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "item": {
+                "type": "string"
+              },
+              "metric": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              }
+            }
+          },
+          "score": {
+            "description": "由人評轉來時的分數(0~10)",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+          }
+        }
+      }
+    }
+  }
+}

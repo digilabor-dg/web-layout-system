@@ -10,5 +10,9 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   {
     languageOptions: { globals: { ...globals.node } },
+    rules: {
+      // 底線開頭的變數表示刻意不用;解構時被 rest 排除的欄位也不算未使用
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_', ignoreRestSiblings: true }],
+    },
   },
 );

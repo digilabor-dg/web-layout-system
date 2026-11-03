@@ -19,7 +19,12 @@
     "poc:greedy": "tsx poc/examples/greedy.ts",
     "docs:wiki": "tsx poc/wiki/gen.ts",
     "poc:generate": "tsx poc/generator/run.ts",
-    "poc:compare": "tsx poc/generator/compare.ts"
+    "poc:compare": "tsx poc/generator/compare.ts",
+    "poc:feedback": "tsx poc/feedback/coverage.ts",
+    "poc:rating": "tsx poc/rating/build.ts",
+    "poc:rating:analyze": "tsx poc/rating/analyze.ts",
+    "poc:review": "tsx poc/rating/review.ts",
+    "poc:align": "tsx poc/rating/align.ts"
   },
   "dependencies": {
     "ajv": "^8.20.0",

@@ -1,0 +1,6478 @@
+{
+  "layouts": [
+    {
+      "id": "gen-default",
+      "title": "示意首頁(預設參數)",
+      "group": "產生結果",
+      "total": 90,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-gen-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-gen-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 9,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-gen-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-gen-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-gen-video",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-gen-world",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "國際",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "6 則 ÷ 4 欄,餘 2"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-gen-politics",
+          "pattern": "P03 左圖右文",
+          "heading": "政治",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-gen-finance",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "財經",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "6 則 ÷ 4 欄,餘 2"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-gen-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-gen-society",
+          "pattern": "P03 左圖右文",
+          "heading": "社會",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-gen-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-gen-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-gen-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen-tw4-beam",
+      "title": "示意首頁(Tailwind 4、集束搜尋)",
+      "group": "產生結果",
+      "total": 90,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-gen-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-gen-subheadline",
+          "pattern": "P03 左圖右文",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-gen-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-gen-video",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-gen-world",
+          "pattern": "P03 左圖右文",
+          "heading": "國際",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "同型不連續",
+                "verdict": "warn",
+                "display": "E、F 連續 2 塊都是 P03"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-gen-finance",
+          "pattern": "P03 左圖右文",
+          "heading": "財經",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "同型不連續",
+                "verdict": "warn",
+                "display": "E、F 連續 2 塊都是 P03"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-gen-politics",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "政治",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-gen-society",
+          "pattern": "P03 左圖右文",
+          "heading": "社會",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "同型不連續",
+                "verdict": "warn",
+                "display": "H、I 連續 2 塊都是 P03"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-gen-tech",
+          "pattern": "P03 左圖右文",
+          "heading": "科技",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "同型不連續",
+                "verdict": "warn",
+                "display": "H、I 連續 2 塊都是 P03"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-gen-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 44%"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-gen-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-gen-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen-no-sidebar",
+      "title": "示意首頁(無側欄、Material 3)",
+      "group": "產生結果",
+      "total": 96,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-gen-headline",
+          "pattern": "P02 大圖下文",
+          "heading": "頭條",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-gen-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-gen-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-gen-world",
+          "pattern": "P03 左圖右文",
+          "heading": "國際",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-gen-video",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-gen-finance",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "財經",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-gen-society",
+          "pattern": "P03 左圖右文",
+          "heading": "社會",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-gen-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-gen-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-gen-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-gen-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gen-from-form",
+      "title": "由表單產生的參數(tw4、集束搜尋、觀點全寬、不放科技)",
+      "group": "產生結果",
+      "total": 90,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-gen-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-gen-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 9,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-gen-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-gen-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-gen-video",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-gen-world",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "國際",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-gen-politics",
+          "pattern": "P03 左圖右文",
+          "heading": "政治",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-gen-finance",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "財經",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-gen-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 15%"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-gen-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-gen-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-gen-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex01-v1",
+      "title": "範例 01 同型連續與放大型相鄰 · V1",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex01-v2",
+      "title": "範例 01 同型連續與放大型相鄰 · V2",
+      "group": "範例",
+      "total": 79,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 4,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P03 左圖右文",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 4,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex02-v1",
+      "title": "範例 02 末列落單 · V1",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex02-v2",
+      "title": "範例 02 末列落單 · V2",
+      "group": "範例",
+      "total": 78,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex03-v1",
+      "title": "範例 03 疊字標題過長 · V1",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex03-v2",
+      "title": "範例 03 疊字標題過長 · V2",
+      "group": "範例",
+      "total": 76,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex04-v1",
+      "title": "範例 04 輪播右側留白 · V1",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex04-v2",
+      "title": "範例 04 輪播右側留白 · V2",
+      "group": "範例",
+      "total": 75,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex05-v1",
+      "title": "範例 05 手機區塊太長 · V1",
+      "group": "範例",
+      "total": 73,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "區塊長度",
+                "verdict": "warn",
+                "display": "1.70 屏"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex05-v2",
+      "title": "範例 05 手機區塊太長 · V2",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex06-v1",
+      "title": "範例 06 觸控目標太小 · V1",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex06-v2",
+      "title": "範例 06 觸控目標太小 · V2",
+      "group": "範例",
+      "total": 78,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 3,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 3,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 3,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 8,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 9,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex07-v1",
+      "title": "範例 07 整頁則數太多 · V1",
+      "group": "範例",
+      "total": 70,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "video 12 則(建議 3–6)"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "9 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 9 則(建議 4–8)"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "9 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 9 則(建議 4–8)"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "video 12 則(建議 3–6)"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex07-v2",
+      "title": "範例 07 整頁則數太多 · V2",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex08-v1",
+      "title": "範例 08 頭條重複 · V1",
+      "group": "範例",
+      "total": 70,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-headline-2",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 9,
+            "findings": [
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 4 組"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "G、H、I 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 4 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "G、H、I 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 4 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "G、H、I 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 4 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 4 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "N",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex08-v2",
+      "title": "範例 08 頭條重複 · V2",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex09-v1",
+      "title": "範例 09 區塊太多 · V1",
+      "group": "範例",
+      "total": 69,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "N",
+          "ref": "inst-home-extra-0",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "更多國際",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "N、O、P、Q、R、S 連續 6 塊都是 P07"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 3 則(建議 4–8)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "O",
+          "ref": "inst-home-extra-1",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "更多國際",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "N、O、P、Q、R、S 連續 6 塊都是 P07"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 3 則(建議 4–8)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "P",
+          "ref": "inst-home-extra-2",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "更多國際",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "N、O、P、Q、R、S 連續 6 塊都是 P07"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 3 則(建議 4–8)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "Q",
+          "ref": "inst-home-extra-3",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "更多國際",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "N、O、P、Q、R、S 連續 6 塊都是 P07"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 3 則(建議 4–8)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "R",
+          "ref": "inst-home-extra-4",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "更多國際",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "N、O、P、Q、R、S 連續 6 塊都是 P07"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 3 則(建議 4–8)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "S",
+          "ref": "inst-home-extra-5",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "更多國際",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "warn",
+                "display": "3 則 ÷ 2 欄,餘 1"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "N、O、P、Q、R、S 連續 6 塊都是 P07"
+              },
+              {
+                "item": "用途則數",
+                "verdict": "warn",
+                "display": "section 3 則(建議 4–8)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex09-v2",
+      "title": "範例 09 區塊太多 · V2",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex10-v1",
+      "title": "範例 10 貪婪法組合改法 · V1",
+      "group": "範例",
+      "total": 74,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "標題行數",
+                "verdict": "fail",
+                "display": "疊字標題 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "末列不落單",
+                "verdict": "fail",
+                "display": "4 則 ÷ 3 欄,餘 1"
+              },
+              {
+                "item": "標題行數",
+                "verdict": "warn",
+                "display": "最多 3 行"
+              }
+            ]
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 0,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              },
+              {
+                "item": "同型不連續",
+                "verdict": "fail",
+                "display": "F、G、H 連續 3 塊都是 P09"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 5,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              },
+              {
+                "item": "放大型不相鄰",
+                "verdict": "warn",
+                "display": "相鄰的放大型 3 組"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 6,
+            "findings": [
+              {
+                "item": "輪播填滿",
+                "verdict": "warn",
+                "display": "4 則,一次顯示 6 張"
+              },
+              {
+                "item": "觸控目標",
+                "verdict": "fail",
+                "display": "最小觸控目標 37px(「更多 ›」)"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ex10-v2",
+      "title": "範例 10 貪婪法組合改法 · V2",
+      "group": "範例",
+      "total": 91,
+      "verdict": "fail",
+      "blocks": [
+        {
+          "code": "A",
+          "ref": "inst-home-headline",
+          "pattern": "P01 大圖疊字",
+          "heading": "頭條",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "B",
+          "ref": "inst-home-subheadline",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "焦點新聞",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "C",
+          "ref": "inst-home-flash",
+          "pattern": "P06 時間軸",
+          "heading": "即時",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "D",
+          "ref": "inst-home-popular",
+          "pattern": "P05 編號排行",
+          "heading": "熱門排行",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "E",
+          "ref": "inst-home-video-focus",
+          "pattern": "P12 橫式輪播",
+          "heading": "影音焦點",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "F",
+          "ref": "inst-home-world",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "國際",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "G",
+          "ref": "inst-home-politics",
+          "pattern": "P03 左圖右文",
+          "heading": "政治 / 兩岸",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "H",
+          "ref": "inst-home-finance",
+          "pattern": "P09 首 1 則放大,其餘純文字",
+          "heading": "財經",
+          "program": {
+            "score": 7,
+            "findings": [
+              {
+                "item": "欄底對齊",
+                "verdict": "fail",
+                "display": "右欄底部留白 161px(左 441px、右 280px,差 36%)"
+              }
+            ]
+          }
+        },
+        {
+          "code": "I",
+          "ref": "inst-home-society",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "社會 / 生活",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "J",
+          "ref": "inst-home-feature",
+          "pattern": "P14 寬幅專題",
+          "heading": "專題",
+          "program": {
+            "score": 9,
+            "findings": [
+              {
+                "item": "填充率",
+                "verdict": "warn",
+                "display": "文字區 ÷ 圖高 = 48%"
+              }
+            ]
+          }
+        },
+        {
+          "code": "K",
+          "ref": "inst-home-opinion",
+          "pattern": "P17 作者卡",
+          "heading": "觀點評論",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "L",
+          "ref": "inst-home-tech",
+          "pattern": "P07 均分圖卡網格",
+          "heading": "科技 / 文化",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        },
+        {
+          "code": "M",
+          "ref": "inst-home-shorts",
+          "pattern": "P13 方形輪播",
+          "heading": "短影音",
+          "program": {
+            "score": 10,
+            "findings": []
+          }
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    [
+      "ex01-v1",
+      "ex01-v2",
+      "範例 01:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex02-v1",
+      "ex02-v2",
+      "範例 02:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex03-v1",
+      "ex03-v2",
+      "範例 03:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex04-v1",
+      "ex04-v2",
+      "範例 04:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex05-v1",
+      "ex05-v2",
+      "範例 05:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex06-v1",
+      "ex06-v2",
+      "範例 06:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex07-v1",
+      "ex07-v2",
+      "範例 07:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex08-v1",
+      "ex08-v2",
+      "範例 08:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex09-v1",
+      "ex09-v2",
+      "範例 09:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "ex10-v1",
+      "ex10-v2",
+      "範例 10:V1 改善前 vs V2 改善後"
+    ],
+    [
+      "gen-default",
+      "gen-no-sidebar",
+      "產生結果:有側欄(bs5) vs 無側欄(md3)"
+    ],
+    [
+      "gen-default",
+      "gen-tw4-beam",
+      "產生結果:bs5 貪婪法 vs tw4 集束搜尋"
+    ],
+    [
+      "ex10-v1",
+      "gen-default",
+      "手排首頁(範例 10 的 V1) vs 產生器的預設結果"
+    ]
+  ]
+}

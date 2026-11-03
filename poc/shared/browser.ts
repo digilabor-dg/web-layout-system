@@ -12,7 +12,13 @@ const require = createRequire(import.meta.url);
 export interface PwPage {
   goto(url: string): Promise<unknown>;
   evaluate<T, A = undefined>(fn: (arg: A) => T | Promise<T>, arg?: A): Promise<T>;
-  screenshot(opts: { path: string; fullPage: boolean; type: 'jpeg'; quality: number }): Promise<unknown>;
+  screenshot(opts: {
+    path: string;
+    fullPage: boolean;
+    type: 'jpeg';
+    quality: number;
+    clip?: { x: number; y: number; width: number; height: number };
+  }): Promise<unknown>;
   addInitScript(script: string): Promise<void>;
   close(): Promise<void>;
 }

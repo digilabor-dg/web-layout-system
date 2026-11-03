@@ -133,6 +133,12 @@ async function main() {
     const checks = judge(c, v1, v2);
     const pass = checks.every((x) => x.pass);
     results.push({ case: c, v1, v2, checks, pass });
+    // 每版的完整評估另存,讓反饋(poc/feedback)可以對照
+    if (!jsonOnly) {
+      mkdirSync(join(HERE, 'reports'), { recursive: true });
+      writeFileSync(join(HERE, 'reports', `${c.id}-v1.json`), JSON.stringify(v1.evaluation, null, 2) + '\n');
+      writeFileSync(join(HERE, 'reports', `${c.id}-v2.json`), JSON.stringify(v2.evaluation, null, 2) + '\n');
+    }
     console.log(`${pass ? '✅' : '❌'} ${c.id} ${c.title}:${v1.evaluation.total} → ${v2.evaluation.total}  ${checks.filter((x) => !x.pass).map((x) => `[${x.name} ${x.detail}]`).join(' ')}`);
   }
   // 【第三步】報表(只在完整跑、且不是單一範例時寫)
