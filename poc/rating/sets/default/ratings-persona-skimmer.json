@@ -1,0 +1,33 @@
+{
+  "set": "default",
+  "rater": "persona-skimmer",
+  "source": "ai-persona",
+  "persona": "只想快速掃標題的讀者(使用者)",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 5, "comment": "標題壓在圖上還算清楚,但電腦版一大片圖只換到一則標題" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 4, "comment": "才三則,手機第三張落單、電腦右邊空一格,標題還折兩行" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 9, "comment": "純文字一行一則,紅線好跟,一眼掃完四則,最對我胃口" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 3, "comment": "說是排行卻看不到名次數字,方圖又大,五則就佔滿一屏" },
+    { "ref": "inst-gen-video", "code": "E", "score": 6, "comment": "電腦一排四則好掃;手機一次只露一則,要一直往旁邊滑" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "comment": "電腦版第二排只剩兩張,右半邊空著;標題幾乎都折兩行" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "標題靠左一條條好掃,但電腦版右側大片留白,圖把每列撐高" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 4, "comment": "又是同一套圖卡網格,第二排一樣空半邊,看到這裡已經膩了" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 3, "comment": "整塊只有一個標題,大圖佔滿,電腦版右下還空一大片" },
+    { "ref": "inst-gen-society", "code": "J", "score": 5, "comment": "跟政治區一模一樣的排法,電腦版標題右邊空蕩蕩" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 2, "comment": "電腦版一張大方圖配一行標題,四則要滑快兩屏,太浪費" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 6, "comment": "電腦版排滿、標題一行好讀,但圖很大,又是第四組圖卡網格" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 5, "comment": "方圖偏高,一排才四則;手機標題折兩行,還要橫滑找" }
+  ],
+  "ab": [
+    { "pair": 1, "winner": "A", "reason": "政治區用大圖加標題列表,比一排排小圖拉長好掃,整頁也比較短" },
+    { "pair": 2, "winner": "B", "reason": "焦點區短很多,能早點滑到即時和排行;雖然第二排落單一張有點空" },
+    { "pair": 3, "winner": "B", "reason": "頭條標題兩行就講完;A 被截成「…」,看不出在講什麼" },
+    { "pair": 4, "winner": "A", "reason": "短影音一排排滿、標題一行;B 圖縮小後右邊空一大塊,標題還折行" },
+    { "pair": 5, "winner": "B", "reason": "排行改成純文字加名次,一眼掃完十則;A 每則配大方圖拉超長" },
+    { "pair": 6, "winner": "tie", "reason": "幾乎一樣,B 區塊間距稍緊一點點,掃標題感覺沒差" },
+    { "pair": 7, "winner": "A", "reason": "短影音一排填滿、標題多幾則;B 右半邊空著像沒排完" },
+    { "pair": 8, "winner": "A", "reason": "B 中間多塞一張滿版大圖只配一行標題,把後面的新聞推很遠" },
+    { "pair": 9, "winner": "B", "reason": "A 底下連續六塊一樣的「更多國際」大圖卡,滑不完又看膩" },
+    { "pair": 10, "winner": "B", "reason": "政治區用大圖加列表比較緊湊,整頁短很多;A 小圖列表拉太長" }
+  ]
+}
