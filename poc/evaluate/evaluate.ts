@@ -31,8 +31,10 @@ export interface Finding {
   item: string;
   layer: 2 | 3;
   facet: Facet;
-  /** 對象:版位代號、section id 或「整頁」 */
+  /** 對象:版位代號、section id 或「整頁」(給人看;區塊搬動後代號會重排) */
   target: string;
+  /** 穩定的參照:區塊用實例 id、section 用 section id;比對 V1、V2 時用它 */
+  ref: string;
   verdict: Verdict;
   /** 最差那次的寬度;與寬度無關的項目為 null */
   width: number | null;
@@ -73,9 +75,9 @@ export function jsonFindings(world: World): Finding[] {
   const byCode = new Map(blocks.map((b) => [b.code, b]));
   const byInstance = new Map(blocks.map((b) => [b.instance.id, b]));
   const raw: Finding[] = [];
-  // 小工具:記一筆判定
-  const add = (f: Omit<Finding, 'suggestion'> & { suggestion?: string }) =>
-    raw.push({ ...f, suggestion: f.verdict === 'pass' ? '' : (f.suggestion ?? '') });
+  // 小工具:記一筆判定;ref 沒給時由 target 推回實例 id(代號 → 實例,section 與整頁照原樣)
+  const add = (f: Omit<Finding, 'suggestion' | 'ref'> & { suggestion?: string; ref?: string }) =>
+    raw.push({ ...f, ref: f.ref ?? refOf(world, f.target), suggestion: f.verdict === 'pass' ? '' : (f.suggestion ?? '') });
 
   // 【第一步】逐一寬度估算每一塊
   for (const { width, height } of profile.testViewports) {
@@ -293,11 +295,25 @@ export function jsonFindings(world: World): Finding[] {
   return mergeWorst(raw);
 }
 
-/** 依「項目 + 對象」取最差的那次(同樣差時取第一次出現的寬度) */
+/** 由顯示用的對象推回穩定參照:「F、G、H」→ 三個實例 id;「A(疊字)」→ 實例 id + #overlay */
+export function refOf(world: World, target: string): string {
+  const codeToId = new Map(world.blocks.map((b) => [b.code, b.instance.id]));
+  return target
+    .split(/[、;]/)
+    .map((t) => {
+      const overlay = t.endsWith('(疊字)');
+      const code = overlay ? t.slice(0, -4) : t;
+      const id = codeToId.get(code);
+      return id ? `${id}${overlay ? '#overlay' : ''}` : t;
+    })
+    .join('+');
+}
+
+/** 依「項目 + 參照」取最差的那次(同樣差時取第一次出現的寬度) */
 export function mergeWorst(raw: Finding[]): Finding[] {
   const merged = new Map<string, Finding>();
   for (const f of raw) {
-    const key = `${f.item}|${f.target}`;
+    const key = `${f.item}|${f.ref}`;
     const prev = merged.get(key);
     if (!prev || RANK[f.verdict] > RANK[prev.verdict]) merged.set(key, f);
   }

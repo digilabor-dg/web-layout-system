@@ -31,13 +31,14 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["item", "layer", "facet", "target", "verdict", "width", "value", "display", "suggestion"],
+        "required": ["item", "layer", "facet", "target", "ref", "verdict", "width", "value", "display", "suggestion"],
         "additionalProperties": false,
         "properties": {
           "item": { "type": "string" },
           "layer": { "enum": [2, 3] },
           "facet": { "enum": ["比例", "對齊", "完整", "密度", "節奏", "層級", "文字", "可用性"] },
           "target": { "type": "string" },
+          "ref": { "type": "string" },
           "verdict": { "$ref": "#/$defs/verdict" },
           "width": { "oneOf": [{ "enum": [360, 390, 768, 1024, 1280, 1440] }, { "type": "null" }] },
           "value": { "type": "number" },

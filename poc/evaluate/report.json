@@ -9,7 +9,8 @@
       "verdict": "fail",
       "value": 0.11135199054000787,
       "display": "兩欄高差 11%(左 376px、右 334px)",
-      "suggestion": "F 的右欄較短 11%;調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型"
+      "suggestion": "F 的右欄較短 11%;調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型",
+      "ref": "inst-home-world"
     },
     {
       "item": "欄底對齊",
@@ -20,7 +21,8 @@
       "verdict": "fail",
       "value": 0.11135199054000787,
       "display": "兩欄高差 11%(左 376px、右 334px)",
-      "suggestion": "G 的右欄較短 11%;調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型"
+      "suggestion": "G 的右欄較短 11%;調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型",
+      "ref": "inst-home-politics"
     },
     {
       "item": "欄底對齊",
@@ -31,7 +33,8 @@
       "verdict": "fail",
       "value": 0.20709776162234547,
       "display": "兩欄高差 21%(左 387px、右 307px)",
-      "suggestion": "H 的右欄較短 21%;調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型"
+      "suggestion": "H 的右欄較短 21%;調整左右比例(例如 8:4 改 7:5)、調整則數,或換成不怕高度差的型",
+      "ref": "inst-home-finance"
     },
     {
       "item": "欄高",
@@ -42,7 +45,8 @@
       "verdict": "fail",
       "value": 0.4407936761418078,
       "display": "2783px / 1556px,差 44%",
-      "suggestion": "section sections 的左欄(F、G、H、I、J)比另一欄高 44%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊"
+      "suggestion": "section sections 的左欄(F、G、H、I、J)比另一欄高 44%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊",
+      "ref": "section sections"
     },
     {
       "item": "欄高",
@@ -53,7 +57,8 @@
       "verdict": "fail",
       "value": 0.13073676132003062,
       "display": "965px / 839px,差 13%",
-      "suggestion": "section top 的左欄(A、B)比另一欄高 13%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊"
+      "suggestion": "section top 的左欄(A、B)比另一欄高 13%;把較高那欄的一塊移到另一欄,或在較矮的欄加一塊",
+      "ref": "section top"
     },
     {
       "item": "末列不落單",
@@ -64,7 +69,8 @@
       "verdict": "fail",
       "value": 1,
       "display": "4 則 ÷ 3 欄,餘 1",
-      "suggestion": "B 在 768px 為 3 欄、4 則;則數改成 3 的倍數,或調整這類裝置的欄數"
+      "suggestion": "B 在 768px 為 3 欄、4 則;則數改成 3 的倍數,或調整這類裝置的欄數",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "同型不連續",
@@ -75,7 +81,8 @@
       "verdict": "fail",
       "value": 3,
       "display": "F、G、H 連續 3 塊都是 P09",
-      "suggestion": "F、G、H 連續使用 P09;把中間那塊換成同分組(news-combo)的其他型,或和其他區塊交錯排列"
+      "suggestion": "F、G、H 連續使用 P09;把中間那塊換成同分組(news-combo)的其他型,或和其他區塊交錯排列",
+      "ref": "inst-home-world+inst-home-politics+inst-home-finance"
     },
     {
       "item": "標題行數",
@@ -86,7 +93,8 @@
       "verdict": "fail",
       "value": 3,
       "display": "疊字標題 3 行",
-      "suggestion": "A 的疊字標題在 360px 估 3 行,超過上限 2 行;標題縮到約 22 字以內,或手機改用 P02 大圖下文"
+      "suggestion": "A 的疊字標題在 360px 估 3 行,超過上限 2 行;標題縮到約 22 字以內,或手機改用 P02 大圖下文",
+      "ref": "inst-home-headline#overlay"
     },
     {
       "item": "觸控目標",
@@ -97,7 +105,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "C 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "C 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-flash"
     },
     {
       "item": "觸控目標",
@@ -108,7 +117,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "D 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "D 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-popular"
     },
     {
       "item": "觸控目標",
@@ -119,7 +129,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "E 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "E 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "觸控目標",
@@ -130,7 +141,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "F 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "F 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-world"
     },
     {
       "item": "觸控目標",
@@ -141,7 +153,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "G 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "G 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-politics"
     },
     {
       "item": "觸控目標",
@@ -152,7 +165,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "H 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "H 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-finance"
     },
     {
       "item": "觸控目標",
@@ -163,7 +177,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "I 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "I 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-feature"
     },
     {
       "item": "觸控目標",
@@ -174,7 +189,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "J 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "J 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-society"
     },
     {
       "item": "觸控目標",
@@ -185,7 +201,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "K 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "K 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "觸控目標",
@@ -196,7 +213,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "L 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "L 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-tech"
     },
     {
       "item": "觸控目標",
@@ -207,7 +225,8 @@
       "value": 37,
       "verdict": "fail",
       "display": "最小觸控目標 37px(「更多 ›」)",
-      "suggestion": "M 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)"
+      "suggestion": "M 的「更多 ›」只有 37px;觸控目標至少 44×44px(例如區塊標題列加高到 44px,或連結加內距)",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "填充率",
@@ -218,7 +237,8 @@
       "verdict": "warn",
       "value": 0.47787610619469034,
       "display": "文字區 ÷ 圖高 = 48%",
-      "suggestion": "I 的文字只佔圖高 48%(右邊太空);加長摘要、加 META 或相關連結,或把左右比例改成 6:6"
+      "suggestion": "I 的文字只佔圖高 48%(右邊太空);加長摘要、加 META 或相關連結,或把左右比例改成 6:6",
+      "ref": "inst-home-feature"
     },
     {
       "item": "輪播填滿",
@@ -230,7 +250,8 @@
       "verdict": "warn",
       "value": 4,
       "display": "4 則,一次顯示 6 張",
-      "suggestion": "M 只有 4 則,少於 1024px 一次顯示的 6 張;增加則數,或減少一次顯示的張數"
+      "suggestion": "M 只有 4 則,少於 1024px 一次顯示的 6 張;增加則數,或減少一次顯示的張數",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "放大型不相鄰",
@@ -241,7 +262,8 @@
       "verdict": "warn",
       "value": 3,
       "display": "相鄰的放大型 3 組",
-      "suggestion": "相鄰的放大型會搶重點;把其中一塊換成不放大的型(例如 P07、P03)"
+      "suggestion": "相鄰的放大型會搶重點;把其中一塊換成不放大的型(例如 P07、P03)",
+      "ref": "inst-home-world+inst-home-politics+inst-home-politics+inst-home-finance+inst-home-finance+inst-home-feature"
     },
     {
       "item": "標題行數",
@@ -252,7 +274,8 @@
       "verdict": "warn",
       "value": 3,
       "display": "最多 3 行",
-      "suggestion": "B 在 1280px 有標題 3 行;限制字數、加寬欄或降低文字量"
+      "suggestion": "B 在 1280px 有標題 3 行;限制字數、加寬欄或降低文字量",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "圖片比例",
@@ -263,7 +286,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "A 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "A 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-headline"
     },
     {
       "item": "圖片比例",
@@ -274,7 +298,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "B 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "B 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "圖片比例",
@@ -285,7 +310,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.01%",
-      "suggestion": "E 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "E 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "圖片比例",
@@ -296,7 +322,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "F 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "F 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-world"
     },
     {
       "item": "圖片比例",
@@ -307,7 +334,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "G 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "G 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-politics"
     },
     {
       "item": "圖片比例",
@@ -318,7 +346,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "H 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "H 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-finance"
     },
     {
       "item": "圖片比例",
@@ -329,7 +358,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "I 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "I 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-feature"
     },
     {
       "item": "圖片比例",
@@ -340,7 +370,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "J 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "J 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-society"
     },
     {
       "item": "圖片比例",
@@ -351,7 +382,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "K 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "K 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "圖片比例",
@@ -362,7 +394,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "L 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "L 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-tech"
     },
     {
       "item": "圖片比例",
@@ -373,7 +406,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "顯示比例誤差 0.00%",
-      "suggestion": "M 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio"
+      "suggestion": "M 的圖片顯示比例誤差超過 1%;後端依主比例裁圖,前端用 aspect-ratio",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "同列對齊",
@@ -384,7 +418,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "同列頂端差 0px、高度差 0px",
-      "suggestion": "B 同列卡片對不齊;統一文字量或限制標題行數"
+      "suggestion": "B 同列卡片對不齊;統一文字量或限制標題行數",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "同列對齊",
@@ -395,7 +430,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "同列頂端差 0px、高度差 0px",
-      "suggestion": "E 同列卡片對不齊;統一文字量或限制標題行數"
+      "suggestion": "E 同列卡片對不齊;統一文字量或限制標題行數",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "同列對齊",
@@ -406,7 +442,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "同列頂端差 0px、高度差 0px",
-      "suggestion": "J 同列卡片對不齊;統一文字量或限制標題行數"
+      "suggestion": "J 同列卡片對不齊;統一文字量或限制標題行數",
+      "ref": "inst-home-society"
     },
     {
       "item": "同列對齊",
@@ -417,7 +454,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "同列頂端差 0px、高度差 0px",
-      "suggestion": "K 同列卡片對不齊;統一文字量或限制標題行數"
+      "suggestion": "K 同列卡片對不齊;統一文字量或限制標題行數",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "同列對齊",
@@ -428,7 +466,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "同列頂端差 0px、高度差 0px",
-      "suggestion": "L 同列卡片對不齊;統一文字量或限制標題行數"
+      "suggestion": "L 同列卡片對不齊;統一文字量或限制標題行數",
+      "ref": "inst-home-tech"
     },
     {
       "item": "同列對齊",
@@ -439,7 +478,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "同列頂端差 0px、高度差 0px",
-      "suggestion": "M 同列卡片對不齊;統一文字量或限制標題行數"
+      "suggestion": "M 同列卡片對不齊;統一文字量或限制標題行數",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "欄寬照格線",
@@ -450,7 +490,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "欄寬比 2.000(設計 2.000),差 0.0%",
-      "suggestion": "F 的欄寬沒照格線;檢查欄距與固定寬度"
+      "suggestion": "F 的欄寬沒照格線;檢查欄距與固定寬度",
+      "ref": "inst-home-world"
     },
     {
       "item": "欄寬照格線",
@@ -461,7 +502,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "欄寬比 2.000(設計 2.000),差 0.0%",
-      "suggestion": "G 的欄寬沒照格線;檢查欄距與固定寬度"
+      "suggestion": "G 的欄寬沒照格線;檢查欄距與固定寬度",
+      "ref": "inst-home-politics"
     },
     {
       "item": "欄寬照格線",
@@ -472,7 +514,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "欄寬比 2.000(設計 2.000),差 0.0%",
-      "suggestion": "H 的欄寬沒照格線;檢查欄距與固定寬度"
+      "suggestion": "H 的欄寬沒照格線;檢查欄距與固定寬度",
+      "ref": "inst-home-finance"
     },
     {
       "item": "欄寬照格線",
@@ -483,7 +526,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "欄寬比 1.400(設計 1.400),差 0.0%",
-      "suggestion": "I 的欄寬沒照格線;檢查欄距與固定寬度"
+      "suggestion": "I 的欄寬沒照格線;檢查欄距與固定寬度",
+      "ref": "inst-home-feature"
     },
     {
       "item": "欄寬照格線",
@@ -494,7 +538,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "欄寬比 2.000(設計 2.000),差 0.0%",
-      "suggestion": "section sections 的欄寬沒照格線;檢查欄距與固定寬度"
+      "suggestion": "section sections 的欄寬沒照格線;檢查欄距與固定寬度",
+      "ref": "section sections"
     },
     {
       "item": "欄寬照格線",
@@ -505,7 +550,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "欄寬比 2.000(設計 2.000),差 0.0%",
-      "suggestion": "section top 的欄寬沒照格線;檢查欄距與固定寬度"
+      "suggestion": "section top 的欄寬沒照格線;檢查欄距與固定寬度",
+      "ref": "section top"
     },
     {
       "item": "末列不落單",
@@ -516,7 +562,8 @@
       "verdict": "pass",
       "value": 0,
       "display": "6 則 ÷ 2 欄,餘 0",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-society"
     },
     {
       "item": "末列不落單",
@@ -527,7 +574,8 @@
       "verdict": "pass",
       "value": 0,
       "display": "4 則 ÷ 2 欄,餘 0",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "末列不落單",
@@ -538,7 +586,8 @@
       "verdict": "pass",
       "value": 0,
       "display": "6 則 ÷ 2 欄,餘 0",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-tech"
     },
     {
       "item": "用途則數",
@@ -549,7 +598,8 @@
       "verdict": "pass",
       "value": 1,
       "display": "headline 1 則(建議 1–1)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-headline"
     },
     {
       "item": "用途則數",
@@ -560,7 +610,8 @@
       "verdict": "pass",
       "value": 4,
       "display": "subheadline 4 則(建議 3–6)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "用途則數",
@@ -571,7 +622,8 @@
       "verdict": "pass",
       "value": 4,
       "display": "flash 4 則(建議 3–5)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-flash"
     },
     {
       "item": "用途則數",
@@ -582,7 +634,8 @@
       "verdict": "pass",
       "value": 8,
       "display": "popular 8 則(建議 5–10)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-popular"
     },
     {
       "item": "用途則數",
@@ -593,7 +646,8 @@
       "verdict": "pass",
       "value": 4,
       "display": "video 4 則(建議 3–6)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "用途則數",
@@ -604,7 +658,8 @@
       "verdict": "pass",
       "value": 6,
       "display": "section 6 則(建議 4–8)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-world"
     },
     {
       "item": "用途則數",
@@ -615,7 +670,8 @@
       "verdict": "pass",
       "value": 6,
       "display": "section 6 則(建議 4–8)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-politics"
     },
     {
       "item": "用途則數",
@@ -626,7 +682,8 @@
       "verdict": "pass",
       "value": 6,
       "display": "section 6 則(建議 4–8)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-finance"
     },
     {
       "item": "用途則數",
@@ -637,7 +694,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "feature 2 則(建議 1–2)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-feature"
     },
     {
       "item": "用途則數",
@@ -648,7 +706,8 @@
       "verdict": "pass",
       "value": 6,
       "display": "section 6 則(建議 4–8)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-society"
     },
     {
       "item": "用途則數",
@@ -659,7 +718,8 @@
       "verdict": "pass",
       "value": 4,
       "display": "opinion 4 則(建議 4–6)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "用途則數",
@@ -670,7 +730,8 @@
       "verdict": "pass",
       "value": 6,
       "display": "section 6 則(建議 4–8)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-tech"
     },
     {
       "item": "用途則數",
@@ -681,7 +742,8 @@
       "verdict": "pass",
       "value": 4,
       "display": "video 4 則(建議 3–6)",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "區塊長度",
@@ -692,7 +754,8 @@
       "verdict": "pass",
       "value": 0.3366666666666667,
       "display": "0.34 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-headline"
     },
     {
       "item": "區塊長度",
@@ -703,7 +766,8 @@
       "verdict": "pass",
       "value": 0.6158333333333332,
       "display": "0.62 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "區塊長度",
@@ -714,7 +778,8 @@
       "verdict": "pass",
       "value": 0.27875,
       "display": "0.28 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-flash"
     },
     {
       "item": "區塊長度",
@@ -725,7 +790,8 @@
       "verdict": "pass",
       "value": 0.5275,
       "display": "0.53 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-popular"
     },
     {
       "item": "區塊長度",
@@ -736,7 +802,8 @@
       "verdict": "pass",
       "value": 0.3396875,
       "display": "0.34 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "區塊長度",
@@ -747,7 +814,8 @@
       "verdict": "pass",
       "value": 0.7404166666666667,
       "display": "0.74 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-world"
     },
     {
       "item": "區塊長度",
@@ -758,7 +826,8 @@
       "verdict": "pass",
       "value": 0.7404166666666667,
       "display": "0.74 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-politics"
     },
     {
       "item": "區塊長度",
@@ -769,7 +838,8 @@
       "verdict": "pass",
       "value": 0.7404166666666667,
       "display": "0.74 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-finance"
     },
     {
       "item": "區塊長度",
@@ -780,7 +850,8 @@
       "verdict": "pass",
       "value": 0.8783333333333334,
       "display": "0.88 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-feature"
     },
     {
       "item": "區塊長度",
@@ -791,7 +862,8 @@
       "verdict": "pass",
       "value": 0.88,
       "display": "0.88 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-society"
     },
     {
       "item": "區塊長度",
@@ -802,7 +874,8 @@
       "verdict": "pass",
       "value": 0.685,
       "display": "0.69 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "區塊長度",
@@ -813,7 +886,8 @@
       "verdict": "pass",
       "value": 0.84625,
       "display": "0.85 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-tech"
     },
     {
       "item": "區塊長度",
@@ -824,7 +898,8 @@
       "verdict": "pass",
       "value": 0.32477272727272727,
       "display": "0.32 屏",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "區塊數",
@@ -835,7 +910,8 @@
       "verdict": "pass",
       "value": 13,
       "display": "13 塊",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "整頁"
     },
     {
       "item": "輪播填滿",
@@ -847,7 +923,8 @@
       "verdict": "pass",
       "value": 4,
       "display": "4 則,一次顯示 1.2 張",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "整頁則數",
@@ -858,7 +935,8 @@
       "verdict": "pass",
       "value": 61,
       "display": "61 則",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "整頁"
     },
     {
       "item": "列距",
@@ -869,7 +947,8 @@
       "verdict": "pass",
       "value": 3,
       "display": "24px ÷ 8px = 3.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-subheadline"
     },
     {
       "item": "列距",
@@ -880,7 +959,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "16px ÷ 8px = 2.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "列距",
@@ -891,7 +971,8 @@
       "verdict": "pass",
       "value": 3,
       "display": "24px ÷ 8px = 3.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-society"
     },
     {
       "item": "列距",
@@ -902,7 +983,8 @@
       "verdict": "pass",
       "value": 3,
       "display": "24px ÷ 8px = 3.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "列距",
@@ -913,7 +995,8 @@
       "verdict": "pass",
       "value": 3,
       "display": "24px ÷ 8px = 3.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-tech"
     },
     {
       "item": "列距",
@@ -924,7 +1007,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "16px ÷ 8px = 2.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "間距節奏",
@@ -935,7 +1019,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "區塊間距 32px ÷ 則間距 16px = 2.0 倍",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "整頁"
     },
     {
       "item": "手機首屏",
@@ -946,7 +1031,8 @@
       "verdict": "pass",
       "value": 0.2954186413902054,
       "display": "頭條圖佔首屏 30%",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-headline"
     },
     {
       "item": "單塊不重複",
@@ -957,7 +1043,8 @@
       "verdict": "pass",
       "value": 1,
       "display": "flash 1 塊",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "flash"
     },
     {
       "item": "單塊不重複",
@@ -968,7 +1055,8 @@
       "verdict": "pass",
       "value": 1,
       "display": "headline 1 塊",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "headline"
     },
     {
       "item": "單塊不重複",
@@ -979,7 +1067,8 @@
       "verdict": "pass",
       "value": 1,
       "display": "popular 1 塊",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "popular"
     },
     {
       "item": "標題行數",
@@ -990,7 +1079,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-flash"
     },
     {
       "item": "標題行數",
@@ -1001,7 +1091,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-popular"
     },
     {
       "item": "標題行數",
@@ -1012,7 +1103,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-video-focus"
     },
     {
       "item": "標題行數",
@@ -1023,7 +1115,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-world"
     },
     {
       "item": "標題行數",
@@ -1034,7 +1127,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-politics"
     },
     {
       "item": "標題行數",
@@ -1045,7 +1139,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-finance"
     },
     {
       "item": "標題行數",
@@ -1056,7 +1151,8 @@
       "verdict": "pass",
       "value": 1,
       "display": "最多 1 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-feature"
     },
     {
       "item": "標題行數",
@@ -1067,7 +1163,8 @@
       "verdict": "pass",
       "value": 3,
       "display": "最多 3 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-society"
     },
     {
       "item": "標題行數",
@@ -1078,7 +1175,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-opinion"
     },
     {
       "item": "標題行數",
@@ -1089,7 +1187,8 @@
       "verdict": "pass",
       "value": 3,
       "display": "最多 3 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-tech"
     },
     {
       "item": "標題行數",
@@ -1100,7 +1199,8 @@
       "verdict": "pass",
       "value": 2,
       "display": "最多 2 行",
-      "suggestion": ""
+      "suggestion": "",
+      "ref": "inst-home-shorts"
     },
     {
       "item": "水平捲動",
@@ -1111,7 +1211,8 @@
       "value": 0,
       "verdict": "pass",
       "display": "沒有水平捲動",
-      "suggestion": "移除固定的最小寬度,讓內容不超出視窗"
+      "suggestion": "移除固定的最小寬度,讓內容不超出視窗",
+      "ref": "整頁"
     }
   ],
   "scores": {

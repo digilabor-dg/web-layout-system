@@ -1,0 +1,153 @@
+{
+  "id": "10",
+  "title": "貪婪法組合改法",
+  "problem": "範例首頁原樣(總分 74):同時有同型連續、末列落單、疊字標題過長、輪播留白、欄高失衡、觸控目標太小等問題。",
+  "fixNote": "由 greedy.ts 從 8 個候選改法中依序選出 5 個:1. G 換 P03、專題移到社會之後(範例 01)(79) 2. B 改 6 則、電腦 3 欄(範例 02)(83) 3. 頭條標題縮短到 17 字(範例 03)(86) 4. 區塊標題列加高到 48px(範例 06)(90) 5. 短影音電腦一次 4 張(範例 04)(91)。沒選上的候選不是不合法,就是會產生新的不合格,或沒有提升總分。",
+  "targets": [
+    "標題行數",
+    "末列不落單",
+    "同型不連續",
+    "觸控目標"
+  ],
+  "shotWidth": 1280,
+  "v1": [],
+  "fix": [
+    {
+      "op": "add",
+      "path": "/block-templates/tpl-politics-side",
+      "value": {
+        "type": "BlockTemplate",
+        "id": "tpl-politics-side",
+        "name": "政治區塊(左圖右文)",
+        "role": "section",
+        "contentType": {
+          "ref": "news",
+          "category": "politics"
+        },
+        "pattern": "P03",
+        "itemCount": 6,
+        "imageRole": "main",
+        "selection": {
+          "mode": "mixed",
+          "pinned": 1,
+          "fill": {
+            "source": "latest",
+            "category": "politics",
+            "withinHours": 48
+          }
+        },
+        "responsive": null,
+        "heading": {
+          "title": "政治 / 兩岸",
+          "moreLink": "/politics"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/block-instances/inst-home-politics/template",
+      "value": "tpl-politics-side"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/home/sections/2/columns/0/blocks",
+      "value": [
+        "inst-home-world",
+        "inst-home-politics",
+        "inst-home-finance",
+        "inst-home-society",
+        "inst-home-feature"
+      ]
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-sub-5",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-sub-5",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:公園綠地增加,週末親子活動多",
+        "url": "/news/ex-sub-5",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-sub-5_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-sub-5_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-sub-6",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-sub-6",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:老屋改造計畫第二期開放申請",
+        "url": "/news/ex-sub-6",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-sub-6_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-sub-6_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-subheadline/items/-",
+      "value": "ex-sub-5"
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-subheadline/items/-",
+      "value": "ex-sub-6"
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-subheadline/itemCount",
+      "value": 6
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-subheadline/responsive",
+      "value": null
+    },
+    {
+      "op": "replace",
+      "path": "/content-items/art-20261103-0001/title",
+      "value": "示意:城市韌性計畫首波工程年底前動工"
+    },
+    {
+      "op": "replace",
+      "path": "/site-profile/site-main/spacing/blockHeadingHeight",
+      "value": 48
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-shorts/responsive",
+      "value": {
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      }
+    }
+  ]
+}

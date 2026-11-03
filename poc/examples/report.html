@@ -1,0 +1,463 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>範例對照</title><style>
+:root{--bg:#fff;--fg:#202124;--muted:#5f6368;--line:#e0e0e0;--card:#f8f9fa;--good:#0a8a3a;--mid:#c26a00;--bad:#d4311f;--na:#9aa0a6;--track:#e8eaed}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f2023;--fg:#e8eaed;--muted:#9aa0a6;--line:#3c4043;--card:#28292c;--good:#3ccf72;--mid:#ffa94d;--bad:#ff6b5e;--na:#80868b;--track:#3c4043}}
+:root[data-theme="dark"]{--bg:#1f2023;--fg:#e8eaed;--muted:#9aa0a6;--line:#3c4043;--card:#28292c;--good:#3ccf72;--mid:#ffa94d;--bad:#ff6b5e;--na:#80868b;--track:#3c4043}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,'Noto Sans TC',sans-serif}
+main{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:18px;margin:32px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+.gauges{display:flex;flex-wrap:wrap;gap:12px 20px;justify-content:center;margin:16px 0}
+.gauge{margin:0;position:relative;width:var(--size);text-align:center}
+.gauge svg{width:var(--size);height:var(--size)}
+.gauge .track{fill:none;stroke:var(--track);stroke-width:8}
+.gauge .arc{fill:none;stroke-width:8;stroke-linecap:round}
+.gauge.good .arc{stroke:var(--good)}.gauge.mid .arc{stroke:var(--mid)}.gauge.bad .arc{stroke:var(--bad)}
+.gauge .num{position:absolute;left:0;right:0;top:calc(var(--size) / 2 - 0.75em);font-size:calc(var(--size) * 0.28);font-weight:600}
+.gauge.good .num{color:var(--good)}.gauge.mid .num{color:var(--mid)}.gauge.bad .num{color:var(--bad)}.gauge.na .num{color:var(--na)}
+.gauge figcaption{font-size:13px;color:var(--muted)}
+.verdict{text-align:center;font-weight:600;margin:0}
+ul.audits{list-style:none;margin:0;padding:0}
+.audit{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.audit .icon{flex:0 0 18px;font-size:13px;line-height:24px}
+.audit.fail .icon{color:var(--bad)}.audit.warn .icon{color:var(--mid)}.audit.pass .icon{color:var(--good)}
+.audit .head{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.audit .target,.audit .w{color:var(--muted);font-size:13px}
+.audit .val{font-size:14px}.audit .sug{font-size:14px;color:var(--muted);margin-top:2px}
+.targets{list-style:none;margin:4px 0 0;padding:0;font-size:14px}.targets li{padding:2px 0}
+.targets li.fail .target{color:var(--bad)}.targets li.warn .target{color:var(--mid)}
+.tag{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--muted)}
+details{margin-top:8px}summary{cursor:pointer;color:var(--muted)}
+.shots{display:flex;gap:16px;flex-wrap:wrap}.shots figure{margin:0;flex:1 1 260px}.shots img{width:100%;border:1px solid var(--line)}
+.shots figcaption{font-size:13px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
+.scroll{overflow-x:auto}
+
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media (max-width:700px){.pair{grid-template-columns:1fr}}
+.ver h3{font-size:15px;margin:8px 0 0;text-align:center}.ver .gauges{gap:6px 10px}
+.case{margin-top:40px}.badge{font-size:12px;border-radius:10px;padding:2px 8px;vertical-align:middle}
+.badge.ok{background:var(--good);color:#fff}.badge.ng{background:var(--bad);color:#fff}
+td.fail{color:var(--bad)}td.warn{color:var(--mid)}td.pass{color:var(--good)}
+</style></head><body><main><h1>範例:V1 改善前 → V2 改善後</h1>
+<p class="sub">10 / 10 個範例通過驗收。每個範例以 data/ 為基礎,V1 製造(或保留)一種問題,V2 只用規格允許的改法修正;兩版都跑第 1 層檢查與完整評估(JSON 估算 + 渲染量測)。</p>
+<div class="scroll"><table><thead><tr><th>#</th><th>範例</th><th>總分 V1 → V2</th><th>驗收</th></tr></thead><tbody><tr><td><a href="#c01">01</a></td><td>同型連續與放大型相鄰</td><td>74 → <b>79</b></td><td>✅</td></tr><tr><td><a href="#c02">02</a></td><td>末列落單</td><td>74 → <b>78</b></td><td>✅</td></tr><tr><td><a href="#c03">03</a></td><td>疊字標題過長</td><td>74 → <b>76</b></td><td>✅</td></tr><tr><td><a href="#c04">04</a></td><td>輪播右側留白</td><td>74 → <b>75</b></td><td>✅</td></tr><tr><td><a href="#c05">05</a></td><td>手機區塊太長</td><td>73 → <b>74</b></td><td>✅</td></tr><tr><td><a href="#c06">06</a></td><td>觸控目標太小</td><td>74 → <b>78</b></td><td>✅</td></tr><tr><td><a href="#c07">07</a></td><td>整頁則數太多</td><td>70 → <b>74</b></td><td>✅</td></tr><tr><td><a href="#c08">08</a></td><td>頭條重複</td><td>70 → <b>74</b></td><td>✅</td></tr><tr><td><a href="#c09">09</a></td><td>區塊太多</td><td>69 → <b>74</b></td><td>✅</td></tr><tr><td><a href="#c10">10</a></td><td>貪婪法組合改法</td><td>74 → <b>91</b></td><td>✅</td></tr></tbody></table></div>
+<section class="case" id="c01"><h2>01 同型連續與放大型相鄰 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>F、G、H 連續 3 塊都是 P09(首 1 則放大,其餘純文字),而且放大型 F~I 一路相鄰,看不出重點。<br><b>改法:</b>G 換成同分組的 P03 左圖右文;專題移到社會之後,讓放大型不再相鄰。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="208.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">79</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>同型不連續</td><td class="fail">不合格</td><td class="pass">合格</td></tr><tr><td>放大型不相鄰</td><td class="warn">警告</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:74 → 79</li><li>✅ 目標:同型不連續:fail → pass</li><li>✅ 目標:放大型不相鄰:warn → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/01-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(1280px)</figcaption></figure><figure><img src="screenshots/01-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(1280px)</figcaption></figure></div></section>
+<section class="case" id="c02"><h2>02 末列落單 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>次頭條 B 有 4 則,電腦設 4 欄;平板依規則推算成 3 欄,最後一列只剩 1 則。電腦 4 欄時標題也擠到 3 行。<br><b>改法:</b>B 改成 6 則,電腦沿用 P07 預設的 3 欄;平板推算為 2 欄。6 則在 2、3 欄都整除。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="205.8 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">78</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>末列不落單</td><td class="fail">不合格</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:74 → 78</li><li>✅ 目標:末列不落單@B:fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/02-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(768px)</figcaption></figure><figure><img src="screenshots/02-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(768px)</figcaption></figure></div></section>
+<section class="case" id="c03"><h2>03 疊字標題過長 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>頭條 A 是疊字型(P01),標題 23 個中文字;360px 手機估 3 行,超過疊字上限 2 行,會被截斷。<br><b>改法:</b>編輯把標題縮短到 17 字,手機 2 行內。(另一條路是斷點下換型 P02,留待第 3 階段渲染器支援。)</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="200.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">76</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>標題行數</td><td class="fail">不合格</td><td class="warn">警告</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:74 → 76</li><li>✅ 目標:標題行數@A(疊字):fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/03-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(360px)</figcaption></figure><figure><img src="screenshots/03-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(360px)</figcaption></figure></div></section>
+<section class="case" id="c04"><h2>04 輪播右側留白 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>短影音 M 只有 4 則,但電腦一次顯示 6 張,右側留白。<br><b>改法:</b>電腦改成一次顯示 4 張。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="197.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">75</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>輪播填滿</td><td class="warn">警告</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:74 → 75</li><li>✅ 目標:輪播填滿@M:warn → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/04-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(1280px)</figcaption></figure><figure><img src="screenshots/04-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(1280px)</figcaption></figure></div></section>
+<section class="case" id="c05"><h2>05 手機區塊太長 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>熱門排行 D 改成每則帶 1:1 縮圖,並增加到 10 則;手機上縮圖約佔 1/3 寬,整塊超過 1.5 屏。<br><b>改法:</b>熱門排行改回純文字清單(P05 允許無圖),10 則保留。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="192.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">73</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>區塊長度</td><td class="warn">警告</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:73 → 74</li><li>✅ 目標:區塊長度@D:warn → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/05-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(390px)</figcaption></figure><figure><img src="screenshots/05-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(390px)</figcaption></figure></div></section>
+<section class="case" id="c06"><h2>06 觸控目標太小 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>每塊標題列的「更多」連結只有 37px 高(標題列 40px 扣掉上框線 3px),低於 44px。<br><b>改法:</b>網站設定的區塊標題列加高到 48px。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="205.8 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">78</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>觸控目標</td><td class="fail">不合格</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:74 → 78</li><li>✅ 目標:觸控目標:fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/06-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(390px)</figcaption></figure><figure><img src="screenshots/06-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(390px)</figcaption></figure></div></section>
+<section class="case" id="c07"><h2>07 整頁則數太多 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>影音與短影音各塞到 12 則、社會與科技各 9 則,整頁 83 則,超過上限 80 則。<br><b>改法:</b>回到原本的則數(整頁 61 則)。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="131.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">50</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>輪播填滿</td><td class="pass">合格</td><td class="warn">警告</td></tr><tr><td>整頁則數</td><td class="fail">不合格</td><td class="pass">合格</td></tr><tr><td>用途則數</td><td class="warn">警告</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:70 → 74</li><li>✅ 目標:整頁則數:fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/07-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(1280px)</figcaption></figure><figure><img src="screenshots/07-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(1280px)</figcaption></figure></div></section>
+<section class="case" id="c08"><h2>08 頭條重複 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>影音焦點下方又放了一塊頭條(P01),頭條變成兩塊,重點不明。<br><b>改法:</b>拿掉第二塊頭條。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="158.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">60</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>單塊不重複</td><td class="fail">不合格</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:70 → 74</li><li>✅ 目標:單塊不重複:fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/08-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(1280px)</figcaption></figure><figure><img src="screenshots/08-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(1280px)</figcaption></figure></div></section>
+<section class="case" id="c09"><h2>09 區塊太多 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>頁尾再加 6 塊「更多國際」(P07,各 3 則),整頁 19 塊,超過上限 18 塊。<br><b>改法:</b>拿掉補充區塊,回到 13 塊。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="182.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">69</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>區塊數</td><td class="fail">不合格</td><td class="pass">合格</td></tr><tr><td>用途則數</td><td class="warn">警告</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:69 → 74</li><li>✅ 目標:區塊數:fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/09-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(1280px)</figcaption></figure><figure><img src="screenshots/09-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(1280px)</figcaption></figure></div></section>
+<section class="case" id="c10"><h2>10 貪婪法組合改法 <span class="badge ok">通過</span></h2>
+<p><b>問題:</b>範例首頁原樣(總分 74):同時有同型連續、末列落單、疊字標題過長、輪播留白、欄高失衡、觸控目標太小等問題。<br><b>改法:</b>由 greedy.ts 從 8 個候選改法中依序選出 5 個:1. G 換 P03、專題移到社會之後(範例 01)(79) 2. B 改 6 則、電腦 3 欄(範例 02)(83) 3. 頭條標題縮短到 17 字(範例 03)(86) 4. 區塊標題列加高到 48px(範例 06)(90) 5. 短影音電腦一次 4 張(範例 04)(91)。沒選上的候選不是不合法,就是會產生新的不合格,或沒有提升總分。</p>
+<div class="pair"><div class="ver"><h3>V1 改善前</h3><div class="gauges"><figure class="gauge mid" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="195.3 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">74</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>完整</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="211.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">80</span><figcaption>密度</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>層級</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>文字</figcaption></figure><figure class="gauge mid" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="184.7 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">70</span><figcaption>可用性</figcaption></figure></div></div><div class="ver"><h3>V2 改善後</h3><div class="gauges"><figure class="gauge good" style="--size:88px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="240.1 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">91</span><figcaption>總分</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>比例</figcaption></figure><figure class="gauge bad" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="105.6 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">40</span><figcaption>對齊</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>完整</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="237.5 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">90</span><figcaption>密度</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>節奏</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>層級</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>文字</figcaption></figure><figure class="gauge good" style="--size:56px">
+<svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="42"/><circle class="arc" cx="50" cy="50" r="42" stroke-dasharray="263.9 263.9" transform="rotate(-90 50 50)"/></svg>
+<span class="num">100</span><figcaption>可用性</figcaption></figure></div></div></div>
+<div class="scroll"><table><thead><tr><th>項目</th><th>V1</th><th>V2</th></tr></thead><tbody><tr><td>標題行數</td><td class="fail">不合格</td><td class="pass">合格</td></tr><tr><td>末列不落單</td><td class="fail">不合格</td><td class="pass">合格</td></tr><tr><td>輪播填滿</td><td class="warn">警告</td><td class="pass">合格</td></tr><tr><td>同型不連續</td><td class="fail">不合格</td><td class="pass">合格</td></tr><tr><td>放大型不相鄰</td><td class="warn">警告</td><td class="pass">合格</td></tr><tr><td>觸控目標</td><td class="fail">不合格</td><td class="pass">合格</td></tr></tbody></table></div>
+<details><summary>驗收明細</summary><ul><li>✅ 第 1 層:V1 錯誤 0、V2 錯誤 0</li><li>✅ 總分提升:74 → 91</li><li>✅ 目標:標題行數:fail → pass</li><li>✅ 目標:末列不落單:fail → pass</li><li>✅ 目標:同型不連續:fail → pass</li><li>✅ 目標:觸控目標:fail → pass</li><li>✅ 沒有新的不合格:無</li></ul></details>
+<div class="shots"><figure><img src="screenshots/10-v1.jpg" alt="V1" loading="lazy"><figcaption>V1(1280px)</figcaption></figure><figure><img src="screenshots/10-v2.jpg" alt="V2" loading="lazy"><figcaption>V2(1280px)</figcaption></figure></div></section>
+</main></body></html>

@@ -1,0 +1,61 @@
+{
+  "id": "01",
+  "title": "同型連續與放大型相鄰",
+  "problem": "F、G、H 連續 3 塊都是 P09(首 1 則放大,其餘純文字),而且放大型 F~I 一路相鄰,看不出重點。",
+  "fixNote": "G 換成同分組的 P03 左圖右文;專題移到社會之後,讓放大型不再相鄰。",
+  "targets": [
+    "同型不連續",
+    "放大型不相鄰"
+  ],
+  "shotWidth": 1280,
+  "v1": [],
+  "fix": [
+    {
+      "op": "add",
+      "path": "/block-templates/tpl-politics-side",
+      "value": {
+        "type": "BlockTemplate",
+        "id": "tpl-politics-side",
+        "name": "政治區塊(左圖右文)",
+        "role": "section",
+        "contentType": {
+          "ref": "news",
+          "category": "politics"
+        },
+        "pattern": "P03",
+        "itemCount": 6,
+        "imageRole": "main",
+        "selection": {
+          "mode": "mixed",
+          "pinned": 1,
+          "fill": {
+            "source": "latest",
+            "category": "politics",
+            "withinHours": 48
+          }
+        },
+        "responsive": null,
+        "heading": {
+          "title": "政治 / 兩岸",
+          "moreLink": "/politics"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "/block-instances/inst-home-politics/template",
+      "value": "tpl-politics-side"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/home/sections/2/columns/0/blocks",
+      "value": [
+        "inst-home-world",
+        "inst-home-politics",
+        "inst-home-finance",
+        "inst-home-society",
+        "inst-home-feature"
+      ]
+    }
+  ]
+}

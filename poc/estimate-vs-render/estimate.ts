@@ -43,9 +43,6 @@ export const BOX = {
   summaryGap: 4,
   /** 疊字區的內距 */
   overlayPadding: 16,
-  /** 左圖右文時,縮圖佔卡片寬的比例(手機結構 1/3、電腦結構 1/4) */
-  sideThumbMobile: 1 / 3,
-  sideThumbDesktop: 1 / 4,
 };
 
 /** 估算一塊在某個視窗寬度的高度 */
@@ -120,6 +117,17 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
     case 'list-text':
       body = textList(0, W);
       break;
+    case 'list-side': {
+      // 左圖右文:縮圖寬 = 區塊寬 × 比例(手機結構 1/3、電腦結構 1/4),文字區 = 其餘寬度扣欄距
+      const thumbW = W * layout.thumb!;
+      const textW = W - thumbW - g;
+      body = b.items.reduce(
+        (h, _, i) => h + Math.max(thumbW / ratio, title(i, size, textW) + summary(i, textW)) + (i > 0 ? s.itemGap : 0),
+        0,
+      );
+      parts.imageHeight = thumbW / ratio;
+      break;
+    }
     case 'list-number':
       body = textList(0, W - BOX.numberCol);
       break;

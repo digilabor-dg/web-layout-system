@@ -30,6 +30,7 @@ export type Kind =
   | 'list-number' // 編號清單
   | 'list-timeline' // 時間軸
   | 'list-card' // 圖上文下的卡片,上下排
+  | 'list-side' // 左圖右文的清單(縮圖佔寬度的 1/3 或 1/4)
   | 'lead-stack' // 首則大圖在上,其餘清單在下
   | 'lead-split' // 首則大圖在左,其餘清單在右
   | 'feature-stack' // 專題:圖上文下
@@ -42,6 +43,8 @@ export interface BlockLayout {
   cols?: number;
   perView?: number;
   split?: [number, number];
+  /** 左圖右文時縮圖佔區塊寬的比例 */
+  thumb?: number;
 }
 
 /** 一塊的完整資訊 */
@@ -128,6 +131,7 @@ export function blockLayout(b: Block, device: DeviceClass): BlockLayout {
     case 'list':
       // 清單依圖片與型決定樣式
       if (!noImage && p.imageText === 'stacked') return { kind: 'list-card' };
+      if (!noImage && p.imageText === 'side') return { kind: 'list-side', thumb: usesDesktopStructure(device) ? 1 / 4 : 1 / 3 };
       if (p.id === 'P05') return { kind: 'list-number' };
       if (p.id === 'P06') return { kind: 'list-timeline' };
       return { kind: 'list-text' };

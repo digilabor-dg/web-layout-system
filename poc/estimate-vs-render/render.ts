@@ -71,6 +71,13 @@ function body(world: World, b: Block, sample: BlockLayout): string {
       return `<div class="cards">${b.items.map((_, i) => card(world, b, i, size)).join('')}</div>`;
     case 'list-text':
       return list(0, '');
+    case 'list-side':
+      return `<ul class="list side">${b.items
+        .map((item, i) => {
+          const sum = item.summary && b.pattern.textAmount !== 'headline' ? `<p class="s">${esc(item.summary)}</p>` : '';
+          return `<li>${placeholder(b)}<div class="tx">${titleTag(b, i, size, t.lineHeight)}${sum}</div></li>`;
+        })
+        .join('')}</ul>`;
     case 'list-number':
       return list(0, 'num');
     case 'list-timeline':
@@ -102,6 +109,8 @@ function blockCss(world: World, b: Block, layout: BlockLayout): string {
       return `${id} .cards{display:grid;grid-template-columns:repeat(${layout.cols},minmax(0,1fr));column-gap:${g}px;row-gap:${s.rowGap}px}`;
     case 'list-card':
       return `${id} .cards{display:flex;flex-direction:column;gap:${s.itemGap}px}`;
+    case 'list-side':
+      return `${id} .list.side .ph{flex:0 0 ${layout.thumb! * 100}%}`;
     case 'lead-stack':
       return `${id} .ls{display:flex;flex-direction:column;gap:${s.itemGap}px}`;
     case 'lead-split':
@@ -174,6 +183,8 @@ ${containerCss}
 .list.num li{display:flex}
 .list.num .n{flex:0 0 ${BOX.numberCol}px}
 .list.num .t{flex:1;min-width:0}
+.list.side li{display:flex;gap:${g}px;align-items:flex-start}
+.list.side .tx{flex:1;min-width:0}
 .list.tl li{border-left:2px solid #c33;padding-left:${BOX.timelineInset - 2}px}
 .ov{position:relative}
 .ovt{position:absolute;left:0;right:0;bottom:0;padding:${BOX.overlayPadding}px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
@@ -186,7 +197,7 @@ ${containerCss}
 .arr.prev{left:4px}.arr.next{right:4px}
 @media (min-width:${bp.tabletH}px){.arr{display:block}}
 .bh{display:flex;justify-content:space-between}
-.more{font-size:14px;color:#c33;text-decoration:none;padding:0 4px}
+.more{font-size:14px;color:#c33;text-decoration:none;padding:0 4px;min-width:44px;display:flex;align-items:center;justify-content:center}
 ${sectionCss}
 ${perBlock}
 `;

@@ -8,7 +8,7 @@ import type { World } from '../estimate-vs-render/model.js';
 import { renderPage } from '../estimate-vs-render/render.js';
 import { launch, notoFontCss } from '../shared/browser.js';
 import { lowerBetter } from './checks.js';
-import { type Finding, mergeWorst } from './evaluate.js';
+import { type Finding, mergeWorst, refOf } from './evaluate.js';
 
 /** 瀏覽器端量到的原始數字(每塊或每個 section 一筆) */
 interface Raw {
@@ -19,14 +19,14 @@ interface Raw {
   overflow: number;
 }
 
-/** 渲染並量測;screenshotDir 有值時存 390px 與 1280px 的截圖 */
-export async function renderAudit(world: World, outDir: string, screenshotDir?: string): Promise<Finding[]> {
+/** 渲染並量測;screenshotDir 有值時,存 shotWidths(預設 390px 與 1280px)的整頁截圖 */
+export async function renderAudit(world: World, outDir: string, screenshotDir?: string, shotWidths = [390, 1280]): Promise<Finding[]> {
   // 【第一步】產生 HTML
   mkdirSync(outDir, { recursive: true });
   const html = join(outDir, 'page.html');
   writeFileSync(html, renderPage(world, notoFontCss()));
   const browser = await launch();
-  const raw: Finding[] = [];
+  const raw: Omit<Finding, 'ref'>[] = [];
   for (const { width, height } of world.profile.testViewports) {
     const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
     await page.goto(pathToFileURL(html).href);
@@ -105,7 +105,7 @@ export async function renderAudit(world: World, outDir: string, screenshotDir?: 
         overflow: document.documentElement.scrollWidth - window.innerWidth,
       };
     });
-    if (screenshotDir && (width === 390 || width === 1280)) {
+    if (screenshotDir && shotWidths.includes(width)) {
       mkdirSync(screenshotDir, { recursive: true });
       await page.screenshot({ path: join(screenshotDir, `page-${width}.jpg`), fullPage: true, type: 'jpeg', quality: 60 });
     }
@@ -149,5 +149,6 @@ export async function renderAudit(world: World, outDir: string, screenshotDir?: 
     });
   }
   await browser.close();
-  return mergeWorst(raw);
+  // 補上穩定參照(代號 → 實例 id)
+  return mergeWorst(raw.map((f) => ({ ...f, ref: refOf(world, f.target) })));
 }

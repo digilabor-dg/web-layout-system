@@ -1,0 +1,272 @@
+[
+  {
+    "id": "type",
+    "note": "G 換 P03、專題移到社會之後(範例 01)",
+    "ops": [
+      {
+        "op": "add",
+        "path": "/block-templates/tpl-politics-side",
+        "value": {
+          "type": "BlockTemplate",
+          "id": "tpl-politics-side",
+          "name": "政治區塊(左圖右文)",
+          "role": "section",
+          "contentType": {
+            "ref": "news",
+            "category": "politics"
+          },
+          "pattern": "P03",
+          "itemCount": 6,
+          "imageRole": "main",
+          "selection": {
+            "mode": "mixed",
+            "pinned": 1,
+            "fill": {
+              "source": "latest",
+              "category": "politics",
+              "withinHours": 48
+            }
+          },
+          "responsive": null,
+          "heading": {
+            "title": "政治 / 兩岸",
+            "moreLink": "/politics"
+          }
+        }
+      },
+      {
+        "op": "replace",
+        "path": "/block-instances/inst-home-politics/template",
+        "value": "tpl-politics-side"
+      },
+      {
+        "op": "replace",
+        "path": "/pages/home/sections/2/columns/0/blocks",
+        "value": [
+          "inst-home-world",
+          "inst-home-politics",
+          "inst-home-finance",
+          "inst-home-society",
+          "inst-home-feature"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grid",
+    "note": "B 改 6 則、電腦 3 欄(範例 02)",
+    "ops": [
+      {
+        "op": "add",
+        "path": "/content-items/ex-sub-5",
+        "value": {
+          "type": "ContentItem",
+          "id": "ex-sub-5",
+          "contentType": "news",
+          "category": "society",
+          "title": "示意:公園綠地增加,週末親子活動多",
+          "url": "/news/ex-sub-5",
+          "publishedAt": "2026-11-03T08:00:00+08:00",
+          "images": {
+            "main": {
+              "src": "/img/ex-sub-5_3x2.jpg",
+              "width": 1200,
+              "height": 800
+            },
+            "square": {
+              "src": "/img/ex-sub-5_1x1.jpg",
+              "width": 600,
+              "height": 600
+            }
+          }
+        }
+      },
+      {
+        "op": "add",
+        "path": "/content-items/ex-sub-6",
+        "value": {
+          "type": "ContentItem",
+          "id": "ex-sub-6",
+          "contentType": "news",
+          "category": "society",
+          "title": "示意:老屋改造計畫第二期開放申請",
+          "url": "/news/ex-sub-6",
+          "publishedAt": "2026-11-03T08:00:00+08:00",
+          "images": {
+            "main": {
+              "src": "/img/ex-sub-6_3x2.jpg",
+              "width": 1200,
+              "height": 800
+            },
+            "square": {
+              "src": "/img/ex-sub-6_1x1.jpg",
+              "width": 600,
+              "height": 600
+            }
+          }
+        }
+      },
+      {
+        "op": "add",
+        "path": "/block-instances/inst-home-subheadline/items/-",
+        "value": "ex-sub-5"
+      },
+      {
+        "op": "add",
+        "path": "/block-instances/inst-home-subheadline/items/-",
+        "value": "ex-sub-6"
+      },
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-subheadline/itemCount",
+        "value": 6
+      },
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-subheadline/responsive",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "note": "頭條標題縮短到 17 字(範例 03)",
+    "ops": [
+      {
+        "op": "replace",
+        "path": "/content-items/art-20261103-0001/title",
+        "value": "示意:城市韌性計畫首波工程年底前動工"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "note": "短影音電腦一次 4 張(範例 04)",
+    "ops": [
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-shorts/responsive",
+        "value": {
+          "desktop": {
+            "layout": "carousel",
+            "perView": 4
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "touch",
+    "note": "區塊標題列加高到 48px(範例 06)",
+    "ops": [
+      {
+        "op": "replace",
+        "path": "/site-profile/site-main/spacing/blockHeadingHeight",
+        "value": 48
+      }
+    ]
+  },
+  {
+    "id": "balance",
+    "note": "熱門排行改 1:1 縮圖 6 則、社會移到右欄",
+    "ops": [
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-popular/imageRole",
+        "value": "square"
+      },
+      {
+        "op": "remove",
+        "path": "/block-instances/inst-home-popular/items/7"
+      },
+      {
+        "op": "remove",
+        "path": "/block-instances/inst-home-popular/items/6"
+      },
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-popular/itemCount",
+        "value": 6
+      },
+      {
+        "op": "replace",
+        "path": "/pages/home/sections/2/columns/0/blocks",
+        "value": [
+          "inst-home-world",
+          "inst-home-politics",
+          "inst-home-finance",
+          "inst-home-feature"
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/pages/home/sections/2/columns/1/blocks",
+        "value": [
+          "inst-home-opinion",
+          "inst-home-society"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soc2",
+    "note": "社會區塊電腦改 2 欄",
+    "ops": [
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-society/responsive",
+        "value": {
+          "desktop": {
+            "layout": "grid",
+            "cols": 2
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "split75",
+    "note": "P09 左右比例改 7:5",
+    "ops": [
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-world/responsive",
+        "value": {
+          "desktop": {
+            "layout": "split",
+            "cols": [
+              7,
+              5
+            ]
+          }
+        }
+      },
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-politics/responsive",
+        "value": {
+          "desktop": {
+            "layout": "split",
+            "cols": [
+              7,
+              5
+            ]
+          }
+        }
+      },
+      {
+        "op": "replace",
+        "path": "/block-templates/tpl-finance/responsive",
+        "value": {
+          "desktop": {
+            "layout": "split",
+            "cols": [
+              7,
+              5
+            ]
+          }
+        }
+      }
+    ]
+  }
+]
