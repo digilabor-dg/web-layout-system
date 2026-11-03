@@ -175,7 +175,7 @@ ${containerCss}
 .list.num .t{flex:1;min-width:0}
 .list.tl li{border-left:2px solid #c33;padding-left:${BOX.timelineInset - 2}px}
 .ov{position:relative}
-.ovt{position:absolute;left:0;right:0;bottom:0;padding:16px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.ovt{position:absolute;left:0;right:0;bottom:0;padding:${BOX.overlayPadding}px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
 .ovt .t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .ovt .s{color:#eee}
 .feats{display:flex;flex-direction:column;gap:${s.itemGap}px}

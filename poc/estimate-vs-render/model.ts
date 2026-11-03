@@ -66,12 +66,18 @@ export interface World {
 }
 
 /** 讀範例資料,組成 POC 需要的結構 */
-export function loadWorld(dir: string): World {
-  // 【第一步】讀檔並依 type 分類
-  const files = loadDataset(dir).files.map((f) => f.data as { type: string; id: string });
+export function loadWorld(dir: string, pageId = 'home'): World {
+  return buildWorld(loadDataset(dir).files.map((f) => f.data), pageId);
+}
+
+/** 由記憶體中的資料組成 POC 需要的結構(POC 3 產生版型後直接用) */
+export function buildWorld(data: unknown[], pageId = 'home'): World {
+  // 【第一步】依 type 分類
+  const files = data as { type: string; id: string }[];
   const of = <T>(type: string) => new Map(files.filter((d) => d.type === type).map((d) => [d.id, d as T]));
   const profile = [...of<SiteProfile>('SiteProfile').values()][0]!;
-  const page = of<Page>('Page').get('home')!;
+  const page = of<Page>('Page').get(pageId);
+  if (!page) throw new Error(`找不到頁面 ${pageId}`);
   const patterns = of<LayoutPattern>('LayoutPattern');
   const templates = of<BlockTemplate>('BlockTemplate');
   const instances = of<BlockInstance>('BlockInstance');

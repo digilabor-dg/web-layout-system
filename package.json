@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit && tsc --noEmit -p poc/tsconfig.json",
     "check": "npm run lint && npm run typecheck && npm test && npm run validate",
-    "poc:1": "tsx poc/estimate-vs-render/run.ts"
+    "poc:1": "tsx poc/estimate-vs-render/run.ts",
+    "poc:2": "tsx poc/evaluate/run.ts"
   },
   "dependencies": {
     "ajv": "^8.20.0",

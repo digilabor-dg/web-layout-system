@@ -14,10 +14,23 @@ export interface TitleEstimate {
   lines: number;
 }
 
+/** 評分(POC 2)需要的中間值 */
+export interface BlockParts {
+  /** 左右並排時,兩欄各自的高度 */
+  columns?: [number, number];
+  /** 左圖右文時,每則的填充率(文字區高 ÷ 圖高) */
+  fill?: number[];
+  /** 疊字標題的估算行數(未截斷前) */
+  overlayLines?: number;
+  /** 第一張圖的高度(手機首屏用) */
+  imageHeight?: number;
+}
+
 /** 一塊的估算結果 */
 export interface BlockEstimate {
   height: number;
   titles: TitleEstimate[];
+  parts: BlockParts;
 }
 
 /** 版面常數:對應 render.ts 的 CSS */
@@ -28,6 +41,8 @@ export const BOX = {
   timelineInset: 14,
   /** 摘要與標題的間距 */
   summaryGap: 4,
+  /** 疊字區的內距 */
+  overlayPadding: 16,
   /** 左圖右文時,縮圖佔卡片寬的比例(手機結構 1/3、電腦結構 1/4) */
   sideThumbMobile: 1 / 3,
   sideThumbDesktop: 1 / 4,
@@ -43,6 +58,7 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
   const layout = blockLayout(b, device);
   const W = blockWidth(world, b, width);
   const titles: TitleEstimate[] = [];
+  const parts: BlockParts = {};
 
   // 【第一步】文字的工具:標題行數、標題高、摘要高
   const lh = (size: number) => size * t.lineHeight;
@@ -81,14 +97,17 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
   let body = 0;
   switch (layout.kind) {
     case 'overlay':
-      // 疊字型:只有圖的高度,標題在圖上(兩行截斷),不比對行數
+      // 疊字型:只有圖的高度,標題在圖上(兩行截斷),不比對行數;另記下未截斷前的行數
       body = W / ratio;
+      parts.imageHeight = body;
+      parts.overlayLines = lines(b.items[0]!.title, leadSize, W - BOX.overlayPadding * 2);
       break;
     case 'grid': {
       // 格線:每列取最高的卡片,列與列之間加列間距
       const c = layout.cols!;
       const cardW = (W - g * (c - 1)) / c;
       const heights = b.items.map((_, i) => card(i, cardW));
+      parts.imageHeight = cardW / ratio;
       for (let r = 0; r * c < heights.length; r++) {
         body += Math.max(...heights.slice(r * c, r * c + c)) + (r > 0 ? s.rowGap : 0);
       }
@@ -110,13 +129,18 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
     case 'lead-stack':
       // 首則大圖在上,接著其餘清單
       body = card(0, W, leadSize) + s.itemGap + textList(1, W);
+      parts.imageHeight = W / ratio;
       break;
     case 'lead-split': {
       // 首則在左、清單在右,取兩欄較高者
       const [l, r] = layout.split!;
       const lw = ((W - g) * l) / (l + r);
       const rw = ((W - g) * r) / (l + r);
-      body = Math.max(card(0, lw, leadSize), textList(1, rw));
+      const left = card(0, lw, leadSize);
+      const right = textList(1, rw);
+      parts.columns = [left, right];
+      parts.imageHeight = lw / ratio;
+      body = Math.max(left, right);
       break;
     }
     case 'feature-stack':
@@ -127,8 +151,12 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
       const [l, r] = layout.split!;
       const lw = ((W - g) * l) / (l + r);
       const rw = ((W - g) * r) / (l + r);
+      parts.fill = [];
+      parts.imageHeight = lw / ratio;
       body = b.items.reduce((h, _, i) => {
-        const text = s.imageTextGap + title(i, size, rw) + summary(i, rw) + s.cardPadding;
+        const words = title(i, size, rw) + summary(i, rw);
+        parts.fill!.push(words / (lw / ratio));
+        const text = s.imageTextGap + words + s.cardPadding;
         return h + Math.max(lw / ratio, text) + (i > 0 ? s.itemGap : 0);
       }, 0);
       break;
@@ -142,5 +170,5 @@ export function estimateBlock(world: World, b: Block, width: number, method: Tit
     }
   }
   // 【第三步】加上區塊標題列
-  return { height: s.blockHeadingHeight + body, titles };
+  return { height: s.blockHeadingHeight + body, titles, parts };
 }
