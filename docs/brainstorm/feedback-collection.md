@@ -1,6 +1,6 @@
 # 反饋收集
 
-> **狀態:發想。**2026-11-03 與使用者討論後整理。還不是規格;決定要做時,開 OpenSpec change(暫名 `score-calibration`),條文以 `openspec/specs/` 為準。
+> **狀態:試驗中。**第 1~3 節(圈選、方向型量表)的 MVP 已做在檢視工具的「圈選」模式(`poc/rating/review.html`,判定在 `poc/rating/region.ts`);其他各節仍是發想。2026-11-03 與使用者討論後整理。還不是規格;決定要做時,開 OpenSpec change(暫名 `score-calibration`),條文以 `openspec/specs/` 為準。
 >
 > 背景與現有工具見 [人評對齊](../wiki/人評對齊.md):目前的檢視工具 `poc/rating/review.html` 是「點選區塊、給 0~10 分、寫短評」,外加 A/B 比較。
 

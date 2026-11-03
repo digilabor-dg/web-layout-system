@@ -1,9 +1,11 @@
 // 人評工具(檢視器):中間是預覽(把 JSON 渲染成的真實網頁),右側工具列有裝置切換、評分、A/B 比較與匯出。
 // 評分模式:在預覽上點選區塊,側欄給 0~10 分(5 顆星,半顆 = 1 分)與短評,盲評(評完才揭曉程式分數)。
 // A/B 模式:同一個裝置下切換或並排兩版,選比較好的那一版(說不出原因也沒關係);左右依題號單雙交替,避免位置偏差。
+// 圈選模式(反饋收集 MVP):在預覽上任意拖一個框(可以框空白),程式判定框到哪裡(region.ts),再依 5 條方向軸評 −5~+5。
 // 單一 HTML 檔,不需要伺服器。
 
 import type { Layout } from './collect.js';
+import { resolveRegion } from './region.js';
 
 /** 檢視工具的資料 */
 export interface ReviewData {
@@ -51,7 +53,9 @@ input[type=range]{width:100%;min-height:44px;accent-color:var(--star)}
 .fail{color:var(--bad)}.warn{color:var(--mid)}
 ol.list{list-style:none;margin:0;padding:0}ol.list button{width:100%;display:flex;justify-content:space-between;margin:3px 0;text-align:left}
 ol.list button.sel{border-color:var(--accent)}
-.mode-ab .only-rate,.mode-rate .only-ab{display:none}
+.only-rate,.only-ab,.only-region{display:none}.mode-rate .only-rate,.mode-ab .only-ab,.mode-region .only-region{display:block}
+.axis{margin:6px 0}.axis .ends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.axis b{font-size:13px}
+input.ax{accent-color:var(--accent)}
 @media (max-width:820px){body{grid-template-columns:1fr;grid-template-rows:1fr 48vh}aside{border-left:0;border-top:1px solid var(--line)}}
 </style>
 </head>
@@ -62,13 +66,18 @@ ol.list button.sel{border-color:var(--accent)}
     <div class="grid2" id="devices"></div>
   </details>
   <details open><summary>模式</summary>
-    <div class="grid2"><button id="m-rate" aria-pressed="true">評分</button><button id="m-ab" aria-pressed="false">A/B 比較</button></div>
+    <div class="grid3"><button id="m-rate" aria-pressed="true">評分</button><button id="m-region" aria-pressed="false">圈選</button><button id="m-ab" aria-pressed="false">A/B 比較</button></div>
   </details>
   <details open class="only-rate"><summary>評分</summary>
     <select id="layout" aria-label="選擇版面"></select>
     <div id="blockPanel"></div>
     <ol class="list" id="blockList"></ol>
     <div class="box"><b>整頁短評</b><textarea id="pageComment" placeholder="整體感覺?"></textarea></div>
+  </details>
+  <details open class="only-region"><summary>圈選評價</summary>
+    <select id="layoutR" aria-label="選擇版面"></select>
+    <div id="regionPanel"></div>
+    <ol class="list" id="regionList"></ol>
   </details>
   <details open class="only-ab"><summary>A/B 比較</summary>
     <div class="row muted" id="pairInfo"></div>
@@ -88,14 +97,17 @@ ol.list button.sel{border-color:var(--accent)}
   </details>
 </aside>
 <script>
+var __name = (f) => f;
+${resolveRegion.toString()}
 const D = ${data};
+const AXES = [['數量', '太少', '太多'], ['大小', '太小', '太大'], ['圖↔字', '圖多一點', '字多一點'], ['空↔擠', '太空', '太擠'], ['層級', '太弱', '太搶']];
 const DEVICES = [['手機', 390, 844], ['平板', 768, 1024], ['筆電', 1280, 800], ['桌機', 1440, 900]];
 const byId = Object.fromEntries(D.layouts.map((l) => [l.id, l]));
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 
 // 【第一步】狀態(暫存在瀏覽器;讀寫失敗時照常運作)
-let S = { mode: 'rate', device: 2, layout: D.layouts[0].id, block: null, pair: 0, view: 'toggle', show: 'A', rater: '', ratings: {}, pageComments: {}, ab: {} };
+let S = { mode: 'rate', device: 2, layout: D.layouts[0].id, block: null, pair: 0, view: 'toggle', show: 'A', rater: '', ratings: {}, pageComments: {}, ab: {}, regions: {}, region: null };
 try { const saved = JSON.parse(localStorage.getItem('layout-review') || 'null'); if (saved) S = Object.assign(S, saved); } catch (e) {}
 function save() { try { localStorage.setItem('layout-review', JSON.stringify(S)); } catch (e) {} }
 const rating = (lid, code) => ((S.ratings[lid] = S.ratings[lid] || {}), (S.ratings[lid][code] = S.ratings[lid][code] || { score: null, comment: '' }));
@@ -116,7 +128,7 @@ function frameFor(lid, label) {
   wrap.innerHTML = '<div class="lbl">' + esc(label) + '</div>';
   const f = document.createElement('iframe'); f.title = label; f.srcdoc = D.html[lid];
   wrap.appendChild(f);
-  f.addEventListener('load', () => { if (S.mode === 'rate') inspect(f); fit(); f.contentDocument.fonts && f.contentDocument.fonts.ready.then(fit); });
+  f.addEventListener('load', () => { if (S.mode === 'rate') inspect(f); if (S.mode === 'region') regionTool(f); fit(); f.contentDocument.fonts && f.contentDocument.fonts.ready.then(fit); });
   return wrap;
 }
 function fit() {
@@ -135,10 +147,10 @@ window.addEventListener('resize', fit);
 function renderFrames() {
   const box = $('frames'); box.innerHTML = '';
   const [dn, w] = DEVICES[S.device];
-  if (S.mode === 'rate') {
+  if (S.mode === 'rate' || S.mode === 'region') {
     box.appendChild(frameFor(S.layout, byId[S.layout].title));
     $('cap').textContent = dn + ' ' + w + 'px · ' + byId[S.layout].title;
-    $('hint').textContent = '點選區塊來評分';
+    $('hint').textContent = S.mode === 'rate' ? '點選區塊來評分' : '在預覽上拖曳畫框;不必框準,也可以框空白';
   } else {
     const p = pairSides(S.pair);
     if (S.view === 'side') { box.appendChild(frameFor(p.A, 'A')); box.appendChild(frameFor(p.B, 'B')); }
@@ -191,7 +203,102 @@ function renderRatePanel() {
   progress();
 }
 
-// 【第四步】A/B 模式
+// 【第四步】圈選模式:收集頁面上每個框的位置,拖曳畫框,判定目標(resolveRegion),依方向軸評價
+const ELEMENT_NAMES = { ph: '圖', t: '標題', s: '摘要', au: '作者', n: '名次', bh: '區塊標題' };
+function collectBoxes(doc) {
+  const win = doc.defaultView; const sx = win.scrollX, sy = win.scrollY;
+  const rect = (r) => ({ x: r.left + sx, y: r.top + sy, w: r.width, h: r.height });
+  const out = [{ level: 'page', x: 0, y: 0, w: doc.documentElement.scrollWidth, h: doc.documentElement.scrollHeight }];
+  doc.querySelectorAll('.sec').forEach((sec) => {
+    out.push(Object.assign({ level: 'section', id: sec.dataset.section }, rect(sec.getBoundingClientRect())));
+    sec.querySelectorAll(':scope > .col').forEach((col, i) => out.push(Object.assign({ level: 'column', id: sec.dataset.section + '/' + (i + 1) }, rect(col.getBoundingClientRect()))));
+  });
+  doc.querySelectorAll('[data-block]').forEach((bl) => {
+    const code = bl.dataset.block;
+    out.push(Object.assign({ level: 'block', code }, rect(bl.getBoundingClientRect())));
+    const items = [...bl.querySelectorAll('.card, .list > li, .feat, .ov')];
+    items.forEach((it, i) => out.push(Object.assign({ level: 'item', code, item: i + 1 }, rect(it.getBoundingClientRect()))));
+    const itemOf = (el) => { const i = items.findIndex((it) => it.contains(el)); return i < 0 ? undefined : i + 1; };
+    // 圖:整個圖框;文字:只取有字的那幾行(標題元素本身比字寬)
+    bl.querySelectorAll('.ph').forEach((el) => out.push(Object.assign({ level: 'element', code, item: itemOf(el), element: '圖' }, rect(el.getBoundingClientRect()))));
+    bl.querySelectorAll('.t, .s, .au, .n, .bh > span, .bh > a').forEach((el) => {
+      const cls = el.closest('.bh') ? 'bh' : el.classList[0];
+      const range = doc.createRange(); range.selectNodeContents(el);
+      [...range.getClientRects()].forEach((r) => { if (r.width > 0 && r.height > 0) out.push(Object.assign({ level: 'element', code, item: itemOf(el), element: ELEMENT_NAMES[cls] || cls }, rect(r))); });
+    });
+  });
+  return out;
+}
+const regionsHere = () => ((S.regions[S.layout] = S.regions[S.layout] || []), S.regions[S.layout].filter((g) => g.width === DEVICES[S.device][1]));
+function regionTool(f) {
+  const doc = f.contentDocument;
+  const css = doc.createElement('style');
+  css.textContent = 'html{user-select:none;cursor:crosshair}a{pointer-events:none}'
+    + '.rg-box{position:absolute;border:2px solid #e8710a;background:rgba(232,113,10,.12);pointer-events:none;z-index:20}.rg-box.sel{border-color:#1a73e8;background:rgba(26,115,232,.16)}'
+    + '.rg-box span{position:absolute;top:-2px;left:-2px;transform:translateY(-100%);background:#e8710a;color:#fff;font:12px/1.6 system-ui;padding:0 6px;border-radius:3px}.rg-box.sel span{background:#1a73e8}';
+  doc.head.appendChild(css);
+  let start = null, box = null;
+  doc.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return; e.preventDefault();
+    start = { x: e.pageX, y: e.pageY };
+    box = doc.createElement('div'); box.className = 'rg-box sel'; doc.body.appendChild(box);
+    Object.assign(box.style, { left: start.x + 'px', top: start.y + 'px', width: '0px', height: '0px' });
+  });
+  doc.addEventListener('pointermove', (e) => {
+    if (!start) return;
+    const x = Math.min(start.x, e.pageX), y = Math.min(start.y, e.pageY);
+    Object.assign(box.style, { left: x + 'px', top: y + 'px', width: Math.abs(e.pageX - start.x) + 'px', height: Math.abs(e.pageY - start.y) + 'px' });
+  });
+  doc.addEventListener('pointerup', (e) => {
+    if (!start) return;
+    const r = { x: Math.round(Math.min(start.x, e.pageX)), y: Math.round(Math.min(start.y, e.pageY)), w: Math.round(Math.abs(e.pageX - start.x)), h: Math.round(Math.abs(e.pageY - start.y)) };
+    start = null; box.remove(); box = null;
+    // 太小的框當成誤觸
+    if (r.w < 8 || r.h < 8) return;
+    const g = { id: 'g' + Date.now().toString(36), width: DEVICES[S.device][1], region: r, resolved: resolveRegion(r, collectBoxes(doc)), axes: {}, comment: '' };
+    S.regions[S.layout] = S.regions[S.layout] || []; S.regions[S.layout].push(g); S.region = g.id; save();
+    drawRegions(doc); renderRegionPanel();
+  });
+  drawRegions(doc);
+}
+function drawRegions(doc) {
+  doc.querySelectorAll('.rg-box').forEach((el) => el.remove());
+  regionsHere().forEach((g, i) => {
+    const el = doc.createElement('div'); el.className = 'rg-box' + (g.id === S.region ? ' sel' : '');
+    Object.assign(el.style, { left: g.region.x + 'px', top: g.region.y + 'px', width: g.region.w + 'px', height: g.region.h + 'px' });
+    el.innerHTML = '<span>' + (i + 1) + '</span>'; doc.body.appendChild(el);
+  });
+}
+/** 把判定結果寫成一句白話 */
+function describe(res) {
+  if (!res) return '無法判定';
+  const name = (t) => t.level === 'column' ? '欄 ' + t.id : t.level === 'section' ? 'section ' + t.id : t.level === 'page' ? '頁面' : t.code + (t.item ? ' 第 ' + t.item + ' 則' : '') + (t.element ? ' · ' + t.element : '');
+  const pct = (x) => Math.round(x * 100) + '%';
+  if (res.kind === 'content') return '內容:' + name(res.targets[0]) + '(佔圈選區 ' + pct(res.targets[0].oR) + ')';
+  if (res.kind === 'multi') return '跨區塊:' + res.targets.map((t) => t.code + ' ' + pct(t.oR)).join('、');
+  const where = { 'in-block': '區塊裡的空白', 'in-column': '欄裡、區塊外的空白', 'between-blocks': '兩塊之間的間距', page: '頁面空白' }[res.blank.where];
+  const dirs = { up: '上', down: '下', left: '左', right: '右' };
+  const nb = Object.entries(res.neighbors || {}).map(([d, t]) => dirs[d] + ':' + name(t) + '(' + t.gap + 'px)').join(';');
+  return where + '(' + name(res.blank.container) + ')' + (nb ? '。鄰居 ' + nb : '');
+}
+const axisText = (a, v) => v === undefined ? '未評' : v === 0 ? '剛好' : v < 0 ? a[1] + ' ' + (-v) : a[2] + ' ' + v;
+function renderRegionPanel() {
+  const list = regionsHere(); const g = list.find((x) => x.id === S.region);
+  $('layoutR').innerHTML = $('layout').innerHTML; $('layoutR').value = S.layout;
+  if (g) {
+    $('regionPanel').innerHTML = '<div class="box"><b>圈選 ' + (list.indexOf(g) + 1) + '</b><div>' + esc(describe(g.resolved)) + '</div>'
+      + AXES.map((a) => '<div class="axis"><b>' + a[0] + ':' + axisText(a, g.axes[a[0]]) + '</b><div class="ends"><span>' + a[1] + '</span><span>剛好</span><span>' + a[2] + '</span></div>'
+        + '<input type="range" class="ax" min="-5" max="5" step="1" value="' + (g.axes[a[0]] ?? 0) + '" data-axis="' + a[0] + '" aria-label="' + a[0] + '"></div>').join('')
+      + '<textarea id="rgComment" placeholder="短評(可以不寫)">' + esc(g.comment) + '</textarea>'
+      + '<div class="grid2" style="margin-top:6px"><button id="rgClear">清除各軸</button><button id="rgDelete">刪除這個圈選</button></div></div>';
+  } else $('regionPanel').innerHTML = '<div class="box muted">在預覽上拖曳畫一個框,不必框準區塊,也可以框空白。程式會判定框到哪裡,再請你沿 5 條軸評:0 是剛好,往兩邊是太少/太多等。</div>';
+  $('regionList').innerHTML = list.map((x, i) => '<li><button data-rg="' + x.id + '" class="' + (x.id === S.region ? 'sel' : '') + '"><span>' + (i + 1) + '. ' + esc(describe(x.resolved).slice(0, 28)) + '</span><span>' + Object.keys(x.axes).length + ' 軸</span></button></li>').join('');
+  progress();
+}
+const currentRegion = () => regionsHere().find((x) => x.id === S.region);
+function redrawRegions() { const f = document.querySelector('#frames iframe'); if (f && f.contentDocument) drawRegions(f.contentDocument); }
+
+// 【第五步】A/B 模式
 function renderAbPanel() {
   const p = pairSides(S.pair); const choice = S.ab[S.pair];
   $('pairInfo').textContent = '第 ' + (S.pair + 1) + ' / ' + D.pairs.length + ' 題' + (choice ? ' · 已選:' + ({ A: 'A 比較好', B: 'B 比較好', tie: '差不多' })[choice.pick] : '');
@@ -208,23 +315,31 @@ function pick(which) { S.ab[S.pair] = { pick: which, reason: $('reason').value.t
 
 function progress() {
   const rated = Object.values(S.ratings).reduce((n, m) => n + Object.values(m).filter((r) => r.score !== null).length, 0);
-  $('progress').textContent = '已評 ' + rated + ' 塊;A/B 已答 ' + Object.keys(S.ab).length + ' / ' + D.pairs.length + ' 題';
+  const regions = Object.values(S.regions).reduce((n, l) => n + l.length, 0);
+  $('progress').textContent = '已評 ' + rated + ' 塊;圈選 ' + regions + ' 個;A/B 已答 ' + Object.keys(S.ab).length + ' / ' + D.pairs.length + ' 題';
 }
 
-// 【第五步】畫側欄與事件
+// 【第六步】畫側欄與事件
 $('devices').innerHTML = DEVICES.map(([n, w], i) => '<button class="dev-btn" data-d="' + i + '" aria-pressed="' + (i === S.device) + '">' + n + ' ' + w + '</button>').join('');
 $('layout').innerHTML = D.layouts.map((l) => '<option value="' + esc(l.id) + '"' + (l.id === S.layout ? ' selected' : '') + '>' + esc(l.group + ' · ' + l.title) + '</option>').join('');
 $('rater').value = S.rater;
-function setMode(m) { S.mode = m; document.body.className = 'mode-' + m; $('m-rate').setAttribute('aria-pressed', String(m === 'rate')); $('m-ab').setAttribute('aria-pressed', String(m === 'ab')); save(); renderFrames(); m === 'rate' ? renderRatePanel() : renderAbPanel(); }
+function setMode(m) {
+  S.mode = m; document.body.className = 'mode-' + m;
+  ['rate', 'region', 'ab'].forEach((x) => $('m-' + x).setAttribute('aria-pressed', String(m === x)));
+  save(); renderFrames(); m === 'rate' ? renderRatePanel() : m === 'region' ? renderRegionPanel() : renderAbPanel();
+}
 document.addEventListener('click', (e) => {
   const t = e.target.closest('button'); if (!t) return;
   if (t.classList.contains('dev-btn')) { S.device = Number(t.dataset.d); document.querySelectorAll('.dev-btn').forEach((x) => x.setAttribute('aria-pressed', String(x === t))); save(); renderFrames(); return; }
   if (t.dataset.code) return selectBlock(t.dataset.code, true);
-  const act = { 'm-rate': () => setMode('rate'), 'm-ab': () => setMode('ab'),
+  if (t.dataset.rg) { S.region = t.dataset.rg; save(); redrawRegions(); return renderRegionPanel(); }
+  if (t.id === 'rgClear' && currentRegion()) { currentRegion().axes = {}; save(); return renderRegionPanel(); }
+  if (t.id === 'rgDelete' && currentRegion()) { S.regions[S.layout] = S.regions[S.layout].filter((x) => x.id !== S.region); S.region = null; save(); redrawRegions(); return renderRegionPanel(); }
+  const act = { 'm-rate': () => setMode('rate'), 'm-region': () => setMode('region'), 'm-ab': () => setMode('ab'),
     prevPair: () => { if (S.pair > 0) { S.pair--; S.show = 'A'; } }, nextPair: () => { if (S.pair < D.pairs.length - 1) { S.pair++; S.show = 'A'; } },
     'v-toggle': () => { S.view = 'toggle'; }, 'v-side': () => { S.view = 'side'; }, showA: () => { S.show = 'A'; }, showB: () => { S.show = 'B'; },
     pickA: () => pick('A'), pickB: () => pick('B'), pickTie: () => pick('tie'), download };
-  if (act[t.id]) { act[t.id](); if (!['download', 'pickA', 'pickB', 'pickTie', 'm-rate', 'm-ab'].includes(t.id)) { save(); renderFrames(); renderAbPanel(); } }
+  if (act[t.id]) { act[t.id](); if (!['download', 'pickA', 'pickB', 'pickTie', 'm-rate', 'm-region', 'm-ab'].includes(t.id)) { save(); renderFrames(); renderAbPanel(); } }
 });
 document.addEventListener('input', (e) => {
   const id = e.target.id;
@@ -233,8 +348,11 @@ document.addEventListener('input', (e) => {
   if (id === 'pageComment') { S.pageComments[S.layout] = e.target.value; save(); }
   if (id === 'reason' && S.ab[S.pair]) { S.ab[S.pair].reason = e.target.value; save(); }
   if (id === 'rater') { S.rater = e.target.value; save(); }
+  if (e.target.dataset.axis && currentRegion()) { currentRegion().axes[e.target.dataset.axis] = Number(e.target.value); save(); renderRegionPanel(); }
+  if (id === 'rgComment' && currentRegion()) { currentRegion().comment = e.target.value; save(); }
 });
 $('layout').addEventListener('change', (e) => { S.layout = e.target.value; S.block = null; save(); renderFrames(); renderRatePanel(); });
+$('layoutR').addEventListener('change', (e) => { S.layout = e.target.value; S.region = null; $('layout').value = S.layout; save(); renderFrames(); renderRegionPanel(); });
 document.addEventListener('keydown', (e) => {
   if (S.mode !== 'ab' || S.view !== 'toggle' || /TEXTAREA|INPUT|SELECT/.test(document.activeElement.tagName)) return;
   const k = e.key.toLowerCase();
@@ -247,7 +365,17 @@ function download() {
     if (b && (r.score !== null || r.comment)) ratings.push({ layout, ref: b.ref, code, score: r.score, comment: r.comment.trim() });
   }
   const ab = Object.entries(S.ab).map(([n, c]) => { const p = pairSides(Number(n)); return { pair: Number(n), A: p.A, B: p.B, winner: c.pick === 'tie' ? 'tie' : p[c.pick], reason: c.reason }; });
-  const out = { tool: 'layout-review', rater: S.rater.trim() || 'anonymous', source: 'human', ratings, pageComments: Object.entries(S.pageComments).filter(([, c]) => c.trim()).map(([layout, comment]) => ({ layout, comment: comment.trim() })), ab };
+  // 圈選:目標的區塊代號換成穩定的 ref,版面改了以後還能對回去
+  const refOf = (layout, code) => { const b = byId[layout] && byId[layout].blocks.find((x) => x.code === code); return b ? b.ref : undefined; };
+  const withRef = (layout, t) => (t && t.code ? Object.assign({}, t, { ref: refOf(layout, t.code) }) : t);
+  const regions = [];
+  for (const [layout, list] of Object.entries(S.regions)) for (const g of list) {
+    const res = g.resolved && Object.assign({}, g.resolved, { targets: g.resolved.targets.map((t) => withRef(layout, t)),
+      neighbors: g.resolved.neighbors && Object.fromEntries(Object.entries(g.resolved.neighbors).map(([d, t]) => [d, withRef(layout, t)])),
+      blank: g.resolved.blank && Object.assign({}, g.resolved.blank, { container: withRef(layout, g.resolved.blank.container) }) });
+    regions.push({ layout, width: g.width, region: g.region, resolved: res, axes: g.axes, comment: g.comment.trim() });
+  }
+  const out = { tool: 'layout-review', rater: S.rater.trim() || 'anonymous', source: 'human', ratings, pageComments: Object.entries(S.pageComments).filter(([, c]) => c.trim()).map(([layout, comment]) => ({ layout, comment: comment.trim() })), ab, regions };
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 2) + '\\n'], { type: 'application/json' }));
   a.download = 'review-' + out.rater + '.json'; a.click();
