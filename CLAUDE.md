@@ -49,6 +49,12 @@ tests/
 6. **AI skill**:讀報告與截圖,判斷不平衡是否刻意,寫出建議。
 7. **版面生成**:集束搜尋;仿生演算法暫不做。
 
+## 工作流程(OpenSpec)
+
+- 變更用 [OpenSpec](https://github.com/Fission-AI/OpenSpec) 管理:每個 change 放在 `openspec/changes/<名稱>/`,內含 proposal、design、tasks 與 spec delta。指令:`/opsx:propose`、`/opsx:apply`、`/opsx:archive`。
+- **同時最多 5 個未 archive 的 change**(任務做完但還沒 archive 的也算)。已滿 5 個時不得再開新 change,先 archive 一個。CI(`.github/workflows/openspec.yml`)會檢查這條,並跑 `openspec validate --all --strict`。
+- `docs/spec/` 與 `openspec/specs/` 如何分工、開發階段如何對應 change,由第一個 change `resolve-spec-ambiguities` 決定;決定前以 `docs/spec/` 為唯一依據。
+
 ## 不可違反的規則
 
 - 圖片只用網站主比例(平面 3:2 或影視 16:9,二選一)與 1:1;影片一律 16:9;禁止直式圖。

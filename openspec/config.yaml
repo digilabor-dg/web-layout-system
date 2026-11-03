@@ -1,0 +1,20 @@
+schema: spec-driven
+
+context: |
+  Language: zh-TW
+  All artifacts must be written in zh-TW.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  專案:新聞首頁區塊排版系統。專案規則見 CLAUDE.md,產品規格在 docs/spec/(01~05)。
+  docs/spec/ 與 openspec/specs/ 的分工,由 change resolve-spec-ambiguities 的 P1 決定;決定前以 docs/spec/ 為唯一依據。
+  規格沒寫或互相矛盾時,先問使用者,不要自行假設。
+
+  WIP 上限:同時最多 5 個未 archive 的 change(含任務已全部完成、但還沒 archive 的)。
+  已有 5 個時,不得再開新 change,必須先 archive 一個。CI 會檢查這條。
+
+rules:
+  proposal:
+    - 註明依據的 docs/spec 檔案與章節
+    - 開新 change 前先跑 openspec list,確認 active change 不到 5 個
+  tasks:
+    - 每條規則、每個公式都要有單元測試任務,測試資料放 tests/fixtures/
