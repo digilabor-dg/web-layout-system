@@ -1,0 +1,661 @@
+{
+  "params": {
+    "name": "from-form",
+    "title": "由表單產生的參數(tw4、集束搜尋、觀點全寬、不放科技)",
+    "preset": "tw4",
+    "blocks": [
+      "headline",
+      "subheadline",
+      "popular",
+      "flash",
+      "video",
+      "world",
+      "politics",
+      "finance",
+      "feature",
+      "society",
+      "opinion",
+      "shorts"
+    ],
+    "sidebar": [
+      "popular",
+      "flash"
+    ],
+    "fullWidth": [
+      "video",
+      "opinion",
+      "shorts"
+    ],
+    "columns": [
+      8,
+      4
+    ],
+    "strategy": "beam",
+    "beamWidth": 3
+  },
+  "choices": [
+    {
+      "block": "headline",
+      "option": "P01 大圖疊字"
+    },
+    {
+      "block": "subheadline",
+      "option": "P07 3 則 4 欄"
+    },
+    {
+      "block": "popular",
+      "option": "P05 8 則(純文字)"
+    },
+    {
+      "block": "flash",
+      "option": "P06 3 則"
+    },
+    {
+      "block": "video",
+      "option": "P12 4 則、一次 4 張"
+    },
+    {
+      "block": "world",
+      "option": "P07 6 則 3 欄"
+    },
+    {
+      "block": "politics",
+      "option": "P03 6 則(main)"
+    },
+    {
+      "block": "finance",
+      "option": "P07 6 則 3 欄"
+    },
+    {
+      "block": "feature",
+      "option": "P14 2 則"
+    },
+    {
+      "block": "society",
+      "option": "P07 6 則 3 欄"
+    },
+    {
+      "block": "opinion",
+      "option": "P17 4 則、電腦清單"
+    },
+    {
+      "block": "shorts",
+      "option": "P13 4 則、一次 4 張"
+    }
+  ],
+  "search": {
+    "strategy": "beam",
+    "evaluated": 368,
+    "steps": [
+      {
+        "note": "起點:每塊都用預設選項",
+        "objective": null,
+        "total": null
+      },
+      {
+        "note": "第 1 步:headline 保留前 3 名,最好是 P01 大圖疊字",
+        "objective": null,
+        "total": null
+      },
+      {
+        "note": "第 2 步:subheadline 保留前 3 名,最好是 P07 3 則 4 欄",
+        "objective": null,
+        "total": null
+      },
+      {
+        "note": "第 3 步:popular 保留前 3 名,最好是 P05 8 則(純文字)",
+        "objective": null,
+        "total": null
+      },
+      {
+        "note": "第 4 步:flash 保留前 3 名,最好是 P06 3 則",
+        "objective": 77686.22826592089,
+        "total": 78
+      },
+      {
+        "note": "第 5 步:video 保留前 3 名,最好是 P12 4 則、一次 4 張",
+        "objective": 77686.22826592089,
+        "total": 78
+      },
+      {
+        "note": "第 6 步:world 保留前 3 名,最好是 P07 6 則 3 欄",
+        "objective": 81766.5123126135,
+        "total": 82
+      },
+      {
+        "note": "第 7 步:politics 保留前 3 名,最好是 P03 6 則(main)",
+        "objective": 82836.86483059911,
+        "total": 83
+      },
+      {
+        "note": "第 8 步:finance 保留前 3 名,最好是 P07 6 則 3 欄",
+        "objective": 82908.14887729171,
+        "total": 83
+      },
+      {
+        "note": "第 9 步:feature 保留前 3 名,最好是 P14 2 則",
+        "objective": 82908.14887729171,
+        "total": 83
+      },
+      {
+        "note": "第 10 步:society 保留前 3 名,最好是 P07 6 則 3 欄",
+        "objective": 89975.18000569638,
+        "total": 90
+      },
+      {
+        "note": "第 11 步:opinion 保留前 3 名,最好是 P17 4 則、電腦清單",
+        "objective": 89975.18000569638,
+        "total": 90
+      },
+      {
+        "note": "第 12 步:shorts 保留前 3 名,最好是 P13 4 則、一次 4 張",
+        "objective": 91976.18000569638,
+        "total": 92
+      }
+    ]
+  },
+  "page": {
+    "type": "Page",
+    "id": "home",
+    "name": "由表單產生的參數(tw4、集束搜尋、觀點全寬、不放科技)",
+    "path": "/",
+    "codeScheme": "flat",
+    "sections": [
+      {
+        "id": "s1",
+        "mode": "stack",
+        "fluid": false,
+        "columns": [
+          {
+            "width": 8,
+            "blocks": [
+              "inst-gen-headline",
+              "inst-gen-subheadline"
+            ]
+          },
+          {
+            "width": 4,
+            "blocks": [
+              "inst-gen-popular",
+              "inst-gen-flash"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "mode": "flow",
+        "fluid": false,
+        "blocks": [
+          {
+            "instance": "inst-gen-video",
+            "span": {
+              "mobile": 12,
+              "desktop": 12
+            }
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "mode": "stack",
+        "fluid": false,
+        "columns": [
+          {
+            "width": 12,
+            "blocks": [
+              "inst-gen-world",
+              "inst-gen-politics",
+              "inst-gen-finance",
+              "inst-gen-feature",
+              "inst-gen-society"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s4",
+        "mode": "flow",
+        "fluid": false,
+        "blocks": [
+          {
+            "instance": "inst-gen-opinion",
+            "span": {
+              "mobile": 12,
+              "desktop": 12
+            }
+          },
+          {
+            "instance": "inst-gen-shorts",
+            "span": {
+              "mobile": 12,
+              "desktop": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "templates": [
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-headline",
+      "name": "頭條",
+      "role": "headline",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P01",
+      "itemCount": 1,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "頭條"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-subheadline",
+      "name": "焦點新聞",
+      "role": "subheadline",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P07",
+      "itemCount": 3,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 4
+        }
+      },
+      "heading": {
+        "title": "焦點新聞"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-popular",
+      "name": "熱門排行",
+      "role": "popular",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P05",
+      "itemCount": 8,
+      "imageRole": "none",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "熱門排行",
+        "moreLink": "/popular"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-flash",
+      "name": "即時",
+      "role": "flash",
+      "contentType": {
+        "ref": "flash"
+      },
+      "pattern": "P06",
+      "itemCount": 3,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "即時",
+        "moreLink": "/flash"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-video",
+      "name": "影音焦點",
+      "role": "video",
+      "contentType": {
+        "ref": "video"
+      },
+      "pattern": "P12",
+      "itemCount": 4,
+      "imageRole": "video",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      },
+      "heading": {
+        "title": "影音焦點",
+        "moreLink": "/video"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-world",
+      "name": "國際",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "world"
+      },
+      "pattern": "P07",
+      "itemCount": 6,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "heading": {
+        "title": "國際",
+        "moreLink": "/world"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-politics",
+      "name": "政治",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "politics"
+      },
+      "pattern": "P03",
+      "itemCount": 6,
+      "imageRole": "main",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "政治",
+        "moreLink": "/politics"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-finance",
+      "name": "財經",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "finance"
+      },
+      "pattern": "P07",
+      "itemCount": 6,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "heading": {
+        "title": "財經",
+        "moreLink": "/finance"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-feature",
+      "name": "專題",
+      "role": "feature",
+      "contentType": {
+        "ref": "feature"
+      },
+      "pattern": "P14",
+      "itemCount": 2,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "專題",
+        "moreLink": "/feature"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-society",
+      "name": "社會",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "society"
+      },
+      "pattern": "P07",
+      "itemCount": 6,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "heading": {
+        "title": "社會",
+        "moreLink": "/society"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-opinion",
+      "name": "觀點評論",
+      "role": "opinion",
+      "contentType": {
+        "ref": "opinion"
+      },
+      "pattern": "P17",
+      "itemCount": 4,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "list",
+          "cols": 1
+        }
+      },
+      "heading": {
+        "title": "觀點評論",
+        "moreLink": "/opinion"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-shorts",
+      "name": "短影音",
+      "role": "video",
+      "contentType": {
+        "ref": "video"
+      },
+      "pattern": "P13",
+      "itemCount": 4,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      },
+      "heading": {
+        "title": "短影音",
+        "moreLink": "/shorts"
+      }
+    }
+  ],
+  "instances": [
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-headline",
+      "template": "tpl-gen-headline",
+      "overrides": {},
+      "items": [
+        "art-20261103-0009"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-subheadline",
+      "template": "tpl-gen-subheadline",
+      "overrides": {},
+      "items": [
+        "art-20261103-0011",
+        "art-20261103-0012",
+        "art-20261103-0013"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-popular",
+      "template": "tpl-gen-popular",
+      "overrides": {},
+      "items": [
+        "art-20261103-0019",
+        "art-20261103-0025",
+        "art-20261103-0031",
+        "art-20261103-0032",
+        "art-20261103-0033",
+        "art-20261103-0034",
+        "art-20261103-0035",
+        "art-20261103-0036"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-flash",
+      "template": "tpl-gen-flash",
+      "overrides": {},
+      "items": [
+        "art-20261103-0044",
+        "art-20261103-0045",
+        "art-20261103-0046"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-video",
+      "template": "tpl-gen-video",
+      "overrides": {},
+      "items": [
+        "art-20261103-0048",
+        "art-20261103-0049",
+        "art-20261103-0050",
+        "art-20261103-0051"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-world",
+      "template": "tpl-gen-world",
+      "overrides": {},
+      "items": [
+        "art-20261103-0008",
+        "art-20261103-0014",
+        "art-20261103-0015",
+        "art-20261103-0016",
+        "art-20261103-0017",
+        "art-20261103-0018"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-politics",
+      "template": "tpl-gen-politics",
+      "overrides": {},
+      "items": [
+        "art-20261103-0001",
+        "art-20261103-0020",
+        "art-20261103-0021",
+        "art-20261103-0022",
+        "art-20261103-0023",
+        "art-20261103-0024"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-finance",
+      "template": "tpl-gen-finance",
+      "overrides": {},
+      "items": [
+        "art-20261103-0006",
+        "art-20261103-0026",
+        "art-20261103-0027",
+        "art-20261103-0028",
+        "art-20261103-0029",
+        "art-20261103-0030"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-feature",
+      "template": "tpl-gen-feature",
+      "overrides": {},
+      "items": [
+        "art-20261103-0056",
+        "art-20261103-0057"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-society",
+      "template": "tpl-gen-society",
+      "overrides": {},
+      "items": [
+        "art-20261103-0002",
+        "art-20261103-0003",
+        "art-20261103-0004",
+        "art-20261103-0005",
+        "art-20261103-0007",
+        "art-20261103-0010"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-opinion",
+      "template": "tpl-gen-opinion",
+      "overrides": {},
+      "items": [
+        "art-20261103-0058",
+        "art-20261103-0059",
+        "art-20261103-0060",
+        "art-20261103-0061"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-shorts",
+      "template": "tpl-gen-shorts",
+      "overrides": {},
+      "items": [
+        "art-20261103-0052",
+        "art-20261103-0053",
+        "art-20261103-0054",
+        "art-20261103-0055"
+      ]
+    }
+  ],
+  "violations": []
+}

@@ -1,0 +1,10 @@
+{
+  "name": "default",
+  "title": "示意首頁(預設參數)",
+  "preset": "bs5",
+  "blocks": ["headline", "subheadline", "flash", "popular", "video", "world", "politics", "finance", "feature", "society", "opinion", "tech", "shorts"],
+  "sidebar": ["flash", "popular", "opinion"],
+  "fullWidth": ["video", "tech", "shorts"],
+  "columns": [8, 4],
+  "strategy": "greedy"
+}

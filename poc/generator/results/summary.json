@@ -1,0 +1,26 @@
+[
+  {
+    "name": "default",
+    "total": 90,
+    "jsonTotal": 92,
+    "evaluated": 406
+  },
+  {
+    "name": "from-form",
+    "total": 90,
+    "jsonTotal": 92,
+    "evaluated": 368
+  },
+  {
+    "name": "no-sidebar",
+    "total": 96,
+    "jsonTotal": 100,
+    "evaluated": 349
+  },
+  {
+    "name": "tw4-beam",
+    "total": 90,
+    "jsonTotal": 92,
+    "evaluated": 416
+  }
+]

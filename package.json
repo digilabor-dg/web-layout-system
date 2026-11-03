@@ -17,7 +17,8 @@
     "poc:2": "tsx poc/evaluate/run.ts",
     "poc:examples": "tsx poc/examples/run.ts",
     "poc:greedy": "tsx poc/examples/greedy.ts",
-    "docs:wiki": "tsx poc/wiki/gen.ts"
+    "docs:wiki": "tsx poc/wiki/gen.ts",
+    "poc:generate": "tsx poc/generator/run.ts"
   },
   "dependencies": {
     "ajv": "^8.20.0",

@@ -20,7 +20,7 @@ context: |
 
 rules:
   proposal:
-    - 註明依據的 docs/spec 檔案與章節
+    - 註明依據的 openspec/specs capability(必要時加上 docs/spec 的原始章節)
     - 開新 change 前先跑 openspec list,確認 active change 不到 5 個
   tasks:
     - 每條規則、每個公式都要有單元測試任務,測試資料放 tests/fixtures/

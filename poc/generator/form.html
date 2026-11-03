@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>版型參數表單</title>
+<style>
+:root{--bg:#fff;--fg:#202124;--muted:#5f6368;--line:#dadce0;--card:#f8f9fa;--accent:#1a73e8;--bad:#d4311f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f2023;--fg:#e8eaed;--muted:#9aa0a6;--line:#3c4043;--card:#28292c;--accent:#8ab4f8;--bad:#ff6b5e}}
+:root[data-theme="dark"]{--bg:#1f2023;--fg:#e8eaed;--muted:#9aa0a6;--line:#3c4043;--card:#28292c;--accent:#8ab4f8;--bad:#ff6b5e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,'Noto Sans TC',sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:22px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+fieldset{border:1px solid var(--line);border-radius:8px;margin:0 0 16px;padding:12px 16px}
+legend{font-weight:600;padding:0 4px}
+label{display:block;margin:6px 0}input[type=text],select,input[type=number]{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);min-height:40px}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>label{flex:1 1 200px}
+table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:middle}
+td.c{text-align:center}button{font:inherit;min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);cursor:pointer}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent);padding:0 16px}
+.scroll{overflow-x:auto}pre{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px;overflow-x:auto;font-size:13px}
+.err{color:var(--bad)}.muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>版型參數表單</h1>
+<p class="sub">填完會產生一份參數 JSON(格式見 <code>params.schema.json</code>)。存成檔案後執行下方的指令,產生器會挑出每塊的展示類型、則數與排法,並輸出評估報表。</p>
+
+<fieldset><legend>基本</legend>
+<div class="row">
+<label>名稱(英數字與 -,也是輸出目錄)<br><input type="text" id="name" value="my-home" pattern="[a-z0-9-]+"></label>
+<label>頁面名稱<br><input type="text" id="title" value="我的首頁"></label>
+</div>
+<div class="row">
+<label>預設參數組<br><select id="preset"><option value="bs5">bs5(Bootstrap 5,主切換點 992)</option><option value="tw4">tw4(Tailwind 4,1024)</option><option value="md3">md3(Material 3,840)</option></select></label>
+<label>主欄:側欄<br><select id="columns"><option value="8,4">8:4</option><option value="9,3">9:3</option><option value="7,5">7:5</option></select></label>
+</div>
+<div class="row">
+<label>搜尋策略<br><select id="strategy"><option value="greedy">貪婪法(逐塊改良)</option><option value="beam">集束搜尋</option></select></label>
+<label>集束寬度(集束搜尋時)<br><input type="number" id="beamWidth" value="3" min="2" max="10"></label>
+</div>
+</fieldset>
+
+<fieldset><legend>區塊(依閱讀順序)</legend>
+<p class="muted">勾選要放的區塊;用 ↑ ↓ 調整順序;選擇放在主欄、側欄,或獨佔一整列。</p>
+<div class="scroll"><table><thead><tr><th>放</th><th>區塊</th><th>位置</th><th>順序</th></tr></thead><tbody id="blocks"></tbody></table></div>
+</fieldset>
+
+<p><button class="primary" id="copy">複製 JSON</button> <button class="primary" id="download">下載 JSON</button> <span id="msg" class="muted"></span></p>
+<p class="err" id="error"></p>
+<pre id="out"></pre>
+<p>存成 <code>poc/generator/params/<span id="fname">my-home</span>.json</code> 後執行:</p>
+<pre id="cmd"></pre>
+</main>
+<script>
+// 【第一步】區塊清單:id、名稱、預設位置(main 主欄、side 側欄、full 全寬)、是否預設勾選
+const BLOCKS = [
+  ['headline', '頭條', 'main', true], ['subheadline', '次頭條', 'main', true], ['flash', '即時快訊', 'side', true],
+  ['popular', '熱門排行', 'side', true], ['video', '影音焦點', 'full', true], ['world', '國際', 'main', true],
+  ['politics', '政治', 'main', true], ['finance', '財經', 'main', true], ['feature', '專題', 'main', true],
+  ['society', '社會', 'main', true], ['opinion', '觀點評論', 'side', true], ['tech', '科技', 'full', true], ['shorts', '短影音', 'full', true],
+].map(([id, label, place, on]) => ({ id, label, place, on }));
+const $ = (id) => document.getElementById(id);
+
+// 【第二步】畫出區塊表格
+function renderBlocks() {
+  $('blocks').innerHTML = BLOCKS.map((b, i) => `<tr>
+    <td class="c"><input type="checkbox" data-i="${i}" class="on" ${b.on ? 'checked' : ''} aria-label="放入${b.label}" style="width:22px;height:22px"></td>
+    <td>${b.label} <span class="muted">${b.id}</span></td>
+    <td><select data-i="${i}" class="place" aria-label="${b.label}的位置">${[['main', '主欄'], ['side', '側欄'], ['full', '全寬']].map(([v, t]) => `<option value="${v}" ${b.place === v ? 'selected' : ''}>${t}</option>`).join('')}</select></td>
+    <td><button data-i="${i}" class="up" aria-label="上移${b.label}" ${i === 0 ? 'disabled' : ''}>↑</button> <button data-i="${i}" class="down" aria-label="下移${b.label}" ${i === BLOCKS.length - 1 ? 'disabled' : ''}>↓</button></td>
+  </tr>`).join('');
+  update();
+}
+
+// 【第三步】由表單組出參數 JSON;不合法時顯示原因
+function build() {
+  const on = BLOCKS.filter((b) => b.on);
+  const params = {
+    name: $('name').value.trim(),
+    title: $('title').value.trim() || undefined,
+    preset: $('preset').value,
+    blocks: on.map((b) => b.id),
+    sidebar: on.filter((b) => b.place === 'side').map((b) => b.id),
+    fullWidth: on.filter((b) => b.place === 'full').map((b) => b.id),
+    columns: $('columns').value.split(',').map(Number),
+    strategy: $('strategy').value,
+  };
+  if (params.strategy === 'beam') params.beamWidth = Number($('beamWidth').value);
+  const errors = [];
+  if (!/^[a-z0-9-]+$/.test(params.name)) errors.push('名稱只能用小寫英數字與 -');
+  if (params.blocks.length === 0) errors.push('至少要放一個區塊');
+  if (params.strategy === 'beam' && !(params.beamWidth >= 2 && params.beamWidth <= 10)) errors.push('集束寬度要在 2~10');
+  return { params, errors };
+}
+
+function update() {
+  const { params, errors } = build();
+  $('error').textContent = errors.join(';');
+  $('out').textContent = JSON.stringify(params, null, 2);
+  $('fname').textContent = params.name || '…';
+  $('cmd').textContent = `npm run poc:generate -- poc/generator/params/${params.name || '…'}.json`;
+}
+
+// 【第四步】事件:勾選、位置、順序、複製、下載
+document.addEventListener('change', (e) => {
+  const i = Number(e.target.dataset.i);
+  if (e.target.classList.contains('on')) BLOCKS[i].on = e.target.checked;
+  if (e.target.classList.contains('place')) BLOCKS[i].place = e.target.value;
+  update();
+});
+document.addEventListener('input', update);
+document.addEventListener('click', (e) => {
+  const t = e.target.closest('button');
+  if (!t) return;
+  const i = Number(t.dataset.i);
+  if (t.classList.contains('up') && i > 0) [BLOCKS[i - 1], BLOCKS[i]] = [BLOCKS[i], BLOCKS[i - 1]];
+  if (t.classList.contains('down') && i < BLOCKS.length - 1) [BLOCKS[i + 1], BLOCKS[i]] = [BLOCKS[i], BLOCKS[i + 1]];
+  if (t.classList.contains('up') || t.classList.contains('down')) renderBlocks();
+});
+$('copy').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText($('out').textContent); $('msg').textContent = '已複製'; }
+  catch { $('msg').textContent = '無法存取剪貼簿,請手動選取下方 JSON'; }
+});
+$('download').addEventListener('click', () => {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([$('out').textContent + '\n'], { type: 'application/json' }));
+  a.download = `${build().params.name || 'params'}.json`;
+  a.click();
+});
+renderBlocks();
+</script>
+</body>
+</html>

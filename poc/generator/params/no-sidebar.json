@@ -1,0 +1,10 @@
+{
+  "name": "no-sidebar",
+  "title": "示意首頁(無側欄、Material 3)",
+  "preset": "md3",
+  "blocks": ["headline", "flash", "subheadline", "world", "video", "finance", "society", "popular", "tech", "opinion", "shorts"],
+  "sidebar": [],
+  "fullWidth": [],
+  "columns": [8, 4],
+  "strategy": "greedy"
+}
