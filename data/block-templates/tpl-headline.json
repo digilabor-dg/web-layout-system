@@ -1,0 +1,18 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-headline",
+  "name": "頭條",
+  "role": "headline",
+  "contentType": {
+    "ref": "news"
+  },
+  "pattern": "P01",
+  "itemCount": 1,
+  "selection": {
+    "mode": "manual"
+  },
+  "responsive": null,
+  "heading": {
+    "title": "頭條"
+  }
+}

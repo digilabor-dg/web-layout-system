@@ -1,0 +1,44 @@
+{
+  "type": "LayoutPattern",
+  "id": "P21",
+  "name": "主新聞群組",
+  "group": "news-combo",
+  "tags": [
+    "mixed",
+    "zoom"
+  ],
+  "arrangement": "list",
+  "emphasis": "lead1",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "lead",
+      "count": 1,
+      "image": [
+        "main"
+      ]
+    },
+    {
+      "role": "link",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 5
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

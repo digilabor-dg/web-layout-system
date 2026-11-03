@@ -1,0 +1,19 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-feature",
+  "name": "專題",
+  "role": "feature",
+  "contentType": {
+    "ref": "feature"
+  },
+  "pattern": "P14",
+  "itemCount": 2,
+  "selection": {
+    "mode": "manual"
+  },
+  "responsive": null,
+  "heading": {
+    "title": "專題",
+    "moreLink": "/feature"
+  }
+}

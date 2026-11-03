@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0003",
+  "contentType": "news",
+  "category": "society",
+  "title": "示意:地方選舉登記截止,各區候選人名單出爐",
+  "url": "/news/0003",
+  "publishedAt": "2026-11-03T22:39:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0003_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0003_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

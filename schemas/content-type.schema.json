@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "content-type.schema.json",
+  "title": "ContentType 內容類型",
+  "type": "object",
+  "required": [
+    "type",
+    "id",
+    "name",
+    "categories",
+    "suggestedPatterns"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "const": "ContentType"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "categories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      }
+    },
+    "suggestedPatterns": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/patternId"
+      }
+    },
+    "requiresVideo": {
+      "description": "這類內容的每則都要另外提供 16:9 的 video 縮圖",
+      "type": "boolean"
+    }
+  }
+}

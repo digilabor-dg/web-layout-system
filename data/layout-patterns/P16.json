@@ -1,0 +1,50 @@
+{
+  "type": "LayoutPattern",
+  "id": "P16",
+  "name": "圖片牆",
+  "group": "news-combo",
+  "tags": [
+    "image"
+  ],
+  "arrangement": "grid",
+  "emphasis": "none",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "gallery",
+      "count": 1,
+      "image": [
+        "square"
+      ]
+    }
+  ],
+  "items": {
+    "min": 1,
+    "max": 1
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "grid",
+      "cols": 3
+    },
+    "desktop": {
+      "layout": "grid",
+      "cols": 6
+    }
+  },
+  "gallery": {
+    "min": 6,
+    "max": 12
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

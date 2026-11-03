@@ -1,0 +1,11 @@
+{
+  "type": "ContentType",
+  "id": "video",
+  "name": "影音",
+  "categories": [],
+  "suggestedPatterns": [
+    "P12",
+    "P13"
+  ],
+  "requiresVideo": true
+}

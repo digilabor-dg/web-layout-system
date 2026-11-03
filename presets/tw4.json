@@ -1,0 +1,23 @@
+{
+  "id": "tw4",
+  "name": "Tailwind CSS 4",
+  "source": "Tailwind CSS v4 文件:Responsive design(--breakpoint-*)、container 工具類、text-base",
+  "breakpoints": { "tabletV": 768, "tabletH": 1024, "desktop": 1280 },
+  "containers": [
+    { "minWidth": 0, "maxWidth": null, "padding": 0 },
+    { "minWidth": 640, "maxWidth": 640, "padding": 0 },
+    { "minWidth": 768, "maxWidth": 768, "padding": 0 },
+    { "minWidth": 1024, "maxWidth": 1024, "padding": 0 },
+    { "minWidth": 1280, "maxWidth": 1280, "padding": 0 },
+    { "minWidth": 1536, "maxWidth": 1536, "padding": 0 }
+  ],
+  "gutter": "1rem",
+  "columns": 12,
+  "baseFontSize": 16,
+  "lineHeight": 1.5,
+  "notes": [
+    "斷點 sm 40rem、md 48rem、lg 64rem、xl 80rem、2xl 96rem",
+    "container 預設沒有內距,網站通常自行加上(例如 px-4),可在網站設定覆寫",
+    "Tailwind 沒有預設欄距;這裡的 1rem 是 gap-4 的慣例值,屬示意"
+  ]
+}

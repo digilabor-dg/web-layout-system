@@ -1,0 +1,19 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-flash",
+  "name": "即時快訊",
+  "role": "flash",
+  "contentType": {
+    "ref": "flash"
+  },
+  "pattern": "P06",
+  "itemCount": 4,
+  "selection": {
+    "mode": "latest"
+  },
+  "responsive": null,
+  "heading": {
+    "title": "即時",
+    "moreLink": "/flash"
+  }
+}

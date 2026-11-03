@@ -1,0 +1,50 @@
+{
+  "type": "LayoutPattern",
+  "id": "P09",
+  "name": "首 1 則放大,其餘純文字",
+  "group": "news-combo",
+  "tags": [
+    "mixed",
+    "zoom"
+  ],
+  "arrangement": "list",
+  "emphasis": "lead1",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "lead",
+      "count": 1,
+      "image": [
+        "main"
+      ]
+    },
+    {
+      "role": "rest",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 4,
+    "max": 6
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "stack"
+    },
+    "desktop": {
+      "layout": "split",
+      "cols": [
+        8,
+        4
+      ]
+    }
+  },
+  "inferred": [
+    "imageText"
+  ]
+}

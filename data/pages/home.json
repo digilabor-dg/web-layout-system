@@ -1,0 +1,88 @@
+{
+  "type": "Page",
+  "id": "home",
+  "name": "首頁",
+  "path": "/",
+  "codeScheme": "flat",
+  "sections": [
+    {
+      "id": "top",
+      "mode": "stack",
+      "fluid": false,
+      "columns": [
+        {
+          "width": 8,
+          "blocks": [
+            "inst-home-headline",
+            "inst-home-subheadline"
+          ]
+        },
+        {
+          "width": 4,
+          "blocks": [
+            "inst-home-flash",
+            "inst-home-popular"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "mode": "flow",
+      "fluid": false,
+      "blocks": [
+        {
+          "instance": "inst-home-video-focus",
+          "span": {
+            "mobile": 12,
+            "desktop": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": "sections",
+      "mode": "stack",
+      "fluid": false,
+      "columns": [
+        {
+          "width": 8,
+          "blocks": [
+            "inst-home-world",
+            "inst-home-politics",
+            "inst-home-finance",
+            "inst-home-feature",
+            "inst-home-society"
+          ]
+        },
+        {
+          "width": 4,
+          "blocks": [
+            "inst-home-opinion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bottom",
+      "mode": "flow",
+      "fluid": false,
+      "blocks": [
+        {
+          "instance": "inst-home-tech",
+          "span": {
+            "mobile": 12,
+            "desktop": 12
+          }
+        },
+        {
+          "instance": "inst-home-shorts",
+          "span": {
+            "mobile": 12,
+            "desktop": 12
+          }
+        }
+      ]
+    }
+  ]
+}

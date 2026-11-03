@@ -1,0 +1,12 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-video-focus",
+  "template": "tpl-video-focus",
+  "overrides": {},
+  "items": [
+    "art-20261103-0048",
+    "art-20261103-0049",
+    "art-20261103-0050",
+    "art-20261103-0051"
+  ]
+}

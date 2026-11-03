@@ -1,0 +1,25 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0052",
+  "contentType": "video",
+  "title": "示意:街頭快問快答:你怎麼通勤?",
+  "url": "/news/0052",
+  "publishedAt": "2026-11-03T16:56:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0052_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0052_1x1.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "video": {
+      "src": "/img/0052_16x9.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "rule": "instance-content-match",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "基準資料集",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "國際區塊放了財經新聞",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/content-items/w1/category",
+          "value": "finance"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "instance-content-match",
+          "id": "inst-grid",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

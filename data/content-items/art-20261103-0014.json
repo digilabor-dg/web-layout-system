@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0014",
+  "contentType": "news",
+  "category": "world",
+  "title": "示意:多國領袖峰會閉幕,發表氣候合作聲明",
+  "url": "/news/0014",
+  "publishedAt": "2026-11-03T21:22:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0014_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0014_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "page": {
+    "type": "Page",
+    "id": "demo",
+    "name": "示意頁",
+    "path": "/demo",
+    "codeScheme": "flat",
+    "sections": [
+      { "id": "s1", "mode": "stack", "fluid": false, "columns": [{ "width": 8, "blocks": ["a", "b"] }, { "width": 4, "blocks": ["c", "d"] }] },
+      { "id": "s2", "mode": "flow", "fluid": false, "blocks": [{ "instance": "e", "span": { "mobile": 12, "desktop": 12 } }] }
+    ]
+  },
+  "flat": ["A", "B", "C", "D", "E"],
+  "sectioned": ["AA", "AB", "AC", "AD", "BA"],
+  "itemCodes": [
+    { "block": "H", "ordinal": 3, "expected": "H3" },
+    { "block": "AC", "ordinal": 12, "expected": "AC12" }
+  ],
+  "mobileDefault": ["a", "b", "c", "d", "e"],
+  "mobileOrder": { "section": 0, "order": ["a", "c", "b", "d"], "expected": ["a", "c", "b", "d", "e"] },
+  "flowRows": {
+    "spans": [8, 4, 6, 6],
+    "expected": [["b1", "b2"], ["b3", "b4"]]
+  }
+}

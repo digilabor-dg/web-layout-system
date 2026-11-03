@@ -1,0 +1,47 @@
+{
+  "type": "LayoutPattern",
+  "id": "P05",
+  "name": "編號排行",
+  "group": "text-led",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "side",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "square",
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 5,
+    "max": 10
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "list",
+      "cols": 1
+    },
+    "desktop": {
+      "layout": "list",
+      "cols": 1
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

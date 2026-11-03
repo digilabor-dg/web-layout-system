@@ -1,0 +1,25 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0050",
+  "contentType": "video",
+  "title": "示意:專家解析本週經濟數據",
+  "url": "/news/0050",
+  "publishedAt": "2026-11-03T17:10:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0050_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0050_1x1.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "video": {
+      "src": "/img/0050_16x9.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  }
+}

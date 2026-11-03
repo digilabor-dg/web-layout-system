@@ -1,4 +1,4 @@
-# news-layout-system
+# web-layout-system
 
 新聞首頁區塊排版系統:用 JSON 定義版面,評估工具自動找出版面問題並提出改進建議。
 

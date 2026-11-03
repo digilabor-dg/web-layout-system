@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0056",
+  "contentType": "feature",
+  "title": "示意:海岸線的未來:三十年後的家園",
+  "summary": "以示意文字說明專題的摘要,介紹整個企劃的內容與篇數。",
+  "url": "/news/0056",
+  "publishedAt": "2026-11-03T16:28:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0056_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0056_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

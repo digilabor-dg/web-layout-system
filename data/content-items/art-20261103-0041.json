@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0041",
+  "contentType": "news",
+  "category": "tech",
+  "title": "示意:博物館推出 AR 導覽,重現古城樣貌",
+  "url": "/news/0041",
+  "publishedAt": "2026-11-03T18:13:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0041_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0041_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

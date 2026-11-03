@@ -1,0 +1,44 @@
+{
+  "type": "LayoutPattern",
+  "id": "P19",
+  "name": "跑馬燈",
+  "group": "text-led",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "headline",
+  "interaction": "marquee",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 10
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "marquee"
+    },
+    "desktop": {
+      "layout": "marquee"
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

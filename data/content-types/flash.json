@@ -1,0 +1,10 @@
+{
+  "type": "ContentType",
+  "id": "flash",
+  "name": "快訊",
+  "categories": [],
+  "suggestedPatterns": [
+    "P06",
+    "P19"
+  ]
+}

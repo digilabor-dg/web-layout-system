@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0038",
+  "contentType": "news",
+  "category": "tech",
+  "title": "示意:生成式 AI 工具導入公部門文書流程",
+  "url": "/news/0038",
+  "publishedAt": "2026-11-03T18:34:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0038_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0038_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

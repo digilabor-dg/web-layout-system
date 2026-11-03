@@ -1,0 +1,25 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0053",
+  "contentType": "video",
+  "title": "示意:30 秒學會折疊環保袋",
+  "url": "/news/0053",
+  "publishedAt": "2026-11-03T16:49:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0053_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0053_1x1.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "video": {
+      "src": "/img/0053_16x9.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  }
+}

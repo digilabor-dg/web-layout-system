@@ -1,0 +1,10 @@
+{
+  "type": "ContentType",
+  "id": "opinion",
+  "name": "觀點",
+  "categories": [],
+  "suggestedPatterns": [
+    "P17",
+    "P18"
+  ]
+}

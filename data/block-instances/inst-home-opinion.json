@@ -1,0 +1,12 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-opinion",
+  "template": "tpl-opinion",
+  "overrides": {},
+  "items": [
+    "art-20261103-0058",
+    "art-20261103-0059",
+    "art-20261103-0060",
+    "art-20261103-0061"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-feature",
+  "template": "tpl-feature",
+  "overrides": {},
+  "items": [
+    "art-20261103-0056",
+    "art-20261103-0057"
+  ]
+}

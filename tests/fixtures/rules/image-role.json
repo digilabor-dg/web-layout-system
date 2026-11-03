@@ -1,0 +1,128 @@
+{
+  "rule": "image-role",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "P03 選定 square",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-thumbs",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-thumbs",
+            "name": "tpl-thumbs",
+            "role": "section",
+            "contentType": {
+              "ref": "news",
+              "category": "world"
+            },
+            "pattern": "P03",
+            "itemCount": 3,
+            "imageRole": "square",
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-thumbs"
+            }
+          }
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "P03 沒有選定",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-thumbs",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-thumbs",
+            "name": "tpl-thumbs",
+            "role": "section",
+            "contentType": {
+              "ref": "news",
+              "category": "world"
+            },
+            "pattern": "P03",
+            "itemCount": 3,
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-thumbs"
+            }
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "image-role",
+          "id": "tpl-thumbs",
+          "severity": "error"
+        }
+      ]
+    },
+    {
+      "name": "P07 選了不允許的 square",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-grid/imageRole",
+          "value": "square"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "image-role",
+          "id": "tpl-grid",
+          "severity": "error"
+        }
+      ]
+    },
+    {
+      "name": "新聞用 video 角色",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-v",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-v",
+            "name": "tpl-v",
+            "role": "section",
+            "contentType": {
+              "ref": "news"
+            },
+            "pattern": "P12",
+            "itemCount": 4,
+            "imageRole": "video",
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-v"
+            }
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "image-role",
+          "id": "tpl-v",
+          "severity": "error"
+        },
+        {
+          "rule": "suggested-pattern",
+          "id": "tpl-v",
+          "severity": "warning"
+        }
+      ]
+    }
+  ]
+}

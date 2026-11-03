@@ -1,0 +1,6 @@
+{
+  "type": "PatternTag",
+  "id": "zoom",
+  "name": "放大",
+  "rule": "至少一則放大強調"
+}

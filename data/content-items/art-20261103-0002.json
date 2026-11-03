@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0002",
+  "contentType": "news",
+  "category": "society",
+  "title": "示意:新一代大眾運輸票證整合上路",
+  "url": "/news/0002",
+  "publishedAt": "2026-11-03T22:46:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0002_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0002_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

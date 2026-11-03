@@ -1,0 +1,14 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-society",
+  "template": "tpl-society",
+  "overrides": {},
+  "items": [
+    "art-20261103-0032",
+    "art-20261103-0033",
+    "art-20261103-0034",
+    "art-20261103-0035",
+    "art-20261103-0036",
+    "art-20261103-0037"
+  ]
+}

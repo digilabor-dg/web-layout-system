@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pattern-tag.schema.json",
+  "title": "PatternTag 外觀標籤",
+  "type": "object",
+  "required": ["type", "id", "name", "rule"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "PatternTag" },
+    "id": { "enum": ["image", "text", "mixed", "carousel", "zoom"] },
+    "name": { "type": "string", "minLength": 1 },
+    "rule": { "description": "貼標條件", "type": "string", "minLength": 1 }
+  }
+}

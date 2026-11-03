@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0031",
+  "contentType": "news",
+  "category": "finance",
+  "title": "示意:綠能債券發行規模創新高",
+  "url": "/news/0031",
+  "publishedAt": "2026-11-03T19:23:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0031_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0031_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

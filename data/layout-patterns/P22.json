@@ -1,0 +1,37 @@
+{
+  "type": "LayoutPattern",
+  "id": "P22",
+  "name": "單一影片播放器",
+  "group": "av",
+  "tags": [
+    "image",
+    "zoom"
+  ],
+  "arrangement": "single",
+  "emphasis": "lead1",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "play",
+  "slots": [
+    {
+      "role": "player",
+      "count": 1,
+      "image": [
+        "video"
+      ]
+    }
+  ],
+  "items": {
+    "min": 1,
+    "max": 1
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

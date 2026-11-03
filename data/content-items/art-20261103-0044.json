@@ -1,0 +1,20 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0044",
+  "contentType": "flash",
+  "title": "示意:東部外海發生規模 4.2 地震,無災情傳出",
+  "url": "/news/0044",
+  "publishedAt": "2026-11-03T17:52:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0044_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0044_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

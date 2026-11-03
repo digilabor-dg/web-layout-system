@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0021",
+  "contentType": "news",
+  "category": "politics",
+  "title": "示意:地方首長聯合提案,爭取交通建設經費",
+  "url": "/news/0021",
+  "publishedAt": "2026-11-03T20:33:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0021_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0021_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

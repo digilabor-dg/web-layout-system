@@ -1,0 +1,37 @@
+{
+  "type": "LayoutPattern",
+  "id": "P34",
+  "name": "無限載入動態",
+  "group": "news-combo",
+  "tags": [
+    "mixed"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "side",
+  "textAmount": "summary",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "main"
+      ]
+    }
+  ],
+  "items": {
+    "min": 1,
+    "max": null,
+    "pageSize": 10
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0055",
+  "contentType": "video",
+  "title": "示意:小吃攤老闆的一天",
+  "url": "/news/0055",
+  "publishedAt": "2026-11-03T16:35:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0055_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0055_1x1.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "video": {
+      "src": "/img/0055_16x9.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  }
+}

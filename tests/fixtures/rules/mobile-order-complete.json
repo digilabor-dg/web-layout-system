@@ -1,0 +1,41 @@
+{
+  "rule": "mobile-order-complete",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "完整的手機順序",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/mobileOrder",
+          "value": [
+            "inst-lead",
+            "inst-list",
+            "inst-grid"
+          ]
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "少列一塊",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/mobileOrder",
+          "value": [
+            "inst-lead",
+            "inst-list"
+          ]
+        }
+      ],
+      "expect": [
+        {
+          "rule": "mobile-order-complete",
+          "id": "home",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

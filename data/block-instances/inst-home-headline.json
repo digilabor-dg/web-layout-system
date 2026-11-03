@@ -1,0 +1,9 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-headline",
+  "template": "tpl-headline",
+  "overrides": {},
+  "items": [
+    "art-20261103-0001"
+  ]
+}

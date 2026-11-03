@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0007",
+  "contentType": "news",
+  "category": "society",
+  "title": "示意:週末天氣轉涼,北部低溫下探 15 度",
+  "url": "/news/0007",
+  "publishedAt": "2026-11-03T22:11:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0007_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0007_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

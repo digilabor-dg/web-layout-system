@@ -1,0 +1,49 @@
+{
+  "type": "LayoutPattern",
+  "id": "P14",
+  "name": "寬幅專題",
+  "group": "news-combo",
+  "tags": [
+    "image",
+    "zoom"
+  ],
+  "arrangement": "single",
+  "emphasis": "lead1",
+  "imageText": "side",
+  "textAmount": "summary",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "main"
+      ]
+    }
+  ],
+  "items": {
+    "min": 1,
+    "max": 2
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "stack"
+    },
+    "desktop": {
+      "layout": "split",
+      "cols": [
+        7,
+        5
+      ]
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

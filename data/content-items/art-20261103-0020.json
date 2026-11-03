@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0020",
+  "contentType": "news",
+  "category": "politics",
+  "title": "示意:立法機關三讀通過預算案,附帶十項決議",
+  "url": "/news/0020",
+  "publishedAt": "2026-11-03T20:40:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0020_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0020_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

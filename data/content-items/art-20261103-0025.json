@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0025",
+  "contentType": "news",
+  "category": "politics",
+  "title": "示意:監察機關提出年度巡察報告",
+  "url": "/news/0025",
+  "publishedAt": "2026-11-03T20:05:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0025_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0025_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

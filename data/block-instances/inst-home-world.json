@@ -1,0 +1,14 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-world",
+  "template": "tpl-world",
+  "overrides": {},
+  "items": [
+    "art-20261103-0014",
+    "art-20261103-0015",
+    "art-20261103-0016",
+    "art-20261103-0017",
+    "art-20261103-0018",
+    "art-20261103-0019"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-popular",
+  "name": "熱門排行",
+  "role": "popular",
+  "contentType": {
+    "ref": "news"
+  },
+  "pattern": "P05",
+  "itemCount": 8,
+  "imageRole": "none",
+  "selection": {
+    "mode": "popular"
+  },
+  "responsive": null,
+  "heading": {
+    "title": "熱門排行",
+    "moreLink": "/popular"
+  }
+}

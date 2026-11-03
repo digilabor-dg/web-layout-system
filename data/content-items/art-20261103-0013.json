@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0013",
+  "contentType": "news",
+  "category": "tech",
+  "title": "示意:電動機車補助延長,申請流程一次看",
+  "url": "/news/0013",
+  "publishedAt": "2026-11-03T21:29:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0013_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0013_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

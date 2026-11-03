@@ -1,0 +1,46 @@
+{
+  "type": "LayoutPattern",
+  "id": "P15",
+  "name": "分頁籤切換",
+  "group": "interactive",
+  "tags": [
+    "mixed"
+  ],
+  "arrangement": "tabs",
+  "emphasis": "none",
+  "imageText": "side",
+  "textAmount": "headline",
+  "interaction": "tabs",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "main",
+        "square",
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 6
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "tabs"
+    },
+    "desktop": {
+      "layout": "tabs"
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

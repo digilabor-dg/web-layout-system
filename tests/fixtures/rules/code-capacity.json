@@ -1,0 +1,1055 @@
+{
+  "rule": "code-capacity",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "3 塊",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "flat 27 塊",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/content-items/x1",
+          "value": {
+            "type": "ContentItem",
+            "id": "x1",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 1",
+            "url": "/news/x1",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x1_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x1_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x1",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x1",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x1"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x1"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x2",
+          "value": {
+            "type": "ContentItem",
+            "id": "x2",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 2",
+            "url": "/news/x2",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x2_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x2_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x2",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x2",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x2"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x2"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x3",
+          "value": {
+            "type": "ContentItem",
+            "id": "x3",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 3",
+            "url": "/news/x3",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x3_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x3_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x3",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x3",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x3"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x3"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x4",
+          "value": {
+            "type": "ContentItem",
+            "id": "x4",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 4",
+            "url": "/news/x4",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x4_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x4_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x4",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x4",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x4"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x4"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x5",
+          "value": {
+            "type": "ContentItem",
+            "id": "x5",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 5",
+            "url": "/news/x5",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x5_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x5_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x5",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x5",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x5"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x5"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x6",
+          "value": {
+            "type": "ContentItem",
+            "id": "x6",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 6",
+            "url": "/news/x6",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x6_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x6_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x6",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x6",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x6"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x6"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x7",
+          "value": {
+            "type": "ContentItem",
+            "id": "x7",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 7",
+            "url": "/news/x7",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x7_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x7_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x7",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x7",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x7"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x7"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x8",
+          "value": {
+            "type": "ContentItem",
+            "id": "x8",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 8",
+            "url": "/news/x8",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x8_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x8_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x8",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x8",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x8"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x8"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x9",
+          "value": {
+            "type": "ContentItem",
+            "id": "x9",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 9",
+            "url": "/news/x9",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x9_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x9_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x9",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x9",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x9"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x9"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x10",
+          "value": {
+            "type": "ContentItem",
+            "id": "x10",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 10",
+            "url": "/news/x10",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x10_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x10_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x10",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x10",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x10"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x10"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x11",
+          "value": {
+            "type": "ContentItem",
+            "id": "x11",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 11",
+            "url": "/news/x11",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x11_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x11_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x11",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x11",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x11"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x11"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x12",
+          "value": {
+            "type": "ContentItem",
+            "id": "x12",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 12",
+            "url": "/news/x12",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x12_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x12_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x12",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x12",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x12"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x12"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x13",
+          "value": {
+            "type": "ContentItem",
+            "id": "x13",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 13",
+            "url": "/news/x13",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x13_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x13_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x13",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x13",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x13"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x13"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x14",
+          "value": {
+            "type": "ContentItem",
+            "id": "x14",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 14",
+            "url": "/news/x14",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x14_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x14_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x14",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x14",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x14"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x14"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x15",
+          "value": {
+            "type": "ContentItem",
+            "id": "x15",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 15",
+            "url": "/news/x15",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x15_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x15_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x15",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x15",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x15"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x15"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x16",
+          "value": {
+            "type": "ContentItem",
+            "id": "x16",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 16",
+            "url": "/news/x16",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x16_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x16_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x16",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x16",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x16"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x16"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x17",
+          "value": {
+            "type": "ContentItem",
+            "id": "x17",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 17",
+            "url": "/news/x17",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x17_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x17_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x17",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x17",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x17"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x17"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x18",
+          "value": {
+            "type": "ContentItem",
+            "id": "x18",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 18",
+            "url": "/news/x18",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x18_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x18_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x18",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x18",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x18"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x18"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x19",
+          "value": {
+            "type": "ContentItem",
+            "id": "x19",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 19",
+            "url": "/news/x19",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x19_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x19_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x19",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x19",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x19"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x19"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x20",
+          "value": {
+            "type": "ContentItem",
+            "id": "x20",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 20",
+            "url": "/news/x20",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x20_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x20_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x20",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x20",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x20"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x20"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x21",
+          "value": {
+            "type": "ContentItem",
+            "id": "x21",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 21",
+            "url": "/news/x21",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x21_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x21_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x21",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x21",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x21"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x21"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x22",
+          "value": {
+            "type": "ContentItem",
+            "id": "x22",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 22",
+            "url": "/news/x22",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x22_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x22_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x22",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x22",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x22"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x22"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x23",
+          "value": {
+            "type": "ContentItem",
+            "id": "x23",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 23",
+            "url": "/news/x23",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x23_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x23_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x23",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x23",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x23"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x23"
+        },
+        {
+          "op": "add",
+          "path": "/content-items/x24",
+          "value": {
+            "type": "ContentItem",
+            "id": "x24",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意 24",
+            "url": "/news/x24",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/x24_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/x24_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-x24",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-x24",
+            "template": "tpl-lead",
+            "overrides": {},
+            "items": [
+              "x24"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-x24"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "code-capacity",
+          "id": "home",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

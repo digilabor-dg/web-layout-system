@@ -1,0 +1,23 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0058",
+  "contentType": "opinion",
+  "title": "示意:城市需要更多可以停留的公共空間",
+  "author": {
+    "name": "示意作者甲"
+  },
+  "url": "/news/0058",
+  "publishedAt": "2026-11-03T16:14:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0058_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0058_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}
