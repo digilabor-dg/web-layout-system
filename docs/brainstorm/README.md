@@ -42,4 +42,5 @@ docs/wiki/        白話說明與進度(規格之後)
 | [feedback-collection.md](feedback-collection.md) | 反饋收集:圈選區域、方向型量表、短評萃取、適應性提問、「這樣會不會更好」,以及對應的 UX 理論 | 發想 |
 | [math.md](math.md) | 數學與演算法:已使用、將要使用、可能使用的公式與用法 | 整理(已使用的以規格為準) |
 | [theory.md](theory.md) | 理論與方法:UX 研究、感官評估、心理測量、HCI,各自的用途與狀態 | 整理 |
+| [search-algorithms.md](search-algorithms.md) | 搜尋演算法:貪婪、集束、仿生(模擬退火、基因演算法、蟻群)的用途與比較方法 | 發想(已決定要做,規格待修改) |
 | [log-2026-11-03.md](log-2026-11-03.md) | 討論記錄:評估器怎麼和人對齊、反饋怎麼收 | 記錄 |
