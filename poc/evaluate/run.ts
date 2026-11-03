@@ -5,17 +5,12 @@ import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadWorld } from '../estimate-vs-render/model.js';
 import { type Evaluation, FACETS, type Finding, evaluatePage, sortFindings } from './evaluate.js';
+export { SPEC_ITEMS } from './evaluate.js';
 import { renderAudit } from './render-audit.js';
 import { renderReportHtml } from './report-html.js';
 
 const HERE = import.meta.dirname;
 const REPO = join(HERE, '..', '..');
-
-/** 規格裡可由 JSON 估算的項目(第 2 層 6 項、第 3 層 9 項) */
-export const SPEC_ITEMS = [
-  '末列不落單', '區塊長度', '標題行數', '欄底對齊', '填充率', '列距',
-  '手機首屏', '間距節奏', '同型不連續', '區塊數', '整頁則數', '單塊不重複', '放大型不相鄰', '用途則數', '欄高',
-];
 
 const LABEL = { pass: '✅ 合格', warn: '⚠️ 警告', fail: '❌ 不合格' } as const;
 

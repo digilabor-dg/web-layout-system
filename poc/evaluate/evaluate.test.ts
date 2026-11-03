@@ -4,8 +4,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadWorld } from '../estimate-vs-render/model.js';
 import { blockCount, fillRate, lastRow, lowerBetter, higherBetter, pageItems, sameTypeRun, titleLines, worse } from './checks.js';
-import { evaluatePage, itemVerdicts, PENALTY } from './evaluate.js';
-import { SPEC_ITEMS } from './run.js';
+import { evaluatePage, itemVerdicts, PENALTY, SPEC_ITEMS } from './evaluate.js';
 
 describe('門檻邊界', () => {
   it('越小越好:欄底對齊 5% / 10%', () => {

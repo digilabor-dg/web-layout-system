@@ -25,6 +25,12 @@ export type Facet = (typeof FACETS)[number];
 /** 需要渲染才能量的面向(JSON 階段不給分) */
 export const RENDER_ONLY: Facet[] = ['比例', '可用性'];
 
+/** 規格裡可由 JSON 估算的項目(第 2 層 6 項、第 3 層 9 項) */
+export const SPEC_ITEMS = [
+  '末列不落單', '區塊長度', '標題行數', '欄底對齊', '填充率', '列距',
+  '手機首屏', '間距節奏', '同型不連續', '區塊數', '整頁則數', '單塊不重複', '放大型不相鄰', '用途則數', '欄高',
+];
+
 /** 一項判定結果 */
 export interface Finding {
   /** 項目名稱,例如「同型不連續」 */
