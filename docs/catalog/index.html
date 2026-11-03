@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>新聞版型圖鑑</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<style>
+/* Layout: a layout-dummy catalogue — 20 pattern cards on a cool proof-blue grid; every picture box is width-driven with a locked 3:2 or 1:1 ratio */
+:root{
+  --bg:#f1f4f8; --surface:#ffffff; --ink:#131b25; --muted:#586577; --line:#d4dce6;
+  --proof:#2c6bd3; --ph-a:#e1e9f6; --ph-b:#c7d6ee; --ok:#1b8656; --bad:#c3352a;
+  --scrim:rgba(8,14,22,.74); --on-scrim:#ffffff;
+  --display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e131a; --surface:#151c25; --ink:#e5eaf0; --muted:#94a1b2; --line:#2a3443;
+  --proof:#71a5f3; --ph-a:#1b283a; --ph-b:#24354d; --ok:#41be86; --bad:#ef6c61; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e131a; --surface:#151c25; --ink:#e5eaf0; --muted:#94a1b2; --line:#2a3443;
+  --proof:#71a5f3; --ph-a:#1b283a; --ph-b:#24354d; --ok:#41be86; --bad:#ef6c61; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6}
+.wrap{max-width:1200px;margin:0 auto;padding-block:36px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:28px}
+
+/* header */
+.top{display:grid;gap:18px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.1em;color:var(--proof);text-transform:uppercase}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,38px);line-height:1.2;margin:0;text-wrap:balance}
+.intro{margin:0;max-width:62ch;color:var(--muted)}
+.rule{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+.rule strong{font-size:15px}
+.rule .samples{display:flex;gap:12px;align-items:flex-end}
+.rule .samples > div{width:72px}
+.rule .samples > div.sq{width:48px}
+.rule p{margin:0;font-size:13.5px;color:var(--muted);flex:1 1 260px;min-width:0}
+.check{display:inline-flex;align-items:center;gap:8px;font-size:13px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--surface);font-variant-numeric:tabular-nums}
+.check .dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.check b{color:var(--ok)}
+.check[data-state="bad"] .dot{background:var(--bad)}
+.check[data-state="bad"] b{color:var(--bad)}
+.check .mono{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+/* filter */
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.bar .label{font-size:13px;color:var(--muted);margin-right:4px}
+.chip{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--proof);border-color:var(--proof);color:var(--surface)}
+.chip:focus-visible,.tabbtn:focus-visible,.nav:focus-visible{outline:2px solid var(--proof);outline-offset:2px}
+.bar .count{margin-left:auto;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* catalogue */
+.cat{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr));gap:20px}
+.pat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:14px;align-content:start;min-width:0}
+.pat.wide{grid-column:1/-1}
+.pat > header{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px}
+.no{font:500 12px/1 var(--mono);color:var(--proof);letter-spacing:.04em}
+.pat h2{margin:0;font-size:17px;font-weight:700}
+.tags{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 8px;line-height:20px}
+.demo{border:1px dashed var(--line);border-radius:6px;padding:14px;background:var(--bg);min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:4px 20px;margin:0;font-size:13px}
+.meta div{display:flex;gap:6px}
+.meta dt{color:var(--muted)}
+.meta dd{margin:0;font-variant-numeric:tabular-nums}
+
+/* picture box — the only image element on the page; height always follows width */
+.ph{position:relative;display:block;width:100%;max-width:100%;height:auto;aspect-ratio:3/2;align-self:start;justify-self:stretch;
+  background:repeating-linear-gradient(135deg,var(--ph-a) 0 9px,var(--ph-b) 9px 10px);border-radius:4px;overflow:hidden}
+.ph[data-ratio="1:1"]{aspect-ratio:1/1}
+.ph::after{content:attr(data-ratio);position:absolute;left:6px;top:6px;font:500 10px/1 var(--mono);color:var(--proof);background:var(--surface);padding:3px 5px;border-radius:2px}
+.ph.round{border-radius:50%}
+.ph.round::after{display:none}
+.ph.violate{outline:3px solid var(--bad);outline-offset:2px}
+.ph.chart{background:var(--surface);border:1px solid var(--line)}
+
+/* mock type */
+.hl{font-family:var(--display);font-weight:700;line-height:1.38;margin:0;text-wrap:balance}
+.hl.xl{font-size:clamp(18px,2.2vw,23px)}
+.hl.l{font-size:18px}
+.hl.m{font-size:15.5px}
+.hl.s{font-family:var(--body);font-weight:500;font-size:14px;line-height:1.5}
+.sum{margin:0;font-size:13px;color:var(--muted)}
+.body{margin:0;font-size:13px;line-height:1.6;color:var(--muted);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--lines,2);line-clamp:var(--lines,2);overflow:hidden}
+.ov .body{color:var(--on-scrim);opacity:.9}
+.bigcard .body{font-size:14px}
+.texts{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+.texts > strong{font-size:15px}
+.texts p{margin:0;font-size:13.5px;color:var(--muted)}
+.layers{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:13.5px;color:var(--muted)}
+.layers b{color:var(--ink);margin-right:6px}
+.levels{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;font-variant-numeric:tabular-nums}
+.levels div{border:1px solid var(--line);border-radius:4px;padding:5px 2px;text-align:center;font-size:12px;color:var(--muted)}
+.levels b{display:block;font:500 15px/1.2 var(--mono);color:var(--proof)}
+@media (max-width:520px){.levels{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.kick{font:500 11px/1 var(--mono);letter-spacing:.08em;color:var(--proof)}
+.time{font:500 11.5px/1.4 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.ov{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(transparent,var(--scrim) 45%);display:grid;gap:6px}
+.ov .hl,.ov .kick{color:var(--on-scrim)}
+
+/* building blocks */
+.stack{display:grid;gap:8px;align-content:start;min-width:0}
+.rows{list-style:none;margin:0;padding:0;display:grid}
+.rows > li{padding-block:10px;border-bottom:1px solid var(--line)}
+.rows > li:first-child{padding-top:0}
+.rows > li:last-child{border-bottom:0;padding-bottom:0}
+.mrow{display:grid;grid-template-columns:clamp(84px,32%,140px) minmax(0,1fr);gap:12px;align-items:start}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,120px),1fr))}
+.split{display:grid;gap:16px;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:start}
+.two{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.four{display:grid;gap:12px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:700px){.split{grid-template-columns:1fr}.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.two{grid-template-columns:1fr}}
+
+.rank{list-style:none;margin:0;padding:0;display:grid}
+.rank li{display:grid;grid-template-columns:28px minmax(0,1fr) 52px;gap:10px;align-items:center;padding-block:8px;border-bottom:1px solid var(--line)}
+.rank li:last-child{border-bottom:0}
+.rank .n{font:500 18px/1 var(--mono);color:var(--proof);font-variant-numeric:tabular-nums}
+
+.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line);display:grid;gap:12px}
+.tl li{position:relative;display:grid;gap:2px}
+.tl li::before{content:"";position:absolute;left:-20px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--surface);border:2px solid var(--proof)}
+
+.bento{display:grid;gap:12px}
+.bento .upper{display:grid;gap:12px;grid-template-columns:minmax(0,2fr) minmax(0,1fr);align-items:start}
+.bento .side{display:grid;gap:12px}
+@media (max-width:560px){.bento .upper{grid-template-columns:1fr}}
+
+.car{display:grid;gap:10px}
+.car .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;overscroll-behavior-x:contain}
+.car .slide{flex:0 0 clamp(170px,30%,250px);scroll-snap-align:start;display:grid;gap:8px;align-content:start}
+.car.sq .slide{flex-basis:clamp(130px,21%,190px)}
+.car .ctrl{display:flex;gap:8px;justify-content:flex-end}
+.nav{font:inherit;font-size:13px;width:34px;height:30px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer}
+
+.feature{display:grid;gap:18px;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:center;background:var(--surface);border-radius:6px;padding:16px}
+.feature .stack{gap:10px}
+.feature .go{font-size:13.5px;font-weight:500;color:var(--proof)}
+@media (max-width:640px){.feature{grid-template-columns:1fr}}
+
+.tabs{display:grid;gap:12px}
+.tablist{display:flex;gap:4px;border-bottom:1px solid var(--line)}
+.tabbtn{font:inherit;font-size:13.5px;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:6px 10px;margin-bottom:-1px;cursor:pointer}
+.tabbtn[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--proof);font-weight:500}
+
+.wall{display:grid;gap:6px;grid-template-columns:repeat(auto-fill,minmax(min(100%,72px),1fr))}
+
+.authors{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr))}
+.author{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;align-items:start}
+.author .who{font-size:12px;color:var(--muted)}
+
+.big{display:grid;gap:12px}
+.bigcard{background:var(--surface);border-left:4px solid var(--proof);border-radius:4px;padding:16px 18px;display:grid;gap:8px}
+.bigcard .hl{font-size:clamp(20px,2.6vw,26px);line-height:1.3}
+
+.ticker{display:flex;align-items:center;gap:12px;background:var(--surface);border-radius:4px;padding:8px 12px;overflow:hidden}
+.ticker .lab{flex:0 0 auto;font:500 12px/1 var(--mono);color:var(--surface);background:var(--bad);padding:4px 8px;border-radius:3px}
+.ticker .run{flex:1;min-width:0;overflow:hidden}
+.ticker .belt{display:inline-flex;gap:40px;white-space:nowrap;animation:belt 26s linear infinite;font-size:14px}
+@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .belt{animation:none;white-space:normal;flex-wrap:wrap;gap:4px 24px}}
+
+.chart svg{display:block;width:100%;height:100%}
+.chart .ax{stroke:var(--line)}
+.chart .bar{fill:var(--proof)}
+.chart .bar.hi{fill:var(--ok)}
+.chart text{fill:var(--muted);font:500 10px var(--mono)}
+.chart .ttl{fill:var(--ink);font:700 12px var(--body)}
+
+.foot{font-size:13px;color:var(--muted);max-width:70ch;margin:0}
+
+/* names-only patterns, grouped */
+.more{display:grid;gap:16px}
+.more > header{display:grid;gap:6px}
+.more .sec{font-family:var(--display);font-weight:700;font-size:22px;line-height:1.3;margin:0}
+.more .note{margin:0;font-size:13.5px;color:var(--muted)}
+.groups{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.grp{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+.grp h3{margin:0;font-size:15px;font-weight:700}
+.minis{list-style:none;margin:0;padding:0;display:grid}
+.mini{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding-block:8px;border-bottom:1px solid var(--line)}
+.mini:last-child{border-bottom:0;padding-bottom:0}
+.mini .nm{font-weight:500}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Homepage block patterns</span>
+    <h1>新聞版型圖鑑</h1>
+    <p class="intro">新聞首頁常見的 38 種區塊編排型式,可依「圖、文、混合、輪播、放大」篩選。前 20 種附線框範例、建議則數、圖片比例與適用區塊,其餘 18 種先列名稱並分組。範例裡的標題都是示意文字。完整定義見<a href="../spec/01-architecture.md">新聞首頁區塊架構定義</a>。</p>
+    <div class="rule">
+      <div class="samples" aria-hidden="true">
+        <div><div class="ph" data-ratio="3:2"></div></div>
+        <div class="sq"><div class="ph" data-ratio="1:1"></div></div>
+      </div>
+      <p><strong>圖片比例:全站主比例二選一(平面媒體 3:2、影視媒體 16:9),1:1 一律可用,不使用直式圖。</strong><br>本頁範例以 3:2 示意。原本常用直式的型式(Shorts 輪播、全寬橫幅)已改成方形輪播與寬幅專題。</p>
+      <div id="check" class="check" role="status" data-state="ok">
+        <span class="dot" aria-hidden="true"></span>
+        <span>比例檢查 <b class="state">通過</b></span>
+        <span class="mono">3:2 × <span class="c32">0</span> · 1:1 × <span class="c11">0</span> · 違規 <span class="cbad">0</span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="texts" aria-labelledby="texts-h">
+    <strong id="texts-h">文字三層與內文等級</strong>
+    <div class="layers"><span><b>標題</b>新聞標題,1~3 行</span><span><b>內文</b>導言或摘要,長度依等級 0~9</span><span><b>META</b>時間、分類、作者、閱讀時間等附屬資訊</span></div>
+    <div class="levels" aria-label="內文等級對照">
+      <div><b>0</b>無</div><div><b>1</b>1 行</div><div><b>2</b>2 行</div><div><b>3</b>3 行</div><div><b>4</b>5 行</div><div><b>5</b>7 行</div><div><b>6</b>10 行</div><div><b>7</b>14 行</div><div><b>8</b>20 行</div><div><b>9</b>30 行</div>
+    </div>
+    <p>4~8 級的行數為暫定。首頁多用 0~3 級,9 級機會不大但不排除;疊在圖上的內文最多 2 級。用下方「內文等級」可以把所有範例切到同一級,看版面怎麼變化;內文為示意文字。</p>
+  </section>
+
+  <nav class="bar" aria-label="內文等級">
+    <span class="label">內文等級</span>
+    <button class="chip lvchip" data-lv="d" aria-pressed="true">各型預設</button>
+    <button class="chip lvchip" data-lv="0" aria-pressed="false">0</button>
+    <button class="chip lvchip" data-lv="1" aria-pressed="false">1</button>
+    <button class="chip lvchip" data-lv="2" aria-pressed="false">2</button>
+    <button class="chip lvchip" data-lv="3" aria-pressed="false">3</button>
+    <button class="chip lvchip" data-lv="4" aria-pressed="false">4</button>
+    <button class="chip lvchip" data-lv="5" aria-pressed="false">5</button>
+    <button class="chip lvchip" data-lv="6" aria-pressed="false">6</button>
+    <button class="chip lvchip" data-lv="7" aria-pressed="false">7</button>
+    <button class="chip lvchip" data-lv="8" aria-pressed="false">8</button>
+    <button class="chip lvchip" data-lv="9" aria-pressed="false">9</button>
+  </nav>
+
+  <nav class="bar" aria-label="依型式篩選">
+    <span class="label">篩選</span>
+    <button class="chip" data-f="all" aria-pressed="true">全部</button>
+    <button class="chip" data-f="圖" aria-pressed="false">圖</button>
+    <button class="chip" data-f="文" aria-pressed="false">文</button>
+    <button class="chip" data-f="混合" aria-pressed="false">混合</button>
+    <button class="chip" data-f="輪播" aria-pressed="false">輪播</button>
+    <button class="chip" data-f="放大" aria-pressed="false">放大</button>
+    <span class="count" id="count">顯示 38 種</span>
+  </nav>
+
+  <main class="cat">
+
+    <!-- 01 -->
+    <article class="pat" data-tags="圖 放大">
+      <header><span class="no">型 01</span><h2>大圖疊字</h2><div class="tags"><span class="tag">圖</span><span class="tag">放大</span></div></header>
+      <div class="demo">
+        <div class="ph" data-ratio="3:2"><div class="ov"><span class="kick">頭條</span><p class="hl xl">颱風外圍環流影響 北部山區今晚起留意豪雨</p><p class="body" data-lv="1" data-max="2">氣象署預估雨勢集中在今晚至明天清晨,提醒山區民眾留意坪方與落石。</p></div></div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>1</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>頭條、專題入口</dd></div></dl>
+    </article>
+
+    <!-- 02 -->
+    <article class="pat" data-tags="圖">
+      <header><span class="no">型 02</span><h2>大圖下文</h2><div class="tags"><span class="tag">圖</span></div></header>
+      <div class="demo stack">
+        <div class="ph" data-ratio="3:2"></div>
+        <p class="hl l">捷運新線通車首週 運量超出原先預估三成</p>
+        <p class="body" data-lv="2">交通局表示將視尖峰時段狀況,評估加開班次並調整轉乘動線。</p>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>1</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>頭條、分類首則</dd></div></dl>
+    </article>
+
+    <!-- 03 -->
+    <article class="pat" data-tags="混合">
+      <header><span class="no">型 03</span><h2>左圖右文</h2><div class="tags"><span class="tag">混合</span></div></header>
+      <div class="demo">
+        <ul class="rows">
+          <li class="mrow"><div class="ph" data-ratio="3:2"></div><div class="stack"><p class="hl s">央行理監事會後宣布利率維持不變</p><p class="body" data-lv="1"></p><span class="time">2 小時前</span></div></li>
+          <li class="mrow"><div class="ph" data-ratio="3:2"></div><div class="stack"><p class="hl s">半導體設備出口創單月新高</p><p class="body" data-lv="1"></p><span class="time">3 小時前</span></div></li>
+          <li class="mrow"><div class="ph" data-ratio="3:2"></div><div class="stack"><p class="hl s">國際油價連三日走低 航空股反彈</p><p class="body" data-lv="1"></p><span class="time">5 小時前</span></div></li>
+        </ul>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>3–6</dd></div><div><dt>比例</dt><dd>3:2(小縮圖也可用 1:1)</dd></div><div><dt>適用</dt><dd>分類版區、相關新聞</dd></div></dl>
+    </article>
+
+    <!-- 04 -->
+    <article class="pat" data-tags="文">
+      <header><span class="no">型 04</span><h2>純文字清單</h2><div class="tags"><span class="tag">文</span></div></header>
+      <div class="demo">
+        <ul class="rows">
+          <li><p class="hl s">高中課綱調整草案 下週舉行第二場公聽會</p><p class="body" data-lv="0" data-max="3"></p></li>
+          <li><p class="hl s">年底用電高峰將至 備轉容量率受關注</p><p class="body" data-lv="0" data-max="3"></p></li>
+          <li><p class="hl s">偏鄉診所人力不足 縣府擬加碼補助</p><p class="body" data-lv="0" data-max="3"></p></li>
+          <li><p class="hl s">夜市攤商推無現金支付 半年使用率倍增</p><p class="body" data-lv="0" data-max="3"></p></li>
+          <li><p class="hl s">職棒季後賽門票開賣 數分鐘內完售</p><p class="body" data-lv="0" data-max="3"></p></li>
+        </ul>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>5–10</dd></div><div><dt>比例</dt><dd>無圖</dd></div><div><dt>適用</dt><dd>分類補充、側欄</dd></div></dl>
+    </article>
+
+    <!-- 05 -->
+    <article class="pat" data-tags="文">
+      <header><span class="no">型 05</span><h2>編號排行</h2><div class="tags"><span class="tag">文</span></div></header>
+      <div class="demo">
+        <ol class="rank">
+          <li><span class="n">1</span><p class="hl s">職棒季後賽門票開賣 數分鐘內完售</p><div class="ph" data-ratio="1:1"></div></li>
+          <li><span class="n">2</span><p class="hl s">捷運新線通車首週 運量超出預估</p><div class="ph" data-ratio="1:1"></div></li>
+          <li><span class="n">3</span><p class="hl s">颱風外圍環流 北部山區留意豪雨</p><div class="ph" data-ratio="1:1"></div></li>
+          <li><span class="n">4</span><p class="hl s">夜市攤商推無現金支付</p><div class="ph" data-ratio="1:1"></div></li>
+        </ol>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>5–10</dd></div><div><dt>比例</dt><dd>1:1 或無圖</dd></div><div><dt>適用</dt><dd>熱門、最多人讀</dd></div></dl>
+    </article>
+
+    <!-- 06 -->
+    <article class="pat" data-tags="文">
+      <header><span class="no">型 06</span><h2>時間軸</h2><div class="tags"><span class="tag">文</span></div></header>
+      <div class="demo">
+        <ul class="tl">
+          <li><span class="time">14:32</span><p class="hl s">氣象署發布豪雨特報 新北、宜蘭山區列警戒</p><p class="body" data-lv="1" data-max="3"></p></li>
+          <li><span class="time">13:50</span><p class="hl s">桃園機場下午兩航班延誤</p><p class="body" data-lv="1" data-max="3"></p></li>
+          <li><span class="time">13:05</span><p class="hl s">國道五號南向車流回堵 估計延至傍晚</p><p class="body" data-lv="1" data-max="3"></p></li>
+          <li><span class="time">12:18</span><p class="hl s">北市停班停課標準 市府下午說明</p><p class="body" data-lv="1" data-max="3"></p></li>
+        </ul>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>3–8</dd></div><div><dt>比例</dt><dd>無圖</dd></div><div><dt>適用</dt><dd>即時快訊、直播更新</dd></div></dl>
+    </article>
+
+    <!-- 07 -->
+    <article class="pat" data-tags="圖">
+      <header><span class="no">型 07</span><h2>均分圖卡網格</h2><div class="tags"><span class="tag">圖</span></div></header>
+      <div class="demo grid">
+        <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">北市老舊公寓都更試辦區公布</p><p class="body" data-lv="0" data-max="3"></p></div>
+        <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">高鐵假日加開南下班次</p><p class="body" data-lv="0" data-max="3"></p></div>
+        <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">農產品冬季價格趨穩</p><p class="body" data-lv="0" data-max="3"></p></div>
+        <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">大學申請入學簡章公告</p><p class="body" data-lv="0" data-max="3"></p></div>
+        <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">國家公園步道修復完工</p><p class="body" data-lv="0" data-max="3"></p></div>
+        <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">社區長照據點再擴充</p><p class="body" data-lv="0" data-max="3"></p></div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>3–9</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>次頭條、分類版區</dd></div></dl>
+    </article>
+
+    <!-- 08 -->
+    <article class="pat wide" data-tags="混合 放大">
+      <header><span class="no">型 08</span><h2>首 1 則放大,其餘小卡</h2><div class="tags"><span class="tag">混合</span><span class="tag">放大</span></div></header>
+      <div class="demo split">
+        <div class="stack">
+          <div class="ph" data-ratio="3:2"></div>
+          <p class="hl l">半導體設備出口創單月新高 全年可望再創紀錄</p>
+          <p class="body" data-lv="3">財政部統計顯示,設備類出口年增逾兩成,主要來自先進製程擴產需求。</p>
+        </div>
+        <div class="two">
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">央行利率維持不變</p><p class="body" data-lv="0" data-max="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">油價連三日走低</p><p class="body" data-lv="0" data-max="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">台股成交量回升</p><p class="body" data-lv="0" data-max="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">新台幣小幅升值</p><p class="body" data-lv="0" data-max="2"></p></div>
+        </div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>5(1 + 4)</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>分類版區(最常用)</dd></div></dl>
+    </article>
+
+    <!-- 09 -->
+    <article class="pat wide" data-tags="混合 放大">
+      <header><span class="no">型 09</span><h2>首 1 則放大,其餘純文字</h2><div class="tags"><span class="tag">混合</span><span class="tag">放大</span></div></header>
+      <div class="demo split">
+        <div class="stack">
+          <div class="ph" data-ratio="3:2"></div>
+          <p class="hl l">高中課綱調整草案 下週舉行第二場公聽會</p><p class="body" data-lv="3"></p>
+        </div>
+        <ul class="rows">
+          <li><p class="hl s">大學申請入學簡章公告 校系名額微調</p><p class="body" data-lv="0" data-max="2"></p></li>
+          <li><p class="hl s">教師員額缺口 教育部擬放寬代理規定</p><p class="body" data-lv="0" data-max="2"></p></li>
+          <li><p class="hl s">雙語教育評鑑結果出爐</p><p class="body" data-lv="0" data-max="2"></p></li>
+          <li><p class="hl s">校園午餐食材價格上漲 縣市補助不一</p><p class="body" data-lv="0" data-max="2"></p></li>
+        </ul>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>4–6(1 + 3–5)</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>財經、文字量大的分類</dd></div></dl>
+    </article>
+
+    <!-- 10 -->
+    <article class="pat wide" data-tags="混合 放大">
+      <header><span class="no">型 10</span><h2>首 2 則放大,其餘小卡</h2><div class="tags"><span class="tag">混合</span><span class="tag">放大</span></div></header>
+      <div class="demo stack" style="gap:14px">
+        <div class="two">
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl m">年底用電高峰將至 備轉容量率受關注</p><p class="body" data-lv="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl m">離岸風場新機組併網 供電再添一座</p><p class="body" data-lv="2"></p></div>
+        </div>
+        <div class="four">
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">電價審議會議延期</p><p class="body" data-lv="0" data-max="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">屋頂光電申請量增加</p><p class="body" data-lv="0" data-max="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">儲能案場陸續啟用</p><p class="body" data-lv="0" data-max="2"></p></div>
+          <div class="stack"><div class="ph" data-ratio="3:2"></div><p class="hl s">節電獎勵方案上路</p><p class="body" data-lv="0" data-max="2"></p></div>
+        </div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>6(2 + 4)</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>次頭條、大型分類</dd></div></dl>
+    </article>
+
+    <!-- 11 -->
+    <article class="pat wide" data-tags="圖 放大">
+      <header><span class="no">型 11</span><h2>拼貼(Bento)</h2><div class="tags"><span class="tag">圖</span><span class="tag">放大</span></div></header>
+      <div class="demo bento">
+        <div class="upper">
+          <div class="ph" data-ratio="3:2"><div class="ov"><span class="kick">焦點</span><p class="hl l">國家公園步道修復完工 週末重新開放</p><p class="body" data-lv="1" data-max="2"></p></div></div>
+          <div class="side">
+            <div class="ph" data-ratio="3:2"><div class="ov"><p class="hl s">山屋預約系統更新</p></div></div>
+            <div class="ph" data-ratio="3:2"><div class="ov"><p class="hl s">賞楓季交通管制</p></div></div>
+          </div>
+        </div>
+        <div class="four">
+          <div class="ph" data-ratio="1:1"></div>
+          <div class="ph" data-ratio="1:1"></div>
+          <div class="ph" data-ratio="1:1"></div>
+          <div class="ph" data-ratio="1:1"></div>
+        </div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>3–7</dd></div><div><dt>比例</dt><dd>3:2 大小格 + 1:1 方格</dd></div><div><dt>適用</dt><dd>專題、生活、旅遊</dd></div></dl>
+    </article>
+
+    <!-- 12 -->
+    <article class="pat wide" data-tags="輪播 圖">
+      <header><span class="no">型 12</span><h2>橫式輪播</h2><div class="tags"><span class="tag">輪播</span><span class="tag">圖</span></div></header>
+      <div class="demo car">
+        <div class="track" tabindex="0" aria-label="橫式輪播範例">
+          <div class="slide"><div class="ph" data-ratio="3:2"></div><p class="hl s">記者直擊豪雨後的山區道路</p></div>
+          <div class="slide"><div class="ph" data-ratio="3:2"></div><p class="hl s">捷運新線首週現場</p></div>
+          <div class="slide"><div class="ph" data-ratio="3:2"></div><p class="hl s">夜市無現金支付體驗</p></div>
+          <div class="slide"><div class="ph" data-ratio="3:2"></div><p class="hl s">離岸風場併網紀錄</p></div>
+          <div class="slide"><div class="ph" data-ratio="3:2"></div><p class="hl s">賞楓季步道巡禮</p></div>
+          <div class="slide"><div class="ph" data-ratio="3:2"></div><p class="hl s">季後賽開打前夕</p></div>
+        </div>
+        <div class="ctrl"><button class="nav prev" aria-label="上一組">‹</button><button class="nav next" aria-label="下一組">›</button></div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>4–12</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>影音焦點、圖輯</dd></div></dl>
+    </article>
+
+    <!-- 13 -->
+    <article class="pat wide" data-tags="輪播 圖">
+      <header><span class="no">型 13</span><h2>方形輪播</h2><div class="tags"><span class="tag">輪播</span><span class="tag">圖</span></div></header>
+      <div class="demo car sq">
+        <div class="track" tabindex="0" aria-label="方形輪播範例">
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">60 秒看豪雨特報</p></div>
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">利率決策重點</p></div>
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">新線轉乘教學</p></div>
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">油價走勢一次看</p></div>
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">季後賽賽程</p></div>
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">停班停課怎麼查</p></div>
+          <div class="slide"><div class="ph" data-ratio="1:1"></div><p class="hl s">步道開放時間</p></div>
+        </div>
+        <div class="ctrl"><button class="nav prev" aria-label="上一組">‹</button><button class="nav next" aria-label="下一組">›</button></div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>4–12</dd></div><div><dt>比例</dt><dd>1:1</dd></div><div><dt>適用</dt><dd>短影音(取代直式 Shorts)</dd></div></dl>
+    </article>
+
+    <!-- 14 -->
+    <article class="pat wide" data-tags="圖 放大">
+      <header><span class="no">型 14</span><h2>寬幅專題</h2><div class="tags"><span class="tag">圖</span><span class="tag">放大</span></div></header>
+      <div class="demo">
+        <div class="feature">
+          <div class="ph" data-ratio="3:2"></div>
+          <div class="stack">
+            <span class="kick">專題</span>
+            <p class="hl l">能源轉型的最後一哩:電網、儲能與用電習慣</p>
+            <p class="body" data-lv="3">從離岸風場併網到家戶節電,這個專題整理供電結構的五個關鍵變化。</p>
+            <span class="go">進入專題 →</span>
+          </div>
+        </div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>1–2</dd></div><div><dt>比例</dt><dd>3:2(取代 3:1 橫幅)</dd></div><div><dt>適用</dt><dd>專題、特別企劃</dd></div></dl>
+    </article>
+
+    <!-- 15 -->
+    <article class="pat" data-tags="混合">
+      <header><span class="no">型 15</span><h2>分頁籤切換</h2><div class="tags"><span class="tag">混合</span></div></header>
+      <div class="demo tabs">
+        <div class="tablist" role="tablist" aria-label="分頁籤範例">
+          <button class="tabbtn" role="tab" id="t1" aria-controls="p1" aria-selected="true">最新</button>
+          <button class="tabbtn" role="tab" id="t2" aria-controls="p2" aria-selected="false">最多人讀</button>
+          <button class="tabbtn" role="tab" id="t3" aria-controls="p3" aria-selected="false">編輯推薦</button>
+        </div>
+        <div role="tabpanel" id="p1" aria-labelledby="t1">
+          <ul class="rows">
+            <li class="mrow"><div class="ph" data-ratio="3:2"></div><p class="hl s">氣象署發布豪雨特報</p></li>
+            <li class="mrow"><div class="ph" data-ratio="3:2"></div><p class="hl s">國道五號南向回堵</p></li>
+            <li class="mrow"><div class="ph" data-ratio="3:2"></div><p class="hl s">北市停班停課說明</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+          <ul class="rows">
+            <li class="mrow"><div class="ph" data-ratio="1:1"></div><p class="hl s">季後賽門票數分鐘完售</p></li>
+            <li class="mrow"><div class="ph" data-ratio="1:1"></div><p class="hl s">捷運新線運量超出預估</p></li>
+            <li class="mrow"><div class="ph" data-ratio="1:1"></div><p class="hl s">夜市無現金支付倍增</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+          <ul class="rows">
+            <li><p class="hl s">能源轉型的最後一哩</p></li>
+            <li><p class="hl s">偏鄉診所人力調查</p></li>
+            <li><p class="hl s">都更試辦區的十年等待</p></li>
+          </ul>
+        </div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>每頁 3–6</dd></div><div><dt>比例</dt><dd>3:2 / 1:1 / 無圖</dd></div><div><dt>適用</dt><dd>側欄、熱門與最新合併</dd></div></dl>
+    </article>
+
+    <!-- 16 -->
+    <article class="pat" data-tags="圖">
+      <header><span class="no">型 16</span><h2>圖片牆</h2><div class="tags"><span class="tag">圖</span></div></header>
+      <div class="demo stack">
+        <div class="wall">
+          <div class="ph" data-ratio="1:1"></div><div class="ph" data-ratio="1:1"></div><div class="ph" data-ratio="1:1"></div><div class="ph" data-ratio="1:1"></div>
+          <div class="ph" data-ratio="1:1"></div><div class="ph" data-ratio="1:1"></div><div class="ph" data-ratio="1:1"></div><div class="ph" data-ratio="1:1"></div>
+        </div>
+        <p class="hl s">圖輯:颱風過後的北海岸</p>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>1 則圖輯,6–12 張</dd></div><div><dt>比例</dt><dd>1:1</dd></div><div><dt>適用</dt><dd>圖輯、攝影專欄</dd></div></dl>
+    </article>
+
+    <!-- 17 -->
+    <article class="pat" data-tags="混合">
+      <header><span class="no">型 17</span><h2>作者卡</h2><div class="tags"><span class="tag">混合</span></div></header>
+      <div class="demo authors">
+        <div class="author"><div class="ph round" data-ratio="1:1"></div><div class="stack" style="gap:2px"><span class="who">財經專欄</span><p class="hl s">利率不動的訊號</p><p class="body" data-lv="1" data-max="3"></p></div></div>
+        <div class="author"><div class="ph round" data-ratio="1:1"></div><div class="stack" style="gap:2px"><span class="who">國際觀察</span><p class="hl s">油價下行誰受惠</p><p class="body" data-lv="1" data-max="3"></p></div></div>
+        <div class="author"><div class="ph round" data-ratio="1:1"></div><div class="stack" style="gap:2px"><span class="who">社會評論</span><p class="hl s">偏鄉醫療的缺口</p><p class="body" data-lv="1" data-max="3"></p></div></div>
+        <div class="author"><div class="ph round" data-ratio="1:1"></div><div class="stack" style="gap:2px"><span class="who">教育現場</span><p class="hl s">課綱調整的代價</p><p class="body" data-lv="1" data-max="3"></p></div></div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>3–6</dd></div><div><dt>比例</dt><dd>1:1(圓形裁切)</dd></div><div><dt>適用</dt><dd>觀點、評論</dd></div></dl>
+    </article>
+
+    <!-- 18 -->
+    <article class="pat" data-tags="文 放大">
+      <header><span class="no">型 18</span><h2>大字無圖標題卡</h2><div class="tags"><span class="tag">文</span><span class="tag">放大</span></div></header>
+      <div class="demo big">
+        <div class="bigcard"><span class="kick">獨家</span><p class="hl">都更試辦區名單出爐 六處老舊社區率先啟動</p><p class="body" data-lv="2"></p></div>
+        <div class="bigcard"><span class="kick">分析</span><p class="hl">利率按兵不動 房市降溫還要多久</p><p class="body" data-lv="2"></p></div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>1–3</dd></div><div><dt>比例</dt><dd>無圖</dd></div><div><dt>適用</dt><dd>獨家、分析、無合適圖片時</dd></div></dl>
+    </article>
+
+    <!-- 19 -->
+    <article class="pat" data-tags="文">
+      <header><span class="no">型 19</span><h2>跑馬燈</h2><div class="tags"><span class="tag">文</span></div></header>
+      <div class="demo">
+        <div class="ticker">
+          <span class="lab">快訊</span>
+          <div class="run"><div class="belt">
+            <span>氣象署發布豪雨特報</span><span>國道五號南向回堵</span><span>桃園機場兩航班延誤</span><span>北市下午說明停班停課標準</span>
+            <span aria-hidden="true">氣象署發布豪雨特報</span><span aria-hidden="true">國道五號南向回堵</span><span aria-hidden="true">桃園機場兩航班延誤</span><span aria-hidden="true">北市下午說明停班停課標準</span>
+          </div></div>
+        </div>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>3–10</dd></div><div><dt>比例</dt><dd>無圖</dd></div><div><dt>適用</dt><dd>突發快訊列</dd></div></dl>
+    </article>
+
+    <!-- 20 -->
+    <article class="pat" data-tags="圖">
+      <header><span class="no">型 20</span><h2>圖表卡</h2><div class="tags"><span class="tag">圖</span></div></header>
+      <div class="demo stack">
+        <div class="ph chart" data-ratio="3:2" role="img" aria-label="示意長條圖:半導體設備月出口,五個月數值 42、55、48、61、66">
+          <svg viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true">
+            <text class="ttl" x="16" y="24">設備月出口(示意,億元)</text>
+            <line class="ax" x1="40" y1="170" x2="288" y2="170"/>
+            <line class="ax" x1="40" y1="100" x2="288" y2="100" stroke-dasharray="3 3"/>
+            <text x="34" y="173" text-anchor="end">0</text>
+            <text x="34" y="103" text-anchor="end">35</text>
+            <text x="34" y="43" text-anchor="end">70</text>
+            <line class="ax" x1="40" y1="40" x2="288" y2="40" stroke-dasharray="3 3"/>
+            <!-- scale: 0→170, 70→40 ; 130px per 70 units -->
+            <rect class="bar" x="54"  y="92"  width="32" height="78"/>
+            <rect class="bar" x="102" y="68"  width="32" height="102"/>
+            <rect class="bar" x="150" y="81"  width="32" height="89"/>
+            <rect class="bar" x="198" y="57"  width="32" height="113"/>
+            <rect class="bar hi" x="246" y="47" width="32" height="123"/>
+            <text x="70"  y="186" text-anchor="middle">7月</text>
+            <text x="118" y="186" text-anchor="middle">8月</text>
+            <text x="166" y="186" text-anchor="middle">9月</text>
+            <text x="214" y="186" text-anchor="middle">10月</text>
+            <text x="262" y="186" text-anchor="middle">11月</text>
+          </svg>
+        </div>
+        <p class="hl s">設備出口連兩月走高(數值為示意)</p><p class="body" data-lv="1" data-max="3"></p>
+      </div>
+      <dl class="meta"><div><dt>則數</dt><dd>1–3</dd></div><div><dt>比例</dt><dd>3:2</dd></div><div><dt>適用</dt><dd>財經、選舉、數據新聞</dd></div></dl>
+    </article>
+
+  </main>
+
+  <section class="more" aria-labelledby="more-h">
+    <header>
+      <h2 class="sec" id="more-h">其他型式</h2>
+      <p class="note">以下 18 種先列名稱,尚未製作範例,依用途分成 5 組。</p>
+    </header>
+    <div class="groups">
+      <div class="grp">
+        <h3>新聞組合</h3>
+        <ul class="minis">
+          <li class="mini" data-tags="混合 放大"><span class="no">型 21</span><span class="nm">主新聞群組</span><span class="tags"><span class="tag">混合</span><span class="tag">放大</span></span></li>
+          <li class="mini" data-tags="混合"><span class="no">型 34</span><span class="nm">無限載入動態</span><span class="tags"><span class="tag">混合</span></span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <h3>影音與廣播</h3>
+        <ul class="minis">
+          <li class="mini" data-tags="圖 放大"><span class="no">型 22</span><span class="nm">單一影片播放器</span><span class="tags"><span class="tag">圖</span><span class="tag">放大</span></span></li>
+          <li class="mini" data-tags="混合"><span class="no">型 23</span><span class="nm">音訊 / Podcast 清單</span><span class="tags"><span class="tag">混合</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 24</span><span class="nm">節目表 / 直播時段</span><span class="tags"><span class="tag">文</span></span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <h3>數據與資訊</h3>
+        <ul class="minis">
+          <li class="mini" data-tags="文 放大"><span class="no">型 25</span><span class="nm">數字卡</span><span class="tags"><span class="tag">文</span><span class="tag">放大</span></span></li>
+          <li class="mini" data-tags="圖"><span class="no">型 26</span><span class="nm">地圖卡</span><span class="tags"><span class="tag">圖</span></span></li>
+          <li class="mini" data-tags="混合"><span class="no">型 33</span><span class="nm">資訊小工具</span><span class="tags"><span class="tag">混合</span></span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <h3>文字為主</h3>
+        <ul class="minis">
+          <li class="mini" data-tags="文 放大"><span class="no">型 27</span><span class="nm">引言卡</span><span class="tags"><span class="tag">文</span><span class="tag">放大</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 35</span><span class="nm">新聞簡報</span><span class="tags"><span class="tag">文</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 36</span><span class="nm">重點整理</span><span class="tags"><span class="tag">文</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 37</span><span class="nm">直播文字</span><span class="tags"><span class="tag">文</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 38</span><span class="nm">背景說明框</span><span class="tags"><span class="tag">文</span></span></li>
+        </ul>
+      </div>
+      <div class="grp">
+        <h3>互動、導覽與推廣</h3>
+        <ul class="minis">
+          <li class="mini" data-tags="文"><span class="no">型 28</span><span class="nm">熱門話題標籤列</span><span class="tags"><span class="tag">文</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 29</span><span class="nm">分類導覽列</span><span class="tags"><span class="tag">文</span></span></li>
+          <li class="mini" data-tags="混合"><span class="no">型 30</span><span class="nm">投票 / 民調</span><span class="tags"><span class="tag">混合</span></span></li>
+          <li class="mini" data-tags="文"><span class="no">型 31</span><span class="nm">摺疊問答</span><span class="tags"><span class="tag">文</span></span></li>
+          <li class="mini" data-tags="混合"><span class="no">型 32</span><span class="nm">訂閱 / 電子報招募</span><span class="tags"><span class="tag">混合</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot">比例檢查會在載入、縮放視窗、切換篩選或分頁籤時,以實際顯示尺寸重新計算每個圖片框的寬高比,和 3:2(1.5)或 1:1(1.0)相差超過 1% 就算違規並加上紅框。所有圖片框的高度都由寬度推算,不會被版面拉伸成直式。</p>
+</div>
+
+<script>
+(function(){
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function check(){
+    let c32 = 0, c11 = 0, bad = 0;
+    for (const el of $$('[data-ratio]')) {
+      if (!el.getClientRects().length) continue;            // hidden by filter or tab
+      const r = el.getBoundingClientRect();
+      if (r.width < 1 || r.height < 1) continue;
+      const want = el.dataset.ratio === '1:1' ? 1 : el.dataset.ratio === '3:2' ? 1.5 : null;
+      const ok = want !== null && Math.abs((r.width / r.height) / want - 1) < 0.01;
+      el.classList.toggle('violate', !ok);
+      if (!ok) bad++; else if (want === 1) c11++; else c32++;
+    }
+    const box = document.getElementById('check');
+    box.dataset.state = bad ? 'bad' : 'ok';
+    box.querySelector('.state').textContent = bad ? '有違規' : '通過';
+    box.querySelector('.c32').textContent = c32;
+    box.querySelector('.c11').textContent = c11;
+    box.querySelector('.cbad').textContent = bad;
+  }
+  let raf = 0;
+  const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(check); };
+
+  // filter
+  const chips = $$('.chip[data-f]');
+  chips.forEach(c => c.addEventListener('click', () => {
+    const f = c.dataset.f;
+    chips.forEach(x => x.setAttribute('aria-pressed', String(x === c)));
+    let n = 0;
+    $$('.pat, .mini').forEach(p => {
+      const show = f === 'all' || p.dataset.tags.split(' ').includes(f);
+      p.hidden = !show; if (show) n++;
+    });
+    $$('.grp').forEach(g => { g.hidden = !g.querySelector('.mini:not([hidden])'); });
+    const more = document.querySelector('.more');
+    more.hidden = !more.querySelector('.grp:not([hidden])');
+    document.getElementById('count').textContent = '顯示 ' + n + ' 種';
+    schedule();
+  }));
+
+  // tabs
+  $$('.tabs').forEach(t => {
+    const btns = $$('[role="tab"]', t);
+    btns.forEach(b => b.addEventListener('click', () => {
+      btns.forEach(x => {
+        const on = x === b;
+        x.setAttribute('aria-selected', String(on));
+        document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+      });
+      schedule();
+    }));
+  });
+
+  // body text levels
+  const SAMPLE = '相關單位今天上午召開說明會,說明事件經過與後續處理方式。主管表示,已成立專案小組全面檢視作業流程,預計兩週內提出改善報告。現場民眾看法不一,有人認為措施來得及時,也有人擔心執行細節仍不夠明確。專家指出,類似情況過去曾多次發生,關鍵在於資訊能否及時公開,以及各單位之間能否有效協調。主管機關強調,後續將定期公布進度,並視實際狀況滾動調整相關規定。'.repeat(8);
+  const LINES = [0, 1, 2, 3, 5, 7, 10, 14, 20, 30];
+  let lvOverride = null;
+  $$('.body').forEach(b => { b.textContent = b.textContent.trim() + SAMPLE; });
+  function applyBody() {
+    $$('.body').forEach(b => {
+      const def = Number(b.dataset.lv);
+      const max = b.dataset.max ? Number(b.dataset.max) : 9;
+      const lv = lvOverride === null ? def : Math.min(lvOverride, max);
+      b.hidden = lv === 0;
+      b.style.setProperty('--lines', String(LINES[lv]));
+      b.dataset.cur = String(lv);
+    });
+    $$('.pat').forEach(p => {
+      const bodies = $$('.body', p);
+      let dd = p.querySelector('.meta .bodylv');
+      if (!dd) {
+        const d = document.createElement('div');
+        d.innerHTML = '<dt>內文</dt><dd class="bodylv"></dd>';
+        p.querySelector('.meta').appendChild(d);
+        dd = d.querySelector('.bodylv');
+      }
+      const lvs = Array.from(new Set(bodies.map(b => b.dataset.cur)));
+      dd.textContent = bodies.length ? lvs.join(' / ') + ' 級' : '無';
+    });
+    schedule();
+  }
+  $$('.lvchip').forEach(c => c.addEventListener('click', () => {
+    $$('.lvchip').forEach(x => x.setAttribute('aria-pressed', String(x === c)));
+    lvOverride = c.dataset.lv === 'd' ? null : Number(c.dataset.lv);
+    applyBody();
+  }));
+  applyBody();
+
+  // carousels
+  $$('.car').forEach(c => {
+    const tr = c.querySelector('.track');
+    const go = d => tr.scrollBy({ left: d * tr.clientWidth * 0.8, behavior: reduce ? 'auto' : 'smooth' });
+    c.querySelector('.prev').addEventListener('click', () => go(-1));
+    c.querySelector('.next').addEventListener('click', () => go(1));
+  });
+
+  check();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+  if ('ResizeObserver' in window) new ResizeObserver(schedule).observe(document.body);
+  else window.addEventListener('resize', schedule);
+})();
+</script>
+
+</body>
+</html>
