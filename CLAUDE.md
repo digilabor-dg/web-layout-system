@@ -5,7 +5,7 @@
 新聞首頁區塊排版系統:用 JSON 定義版面,評估工具自動找出不平衡、留白、擁擠等問題,並提出改進建議。
 **規格的唯一依據是 `openspec/specs/`**;規格沒寫或互相矛盾時,先停下來問,不要自行假設。
 `docs/spec/` 是發想與資料收集(原始設計說明),視覺範例在 `docs/catalog/index.html`。
-過渡期:change `migrate-docs-to-openspec` archive 之前,以 `docs/spec/` 加上 archive 裡 `resolve-spec-ambiguities/design.md` 的決定為依據。
+`openspec/specs/` 共 17 個 capability(`openspec list --specs`);Claude 補充的詮釋見 `openspec/changes/archive/2026-11-03-migrate-docs-to-openspec/design.md`,待使用者確認。
 
 | 檔案(`docs/spec/`,參考用) | 內容 |
 | --- | --- |
@@ -56,7 +56,7 @@ tests/
 - 變更用 [OpenSpec](https://github.com/Fission-AI/OpenSpec) 管理:每個 change 放在 `openspec/changes/<名稱>/`,內含 proposal、design、tasks 與 spec delta。指令:`/opsx:propose`、`/opsx:apply`、`/opsx:archive`。
 - **同時最多 5 個未 archive 的 change**(任務做完但還沒 archive 的也算)。已滿 5 個時不得再開新 change,先 archive 一個。CI(`.github/workflows/openspec.yml`)會檢查這條,並跑 `openspec validate --all --strict`。
 - **一個開發階段 = 一個 change = 一個 PR**。新需求先寫進 change 的 spec delta,archive 後併入 `openspec/specs/`。
-- 決策紀錄:`openspec/changes/archive/*-resolve-spec-ambiguities/design.md`(P、A、B 各題的決定與理由)。
+- 決策紀錄:`openspec/changes/archive/2026-11-03-resolve-spec-ambiguities/design.md`(P、A、B 各題的決定與理由)。
 
 ## 不可違反的規則
 
