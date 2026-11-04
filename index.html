@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>web-layout-system</title>
+<style>
+/* 入口頁:列出可以直接在瀏覽器使用的工具與報表(全部是靜態檔案,不需要伺服器) */
+:root{--bg:#fff;--fg:#202124;--muted:#5f6368;--line:#dadce0;--card:#f8f9fa;--accent:#1a73e8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f2023;--fg:#e8eaed;--muted:#9aa0a6;--line:#3c4043;--card:#2d2e31;--accent:#8ab4f8}}
+:root[data-theme="dark"]{--bg:#1f2023;--fg:#e8eaed;--muted:#9aa0a6;--line:#3c4043;--card:#2d2e31;--accent:#8ab4f8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,'Noto Sans TC',sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 48px}
+h1{margin:0 0 4px;font-size:28px}h2{font-size:19px;margin:32px 0 8px}
+p{margin:6px 0}.muted{color:var(--muted)}
+a{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card);text-decoration:none;color:inherit;min-height:44px}
+.card:hover,.card:focus-visible{border-color:var(--accent)}
+.card b{display:block;color:var(--accent);margin-bottom:2px}
+.card span{font-size:14px;color:var(--muted)}
+.note{border-left:3px solid var(--line);padding:4px 12px;margin:12px 0;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <h1>web-layout-system</h1>
+  <p class="muted">內容導向 CMS 的版面生成與評估核心(開源、headless)。第一個案例是新聞首頁,所有新聞都是示意文字。</p>
+
+  <h2>人評工具</h2>
+  <div class="grid">
+    <a class="card" href="poc/rating/review.html"><b>版面檢視與人評</b><span>中間是預覽,側欄切換裝置。三種模式:點選區塊評 0~10 分、圈選任意區域沿 5 條軸評、A/B 盲測。</span></a>
+    <a class="card" href="poc/generator/form.html"><b>參數表單</b><span>勾選區塊、位置與順序,產生參數 JSON。</span></a>
+  </div>
+  <p class="note">評分只存在你的瀏覽器裡,不會自動送出。評完請在側欄「匯出」下載 JSON,再交給專案(放進 <code>poc/rating/reviews/</code>)。參數表單只產生 JSON;要依參數產生版面並評分,需要在本機執行 <code>npm run poc:generate</code>。</p>
+
+  <h2>評估報表</h2>
+  <div class="grid">
+    <a class="card" href="poc/evaluate/report.html"><b>範例首頁的評估報告</b><span>Lighthouse 式:21 個項目、8 個面向 0~100 分。</span></a>
+    <a class="card" href="poc/examples/report.html"><b>10 個範例 V1 → V2</b><span>每個範例修好一種問題,附截圖與分數變化。</span></a>
+    <a class="card" href="poc/generator/results/default/report.html"><b>參數產生的版面:預設</b><span>貪婪法產生,bs5。</span></a>
+    <a class="card" href="poc/generator/results/tw4-beam/report.html"><b>參數產生的版面:集束搜尋</b><span>tw4,集束寬度 3。</span></a>
+    <a class="card" href="poc/generator/results/no-sidebar/report.html"><b>參數產生的版面:無側欄</b><span>md3;示範搜尋會鑽評估器的漏洞。</span></a>
+    <a class="card" href="poc/generator/results/from-form/report.html"><b>參數產生的版面:表單產生</b><span>由參數表單產生的參數。</span></a>
+  </div>
+
+  <h2>參考</h2>
+  <div class="grid">
+    <a class="card" href="docs/catalog/index.html"><b>版型圖鑑</b><span>38 種展示類型的視覺範例。</span></a>
+    <a class="card" href="https://github.com/digilabor-dg/web-layout-system/blob/claude/laughing-hawking-2qg9oa/docs/wiki/Home.md"><b>wiki</b><span>規格的白話說明、成果、範例、待確認(在 GitHub 上看)。</span></a>
+  </div>
+</main>
+</body>
+</html>
