@@ -1,0 +1,28 @@
+{
+  "rule": "stack-columns-sum",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "8:4",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "8:3",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/pages/home/sections/0/columns/1/width",
+          "value": 3
+        }
+      ],
+      "expect": [
+        {
+          "rule": "stack-columns-sum",
+          "id": "home",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

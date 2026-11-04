@@ -1,0 +1,289 @@
+{
+  "set": "default",
+  "title": "示意首頁(預設參數)",
+  "total": 90,
+  "blocks": [
+    {
+      "code": "A",
+      "ref": "inst-gen-headline",
+      "pattern": "P01 大圖疊字",
+      "heading": "頭條",
+      "program": {
+        "score": 10,
+        "findings": []
+      },
+      "images": {
+        "mobile": "blocks/A-mobile.jpg",
+        "tablet": "blocks/A-tablet.jpg",
+        "desktop": "blocks/A-desktop.jpg"
+      }
+    },
+    {
+      "code": "B",
+      "ref": "inst-gen-subheadline",
+      "pattern": "P07 均分圖卡網格",
+      "heading": "焦點新聞",
+      "program": {
+        "score": 9,
+        "findings": [
+          {
+            "item": "末列不落單",
+            "verdict": "warn",
+            "display": "3 則 ÷ 2 欄,餘 1"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/B-mobile.jpg",
+        "tablet": "blocks/B-tablet.jpg",
+        "desktop": "blocks/B-desktop.jpg"
+      }
+    },
+    {
+      "code": "C",
+      "ref": "inst-gen-flash",
+      "pattern": "P06 時間軸",
+      "heading": "即時",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/C-mobile.jpg",
+        "tablet": "blocks/C-tablet.jpg",
+        "desktop": "blocks/C-desktop.jpg"
+      }
+    },
+    {
+      "code": "D",
+      "ref": "inst-gen-popular",
+      "pattern": "P05 編號排行",
+      "heading": "熱門排行",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/D-mobile.jpg",
+        "tablet": "blocks/D-tablet.jpg",
+        "desktop": "blocks/D-desktop.jpg"
+      }
+    },
+    {
+      "code": "E",
+      "ref": "inst-gen-video",
+      "pattern": "P12 橫式輪播",
+      "heading": "影音焦點",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/E-mobile.jpg",
+        "tablet": "blocks/E-tablet.jpg",
+        "desktop": "blocks/E-desktop.jpg"
+      }
+    },
+    {
+      "code": "F",
+      "ref": "inst-gen-world",
+      "pattern": "P07 均分圖卡網格",
+      "heading": "國際",
+      "program": {
+        "score": 6,
+        "findings": [
+          {
+            "item": "末列不落單",
+            "verdict": "warn",
+            "display": "6 則 ÷ 4 欄,餘 2"
+          },
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/F-mobile.jpg",
+        "tablet": "blocks/F-tablet.jpg",
+        "desktop": "blocks/F-desktop.jpg"
+      }
+    },
+    {
+      "code": "G",
+      "ref": "inst-gen-politics",
+      "pattern": "P03 左圖右文",
+      "heading": "政治",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/G-mobile.jpg",
+        "tablet": "blocks/G-tablet.jpg",
+        "desktop": "blocks/G-desktop.jpg"
+      }
+    },
+    {
+      "code": "H",
+      "ref": "inst-gen-finance",
+      "pattern": "P07 均分圖卡網格",
+      "heading": "財經",
+      "program": {
+        "score": 6,
+        "findings": [
+          {
+            "item": "末列不落單",
+            "verdict": "warn",
+            "display": "6 則 ÷ 4 欄,餘 2"
+          },
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/H-mobile.jpg",
+        "tablet": "blocks/H-tablet.jpg",
+        "desktop": "blocks/H-desktop.jpg"
+      }
+    },
+    {
+      "code": "I",
+      "ref": "inst-gen-feature",
+      "pattern": "P14 寬幅專題",
+      "heading": "專題",
+      "program": {
+        "score": 6,
+        "findings": [
+          {
+            "item": "填充率",
+            "verdict": "warn",
+            "display": "文字區 ÷ 圖高 = 48%"
+          },
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/I-mobile.jpg",
+        "tablet": "blocks/I-tablet.jpg",
+        "desktop": "blocks/I-desktop.jpg"
+      }
+    },
+    {
+      "code": "J",
+      "ref": "inst-gen-society",
+      "pattern": "P03 左圖右文",
+      "heading": "社會",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/J-mobile.jpg",
+        "tablet": "blocks/J-tablet.jpg",
+        "desktop": "blocks/J-desktop.jpg"
+      }
+    },
+    {
+      "code": "K",
+      "ref": "inst-gen-opinion",
+      "pattern": "P17 作者卡",
+      "heading": "觀點評論",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/K-mobile.jpg",
+        "tablet": "blocks/K-tablet.jpg",
+        "desktop": "blocks/K-desktop.jpg"
+      }
+    },
+    {
+      "code": "L",
+      "ref": "inst-gen-tech",
+      "pattern": "P07 均分圖卡網格",
+      "heading": "科技",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/L-mobile.jpg",
+        "tablet": "blocks/L-tablet.jpg",
+        "desktop": "blocks/L-desktop.jpg"
+      }
+    },
+    {
+      "code": "M",
+      "ref": "inst-gen-shorts",
+      "pattern": "P13 方形輪播",
+      "heading": "短影音",
+      "program": {
+        "score": 7,
+        "findings": [
+          {
+            "item": "觸控目標",
+            "verdict": "fail",
+            "display": "最小觸控目標 37px(「更多 ›」)"
+          }
+        ]
+      },
+      "images": {
+        "mobile": "blocks/M-mobile.jpg",
+        "tablet": "blocks/M-tablet.jpg",
+        "desktop": "blocks/M-desktop.jpg"
+      }
+    }
+  ]
+}

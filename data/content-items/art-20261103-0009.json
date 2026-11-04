@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0009",
+  "contentType": "news",
+  "category": "tech",
+  "title": "示意:新手存錢術:每月固定撥出兩成",
+  "url": "/news/0009",
+  "publishedAt": "2026-11-03T21:57:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0009_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0009_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

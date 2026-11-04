@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "page.schema.json",
+  "title": "Page 頁面",
+  "type": "object",
+  "required": ["type", "id", "name", "path", "codeScheme", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "Page" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "name": { "type": "string", "minLength": 1 },
+    "path": { "type": "string", "pattern": "^/" },
+    "codeScheme": { "description": "版位代號格式:flat=A~Z,sectioned=AA、AB…", "enum": ["flat", "sectioned"] },
+    "sections": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/section" } }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": ["id", "mode", "fluid"],
+      "properties": {
+        "id": { "$ref": "common.schema.json#/$defs/id" },
+        "mode": { "enum": ["stack", "flow"] },
+        "fluid": { "description": "true 表示不受容器最大寬度限制", "type": "boolean" },
+        "mobileOrder": { "description": "手機上的順序:該 section 所有實例 id", "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
+        "columns": {
+          "description": "stack:每欄的寬度與由上而下的實例",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["width", "blocks"],
+            "additionalProperties": false,
+            "properties": {
+              "width": { "type": "integer", "minimum": 1, "maximum": 12 },
+              "blocks": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } }
+            }
+          }
+        },
+        "blocks": {
+          "description": "flow:依序排列,每塊宣告手機與電腦各佔幾欄",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["instance", "span"],
+            "additionalProperties": false,
+            "properties": {
+              "instance": { "$ref": "common.schema.json#/$defs/id" },
+              "span": {
+                "type": "object",
+                "required": ["mobile", "desktop"],
+                "additionalProperties": false,
+                "properties": {
+                  "mobile": { "type": "integer", "minimum": 1, "maximum": 12 },
+                  "desktop": { "type": "integer", "minimum": 1, "maximum": 12 }
+                }
+              }
+            }
+          }
+        }
+      },
+      "oneOf": [
+        {
+          "properties": { "mode": { "const": "stack" } },
+          "required": ["columns"],
+          "not": { "required": ["blocks"] }
+        },
+        {
+          "properties": { "mode": { "const": "flow" } },
+          "required": ["blocks"],
+          "not": { "required": ["columns"] }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}

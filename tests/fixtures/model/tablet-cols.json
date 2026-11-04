@@ -1,0 +1,11 @@
+{
+  "description": "平板欄數 = 電腦版欄數減一欄,且不少於手機欄數",
+  "cases": [
+    { "mobile": 2, "desktop": 4, "expected": 3 },
+    { "mobile": 2, "desktop": 3, "expected": 2 },
+    { "mobile": 3, "desktop": 6, "expected": 5 },
+    { "mobile": 1, "desktop": 1, "expected": 1 },
+    { "mobile": 2, "desktop": 2, "expected": 2 },
+    { "mobile": 3, "desktop": 2, "expected": 2 }
+  ]
+}

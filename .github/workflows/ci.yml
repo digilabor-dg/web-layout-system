@@ -1,0 +1,41 @@
+# CI:lint、型別檢查、單元測試,以及對範例資料跑第 1 層規則檢查
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      # 【第一步】依 package-lock.json 安裝,確保每次版本相同
+      - name: 安裝套件
+        run: npm ci
+
+      # 【第二步】程式碼風格
+      - name: Lint
+        run: npm run lint
+
+      # 【第三步】TypeScript 型別檢查
+      - name: 型別檢查
+        run: npm run typecheck
+
+      # 【第四步】單元測試(含每條規則的合法與不合法 fixture)
+      - name: 測試
+        run: npm test
+
+      # 【第五步】範例資料必須 0 錯誤、0 警告
+      - name: 規則檢查(範例資料)
+        run: npm run validate -- --strict

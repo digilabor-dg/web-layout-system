@@ -1,0 +1,1723 @@
+{
+  "rule": "pattern-limit",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "7 種",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "41 種",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/layout-patterns/P60",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P60",
+            "name": "測試型 60",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P61",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P61",
+            "name": "測試型 61",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P62",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P62",
+            "name": "測試型 62",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P63",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P63",
+            "name": "測試型 63",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P64",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P64",
+            "name": "測試型 64",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P65",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P65",
+            "name": "測試型 65",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P66",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P66",
+            "name": "測試型 66",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P67",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P67",
+            "name": "測試型 67",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P68",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P68",
+            "name": "測試型 68",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P69",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P69",
+            "name": "測試型 69",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P70",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P70",
+            "name": "測試型 70",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P71",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P71",
+            "name": "測試型 71",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P72",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P72",
+            "name": "測試型 72",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P73",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P73",
+            "name": "測試型 73",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P74",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P74",
+            "name": "測試型 74",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P75",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P75",
+            "name": "測試型 75",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P76",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P76",
+            "name": "測試型 76",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P77",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P77",
+            "name": "測試型 77",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P78",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P78",
+            "name": "測試型 78",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P79",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P79",
+            "name": "測試型 79",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P80",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P80",
+            "name": "測試型 80",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P81",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P81",
+            "name": "測試型 81",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P82",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P82",
+            "name": "測試型 82",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P83",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P83",
+            "name": "測試型 83",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P84",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P84",
+            "name": "測試型 84",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P85",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P85",
+            "name": "測試型 85",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P86",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P86",
+            "name": "測試型 86",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P87",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P87",
+            "name": "測試型 87",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P88",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P88",
+            "name": "測試型 88",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P89",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P89",
+            "name": "測試型 89",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P90",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P90",
+            "name": "測試型 90",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P91",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P91",
+            "name": "測試型 91",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P92",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P92",
+            "name": "測試型 92",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/layout-patterns/P93",
+          "value": {
+            "type": "LayoutPattern",
+            "id": "P93",
+            "name": "測試型 93",
+            "group": "news-combo",
+            "tags": [
+              "image"
+            ],
+            "arrangement": "grid",
+            "emphasis": "none",
+            "imageText": "stacked",
+            "textAmount": "headline",
+            "interaction": "none",
+            "slots": [
+              {
+                "role": "card",
+                "count": "rest",
+                "image": [
+                  "main"
+                ]
+              }
+            ],
+            "items": {
+              "min": 3,
+              "max": 9
+            },
+            "responsiveDefault": {
+              "mobile": {
+                "layout": "grid",
+                "cols": 2
+              },
+              "desktop": {
+                "layout": "grid",
+                "cols": 3
+              }
+            },
+            "inferred": [
+              "arrangement",
+              "emphasis",
+              "imageText",
+              "textAmount",
+              "interaction",
+              "slots",
+              "responsiveDefault"
+            ]
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "pattern-limit",
+          "id": "",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

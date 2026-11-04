@@ -1,0 +1,20 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0046",
+  "contentType": "flash",
+  "title": "示意:高速公路北上路段事故,回堵三公里",
+  "url": "/news/0046",
+  "publishedAt": "2026-11-03T17:38:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0046_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0046_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "round": 2,
+  "rater": "persona-ux-a11y",
+  "source": "ai-persona",
+  "persona": "可用性與無障礙專家",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 8, "comment": "字級大、漸層底對比足,手機兩行好讀;桌機單行標題清楚。" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 4, "comment": "三則放四欄,右邊空一大塊;手機第三張落單,看起來像缺件。" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 7, "comment": "單行列表好掃讀、列高夠點;但即時新聞沒標時間,資訊被藏。" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 5, "comment": "手機編號離縮圖太遠,方圖過大、每則僅兩行字,要捲很久。" },
+    { "ref": "inst-gen-video", "code": "E", "score": 5, "comment": "手機只露一截下一張、無指示點;桌機箭頭蓋住圖,標題高低不齊。" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "comment": "手機兩欄整齊;桌機六則排四欄,第二列只兩張,右半邊空掉。" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "只有首則有摘要,節奏不一;桌機標題單行,右側與圖下空很多。" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 5, "comment": "與國際同病:桌機四欄排六則,末列剩兩張右半空;手機正常。" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 7, "comment": "手機圖文順序清楚;桌機標題斷出孤字「園」,右欄下方大片空白。" },
+    { "ref": "inst-gen-society", "code": "J", "score": 7, "comment": "手機縮圖與兩行標題對齊好讀;桌機標題單行,右側留白過多。" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 3, "comment": "桌機窄欄變單欄巨大方圖,四則要捲近兩千像素,比手機還難掃。" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 8, "comment": "桌機三欄兩列填滿、標題無截斷;手機兩欄也整齊,寬度間一致。" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 6, "comment": "手機兩張完整加細縫露出,滑動暗示弱、標題被切;桌機箭頭蓋圖。" }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "LayoutPattern",
+  "id": "P23",
+  "name": "音訊 / Podcast 清單",
+  "group": "av",
+  "tags": [
+    "mixed"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "side",
+  "textAmount": "headline",
+  "interaction": "play",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "square",
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 8
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

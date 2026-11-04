@@ -1,0 +1,6 @@
+{
+  "description": "三組預設參數組都把 6 種測試寬度分進同樣的 4 類裝置",
+  "presets": ["bs5", "tw4", "md3"],
+  "expected": { "360": "mobile", "390": "mobile", "768": "tablet-V", "1024": "tablet-H", "1280": "desktop", "1440": "desktop" },
+  "mainSwitch": { "bs5": 992, "tw4": 1024, "md3": 840 }
+}

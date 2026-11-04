@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0018",
+  "contentType": "news",
+  "category": "world",
+  "title": "示意:跨國研究團隊公布新型電池成果",
+  "url": "/news/0018",
+  "publishedAt": "2026-11-03T20:54:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0018_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0018_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

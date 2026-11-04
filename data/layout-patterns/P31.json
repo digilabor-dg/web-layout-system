@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P31",
+  "name": "摺疊問答",
+  "group": "interactive",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "summary",
+  "interaction": "accordion",
+  "slots": [
+    {
+      "role": "qa",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 8
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

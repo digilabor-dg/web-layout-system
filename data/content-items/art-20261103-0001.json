@@ -1,0 +1,22 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0001",
+  "contentType": "news",
+  "category": "politics",
+  "title": "示意:跨部會推動城市韌性計畫,首波十二項工程年底前動工",
+  "summary": "中央與地方合作的示意計畫,說明排版用的摘要文字,長度約兩行。",
+  "url": "/news/0001",
+  "publishedAt": "2026-11-03T22:53:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0001_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0001_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

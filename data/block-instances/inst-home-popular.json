@@ -1,0 +1,16 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-popular",
+  "template": "tpl-popular",
+  "overrides": {},
+  "items": [
+    "art-20261103-0006",
+    "art-20261103-0007",
+    "art-20261103-0008",
+    "art-20261103-0009",
+    "art-20261103-0010",
+    "art-20261103-0011",
+    "art-20261103-0012",
+    "art-20261103-0013"
+  ]
+}

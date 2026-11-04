@@ -1,0 +1,10 @@
+{
+  "type": "ContentType",
+  "id": "feature",
+  "name": "專題",
+  "categories": [],
+  "suggestedPatterns": [
+    "P11",
+    "P14"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0016",
+  "contentType": "news",
+  "category": "world",
+  "title": "示意:區域貿易協定新增兩個成員國",
+  "url": "/news/0016",
+  "publishedAt": "2026-11-03T21:08:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0016_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0016_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

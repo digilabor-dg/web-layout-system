@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P24",
+  "name": "節目表 / 直播時段",
+  "group": "av",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "slot",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 4,
+    "max": 12
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

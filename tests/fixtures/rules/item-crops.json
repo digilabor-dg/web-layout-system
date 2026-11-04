@@ -1,0 +1,63 @@
+{
+  "rule": "item-crops",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "基準資料集",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "缺少 1:1",
+      "patch": [
+        {
+          "op": "remove",
+          "path": "/content-items/w1/images/square"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "item-crops",
+          "id": "w1",
+          "severity": "error"
+        }
+      ]
+    },
+    {
+      "name": "影音缺少 16:9",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/content-items/v1",
+          "value": {
+            "type": "ContentItem",
+            "id": "v1",
+            "contentType": "video",
+            "title": "示意影音",
+            "url": "/news/v1",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/v1_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/v1_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            }
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "item-crops",
+          "id": "v1",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

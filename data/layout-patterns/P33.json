@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P33",
+  "name": "資訊小工具",
+  "group": "data",
+  "tags": [
+    "mixed"
+  ],
+  "arrangement": "grid",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "widget",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 1,
+    "max": 3
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

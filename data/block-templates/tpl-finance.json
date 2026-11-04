@@ -1,0 +1,26 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-finance",
+  "name": "財經區塊",
+  "role": "section",
+  "contentType": {
+    "ref": "news",
+    "category": "finance"
+  },
+  "pattern": "P09",
+  "itemCount": 6,
+  "selection": {
+    "mode": "mixed",
+    "pinned": 1,
+    "fill": {
+      "source": "latest",
+      "category": "finance",
+      "withinHours": 48
+    }
+  },
+  "responsive": null,
+  "heading": {
+    "title": "財經",
+    "moreLink": "/finance"
+  }
+}

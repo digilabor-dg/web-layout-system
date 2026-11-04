@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0043",
+  "contentType": "news",
+  "category": "tech",
+  "title": "示意:電動車充電站密度提升,偏鄉也能充",
+  "url": "/news/0043",
+  "publishedAt": "2026-11-03T17:59:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0043_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0043_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

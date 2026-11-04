@@ -1,0 +1,87 @@
+{
+  "set": "default",
+  "round": 2,
+  "rater": "persona-frontend-engineer",
+  "source": "ai-persona",
+  "persona": "前端工程師(專家)",
+  "ratings": [
+    {
+      "ref": "inst-gen-headline",
+      "code": "A",
+      "score": 8,
+      "comment": "3:2 大圖兩端一致,疊字漸層在手機換行也不溢出,桌機圖略高但合理"
+    },
+    {
+      "ref": "inst-gen-subheadline",
+      "code": "B",
+      "score": 3,
+      "comment": "3 則塞 2 欄手機落單一張,桌機 4 欄格只放 3 張右邊空一欄"
+    },
+    {
+      "ref": "inst-gen-flash",
+      "code": "C",
+      "score": 7,
+      "comment": "兩端同一套單欄列表很穩,左線對齊整齊;時間軸卻沒時間欄偏單薄"
+    },
+    {
+      "ref": "inst-gen-popular",
+      "code": "D",
+      "score": 4,
+      "comment": "手機方圖縮圖太大,標題兩行下方空一截;編號欄與圖間距過寬"
+    },
+    {
+      "ref": "inst-gen-video",
+      "code": "E",
+      "score": 8,
+      "comment": "手機露出下一張提示可滑,桌機 4 張加箭頭,16:9 比例一致"
+    },
+    {
+      "ref": "inst-gen-world",
+      "code": "F",
+      "score": 5,
+      "comment": "手機 2×3 整齊,桌機 4 欄放 6 則第二列只剩 2 張,右半空著"
+    },
+    {
+      "ref": "inst-gen-politics",
+      "code": "G",
+      "score": 5,
+      "comment": "桌機單欄拉滿寬,短標題右側大片空白;手機首則摘要讓文比圖高"
+    },
+    {
+      "ref": "inst-gen-finance",
+      "code": "H",
+      "score": 5,
+      "comment": "同國際版:桌機 4+2 收尾不齊,欄數沒依則數調整"
+    },
+    {
+      "ref": "inst-gen-feature",
+      "code": "I",
+      "score": 7,
+      "comment": "手機上下堆疊、桌機左右分欄轉換自然;桌機文字欄下方空太多"
+    },
+    {
+      "ref": "inst-gen-society",
+      "code": "J",
+      "score": 4,
+      "comment": "桌機單欄每列只一行字,右側與下方三分之二都是空的,沒善用寬度"
+    },
+    {
+      "ref": "inst-gen-opinion",
+      "code": "K",
+      "score": 2,
+      "comment": "手機 2 欄桌機反變 1 欄,方圖撐到近 400px 高,作者卡長到失控"
+    },
+    {
+      "ref": "inst-gen-tech",
+      "code": "L",
+      "score": 8,
+      "comment": "手機 2 欄、桌機 3 欄 6 則剛好排滿,欄數變化自然,間距一致"
+    },
+    {
+      "ref": "inst-gen-shorts",
+      "code": "M",
+      "score": 8,
+      "comment": "1:1 輪播手機露邊、桌機 4 張加箭頭,與影音區同邏輯很一致"
+    }
+  ]
+}

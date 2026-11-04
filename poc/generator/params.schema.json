@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "generator-params.schema.json",
+  "title": "版型產生參數(POC 3;表單產生的就是這份 JSON)",
+  "type": "object",
+  "required": ["name", "preset", "blocks", "sidebar", "fullWidth", "columns", "strategy"],
+  "additionalProperties": false,
+  "properties": {
+    "name": { "description": "這組參數的名稱,也是輸出目錄名", "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "description": "頁面名稱", "type": "string" },
+    "preset": { "description": "預設參數組", "enum": ["bs5", "tw4", "md3"] },
+    "blocks": {
+      "description": "要放的區塊,依閱讀順序",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["headline", "subheadline", "flash", "popular", "video", "world", "politics", "finance", "feature", "society", "opinion", "tech", "shorts"] }
+    },
+    "sidebar": { "description": "放在側欄的區塊", "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "fullWidth": { "description": "獨佔一整列的區塊(其餘放主欄)", "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "columns": { "description": "主欄與側欄的欄寬,加總 12", "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "integer", "minimum": 1, "maximum": 11 } },
+    "strategy": { "description": "搜尋策略", "enum": ["greedy", "beam"] },
+    "beamWidth": { "description": "集束寬度(strategy 為 beam 時)", "type": "integer", "minimum": 2, "maximum": 10 }
+  }
+}

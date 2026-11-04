@@ -1,0 +1,46 @@
+# OpenSpec 檢查:驗證所有 change 與 spec,並守住「最多 5 個未 archive 的 change」
+name: openspec
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  openspec:
+    runs-on: ubuntu-latest
+    env:
+      # 關閉 OpenSpec 的匿名使用統計
+      OPENSPEC_TELEMETRY: "0"
+      # 同時允許的未 archive change 上限
+      MAX_ACTIVE_CHANGES: "5"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 【第一步】安裝固定版本的 OpenSpec CLI,確保每次結果一致
+      - name: 安裝 OpenSpec
+        run: npm install -g @fission-ai/openspec@1.16.0
+
+      # 【第二步】格式檢查:每個 change 與 spec 都要通過嚴格驗證
+      - name: 驗證 change 與 spec
+        run: openspec validate --all --strict
+
+      # 【第三步】WIP 上限:數一數 openspec/changes/ 下還沒 archive 的 change
+      - name: 檢查 active change 數量
+        run: |
+          set -euo pipefail
+          # 取出未 archive 的 change 名稱清單(archive/ 底下的不會列出)
+          names=$(openspec list --json | jq -r '.changes[].name')
+          # 計算數量;清單為空時算 0
+          count=$(printf '%s' "$names" | grep -c . || true)
+          echo "active change:$count / $MAX_ACTIVE_CHANGES"
+          printf '%s\n' "$names"
+          # 超過上限就讓 CI 失敗,提示先 archive
+          if [ "$count" -gt "$MAX_ACTIVE_CHANGES" ]; then
+            echo "::error::未 archive 的 change 有 $count 個,超過上限 $MAX_ACTIVE_CHANGES。請先 archive 再開新的 change。"
+            exit 1
+          fi

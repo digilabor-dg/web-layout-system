@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P29",
+  "name": "分類導覽列",
+  "group": "interactive",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "link",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 8
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

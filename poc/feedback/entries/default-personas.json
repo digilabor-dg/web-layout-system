@@ -1,0 +1,479 @@
+{
+  "description": "產生結果 default 的 8 個角色 agent 評分中,比程式分數低 3 分以上的區塊(盲點)。mapped / candidate 由 skill(Claude)依短評判讀。這些是 AI 擬人評估,只用來找盲點。",
+  "entries": [
+    {
+      "id": "default-desktop-reader-A",
+      "source": "ai-persona",
+      "persona": "電腦讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-headline",
+      "target": "A",
+      "sentiment": "dislike",
+      "score": 6,
+      "text": "大圖撐滿主欄只配一行標題,桌機看有點空洞;手機版還好",
+      "candidate": {
+        "item": "圖文比(電腦)",
+        "metric": "大圖面積 ÷ 所帶的標題則數",
+        "threshold": "待定"
+      }
+    },
+    {
+      "id": "default-desktop-reader-B",
+      "source": "ai-persona",
+      "persona": "電腦讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "桌機三張卡只排到四分之三,右邊空一塊;手機剩一張落單",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-desktop-reader-J",
+      "source": "ai-persona",
+      "persona": "電腦讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-society",
+      "target": "J",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "四則都只一行字,圖右邊大片留白,排得太鬆又沒重點",
+      "candidate": {
+        "item": "填充率(左圖右文清單)",
+        "metric": "左圖右文的清單,每則文字高 ÷ 縮圖高",
+        "threshold": "比照填充率 60%~90%"
+      }
+    },
+    {
+      "id": "default-desktop-reader-K",
+      "source": "ai-persona",
+      "persona": "電腦讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 2,
+      "text": "四張大方圖疊成一長條,每張只一行字,也看不到作者是誰",
+      "candidate": {
+        "item": "區塊長度(電腦)",
+        "metric": "電腦寬度下區塊高 ÷ 視窗高",
+        "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告"
+      }
+    },
+    {
+      "id": "default-frontend-engineer-B",
+      "source": "ai-persona",
+      "persona": "前端工程師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "3 則卻排手機 2 欄、電腦 4 欄,兩個寬度都留洞,右邊空一塊",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-frontend-engineer-D",
+      "source": "ai-persona",
+      "persona": "前端工程師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-popular",
+      "target": "D",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "排行沒有編號;手機方圖太大,文字只佔上半,下面空一截",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-frontend-engineer-K",
+      "source": "ai-persona",
+      "persona": "前端工程師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 2,
+      "text": "手機 2 欄、電腦反而變 1 欄巨大方圖,拉得超長,欄數邏輯顛倒",
+      "candidate": {
+        "item": "區塊長度(電腦)",
+        "metric": "電腦寬度下區塊高 ÷ 視窗高",
+        "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告"
+      }
+    },
+    {
+      "id": "default-mobile-commuter-A",
+      "source": "ai-persona",
+      "persona": "通勤讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-headline",
+      "target": "A",
+      "sentiment": "dislike",
+      "score": 7,
+      "text": "頭條疊字大又清楚,手機一屏還看得到下一塊;桌機圖偏大",
+      "candidate": {
+        "item": "圖文比(電腦)",
+        "metric": "大圖面積 ÷ 所帶的標題則數",
+        "threshold": "待定"
+      }
+    },
+    {
+      "id": "default-mobile-commuter-B",
+      "source": "ai-persona",
+      "persona": "通勤讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 5,
+      "text": "三則排兩欄,右下缺一格空空的;桌機右邊也空一塊",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-mobile-commuter-D",
+      "source": "ai-persona",
+      "persona": "通勤讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-popular",
+      "target": "D",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "排行看不到名次數字,每則都配大方圖,五則就滑掉一屏",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-mobile-commuter-K",
+      "source": "ai-persona",
+      "persona": "通勤讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "方圖超大,桌機側欄要一路往下拉;也看不到作者是誰",
+      "candidate": {
+        "item": "區塊長度(電腦)",
+        "metric": "電腦寬度下區塊高 ÷ 視窗高",
+        "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告"
+      }
+    },
+    {
+      "id": "default-news-editor-B",
+      "source": "ai-persona",
+      "persona": "新聞編輯",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "焦點只有三則小卡,電腦版右邊空一格、手機剩一張落單,撐不起第二層",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-news-editor-D",
+      "source": "ai-persona",
+      "persona": "新聞編輯",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-popular",
+      "target": "D",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "叫排行卻沒有名次數字,方形大縮圖搶版面,標題下方大片空白",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-news-editor-K",
+      "source": "ai-persona",
+      "persona": "新聞編輯",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 2,
+      "text": "作者卡卻看不到作者名與頭像;電腦版四張大方圖直疊,拉得極長",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-senior-reader-B",
+      "source": "ai-persona",
+      "persona": "年長讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 5,
+      "text": "才三則,電腦版右邊空一大塊,手機第三則孤零零的。",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-senior-reader-K",
+      "source": "ai-persona",
+      "persona": "年長讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "電腦版四張大方圖要一直滑,標題字小,也看不到作者是誰。",
+      "candidate": {
+        "item": "區塊長度(電腦)",
+        "metric": "電腦寬度下區塊高 ÷ 視窗高",
+        "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告"
+      }
+    },
+    {
+      "id": "default-skimmer-A",
+      "source": "ai-persona",
+      "persona": "快速掃讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-headline",
+      "target": "A",
+      "sentiment": "dislike",
+      "score": 5,
+      "text": "標題壓在圖上還算清楚,但電腦版一大片圖只換到一則標題",
+      "candidate": {
+        "item": "圖文比(電腦)",
+        "metric": "大圖面積 ÷ 所帶的標題則數",
+        "threshold": "待定"
+      }
+    },
+    {
+      "id": "default-skimmer-B",
+      "source": "ai-persona",
+      "persona": "快速掃讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "才三則,手機第三張落單、電腦右邊空一格,標題還折兩行",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-skimmer-D",
+      "source": "ai-persona",
+      "persona": "快速掃讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-popular",
+      "target": "D",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "說是排行卻看不到名次數字,方圖又大,五則就佔滿一屏",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-skimmer-I",
+      "source": "ai-persona",
+      "persona": "快速掃讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-feature",
+      "target": "I",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "整塊只有一個標題,大圖佔滿,電腦版右下還空一大片",
+      "mapped": "填充率"
+    },
+    {
+      "id": "default-skimmer-K",
+      "source": "ai-persona",
+      "persona": "快速掃讀者",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 2,
+      "text": "電腦版一張大方圖配一行標題,四則要滑快兩屏,太浪費",
+      "candidate": {
+        "item": "區塊長度(電腦)",
+        "metric": "電腦寬度下區塊高 ÷ 視窗高",
+        "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告"
+      }
+    },
+    {
+      "id": "default-ux-a11y-A",
+      "source": "ai-persona",
+      "persona": "可用性與無障礙專家",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-headline",
+      "target": "A",
+      "sentiment": "dislike",
+      "score": 6,
+      "text": "白字疊在漸層淺處,手機第一行對比偏弱;字級夠大但閱讀吃力。",
+      "candidate": {
+        "item": "疊字對比",
+        "metric": "疊字文字與背後圖片(漸層)的對比",
+        "threshold": "WCAG AA 4.5:1"
+      }
+    },
+    {
+      "id": "default-ux-a11y-B",
+      "source": "ai-persona",
+      "persona": "可用性與無障礙專家",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 5,
+      "text": "手機3張排2欄最後落單,電腦右側空一欄,版面不完整。",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-ux-a11y-D",
+      "source": "ai-persona",
+      "persona": "可用性與無障礙專家",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-popular",
+      "target": "D",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "排行卻看不到名次數字,大方圖把列表拉很長,文字下方空白。",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-ux-a11y-E",
+      "source": "ai-persona",
+      "persona": "可用性與無障礙專家",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-video",
+      "target": "E",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "手機只露一小條下一張且標題被截,沒點點;電腦箭頭壓在圖上。",
+      "candidate": {
+        "item": "輪播露出比例",
+        "metric": "露出的下一張佔卡片寬的比例、是否有頁碼指示",
+        "threshold": "待定"
+      }
+    },
+    {
+      "id": "default-ux-a11y-K",
+      "source": "ai-persona",
+      "persona": "可用性與無障礙專家",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "作者卡看不到作者名與頭像;電腦單欄四張大方圖,捲很久。",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-visual-designer-B",
+      "source": "ai-persona",
+      "persona": "視覺設計師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "只有三則:手機第二列落單一張,桌機右側空出四分之一,欄底不齊",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "default-visual-designer-D",
+      "source": "ai-persona",
+      "persona": "視覺設計師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-popular",
+      "target": "D",
+      "sentiment": "dislike",
+      "score": 3,
+      "text": "排行卻看不到名次編號;方圖偏大,文字只佔上半,每列下方空",
+      "candidate": {
+        "item": "內容完整性",
+        "metric": "展示類型應有的元素是否都有顯示(排行的名次、作者卡的作者名與頭像)",
+        "threshold": "缺少即不合格"
+      }
+    },
+    {
+      "id": "default-visual-designer-J",
+      "source": "ai-persona",
+      "persona": "視覺設計師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-society",
+      "target": "J",
+      "sentiment": "dislike",
+      "score": 4,
+      "text": "又是左圖右文,桌機標題一行就結束、列間鬆散,右邊很空",
+      "candidate": {
+        "item": "填充率(左圖右文清單)",
+        "metric": "左圖右文的清單,每則文字高 ÷ 縮圖高",
+        "threshold": "比照填充率 60%~90%"
+      }
+    },
+    {
+      "id": "default-visual-designer-K",
+      "source": "ai-persona",
+      "persona": "視覺設計師",
+      "report": "poc/generator/results/default/report.json",
+      "width": null,
+      "ref": "inst-gen-opinion",
+      "target": "K",
+      "sentiment": "dislike",
+      "score": 2,
+      "text": "桌機窄欄四張大方圖直疊,高度失控;作者卡看不到作者資訊",
+      "candidate": {
+        "item": "區塊長度(電腦)",
+        "metric": "電腦寬度下區塊高 ÷ 視窗高",
+        "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告"
+      }
+    }
+  ]
+}

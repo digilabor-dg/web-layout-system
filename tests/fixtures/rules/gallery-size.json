@@ -1,0 +1,210 @@
+{
+  "rule": "gallery-size",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "圖輯 6 張",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-gallery",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-gallery",
+            "name": "tpl-gallery",
+            "role": "section",
+            "contentType": {
+              "ref": "news",
+              "category": "world"
+            },
+            "pattern": "P16",
+            "itemCount": 1,
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-gallery"
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/content-items/g1",
+          "value": {
+            "type": "ContentItem",
+            "id": "g1",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意圖輯",
+            "url": "/news/g1",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/g1_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/g1_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            },
+            "gallery": [
+              {
+                "src": "/img/g1_0.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_1.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_2.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_3.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_4.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_5.jpg",
+                "width": 600,
+                "height": 600
+              }
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-gallery",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-gallery",
+            "template": "tpl-gallery",
+            "overrides": {},
+            "items": [
+              "g1"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-gallery"
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "圖輯 4 張",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-gallery",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-gallery",
+            "name": "tpl-gallery",
+            "role": "section",
+            "contentType": {
+              "ref": "news",
+              "category": "world"
+            },
+            "pattern": "P16",
+            "itemCount": 1,
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-gallery"
+            }
+          }
+        },
+        {
+          "op": "add",
+          "path": "/content-items/g1",
+          "value": {
+            "type": "ContentItem",
+            "id": "g1",
+            "contentType": "news",
+            "category": "world",
+            "title": "示意圖輯",
+            "url": "/news/g1",
+            "publishedAt": "2026-11-03T09:00:00+08:00",
+            "images": {
+              "main": {
+                "src": "/img/g1_3x2.jpg",
+                "width": 1200,
+                "height": 800
+              },
+              "square": {
+                "src": "/img/g1_1x1.jpg",
+                "width": 600,
+                "height": 600
+              }
+            },
+            "gallery": [
+              {
+                "src": "/img/g1_0.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_1.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_2.jpg",
+                "width": 600,
+                "height": 600
+              },
+              {
+                "src": "/img/g1_3.jpg",
+                "width": 600,
+                "height": 600
+              }
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-gallery",
+          "value": {
+            "type": "BlockInstance",
+            "id": "inst-gallery",
+            "template": "tpl-gallery",
+            "overrides": {},
+            "items": [
+              "g1"
+            ]
+          }
+        },
+        {
+          "op": "add",
+          "path": "/pages/home/sections/0/columns/0/blocks/-",
+          "value": "inst-gallery"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "gallery-size",
+          "id": "g1",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

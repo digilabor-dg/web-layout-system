@@ -1,0 +1,6 @@
+{
+  "type": "PatternTag",
+  "id": "image",
+  "name": "圖",
+  "rule": "以圖片為主體"
+}

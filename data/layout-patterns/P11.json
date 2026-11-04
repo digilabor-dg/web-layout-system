@@ -1,0 +1,54 @@
+{
+  "type": "LayoutPattern",
+  "id": "P11",
+  "name": "拼貼(Bento)",
+  "group": "news-combo",
+  "tags": [
+    "image",
+    "zoom"
+  ],
+  "arrangement": "bento",
+  "emphasis": "lead1",
+  "imageText": "overlay",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "lead",
+      "count": 1,
+      "image": [
+        "main"
+      ]
+    },
+    {
+      "role": "tile",
+      "count": "rest",
+      "image": [
+        "square"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 7
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "bento",
+      "cols": 2
+    },
+    "desktop": {
+      "layout": "bento",
+      "cols": 4
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

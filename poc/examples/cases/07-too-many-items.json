@@ -1,0 +1,757 @@
+{
+  "id": "07",
+  "title": "整頁則數太多",
+  "problem": "影音與短影音各塞到 12 則、社會與科技各 9 則,整頁 83 則,超過上限 80 則。",
+  "fixNote": "回到原本的則數(整頁 61 則)。",
+  "targets": [
+    "整頁則數"
+  ],
+  "shotWidth": 1280,
+  "v1": [
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-0",
+        "contentType": "video",
+        "title": "示意:影音精選第 1 集",
+        "url": "/news/ex-video-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-0_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-0"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-0",
+        "contentType": "video",
+        "title": "示意:短影音第 1 支",
+        "url": "/news/ex-short-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-0_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-0"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-1",
+        "contentType": "video",
+        "title": "示意:影音精選第 2 集",
+        "url": "/news/ex-video-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-1_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-1"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-1",
+        "contentType": "video",
+        "title": "示意:短影音第 2 支",
+        "url": "/news/ex-short-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-1_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-1"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-2",
+        "contentType": "video",
+        "title": "示意:影音精選第 3 集",
+        "url": "/news/ex-video-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-2_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-2"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-2",
+        "contentType": "video",
+        "title": "示意:短影音第 3 支",
+        "url": "/news/ex-short-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-2_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-2"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-3",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-3",
+        "contentType": "video",
+        "title": "示意:影音精選第 4 集",
+        "url": "/news/ex-video-3",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-3_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-3_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-3_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-3"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-3",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-3",
+        "contentType": "video",
+        "title": "示意:短影音第 4 支",
+        "url": "/news/ex-short-3",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-3_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-3_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-3_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-3"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-4",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-4",
+        "contentType": "video",
+        "title": "示意:影音精選第 5 集",
+        "url": "/news/ex-video-4",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-4_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-4_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-4_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-4"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-4",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-4",
+        "contentType": "video",
+        "title": "示意:短影音第 5 支",
+        "url": "/news/ex-short-4",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-4_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-4_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-4_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-4"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-5",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-5",
+        "contentType": "video",
+        "title": "示意:影音精選第 6 集",
+        "url": "/news/ex-video-5",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-5_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-5_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-5_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-5"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-5",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-5",
+        "contentType": "video",
+        "title": "示意:短影音第 6 支",
+        "url": "/news/ex-short-5",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-5_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-5_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-5_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-5"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-6",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-6",
+        "contentType": "video",
+        "title": "示意:影音精選第 7 集",
+        "url": "/news/ex-video-6",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-6_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-6_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-6_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-6"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-6",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-6",
+        "contentType": "video",
+        "title": "示意:短影音第 7 支",
+        "url": "/news/ex-short-6",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-6_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-6_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-6_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-6"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-video-7",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-video-7",
+        "contentType": "video",
+        "title": "示意:影音精選第 8 集",
+        "url": "/news/ex-video-7",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-video-7_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-video-7_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-video-7_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-video-focus/items/-",
+      "value": "ex-video-7"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-short-7",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-short-7",
+        "contentType": "video",
+        "title": "示意:短影音第 8 支",
+        "url": "/news/ex-short-7",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-short-7_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-short-7_1x1.jpg",
+            "width": 600,
+            "height": 600
+          },
+          "video": {
+            "src": "/img/ex-short-7_16x9.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-shorts/items/-",
+      "value": "ex-short-7"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-society-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-society-0",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:society 補充新聞 1",
+        "url": "/news/ex-society-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-society-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-society-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-society/items/-",
+      "value": "ex-society-0"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-society-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-society-1",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:society 補充新聞 2",
+        "url": "/news/ex-society-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-society-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-society-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-society/items/-",
+      "value": "ex-society-1"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-society-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-society-2",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:society 補充新聞 3",
+        "url": "/news/ex-society-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-society-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-society-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-society/items/-",
+      "value": "ex-society-2"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-tech-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-tech-0",
+        "contentType": "news",
+        "category": "tech",
+        "title": "示意:tech 補充新聞 1",
+        "url": "/news/ex-tech-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-tech-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-tech-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-tech/items/-",
+      "value": "ex-tech-0"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-tech-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-tech-1",
+        "contentType": "news",
+        "category": "tech",
+        "title": "示意:tech 補充新聞 2",
+        "url": "/news/ex-tech-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-tech-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-tech-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-tech/items/-",
+      "value": "ex-tech-1"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-tech-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-tech-2",
+        "contentType": "news",
+        "category": "tech",
+        "title": "示意:tech 補充新聞 3",
+        "url": "/news/ex-tech-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-tech-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-tech-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-tech/items/-",
+      "value": "ex-tech-2"
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-video-focus/itemCount",
+      "value": 12
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-shorts/itemCount",
+      "value": 12
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-society/itemCount",
+      "value": 9
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-tech/itemCount",
+      "value": 9
+    }
+  ],
+  "v2": []
+}

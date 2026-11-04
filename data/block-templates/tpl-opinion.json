@@ -1,0 +1,24 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-opinion",
+  "name": "觀點評論",
+  "role": "opinion",
+  "contentType": {
+    "ref": "opinion"
+  },
+  "pattern": "P17",
+  "itemCount": 4,
+  "selection": {
+    "mode": "manual"
+  },
+  "responsive": {
+    "desktop": {
+      "layout": "list",
+      "cols": 1
+    }
+  },
+  "heading": {
+    "title": "觀點評論",
+    "moreLink": "/opinion"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "type": "LayoutPattern",
+  "id": "P12",
+  "name": "橫式輪播",
+  "group": "av",
+  "tags": [
+    "carousel",
+    "image"
+  ],
+  "arrangement": "carousel",
+  "emphasis": "none",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "carousel",
+  "slots": [
+    {
+      "role": "card",
+      "count": "rest",
+      "image": [
+        "main",
+        "video"
+      ]
+    }
+  ],
+  "items": {
+    "min": 4,
+    "max": 12
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "carousel",
+      "perView": 1.2
+    },
+    "desktop": {
+      "layout": "carousel",
+      "perView": 4
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

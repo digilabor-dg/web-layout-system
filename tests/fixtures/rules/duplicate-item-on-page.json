@@ -1,0 +1,28 @@
+{
+  "rule": "duplicate-item-on-page",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "基準資料集",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "同一則出現在頭條與國際區塊",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/block-instances/inst-lead/items/0",
+          "value": "w1"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "duplicate-item-on-page",
+          "id": "inst-grid",
+          "severity": "warning"
+        }
+      ]
+    }
+  ]
+}

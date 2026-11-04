@@ -1,0 +1,22 @@
+{
+  "id": "bs5",
+  "name": "Bootstrap 5",
+  "source": "Bootstrap 5.3 文件:Breakpoints、Containers、Gutters($grid-breakpoints、$container-max-widths、$grid-gutter-width)",
+  "breakpoints": { "tabletV": 768, "tabletH": 992, "desktop": 1200 },
+  "containers": [
+    { "minWidth": 0, "maxWidth": null, "padding": null },
+    { "minWidth": 576, "maxWidth": 540, "padding": null },
+    { "minWidth": 768, "maxWidth": 720, "padding": null },
+    { "minWidth": 992, "maxWidth": 960, "padding": null },
+    { "minWidth": 1200, "maxWidth": 1140, "padding": null },
+    { "minWidth": 1400, "maxWidth": 1320, "padding": null }
+  ],
+  "gutter": "1.5rem",
+  "columns": 12,
+  "baseFontSize": 16,
+  "lineHeight": 1.5,
+  "notes": [
+    "容器左右內距等於欄距的一半(.container 的 padding-x = gutter × 0.5)",
+    "斷點 sm 576、md 768、lg 992、xl 1200、xxl 1400;四類裝置取 md、lg、xl 為起點"
+  ]
+}

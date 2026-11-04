@@ -1,0 +1,47 @@
+{
+  "type": "LayoutPattern",
+  "id": "P13",
+  "name": "方形輪播",
+  "group": "av",
+  "tags": [
+    "carousel",
+    "image"
+  ],
+  "arrangement": "carousel",
+  "emphasis": "none",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "carousel",
+  "slots": [
+    {
+      "role": "card",
+      "count": "rest",
+      "image": [
+        "square"
+      ]
+    }
+  ],
+  "items": {
+    "min": 4,
+    "max": 12
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "carousel",
+      "perView": 2.2
+    },
+    "desktop": {
+      "layout": "carousel",
+      "perView": 6
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

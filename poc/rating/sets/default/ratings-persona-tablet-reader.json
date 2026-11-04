@@ -1,0 +1,21 @@
+{
+  "set": "default",
+  "rater": "persona-tablet-reader",
+  "source": "ai-persona",
+  "persona": "平板讀者(使用者)",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 7, "comment": "頭條大圖撐滿寬度很有氣勢,疊字夠大,但一屏幾乎只有這則" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 8, "comment": "三張卡並排剛好用滿寬度,大小適中,字不用放大就能讀" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 7, "comment": "字夠大好讀,紅線清楚,但只有四則,右半邊空著" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 3, "comment": "每則配一張大方圖,一屏只看兩三則,標題下空一大片" },
+    { "ref": "inst-gen-video", "code": "E", "score": 5, "comment": "一張影片卡幾乎佔滿整寬,像放大的手機版,要一直滑" },
+    { "ref": "inst-gen-world", "code": "F", "score": 9, "comment": "三欄兩列剛剛好,一屏看得到六則,字大小舒服" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "左圖右文好讀,但標題下空很多,只有第一則有摘要不齊" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 9, "comment": "三欄兩列整齊,卡片大小適中,一屏六則很好掃" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 6, "comment": "專題大圖滿版有份量,但一屏只剩這一則,摘要字偏小" },
+    { "ref": "inst-gen-society", "code": "J", "score": 6, "comment": "左圖右文清楚,但每則標題下都空一大塊,有點浪費" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 2, "comment": "每張作者卡都是整屏大方圖,一屏只看一則,作者名好小" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 6, "comment": "兩欄卡片偏大,一屏只看到四則,不如三欄緊湊" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 7, "comment": "方形卡一屏兩張半,寬度用得不錯,也看得出能滑" }
+  ]
+}

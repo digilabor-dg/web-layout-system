@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0004",
+  "contentType": "news",
+  "category": "society",
+  "title": "示意:秋季流感疫苗開打,醫療院所加開門診",
+  "url": "/news/0004",
+  "publishedAt": "2026-11-03T22:32:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0004_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0004_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

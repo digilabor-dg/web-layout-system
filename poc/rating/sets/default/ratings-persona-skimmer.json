@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "round": 2,
+  "rater": "persona-skimmer",
+  "source": "ai-persona",
+  "persona": "只想快速掃標題的讀者",
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 6, "comment": "疊字標題夠大好讀,但電腦版一張大圖佔滿一屏只換到一個標題" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 4, "comment": "手機第三張孤零零掉到下一行,電腦版右邊空一大格" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 9, "comment": "純文字一行一則,紅線引導,一眼掃完四條,最對我胃口" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 3, "comment": "排行榜配大方圖,手機五則要滑快兩屏,號碼和圖中間還空一截" },
+    { "ref": "inst-gen-video", "code": "E", "score": 5, "comment": "電腦版四則還行,手機一屏只看到一個標題,其他得自己滑" },
+    { "ref": "inst-gen-world", "code": "F", "score": 5, "comment": "手機兩欄整齊,電腦版四加二,第二排右半邊空著;圖比字搶眼" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 6, "comment": "手機小圖配字很好掃;電腦版標題一行,圖下方和右邊空太多" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 4, "comment": "跟國際一模一樣的圖卡網格又來一次,一樣四加二留空洞,看膩" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 3, "comment": "一大張圖只換一個標題,電腦版「園」字單獨掉一行,下方空一大片" },
+    { "ref": "inst-gen-society", "code": "J", "score": 5, "comment": "和政治同一種左圖右文重複;電腦版字只佔一行,右下全空" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 2, "comment": "電腦版單欄超大方圖,四個標題要滑三屏,圖完全壓過標題" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 4, "comment": "第四次圖卡網格;電腦版標題一行好讀,但圖大到一屏只見三則" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 5, "comment": "方圖偏大,手機只見兩個半標題,其餘藏在輪播裡要滑" }
+  ]
+}

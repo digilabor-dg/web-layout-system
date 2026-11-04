@@ -1,0 +1,19 @@
+{
+  "id": "md3",
+  "name": "Material Design 3",
+  "source": "Material Design 3:Window size classes(compact < 600、medium 600–839、expanded 840–1199、large 1200–1599、extra-large ≥ 1600)與版面邊距",
+  "breakpoints": { "tabletV": 600, "tabletH": 840, "desktop": 1200 },
+  "containers": [
+    { "minWidth": 0, "maxWidth": null, "padding": 16 },
+    { "minWidth": 600, "maxWidth": null, "padding": 24 }
+  ],
+  "gutter": "1.5rem",
+  "columns": 12,
+  "baseFontSize": 16,
+  "lineHeight": 1.5,
+  "notes": [
+    "M3 版面為滿版(fluid),沒有容器最大寬",
+    "邊距 compact 16dp、其餘 24dp;M3 沒有規定欄數,12 欄為示意",
+    "body large 16sp、行高 24sp"
+  ]
+}

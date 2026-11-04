@@ -1,0 +1,62 @@
+[
+  {
+    "pair": 1,
+    "width": 1280,
+    "A": "pair-01-A.jpg",
+    "B": "pair-01-B.jpg"
+  },
+  {
+    "pair": 2,
+    "width": 768,
+    "A": "pair-02-A.jpg",
+    "B": "pair-02-B.jpg"
+  },
+  {
+    "pair": 3,
+    "width": 360,
+    "A": "pair-03-A.jpg",
+    "B": "pair-03-B.jpg"
+  },
+  {
+    "pair": 4,
+    "width": 1280,
+    "A": "pair-04-A.jpg",
+    "B": "pair-04-B.jpg"
+  },
+  {
+    "pair": 5,
+    "width": 390,
+    "A": "pair-05-A.jpg",
+    "B": "pair-05-B.jpg"
+  },
+  {
+    "pair": 6,
+    "width": 390,
+    "A": "pair-06-A.jpg",
+    "B": "pair-06-B.jpg"
+  },
+  {
+    "pair": 7,
+    "width": 1280,
+    "A": "pair-07-A.jpg",
+    "B": "pair-07-B.jpg"
+  },
+  {
+    "pair": 8,
+    "width": 1280,
+    "A": "pair-08-A.jpg",
+    "B": "pair-08-B.jpg"
+  },
+  {
+    "pair": 9,
+    "width": 1280,
+    "A": "pair-09-A.jpg",
+    "B": "pair-09-B.jpg"
+  },
+  {
+    "pair": 10,
+    "width": 1280,
+    "A": "pair-10-A.jpg",
+    "B": "pair-10-B.jpg"
+  }
+]

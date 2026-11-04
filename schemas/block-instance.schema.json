@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "block-instance.schema.json",
+  "title": "BlockInstance 區塊實例(版位)",
+  "description": "位置(section、欄、順序、版位代號)只由 Page 決定,實例不存",
+  "type": "object",
+  "required": ["type", "id", "template", "overrides", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "BlockInstance" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "template": { "$ref": "common.schema.json#/$defs/id" },
+    "overrides": {
+      "description": "只允許 itemCount、selection、heading;其他欄位由規則 override-fields 回報",
+      "type": "object",
+      "properties": {
+        "itemCount": { "type": "integer", "minimum": 1 },
+        "selection": { "$ref": "common.schema.json#/$defs/selection" },
+        "heading": { "$ref": "common.schema.json#/$defs/heading" }
+      }
+    },
+    "items": { "description": "新聞則 id 的有序清單", "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
+    "devices": {
+      "description": "各類裝置是否顯示,預設皆為 true",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mobile": { "type": "boolean" },
+        "desktop": { "type": "boolean" }
+      }
+    }
+  }
+}

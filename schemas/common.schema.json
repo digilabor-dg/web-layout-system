@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.schema.json",
+  "title": "共用定義",
+  "$defs": {
+    "id": {
+      "description": "識別碼:小寫英數字與連字號",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*$"
+    },
+    "patternId": {
+      "description": "展示類型 id:P01~P99",
+      "type": "string",
+      "pattern": "^P[0-9]{2}$"
+    },
+    "imageRole": {
+      "description": "圖片角色:main=網站主比例,square=1:1,video=16:9,none=無圖",
+      "enum": ["main", "square", "video", "none"]
+    },
+    "imageFile": {
+      "description": "一份裁好的圖檔:路徑與裁切後的像素寬高",
+      "type": "object",
+      "required": ["src", "width", "height"],
+      "additionalProperties": false,
+      "properties": {
+        "src": { "type": "string", "minLength": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "cssLength": {
+      "description": "CSS 長度,只接受 px 或 rem,例如 16px、1rem",
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)?(px|rem)$"
+    },
+    "heading": {
+      "description": "區塊標題與「更多」連結",
+      "type": "object",
+      "required": ["title"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "moreLink": { "type": "string" }
+      }
+    },
+    "selection": {
+      "description": "選稿規則:manual|latest|popular|mixed",
+      "type": "object",
+      "required": ["mode"],
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "enum": ["manual", "latest", "popular", "mixed"] },
+        "pinned": { "type": "integer", "minimum": 0 },
+        "fill": {
+          "type": "object",
+          "required": ["source"],
+          "additionalProperties": false,
+          "properties": {
+            "source": { "enum": ["latest", "popular"] },
+            "category": { "type": "string" },
+            "withinHours": { "type": "integer", "minimum": 1 }
+          }
+        }
+      },
+      "if": { "properties": { "mode": { "const": "mixed" } } },
+      "then": { "required": ["pinned", "fill"] }
+    },
+    "responsiveEntry": {
+      "description": "某一端(手機或電腦)的排法:layout 與欄數或每次顯示張數",
+      "type": "object",
+      "required": ["layout"],
+      "additionalProperties": false,
+      "properties": {
+        "layout": { "enum": ["full", "stack", "split", "grid", "list", "carousel", "tabs", "marquee", "bento"] },
+        "cols": {
+          "oneOf": [
+            { "type": "integer", "minimum": 1, "maximum": 12 },
+            { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 12 }, "minItems": 2 }
+          ]
+        },
+        "perView": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    }
+  }
+}

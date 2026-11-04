@@ -1,0 +1,14 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-tech",
+  "template": "tpl-tech",
+  "overrides": {},
+  "items": [
+    "art-20261103-0038",
+    "art-20261103-0039",
+    "art-20261103-0040",
+    "art-20261103-0041",
+    "art-20261103-0042",
+    "art-20261103-0043"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-politics",
+  "template": "tpl-politics",
+  "overrides": {},
+  "items": [
+    "art-20261103-0020",
+    "art-20261103-0021",
+    "art-20261103-0022",
+    "art-20261103-0023",
+    "art-20261103-0024",
+    "art-20261103-0025"
+  ]
+}

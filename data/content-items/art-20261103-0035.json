@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0035",
+  "contentType": "news",
+  "category": "society",
+  "title": "示意:颱風過後清潔隊全員出動",
+  "url": "/news/0035",
+  "publishedAt": "2026-11-03T18:55:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0035_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0035_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

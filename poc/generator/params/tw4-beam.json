@@ -1,0 +1,11 @@
+{
+  "name": "tw4-beam",
+  "title": "示意首頁(Tailwind 4、集束搜尋)",
+  "preset": "tw4",
+  "blocks": ["headline", "subheadline", "popular", "video", "world", "finance", "politics", "society", "opinion", "tech", "feature", "shorts"],
+  "sidebar": ["popular", "opinion"],
+  "fullWidth": ["video", "shorts"],
+  "columns": [8, 4],
+  "strategy": "beam",
+  "beamWidth": 3
+}

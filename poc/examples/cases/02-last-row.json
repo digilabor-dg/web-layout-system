@@ -1,0 +1,83 @@
+{
+  "id": "02",
+  "title": "末列落單",
+  "problem": "次頭條 B 有 4 則,電腦設 4 欄;平板依規則推算成 3 欄,最後一列只剩 1 則。電腦 4 欄時標題也擠到 3 行。",
+  "fixNote": "B 改成 6 則,電腦沿用 P07 預設的 3 欄;平板推算為 2 欄。6 則在 2、3 欄都整除。",
+  "targets": [
+    "末列不落單@B"
+  ],
+  "shotWidth": 768,
+  "v1": [],
+  "fix": [
+    {
+      "op": "add",
+      "path": "/content-items/ex-sub-5",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-sub-5",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:公園綠地增加,週末親子活動多",
+        "url": "/news/ex-sub-5",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-sub-5_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-sub-5_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-sub-6",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-sub-6",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:老屋改造計畫第二期開放申請",
+        "url": "/news/ex-sub-6",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-sub-6_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-sub-6_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-subheadline/items/-",
+      "value": "ex-sub-5"
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-subheadline/items/-",
+      "value": "ex-sub-6"
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-subheadline/itemCount",
+      "value": 6
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-subheadline/responsive",
+      "value": null
+    }
+  ]
+}

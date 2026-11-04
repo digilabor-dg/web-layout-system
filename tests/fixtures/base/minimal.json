@@ -1,0 +1,780 @@
+{
+  "site-profile": {
+    "site-main": {
+      "type": "SiteProfile",
+      "id": "site-main",
+      "mediaKind": "print",
+      "mainRatio": "3:2",
+      "squareRatioAllowed": true,
+      "ratioTolerance": 0.01,
+      "preset": "bs5",
+      "grid": {
+        "columns": 12,
+        "gutter": "1rem"
+      },
+      "testViewports": [
+        {
+          "width": 360,
+          "height": 800
+        },
+        {
+          "width": 390,
+          "height": 844
+        },
+        {
+          "width": 768,
+          "height": 1024
+        },
+        {
+          "width": 1024,
+          "height": 768
+        },
+        {
+          "width": 1280,
+          "height": 800
+        },
+        {
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "typography": {
+        "baseFontSize": 16,
+        "lineHeight": 1.5,
+        "headingFontSize": {
+          "headline": 18,
+          "summary": 20,
+          "paragraph": 20,
+          "lead": 28
+        },
+        "avgCharWidth": {
+          "cjk": 1,
+          "latin": 0.55
+        }
+      },
+      "spacing": {
+        "itemGap": 16,
+        "blockGap": 32,
+        "cardPadding": 16,
+        "rowGap": 24,
+        "imageTextGap": 8,
+        "blockHeadingHeight": 40
+      }
+    }
+  },
+  "pattern-tags": {
+    "image": {
+      "type": "PatternTag",
+      "id": "image",
+      "name": "圖",
+      "rule": "以圖片為主體"
+    },
+    "text": {
+      "type": "PatternTag",
+      "id": "text",
+      "name": "文",
+      "rule": "無圖,或以文字為主"
+    },
+    "mixed": {
+      "type": "PatternTag",
+      "id": "mixed",
+      "name": "混合",
+      "rule": "圖片與純文字條目並存"
+    },
+    "carousel": {
+      "type": "PatternTag",
+      "id": "carousel",
+      "name": "輪播",
+      "rule": "有左右切換"
+    },
+    "zoom": {
+      "type": "PatternTag",
+      "id": "zoom",
+      "name": "放大",
+      "rule": "至少一則放大強調"
+    }
+  },
+  "pattern-groups": {
+    "news-combo": {
+      "type": "PatternGroup",
+      "id": "news-combo",
+      "name": "新聞組合"
+    },
+    "av": {
+      "type": "PatternGroup",
+      "id": "av",
+      "name": "影音與廣播"
+    },
+    "data": {
+      "type": "PatternGroup",
+      "id": "data",
+      "name": "數據與資訊"
+    },
+    "text-led": {
+      "type": "PatternGroup",
+      "id": "text-led",
+      "name": "文字為主"
+    },
+    "interactive": {
+      "type": "PatternGroup",
+      "id": "interactive",
+      "name": "互動、導覽與推廣"
+    }
+  },
+  "layout-patterns": {
+    "P01": {
+      "type": "LayoutPattern",
+      "id": "P01",
+      "name": "大圖疊字",
+      "group": "news-combo",
+      "tags": [
+        "image",
+        "zoom"
+      ],
+      "arrangement": "single",
+      "emphasis": "lead1",
+      "imageText": "overlay",
+      "textAmount": "summary",
+      "interaction": "none",
+      "slots": [
+        {
+          "role": "lead",
+          "count": 1,
+          "image": [
+            "main"
+          ]
+        }
+      ],
+      "items": {
+        "min": 1,
+        "max": 1
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "full"
+        },
+        "desktop": {
+          "layout": "full"
+        }
+      },
+      "inferred": [
+        "arrangement",
+        "emphasis",
+        "imageText",
+        "textAmount",
+        "interaction",
+        "slots",
+        "responsiveDefault"
+      ]
+    },
+    "P03": {
+      "type": "LayoutPattern",
+      "id": "P03",
+      "name": "左圖右文",
+      "group": "news-combo",
+      "tags": [
+        "mixed"
+      ],
+      "arrangement": "list",
+      "emphasis": "none",
+      "imageText": "side",
+      "textAmount": "summary",
+      "interaction": "none",
+      "slots": [
+        {
+          "role": "item",
+          "count": "rest",
+          "image": [
+            "main",
+            "square"
+          ]
+        }
+      ],
+      "items": {
+        "min": 3,
+        "max": 6
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "list",
+          "cols": 1
+        },
+        "desktop": {
+          "layout": "list",
+          "cols": 1
+        }
+      },
+      "inferred": [
+        "arrangement",
+        "emphasis",
+        "imageText",
+        "textAmount",
+        "interaction",
+        "slots",
+        "responsiveDefault"
+      ]
+    },
+    "P07": {
+      "type": "LayoutPattern",
+      "id": "P07",
+      "name": "均分圖卡網格",
+      "group": "news-combo",
+      "tags": [
+        "image"
+      ],
+      "arrangement": "grid",
+      "emphasis": "none",
+      "imageText": "stacked",
+      "textAmount": "headline",
+      "interaction": "none",
+      "slots": [
+        {
+          "role": "card",
+          "count": "rest",
+          "image": [
+            "main"
+          ]
+        }
+      ],
+      "items": {
+        "min": 3,
+        "max": 9
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "grid",
+          "cols": 2
+        },
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "inferred": [
+        "arrangement",
+        "emphasis",
+        "imageText",
+        "textAmount",
+        "interaction",
+        "slots",
+        "responsiveDefault"
+      ]
+    },
+    "P09": {
+      "type": "LayoutPattern",
+      "id": "P09",
+      "name": "首 1 則放大,其餘純文字",
+      "group": "news-combo",
+      "tags": [
+        "mixed",
+        "zoom"
+      ],
+      "arrangement": "list",
+      "emphasis": "lead1",
+      "imageText": "stacked",
+      "textAmount": "headline",
+      "interaction": "none",
+      "slots": [
+        {
+          "role": "lead",
+          "count": 1,
+          "image": [
+            "main"
+          ]
+        },
+        {
+          "role": "rest",
+          "count": "rest",
+          "image": [
+            "none"
+          ]
+        }
+      ],
+      "items": {
+        "min": 4,
+        "max": 6
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "stack"
+        },
+        "desktop": {
+          "layout": "split",
+          "cols": [
+            8,
+            4
+          ]
+        }
+      },
+      "inferred": [
+        "imageText"
+      ]
+    },
+    "P12": {
+      "type": "LayoutPattern",
+      "id": "P12",
+      "name": "橫式輪播",
+      "group": "av",
+      "tags": [
+        "carousel",
+        "image"
+      ],
+      "arrangement": "carousel",
+      "emphasis": "none",
+      "imageText": "stacked",
+      "textAmount": "headline",
+      "interaction": "carousel",
+      "slots": [
+        {
+          "role": "card",
+          "count": "rest",
+          "image": [
+            "main",
+            "video"
+          ]
+        }
+      ],
+      "items": {
+        "min": 4,
+        "max": 12
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "carousel",
+          "perView": 1.2
+        },
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      },
+      "inferred": [
+        "arrangement",
+        "emphasis",
+        "imageText",
+        "textAmount",
+        "interaction",
+        "slots",
+        "responsiveDefault"
+      ]
+    },
+    "P15": {
+      "type": "LayoutPattern",
+      "id": "P15",
+      "name": "分頁籤切換",
+      "group": "interactive",
+      "tags": [
+        "mixed"
+      ],
+      "arrangement": "tabs",
+      "emphasis": "none",
+      "imageText": "side",
+      "textAmount": "headline",
+      "interaction": "tabs",
+      "slots": [
+        {
+          "role": "item",
+          "count": "rest",
+          "image": [
+            "main",
+            "square",
+            "none"
+          ]
+        }
+      ],
+      "items": {
+        "min": 3,
+        "max": 6
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "tabs"
+        },
+        "desktop": {
+          "layout": "tabs"
+        }
+      },
+      "inferred": [
+        "arrangement",
+        "emphasis",
+        "imageText",
+        "textAmount",
+        "interaction",
+        "slots",
+        "responsiveDefault"
+      ]
+    },
+    "P16": {
+      "type": "LayoutPattern",
+      "id": "P16",
+      "name": "圖片牆",
+      "group": "news-combo",
+      "tags": [
+        "image"
+      ],
+      "arrangement": "grid",
+      "emphasis": "none",
+      "imageText": "stacked",
+      "textAmount": "headline",
+      "interaction": "none",
+      "slots": [
+        {
+          "role": "gallery",
+          "count": 1,
+          "image": [
+            "square"
+          ]
+        }
+      ],
+      "items": {
+        "min": 1,
+        "max": 1
+      },
+      "responsiveDefault": {
+        "mobile": {
+          "layout": "grid",
+          "cols": 3
+        },
+        "desktop": {
+          "layout": "grid",
+          "cols": 6
+        }
+      },
+      "gallery": {
+        "min": 6,
+        "max": 12
+      },
+      "inferred": [
+        "arrangement",
+        "emphasis",
+        "imageText",
+        "textAmount",
+        "interaction",
+        "slots",
+        "responsiveDefault"
+      ]
+    }
+  },
+  "content-types": {
+    "news": {
+      "type": "ContentType",
+      "id": "news",
+      "name": "新聞",
+      "categories": [
+        "world",
+        "finance"
+      ],
+      "suggestedPatterns": [
+        "P01",
+        "P03",
+        "P07",
+        "P09",
+        "P15",
+        "P16"
+      ]
+    },
+    "video": {
+      "type": "ContentType",
+      "id": "video",
+      "name": "影音",
+      "categories": [],
+      "suggestedPatterns": [
+        "P12"
+      ],
+      "requiresVideo": true
+    }
+  },
+  "block-templates": {
+    "tpl-lead": {
+      "type": "BlockTemplate",
+      "id": "tpl-lead",
+      "name": "tpl-lead",
+      "role": "headline",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P01",
+      "itemCount": 1,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "tpl-lead"
+      }
+    },
+    "tpl-list": {
+      "type": "BlockTemplate",
+      "id": "tpl-list",
+      "name": "tpl-list",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "finance"
+      },
+      "pattern": "P09",
+      "itemCount": 4,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "tpl-list"
+      }
+    },
+    "tpl-grid": {
+      "type": "BlockTemplate",
+      "id": "tpl-grid",
+      "name": "tpl-grid",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "world"
+      },
+      "pattern": "P07",
+      "itemCount": 3,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "tpl-grid"
+      }
+    }
+  },
+  "block-instances": {
+    "inst-lead": {
+      "type": "BlockInstance",
+      "id": "inst-lead",
+      "template": "tpl-lead",
+      "overrides": {},
+      "items": [
+        "a1"
+      ]
+    },
+    "inst-list": {
+      "type": "BlockInstance",
+      "id": "inst-list",
+      "template": "tpl-list",
+      "overrides": {},
+      "items": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ]
+    },
+    "inst-grid": {
+      "type": "BlockInstance",
+      "id": "inst-grid",
+      "template": "tpl-grid",
+      "overrides": {},
+      "items": [
+        "w1",
+        "w2",
+        "w3"
+      ]
+    }
+  },
+  "pages": {
+    "home": {
+      "type": "Page",
+      "id": "home",
+      "name": "首頁",
+      "path": "/",
+      "codeScheme": "flat",
+      "sections": [
+        {
+          "id": "top",
+          "mode": "stack",
+          "fluid": false,
+          "columns": [
+            {
+              "width": 8,
+              "blocks": [
+                "inst-lead",
+                "inst-grid"
+              ]
+            },
+            {
+              "width": 4,
+              "blocks": [
+                "inst-list"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "content-items": {
+    "a1": {
+      "type": "ContentItem",
+      "id": "a1",
+      "contentType": "news",
+      "category": "world",
+      "title": "示意頭條",
+      "url": "/news/a1",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/a1_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/a1_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "f1": {
+      "type": "ContentItem",
+      "id": "f1",
+      "contentType": "news",
+      "category": "finance",
+      "title": "示意財經 1",
+      "url": "/news/f1",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/f1_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/f1_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "f2": {
+      "type": "ContentItem",
+      "id": "f2",
+      "contentType": "news",
+      "category": "finance",
+      "title": "示意財經 2",
+      "url": "/news/f2",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/f2_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/f2_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "f3": {
+      "type": "ContentItem",
+      "id": "f3",
+      "contentType": "news",
+      "category": "finance",
+      "title": "示意財經 3",
+      "url": "/news/f3",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/f3_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/f3_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "f4": {
+      "type": "ContentItem",
+      "id": "f4",
+      "contentType": "news",
+      "category": "finance",
+      "title": "示意財經 4",
+      "url": "/news/f4",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/f4_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/f4_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "w1": {
+      "type": "ContentItem",
+      "id": "w1",
+      "contentType": "news",
+      "category": "world",
+      "title": "示意國際 1",
+      "url": "/news/w1",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/w1_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/w1_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "w2": {
+      "type": "ContentItem",
+      "id": "w2",
+      "contentType": "news",
+      "category": "world",
+      "title": "示意國際 2",
+      "url": "/news/w2",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/w2_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/w2_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    },
+    "w3": {
+      "type": "ContentItem",
+      "id": "w3",
+      "contentType": "news",
+      "category": "world",
+      "title": "示意國際 3",
+      "url": "/news/w3",
+      "publishedAt": "2026-11-03T09:00:00+08:00",
+      "images": {
+        "main": {
+          "src": "/img/w3_3x2.jpg",
+          "width": 1200,
+          "height": 800
+        },
+        "square": {
+          "src": "/img/w3_1x1.jpg",
+          "width": 600,
+          "height": 600
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "06",
+  "title": "觸控目標太小",
+  "problem": "每塊標題列的「更多」連結只有 37px 高(標題列 40px 扣掉上框線 3px),低於 44px。",
+  "fixNote": "網站設定的區塊標題列加高到 48px。",
+  "targets": [
+    "觸控目標"
+  ],
+  "shotWidth": 390,
+  "v1": [],
+  "fix": [
+    {
+      "op": "replace",
+      "path": "/site-profile/site-main/spacing/blockHeadingHeight",
+      "value": 48
+    }
+  ]
+}

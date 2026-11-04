@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P35",
+  "name": "新聞簡報",
+  "group": "text-led",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "summary",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 6
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

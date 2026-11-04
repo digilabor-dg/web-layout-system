@@ -1,0 +1,36 @@
+{
+  "rule": "override-fields",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "覆寫區塊標題",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-instances/inst-list/overrides/heading",
+          "value": {
+            "title": "財經新聞"
+          }
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "覆寫展示類型",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-instances/inst-list/overrides/pattern",
+          "value": "P07"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "override-fields",
+          "id": "inst-list",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

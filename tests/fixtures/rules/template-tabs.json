@@ -1,0 +1,88 @@
+{
+  "rule": "template-tabs",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "P15 有分頁數",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-tabs",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-tabs",
+            "name": "tpl-tabs",
+            "role": "section",
+            "contentType": {
+              "ref": "news"
+            },
+            "pattern": "P15",
+            "itemCount": 3,
+            "imageRole": "none",
+            "tabs": 2,
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-tabs"
+            }
+          }
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "P15 沒有分頁數",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-tabs",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-tabs",
+            "name": "tpl-tabs",
+            "role": "section",
+            "contentType": {
+              "ref": "news"
+            },
+            "pattern": "P15",
+            "itemCount": 3,
+            "imageRole": "none",
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-tabs"
+            }
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "template-tabs",
+          "id": "tpl-tabs",
+          "severity": "error"
+        }
+      ]
+    },
+    {
+      "name": "P07 帶分頁數",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-grid/tabs",
+          "value": 2
+        }
+      ],
+      "expect": [
+        {
+          "rule": "template-tabs",
+          "id": "tpl-grid",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

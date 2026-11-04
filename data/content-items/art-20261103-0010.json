@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0010",
+  "contentType": "news",
+  "category": "society",
+  "title": "示意:社區圖書館改造完成,開放夜間借閱",
+  "url": "/news/0010",
+  "publishedAt": "2026-11-03T21:50:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0010_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0010_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

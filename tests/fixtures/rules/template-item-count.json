@@ -1,0 +1,33 @@
+{
+  "rule": "template-item-count",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "P09 的下限 4 則",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "P09 放 7 則(實例覆寫回 4 則)",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/block-templates/tpl-list/itemCount",
+          "value": 7
+        },
+        {
+          "op": "add",
+          "path": "/block-instances/inst-list/overrides/itemCount",
+          "value": 4
+        }
+      ],
+      "expect": [
+        {
+          "rule": "template-item-count",
+          "id": "tpl-list",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

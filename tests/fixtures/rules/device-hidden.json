@@ -1,0 +1,39 @@
+{
+  "rule": "device-hidden",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "兩種裝置都顯示",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-instances/inst-grid/devices",
+          "value": {
+            "mobile": true,
+            "desktop": true
+          }
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "手機隱藏",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-instances/inst-grid/devices",
+          "value": {
+            "mobile": false
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "device-hidden",
+          "id": "inst-grid",
+          "severity": "warning"
+        }
+      ]
+    }
+  ]
+}

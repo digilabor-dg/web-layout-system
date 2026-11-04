@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0019",
+  "contentType": "news",
+  "category": "world",
+  "title": "示意:歐洲多地降雨偏多,農作收成延後",
+  "url": "/news/0019",
+  "publishedAt": "2026-11-03T20:47:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0019_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0019_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

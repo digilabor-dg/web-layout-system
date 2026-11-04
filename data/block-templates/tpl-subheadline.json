@@ -1,0 +1,23 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-subheadline",
+  "name": "次頭條",
+  "role": "subheadline",
+  "contentType": {
+    "ref": "news"
+  },
+  "pattern": "P07",
+  "itemCount": 4,
+  "selection": {
+    "mode": "manual"
+  },
+  "responsive": {
+    "desktop": {
+      "layout": "grid",
+      "cols": 4
+    }
+  },
+  "heading": {
+    "title": "焦點新聞"
+  }
+}

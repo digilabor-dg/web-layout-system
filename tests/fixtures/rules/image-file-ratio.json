@@ -1,0 +1,42 @@
+{
+  "rule": "image-file-ratio",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "誤差小於 1%",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/content-items/w1/images/main",
+          "value": {
+            "src": "/img/w1.jpg",
+            "width": 1200,
+            "height": 797
+          }
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "4:3 當主圖",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/content-items/w1/images/main",
+          "value": {
+            "src": "/img/w1.jpg",
+            "width": 1200,
+            "height": 900
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "image-file-ratio",
+          "id": "w1",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

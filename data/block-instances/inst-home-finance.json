@@ -1,0 +1,14 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-finance",
+  "template": "tpl-finance",
+  "overrides": {},
+  "items": [
+    "art-20261103-0026",
+    "art-20261103-0027",
+    "art-20261103-0028",
+    "art-20261103-0029",
+    "art-20261103-0030",
+    "art-20261103-0031"
+  ]
+}

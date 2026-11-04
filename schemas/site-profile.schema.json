@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "site-profile.schema.json",
+  "title": "SiteProfile 網站設定",
+  "type": "object",
+  "required": ["type", "id", "mediaKind", "mainRatio", "squareRatioAllowed", "ratioTolerance", "preset", "testViewports", "typography", "spacing"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "SiteProfile" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "mediaKind": { "description": "print=平面,broadcast=影視", "enum": ["print", "broadcast"] },
+    "mainRatio": { "description": "主比例,只能 3:2 或 16:9", "enum": ["3:2", "16:9"] },
+    "squareRatioAllowed": { "description": "1:1 一律可用,固定為 true", "const": true },
+    "ratioTolerance": { "description": "比例容許誤差,預設 0.01", "type": "number", "exclusiveMinimum": 0, "maximum": 0.05 },
+    "preset": { "description": "預設參數組", "enum": ["bs5", "tw4", "md3", "custom"] },
+    "breakpoints": {
+      "description": "覆寫預設參數組的斷點:各類裝置的起點(px)",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tabletV": { "type": "integer", "minimum": 1 },
+        "tabletH": { "type": "integer", "minimum": 1 },
+        "desktop": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "grid": {
+      "description": "覆寫格線:欄數固定 12;欄距與容器最大寬可覆寫",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "columns": { "const": 12 },
+        "gutter": { "$ref": "common.schema.json#/$defs/cssLength" },
+        "maxWidth": { "$ref": "common.schema.json#/$defs/cssLength" }
+      }
+    },
+    "testViewports": {
+      "description": "6 種測試寬度與對應的視窗高度",
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["width", "height"],
+        "additionalProperties": false,
+        "properties": {
+          "width": { "enum": [360, 390, 768, 1024, 1280, 1440] },
+          "height": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "typography": {
+      "description": "估算用的字體數值(示意值,第 4 階段以渲染校正)",
+      "type": "object",
+      "required": ["baseFontSize", "lineHeight", "headingFontSize", "avgCharWidth"],
+      "additionalProperties": false,
+      "properties": {
+        "baseFontSize": { "description": "基本字級 px", "type": "number", "exclusiveMinimum": 0 },
+        "lineHeight": { "description": "行高倍數", "type": "number", "exclusiveMinimum": 0 },
+        "headingFontSize": {
+          "description": "各文字量的標題字級 px",
+          "type": "object",
+          "required": ["headline", "summary", "paragraph", "lead"],
+          "additionalProperties": false,
+          "properties": {
+            "headline": { "type": "number", "exclusiveMinimum": 0 },
+            "summary": { "type": "number", "exclusiveMinimum": 0 },
+            "paragraph": { "type": "number", "exclusiveMinimum": 0 },
+            "lead": { "description": "放大則(首則)的標題字級", "type": "number", "exclusiveMinimum": 0 }
+          }
+        },
+        "avgCharWidth": {
+          "description": "平均字寬,以 em 計",
+          "type": "object",
+          "required": ["cjk", "latin"],
+          "additionalProperties": false,
+          "properties": {
+            "cjk": { "type": "number", "exclusiveMinimum": 0 },
+            "latin": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        }
+      }
+    },
+    "spacing": {
+      "description": "估算用的間距數值 px(示意值)",
+      "type": "object",
+      "required": ["itemGap", "blockGap", "cardPadding", "rowGap", "imageTextGap", "blockHeadingHeight"],
+      "additionalProperties": false,
+      "properties": {
+        "itemGap": { "description": "區塊內則與則的間距", "type": "number", "minimum": 0 },
+        "blockGap": { "description": "區塊與區塊的間距", "type": "number", "minimum": 0 },
+        "cardPadding": { "description": "卡片內距(上下合計)", "type": "number", "minimum": 0 },
+        "rowGap": { "description": "卡片列與列的間距", "type": "number", "minimum": 0 },
+        "imageTextGap": { "description": "卡片內圖與文的間距", "type": "number", "minimum": 0 },
+        "blockHeadingHeight": { "description": "區塊標題列的高度", "type": "number", "minimum": 0 }
+      }
+    }
+  }
+}

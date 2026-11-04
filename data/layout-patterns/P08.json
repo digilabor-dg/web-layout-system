@@ -1,0 +1,57 @@
+{
+  "type": "LayoutPattern",
+  "id": "P08",
+  "name": "首 1 則放大,其餘小卡",
+  "group": "news-combo",
+  "tags": [
+    "mixed",
+    "zoom"
+  ],
+  "arrangement": "grid",
+  "emphasis": "lead1",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "lead",
+      "count": 1,
+      "image": [
+        "main"
+      ]
+    },
+    {
+      "role": "card",
+      "count": "rest",
+      "image": [
+        "main"
+      ]
+    }
+  ],
+  "items": {
+    "min": 5,
+    "max": 5
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "stack",
+      "cols": 2
+    },
+    "desktop": {
+      "layout": "split",
+      "cols": [
+        8,
+        4
+      ]
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

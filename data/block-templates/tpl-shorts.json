@@ -1,0 +1,19 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-shorts",
+  "name": "短影音",
+  "role": "video",
+  "contentType": {
+    "ref": "video"
+  },
+  "pattern": "P13",
+  "itemCount": 4,
+  "selection": {
+    "mode": "latest"
+  },
+  "responsive": null,
+  "heading": {
+    "title": "短影音",
+    "moreLink": "/shorts"
+  }
+}

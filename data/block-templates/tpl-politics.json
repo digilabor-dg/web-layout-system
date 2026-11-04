@@ -1,0 +1,26 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-politics",
+  "name": "政治區塊",
+  "role": "section",
+  "contentType": {
+    "ref": "news",
+    "category": "politics"
+  },
+  "pattern": "P09",
+  "itemCount": 6,
+  "selection": {
+    "mode": "mixed",
+    "pinned": 1,
+    "fill": {
+      "source": "latest",
+      "category": "politics",
+      "withinHours": 48
+    }
+  },
+  "responsive": null,
+  "heading": {
+    "title": "政治 / 兩岸",
+    "moreLink": "/politics"
+  }
+}

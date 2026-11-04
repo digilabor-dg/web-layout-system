@@ -1,0 +1,29 @@
+schema: spec-driven
+
+context: |
+  Language: zh-TW
+  All artifacts must be written in zh-TW.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  專案:新聞首頁區塊排版系統。專案規則見 CLAUDE.md。
+  規格的唯一依據是 openspec/specs/。文件分三層:docs/brainstorm/(規格前的發想)→ openspec/specs/(規格)→ docs/wiki/(規格後的白話說明)。
+  docs/spec/(01~05)是最初的設計說明,已併入 openspec/specs/,參考用。
+  決策紀錄在 archive 裡的 resolve-spec-ambiguities/design.md。
+  一個開發階段 = 一個 change = 一個 PR。
+  docs/wiki/ 以白話描述 openspec/specs/;change archive 時同步更新對應的 wiki 頁(資料模型、規則檢查、估算與渲染、評估、改進與生成)。
+  規格沒寫或互相矛盾時,先問使用者,不要自行假設。
+
+  方向:headless、CLI 先行,用 JSON 定義一切;核心先用 Node.js,
+  但要能移植到 Python、C#(JSON Schema 當合約、測試寫成 JSON fixture、核心不依賴 Node 專屬 API)。
+
+  WIP 上限:同時最多 5 個未 archive 的 change(含任務已全部完成、但還沒 archive 的)。
+  已有 5 個時,不得再開新 change,必須先 archive 一個。CI 會檢查這條。
+
+rules:
+  proposal:
+    - 註明依據的 openspec/specs capability(必要時加上 docs/spec 的原始章節)
+    - 開新 change 前先跑 openspec list,確認 active change 不到 5 個
+    - 來自 docs/brainstorm/ 的發想,要註明檔案,並把該發想的狀態改成「已提案」
+  tasks:
+    - 每條規則、每個公式都要有單元測試任務,測試資料放 tests/fixtures/
+    - 改到 spec 的 change,要有「更新 docs/wiki 對應白話頁」的任務

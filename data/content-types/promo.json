@@ -1,0 +1,9 @@
+{
+  "type": "ContentType",
+  "id": "promo",
+  "name": "推廣",
+  "categories": [],
+  "suggestedPatterns": [
+    "P14"
+  ]
+}

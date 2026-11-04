@@ -1,0 +1,104 @@
+{
+  "rule": "single-site-profile",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "恰好一份",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "兩份網站設定",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/site-profile/site-b",
+          "value": {
+            "type": "SiteProfile",
+            "id": "site-b",
+            "mediaKind": "print",
+            "mainRatio": "3:2",
+            "squareRatioAllowed": true,
+            "ratioTolerance": 0.01,
+            "preset": "bs5",
+            "grid": {
+              "columns": 12,
+              "gutter": "1rem"
+            },
+            "testViewports": [
+              {
+                "width": 360,
+                "height": 800
+              },
+              {
+                "width": 390,
+                "height": 844
+              },
+              {
+                "width": 768,
+                "height": 1024
+              },
+              {
+                "width": 1024,
+                "height": 768
+              },
+              {
+                "width": 1280,
+                "height": 800
+              },
+              {
+                "width": 1440,
+                "height": 900
+              }
+            ],
+            "typography": {
+              "baseFontSize": 16,
+              "lineHeight": 1.5,
+              "headingFontSize": {
+                "headline": 18,
+                "summary": 20,
+                "paragraph": 20,
+                "lead": 28
+              },
+              "avgCharWidth": {
+                "cjk": 1,
+                "latin": 0.55
+              }
+            },
+            "spacing": {
+              "itemGap": 16,
+              "blockGap": 32,
+              "cardPadding": 16,
+              "rowGap": 24,
+              "imageTextGap": 8,
+              "blockHeadingHeight": 40
+            }
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "single-site-profile",
+          "id": "",
+          "severity": "error"
+        }
+      ]
+    },
+    {
+      "name": "沒有網站設定",
+      "patch": [
+        {
+          "op": "remove",
+          "path": "/site-profile/site-main"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "single-site-profile",
+          "id": "",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

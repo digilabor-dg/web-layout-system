@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "preset.schema.json",
+  "title": "預設參數組(bs5、tw4、md3)",
+  "description": "只取框架的參數定義,不使用框架程式碼",
+  "type": "object",
+  "required": ["id", "name", "source", "breakpoints", "containers", "gutter", "columns", "baseFontSize", "lineHeight"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "enum": ["bs5", "tw4", "md3"] },
+    "name": { "type": "string" },
+    "source": { "description": "數值出處與版本", "type": "string" },
+    "breakpoints": {
+      "description": "各類裝置的起點(px)",
+      "type": "object",
+      "required": ["tabletV", "tabletH", "desktop"],
+      "additionalProperties": false,
+      "properties": {
+        "tabletV": { "type": "integer" },
+        "tabletH": { "type": "integer" },
+        "desktop": { "type": "integer" }
+      }
+    },
+    "containers": {
+      "description": "容器規則:由小到大,視窗寬 ≥ minWidth 時容器最大寬為 maxWidth(null 表示滿版)",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["minWidth", "maxWidth", "padding"],
+        "additionalProperties": false,
+        "properties": {
+          "minWidth": { "type": "integer", "minimum": 0 },
+          "maxWidth": { "oneOf": [{ "type": "integer" }, { "type": "null" }] },
+          "padding": { "description": "容器左右各自的內距 px;null 表示等於欄距的一半", "oneOf": [{ "type": "number" }, { "type": "null" }] }
+        }
+      }
+    },
+    "gutter": { "$ref": "common.schema.json#/$defs/cssLength" },
+    "columns": { "const": 12 },
+    "baseFontSize": { "type": "number" },
+    "lineHeight": { "type": "number" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

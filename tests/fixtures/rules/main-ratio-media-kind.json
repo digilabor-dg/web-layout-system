@@ -1,0 +1,28 @@
+{
+  "rule": "main-ratio-media-kind",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "平面站 3:2",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "影視站卻用 3:2",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/site-profile/site-main/mediaKind",
+          "value": "broadcast"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "main-ratio-media-kind",
+          "id": "site-main",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

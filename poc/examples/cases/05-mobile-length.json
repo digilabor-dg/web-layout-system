@@ -1,0 +1,89 @@
+{
+  "id": "05",
+  "title": "手機區塊太長",
+  "problem": "熱門排行 D 改成每則帶 1:1 縮圖,並增加到 10 則;手機上縮圖約佔 1/3 寬,整塊超過 1.5 屏。",
+  "fixNote": "熱門排行改回純文字清單(P05 允許無圖),10 則保留。",
+  "targets": [
+    "區塊長度@D"
+  ],
+  "shotWidth": 390,
+  "v1": [
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-popular/imageRole",
+      "value": "square"
+    },
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-popular/itemCount",
+      "value": 10
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-pop-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-pop-0",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:年終獎金怎麼領?三個常見問題",
+        "url": "/news/ex-pop-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-pop-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-pop-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-popular/items/-",
+      "value": "ex-pop-0"
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-pop-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-pop-1",
+        "contentType": "news",
+        "category": "society",
+        "title": "示意:社區市集週末登場,攤位一次看",
+        "url": "/news/ex-pop-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-pop-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-pop-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-popular/items/-",
+      "value": "ex-pop-1"
+    }
+  ],
+  "fix": [
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-popular/imageRole",
+      "value": "none"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "rater": "persona-mobile-commuter",
+  "source": "ai-persona",
+  "persona": "通勤滑手機的讀者",
+  "round": 2,
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 7, "comment": "頭條疊字清楚,手機一屏一則剛好;電腦版大圖高到要滑一下。" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 5, "comment": "手機第三張落單,右邊空一塊;電腦版右側也空著一截。" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 9, "comment": "一行一則,一屏看完四則,滑最快;只是「更多」字小不好點。" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 3, "comment": "方圖太大、編號和圖中間空一截,五則要滑好久才看完。" },
+    { "ref": "inst-gen-video", "code": "E", "score": 7, "comment": "單手左右滑方便,有露出下一張;但手機一屏只有一支影片。" },
+    { "ref": "inst-gen-world", "code": "F", "score": 6, "comment": "手機兩欄六則還整齊;電腦版第二排只兩張,右半排空著。" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 8, "comment": "小圖配標題,一屏看四則;第一則多了摘要,節奏稍不一致。" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 6, "comment": "跟國際一樣,手機尚可;電腦版第二排落單,右邊空半排。" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 5, "comment": "大圖佔掉大半屏卻只有一則專題,通勤時要多滑一段。" },
+    { "ref": "inst-gen-society", "code": "J", "score": 9, "comment": "小圖短標,一屏四則很好掃;電腦版標題右側留白偏多。" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 4, "comment": "手機方圖偏大還能看;電腦版單欄巨大方圖,一屏才一則。" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 7, "comment": "手機兩欄六則整齊;電腦版三欄排滿,只是圖大了點。" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 8, "comment": "方卡一屏兩張加露出,單手滑很順,標題也沒被截斷。" }
+  ]
+}

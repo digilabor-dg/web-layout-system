@@ -1,0 +1,545 @@
+{
+  "params": {
+    "name": "no-sidebar",
+    "title": "示意首頁(無側欄、Material 3)",
+    "preset": "md3",
+    "blocks": [
+      "headline",
+      "flash",
+      "subheadline",
+      "world",
+      "video",
+      "finance",
+      "society",
+      "popular",
+      "tech",
+      "opinion",
+      "shorts"
+    ],
+    "sidebar": [],
+    "fullWidth": [],
+    "columns": [
+      8,
+      4
+    ],
+    "strategy": "greedy"
+  },
+  "choices": [
+    {
+      "block": "headline",
+      "option": "P02 大圖下文"
+    },
+    {
+      "block": "flash",
+      "option": "P06 4 則"
+    },
+    {
+      "block": "subheadline",
+      "option": "P07 6 則 3 欄"
+    },
+    {
+      "block": "world",
+      "option": "P03 4 則(main)"
+    },
+    {
+      "block": "video",
+      "option": "P12 4 則、一次 4 張"
+    },
+    {
+      "block": "finance",
+      "option": "P07 6 則 3 欄"
+    },
+    {
+      "block": "society",
+      "option": "P03 4 則(main)"
+    },
+    {
+      "block": "popular",
+      "option": "P05 8 則(純文字)"
+    },
+    {
+      "block": "tech",
+      "option": "P07 6 則 3 欄"
+    },
+    {
+      "block": "opinion",
+      "option": "P17 4 則、電腦清單"
+    },
+    {
+      "block": "shorts",
+      "option": "P13 4 則、一次 4 張"
+    }
+  ],
+  "search": {
+    "strategy": "greedy",
+    "evaluated": 349,
+    "steps": [
+      {
+        "note": "起點:每塊都用預設選項",
+        "objective": null,
+        "total": null
+      },
+      {
+        "note": "第 1 輪:flash 改為 P06 4 則",
+        "objective": 82663.48114135783,
+        "total": 83
+      },
+      {
+        "note": "第 1 輪:subheadline 改為 P07 6 則 3 欄",
+        "objective": 84664.48114135783,
+        "total": 85
+      },
+      {
+        "note": "第 1 輪:world 改為 P03 4 則(main)",
+        "objective": 84745.11085601836,
+        "total": 85
+      },
+      {
+        "note": "第 1 輪:finance 改為 P07 6 則 3 欄",
+        "objective": 87827.74057067891,
+        "total": 88
+      },
+      {
+        "note": "第 1 輪:society 改為 P03 4 則(main)",
+        "objective": 87908.37028533945,
+        "total": 88
+      },
+      {
+        "note": "第 1 輪:tech 改為 P07 6 則 3 欄",
+        "objective": 92989,
+        "total": 93
+      },
+      {
+        "note": "第 1 輪:shorts 改為 P13 4 則、一次 4 張",
+        "objective": 94990,
+        "total": 95
+      },
+      {
+        "note": "第 2 輪:headline 改為 P02 大圖下文",
+        "objective": 100000,
+        "total": 100
+      }
+    ]
+  },
+  "page": {
+    "type": "Page",
+    "id": "home",
+    "name": "示意首頁(無側欄、Material 3)",
+    "path": "/",
+    "codeScheme": "flat",
+    "sections": [
+      {
+        "id": "s1",
+        "mode": "stack",
+        "fluid": false,
+        "columns": [
+          {
+            "width": 12,
+            "blocks": [
+              "inst-gen-headline",
+              "inst-gen-flash",
+              "inst-gen-subheadline",
+              "inst-gen-world",
+              "inst-gen-video",
+              "inst-gen-finance",
+              "inst-gen-society",
+              "inst-gen-popular",
+              "inst-gen-tech",
+              "inst-gen-opinion",
+              "inst-gen-shorts"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "templates": [
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-headline",
+      "name": "頭條",
+      "role": "headline",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P02",
+      "itemCount": 1,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "頭條"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-flash",
+      "name": "即時",
+      "role": "flash",
+      "contentType": {
+        "ref": "flash"
+      },
+      "pattern": "P06",
+      "itemCount": 4,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "即時",
+        "moreLink": "/flash"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-subheadline",
+      "name": "焦點新聞",
+      "role": "subheadline",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P07",
+      "itemCount": 6,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "heading": {
+        "title": "焦點新聞"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-world",
+      "name": "國際",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "world"
+      },
+      "pattern": "P03",
+      "itemCount": 4,
+      "imageRole": "main",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "國際",
+        "moreLink": "/world"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-video",
+      "name": "影音焦點",
+      "role": "video",
+      "contentType": {
+        "ref": "video"
+      },
+      "pattern": "P12",
+      "itemCount": 4,
+      "imageRole": "video",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      },
+      "heading": {
+        "title": "影音焦點",
+        "moreLink": "/video"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-finance",
+      "name": "財經",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "finance"
+      },
+      "pattern": "P07",
+      "itemCount": 6,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "heading": {
+        "title": "財經",
+        "moreLink": "/finance"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-society",
+      "name": "社會",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "society"
+      },
+      "pattern": "P03",
+      "itemCount": 4,
+      "imageRole": "main",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "社會",
+        "moreLink": "/society"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-popular",
+      "name": "熱門排行",
+      "role": "popular",
+      "contentType": {
+        "ref": "news"
+      },
+      "pattern": "P05",
+      "itemCount": 8,
+      "imageRole": "none",
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": null,
+      "heading": {
+        "title": "熱門排行",
+        "moreLink": "/popular"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-tech",
+      "name": "科技",
+      "role": "section",
+      "contentType": {
+        "ref": "news",
+        "category": "tech"
+      },
+      "pattern": "P07",
+      "itemCount": 6,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "grid",
+          "cols": 3
+        }
+      },
+      "heading": {
+        "title": "科技",
+        "moreLink": "/tech"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-opinion",
+      "name": "觀點評論",
+      "role": "opinion",
+      "contentType": {
+        "ref": "opinion"
+      },
+      "pattern": "P17",
+      "itemCount": 4,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "list",
+          "cols": 1
+        }
+      },
+      "heading": {
+        "title": "觀點評論",
+        "moreLink": "/opinion"
+      }
+    },
+    {
+      "type": "BlockTemplate",
+      "id": "tpl-gen-shorts",
+      "name": "短影音",
+      "role": "video",
+      "contentType": {
+        "ref": "video"
+      },
+      "pattern": "P13",
+      "itemCount": 4,
+      "selection": {
+        "mode": "latest"
+      },
+      "responsive": {
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      },
+      "heading": {
+        "title": "短影音",
+        "moreLink": "/shorts"
+      }
+    }
+  ],
+  "instances": [
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-headline",
+      "template": "tpl-gen-headline",
+      "overrides": {},
+      "items": [
+        "art-20261103-0001"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-flash",
+      "template": "tpl-gen-flash",
+      "overrides": {},
+      "items": [
+        "art-20261103-0044",
+        "art-20261103-0045",
+        "art-20261103-0046",
+        "art-20261103-0047"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-subheadline",
+      "template": "tpl-gen-subheadline",
+      "overrides": {},
+      "items": [
+        "art-20261103-0007",
+        "art-20261103-0010",
+        "art-20261103-0011",
+        "art-20261103-0012",
+        "art-20261103-0017",
+        "art-20261103-0018"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-world",
+      "template": "tpl-gen-world",
+      "overrides": {},
+      "items": [
+        "art-20261103-0008",
+        "art-20261103-0014",
+        "art-20261103-0015",
+        "art-20261103-0016"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-video",
+      "template": "tpl-gen-video",
+      "overrides": {},
+      "items": [
+        "art-20261103-0048",
+        "art-20261103-0049",
+        "art-20261103-0050",
+        "art-20261103-0051"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-finance",
+      "template": "tpl-gen-finance",
+      "overrides": {},
+      "items": [
+        "art-20261103-0006",
+        "art-20261103-0026",
+        "art-20261103-0027",
+        "art-20261103-0028",
+        "art-20261103-0029",
+        "art-20261103-0030"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-society",
+      "template": "tpl-gen-society",
+      "overrides": {},
+      "items": [
+        "art-20261103-0002",
+        "art-20261103-0003",
+        "art-20261103-0004",
+        "art-20261103-0005"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-popular",
+      "template": "tpl-gen-popular",
+      "overrides": {},
+      "items": [
+        "art-20261103-0019",
+        "art-20261103-0020",
+        "art-20261103-0021",
+        "art-20261103-0022",
+        "art-20261103-0023",
+        "art-20261103-0024",
+        "art-20261103-0025",
+        "art-20261103-0031"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-tech",
+      "template": "tpl-gen-tech",
+      "overrides": {},
+      "items": [
+        "art-20261103-0009",
+        "art-20261103-0013",
+        "art-20261103-0038",
+        "art-20261103-0039",
+        "art-20261103-0040",
+        "art-20261103-0041"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-opinion",
+      "template": "tpl-gen-opinion",
+      "overrides": {},
+      "items": [
+        "art-20261103-0058",
+        "art-20261103-0059",
+        "art-20261103-0060",
+        "art-20261103-0061"
+      ]
+    },
+    {
+      "type": "BlockInstance",
+      "id": "inst-gen-shorts",
+      "template": "tpl-gen-shorts",
+      "overrides": {},
+      "items": [
+        "art-20261103-0052",
+        "art-20261103-0053",
+        "art-20261103-0054",
+        "art-20261103-0055"
+      ]
+    }
+  ],
+  "violations": []
+}

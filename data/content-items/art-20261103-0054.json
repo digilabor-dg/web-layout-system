@@ -1,0 +1,25 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0054",
+  "contentType": "video",
+  "title": "示意:夜景空拍:城市燈光秀",
+  "url": "/news/0054",
+  "publishedAt": "2026-11-03T16:42:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0054_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0054_1x1.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "video": {
+      "src": "/img/0054_16x9.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P37",
+  "name": "直播文字",
+  "group": "text-led",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "paragraph",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "entry",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 1,
+    "max": null
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

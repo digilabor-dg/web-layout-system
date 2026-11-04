@@ -1,0 +1,23 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0061",
+  "contentType": "opinion",
+  "title": "示意:讓學習回到好奇心",
+  "author": {
+    "name": "示意作者丁"
+  },
+  "url": "/news/0061",
+  "publishedAt": "2026-11-03T15:53:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0061_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0061_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

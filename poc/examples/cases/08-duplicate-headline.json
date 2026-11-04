@@ -1,0 +1,62 @@
+{
+  "id": "08",
+  "title": "頭條重複",
+  "problem": "影音焦點下方又放了一塊頭條(P01),頭條變成兩塊,重點不明。",
+  "fixNote": "拿掉第二塊頭條。",
+  "targets": [
+    "單塊不重複"
+  ],
+  "shotWidth": 1280,
+  "v1": [
+    {
+      "op": "add",
+      "path": "/content-items/ex-headline-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-headline-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:第二則頭條",
+        "url": "/news/ex-headline-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-headline-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-headline-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-headline-2",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-headline-2",
+        "template": "tpl-headline",
+        "overrides": {},
+        "items": [
+          "ex-headline-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/1/blocks/-",
+      "value": {
+        "instance": "inst-home-headline-2",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    }
+  ],
+  "v2": []
+}

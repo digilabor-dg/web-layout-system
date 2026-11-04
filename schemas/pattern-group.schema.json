@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pattern-group.schema.json",
+  "title": "PatternGroup 用途分組",
+  "type": "object",
+  "required": ["type", "id", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "PatternGroup" },
+    "id": { "enum": ["news-combo", "av", "data", "text-led", "interactive"] },
+    "name": { "type": "string", "minLength": 1 }
+  }
+}

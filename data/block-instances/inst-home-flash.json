@@ -1,0 +1,12 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-flash",
+  "template": "tpl-flash",
+  "overrides": {},
+  "items": [
+    "art-20261103-0044",
+    "art-20261103-0045",
+    "art-20261103-0046",
+    "art-20261103-0047"
+  ]
+}

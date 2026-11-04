@@ -1,0 +1,20 @@
+{
+  "type": "BlockTemplate",
+  "id": "tpl-video-focus",
+  "name": "影音焦點",
+  "role": "video",
+  "contentType": {
+    "ref": "video"
+  },
+  "pattern": "P12",
+  "itemCount": 4,
+  "imageRole": "video",
+  "selection": {
+    "mode": "latest"
+  },
+  "responsive": null,
+  "heading": {
+    "title": "影音焦點",
+    "moreLink": "/video"
+  }
+}

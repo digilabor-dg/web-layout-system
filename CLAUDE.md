@@ -3,9 +3,14 @@
 ## 專案是什麼
 
 新聞首頁區塊排版系統:用 JSON 定義版面,評估工具自動找出不平衡、留白、擁擠等問題,並提出改進建議。
-規格全部在 `docs/spec/`,視覺範例在 `docs/catalog/index.html`。**規格是唯一依據**;規格沒寫或互相矛盾時,先停下來問,不要自行假設。
+**規格的唯一依據是 `openspec/specs/`**;規格沒寫或互相矛盾時,先停下來問,不要自行假設。
+文件分三層:**發想(規格前)→ 規格 → wiki(規格後)**。
+`docs/brainstorm/` 是規格之前的發想(pre-requirements),每份開頭寫狀態(發想、試驗中、已提案、已併入規格、擱置);決定要做時開 change,proposal 註明來自哪一份發想。`docs/research/` 是資料收集。
+`docs/spec/` 是最初的設計說明 01~05,已全部搬進 `openspec/specs/`,參考用、不再更新。視覺範例在 `docs/catalog/index.html`。
+`docs/wiki/` **以白話描述 `openspec/specs/`**(條文以 spec 為準):spec 有變動(archive)時,同步更新對應的 wiki 頁;`tests/wiki.test.ts` 會檢查每個 capability 都有白話說明。進度與證據(成果、範例、待確認)也在 wiki;數字頁由 `npm run docs:wiki` 產生。
+`openspec/specs/` 共 18 個 capability(`openspec list --specs`);Claude 補充的詮釋見 `openspec/changes/archive/2026-11-03-migrate-docs-to-openspec/design.md`,待使用者確認。
 
-| 檔案 | 內容 |
+| 檔案(`docs/spec/`,參考用) | 內容 |
 | --- | --- |
 | `docs/spec/01-architecture.md` | 架構、術語、38 種展示類型、響應式規則、圖片比例規範、首頁配置原則 |
 | `docs/spec/02-data-structure.md` | 9 種 prototype 的 JSON 範例與檢查規則 |
@@ -48,6 +53,15 @@ tests/
 5. **改進建議**:候選改法、公式試算、貪婪法,只對前 3 名渲染驗證。
 6. **AI skill**:讀報告與截圖,判斷不平衡是否刻意,寫出建議。
 7. **版面生成**:集束搜尋;仿生演算法暫不做。
+
+**持續主線:人評對齊(雙評分)**。從第 2 階段起持續進行:每個階段都用真人評分(以及 `agents/` 的 AI 擬人評分)校正評估器;A/B 一致率、反饋覆蓋率、程式分數與人評的等級相關,列為各階段的驗收指標之一。工具在 `poc/rating/`(檢視與評分)、`poc/feedback/`(覆蓋率),流程見 `skills/layout-tuner/SKILL.md`。正式規格(暫名 `score-calibration`)待 POC 確認後再寫;反饋收集介面的發想在 `docs/brainstorm/feedback-collection.md`。
+
+## 工作流程(OpenSpec)
+
+- 變更用 [OpenSpec](https://github.com/Fission-AI/OpenSpec) 管理:每個 change 放在 `openspec/changes/<名稱>/`,內含 proposal、design、tasks 與 spec delta。指令:`/opsx:propose`、`/opsx:apply`、`/opsx:archive`。
+- **同時最多 5 個未 archive 的 change**(任務做完但還沒 archive 的也算)。已滿 5 個時不得再開新 change,先 archive 一個。CI(`.github/workflows/openspec.yml`)會檢查這條,並跑 `openspec validate --all --strict`。
+- **一個開發階段 = 一個 change = 一個 PR**。新需求先寫進 change 的 spec delta,archive 後併入 `openspec/specs/`。
+- 決策紀錄:`openspec/changes/archive/2026-11-03-resolve-spec-ambiguities/design.md`(P、A、B 各題的決定與理由)。
 
 ## 不可違反的規則
 

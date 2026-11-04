@@ -1,0 +1,46 @@
+{
+  "rule": "duplicate-id",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "基準資料集",
+      "patch": [],
+      "expect": []
+    },
+    {
+      "name": "兩個檔案的範本 id 相同",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-templates/tpl-list-copy",
+          "value": {
+            "type": "BlockTemplate",
+            "id": "tpl-list",
+            "name": "tpl-list",
+            "role": "section",
+            "contentType": {
+              "ref": "news",
+              "category": "finance"
+            },
+            "pattern": "P09",
+            "itemCount": 4,
+            "selection": {
+              "mode": "latest"
+            },
+            "responsive": null,
+            "heading": {
+              "title": "tpl-list"
+            }
+          }
+        }
+      ],
+      "expect": [
+        {
+          "rule": "duplicate-id",
+          "id": "tpl-list",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

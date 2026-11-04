@@ -1,0 +1,23 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0060",
+  "contentType": "opinion",
+  "title": "示意:從預算看見施政優先順序",
+  "author": {
+    "name": "示意作者丙"
+  },
+  "url": "/news/0060",
+  "publishedAt": "2026-11-03T16:00:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0060_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0060_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

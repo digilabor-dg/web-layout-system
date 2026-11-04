@@ -1,0 +1,12 @@
+{
+  "parse": [
+    { "ratio": "3:2", "expected": 1.5 },
+    { "ratio": "16:9", "expected": 1.7777777777777777 },
+    { "ratio": "1:1", "expected": 1 }
+  ],
+  "error": [
+    { "name": "1200×797 對 3:2,約 0.38%,通過", "width": 1200, "height": 797, "ratio": "3:2", "within1pct": true },
+    { "name": "1200×900 對 3:2,約 11%,不通過", "width": 1200, "height": 900, "ratio": "3:2", "within1pct": false },
+    { "name": "1280×720 對 16:9,0%", "width": 1280, "height": 720, "ratio": "16:9", "within1pct": true }
+  ]
+}

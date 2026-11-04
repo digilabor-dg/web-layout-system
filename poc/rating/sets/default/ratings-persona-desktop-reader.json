@@ -1,0 +1,22 @@
+{
+  "set": "default",
+  "rater": "persona-desktop-reader",
+  "source": "ai-persona",
+  "persona": "上班用電腦看新聞的讀者",
+  "round": 2,
+  "ratings": [
+    { "ref": "inst-gen-headline", "code": "A", "score": 5, "comment": "頭條大圖撐滿主欄,只有一行標題,沒摘要,桌機上一整片灰很空" },
+    { "ref": "inst-gen-subheadline", "code": "B", "score": 3, "comment": "桌機四欄只放三張,右邊空四分之一;手機第三張落單" },
+    { "ref": "inst-gen-flash", "code": "C", "score": 8, "comment": "側欄條列緊湊,一眼掃完四則即時;可惜沒顯示時間" },
+    { "ref": "inst-gen-popular", "code": "D", "score": 5, "comment": "方圖比兩行標題高,每列下面空一截,編號和圖之間也空" },
+    { "ref": "inst-gen-video", "code": "E", "score": 8, "comment": "四支影片剛好填滿全寬,標題好讀,只是箭頭壓到圖" },
+    { "ref": "inst-gen-world", "code": "F", "score": 4, "comment": "第二排只剩兩張,右半邊空一大塊,大螢幕看很不完整" },
+    { "ref": "inst-gen-politics", "code": "G", "score": 5, "comment": "標題只一行,右邊和下方空一大片,只有第一則有摘要" },
+    { "ref": "inst-gen-finance", "code": "H", "score": 4, "comment": "跟國際一樣四加二,第二排右邊空半排,很鬆" },
+    { "ref": "inst-gen-feature", "code": "I", "score": 5, "comment": "左大圖右文字,右欄文字只佔上方三分之一,下面全空" },
+    { "ref": "inst-gen-society", "code": "J", "score": 4, "comment": "圖高字短,每列只一行標題又沒摘要,右側大片空白" },
+    { "ref": "inst-gen-opinion", "code": "K", "score": 2, "comment": "桌機側欄四張大方圖直排,拉得超長,比主欄長太多" },
+    { "ref": "inst-gen-tech", "code": "L", "score": 6, "comment": "三欄兩排有填滿寬度,但圖很大、標題只一行,有點空洞" },
+    { "ref": "inst-gen-shorts", "code": "M", "score": 7, "comment": "四張方圖填滿全寬節奏整齊,但方圖偏高佔掉不少版面" }
+  ]
+}

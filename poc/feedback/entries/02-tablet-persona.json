@@ -1,0 +1,44 @@
+{
+  "description": "範例 02(末列落單)在 768px 的擬人評估:Claude 以一般讀者的角度看 V1、V2 截圖,寫下最可能出現的 3 句意見。可能性是主觀估計,待真人反饋校正。",
+  "entries": [
+    {
+      "id": "02-1",
+      "source": "ai-persona",
+      "persona": "一般讀者",
+      "likelihood": 0.7,
+      "report": "poc/examples/reports/02-v1.json",
+      "width": 768,
+      "ref": "inst-home-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "text": "次頭條最後一則孤零零的,右邊空一大塊,像沒排完。",
+      "mapped": "末列不落單"
+    },
+    {
+      "id": "02-2",
+      "source": "ai-persona",
+      "persona": "一般讀者",
+      "likelihood": 0.5,
+      "report": "poc/examples/reports/02-v2.json",
+      "width": 768,
+      "ref": "inst-home-subheadline",
+      "target": "B",
+      "sentiment": "dislike",
+      "text": "改完圖片變好大,一屏只看到兩張,要滑很久才到快訊。",
+      "candidate": { "item": "區塊長度(平板)", "metric": "平板寬度下區塊高 ÷ 視窗高", "threshold": "比照手機:≤ 1.5 屏合格、≤ 2 屏警告" }
+    },
+    {
+      "id": "02-3",
+      "source": "ai-persona",
+      "persona": "一般讀者",
+      "likelihood": 0.3,
+      "report": "poc/examples/reports/02-v2.json",
+      "width": 768,
+      "ref": "inst-home-video-focus",
+      "target": "E",
+      "sentiment": "dislike",
+      "text": "影音焦點只露出一張半,第二張被切掉,看起來像排壞了。",
+      "candidate": { "item": "輪播露出比例(平板)", "metric": "平板寬度下,露出的下一張佔卡片寬的比例", "threshold": "待定;手機常見 0.2,平板建議改為整數張或 ≥ 0.4" }
+    }
+  ]
+}

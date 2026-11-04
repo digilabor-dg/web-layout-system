@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0008",
+  "contentType": "news",
+  "category": "world",
+  "title": "示意:熱門景點人潮回流,業者推優惠",
+  "url": "/news/0008",
+  "publishedAt": "2026-11-03T22:04:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0008_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0008_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

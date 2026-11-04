@@ -1,0 +1,46 @@
+{
+  "type": "LayoutPattern",
+  "id": "P06",
+  "name": "時間軸",
+  "group": "text-led",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "item",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 8
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "list",
+      "cols": 1
+    },
+    "desktop": {
+      "layout": "list",
+      "cols": 1
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

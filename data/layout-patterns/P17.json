@@ -1,0 +1,46 @@
+{
+  "type": "LayoutPattern",
+  "id": "P17",
+  "name": "作者卡",
+  "group": "text-led",
+  "tags": [
+    "mixed"
+  ],
+  "arrangement": "grid",
+  "emphasis": "none",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "card",
+      "count": "rest",
+      "image": [
+        "square"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 6
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "grid",
+      "cols": 2
+    },
+    "desktop": {
+      "layout": "grid",
+      "cols": 4
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

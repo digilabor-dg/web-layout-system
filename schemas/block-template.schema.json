@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "block-template.schema.json",
+  "title": "BlockTemplate 區塊範本",
+  "type": "object",
+  "required": ["type", "id", "name", "role", "contentType", "pattern", "itemCount", "selection", "responsive", "heading"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "BlockTemplate" },
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "name": { "type": "string", "minLength": 1 },
+    "role": { "enum": ["headline", "subheadline", "flash", "popular", "section", "video", "opinion", "feature", "chart", "promo"] },
+    "contentType": {
+      "type": "object",
+      "required": ["ref"],
+      "additionalProperties": false,
+      "properties": {
+        "ref": { "$ref": "common.schema.json#/$defs/id" },
+        "category": { "$ref": "common.schema.json#/$defs/id" }
+      }
+    },
+    "pattern": { "$ref": "common.schema.json#/$defs/patternId" },
+    "itemCount": { "description": "P15 為每頁則數", "type": "integer", "minimum": 1 },
+    "imageRole": { "$ref": "common.schema.json#/$defs/imageRole" },
+    "tabs": { "description": "只有 P15 使用:分頁數", "type": "integer", "minimum": 2 },
+    "selection": { "$ref": "common.schema.json#/$defs/selection" },
+    "responsive": {
+      "description": "null 表示沿用展示類型預設;mobile.pattern 為斷點下換型",
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "mobile": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "pattern": { "$ref": "common.schema.json#/$defs/patternId" },
+                "layout": { "$ref": "common.schema.json#/$defs/responsiveEntry/properties/layout" },
+                "cols": { "$ref": "common.schema.json#/$defs/responsiveEntry/properties/cols" },
+                "perView": { "$ref": "common.schema.json#/$defs/responsiveEntry/properties/perView" }
+              }
+            },
+            "desktop": { "$ref": "common.schema.json#/$defs/responsiveEntry" }
+          }
+        }
+      ]
+    },
+    "heading": { "$ref": "common.schema.json#/$defs/heading" }
+  }
+}

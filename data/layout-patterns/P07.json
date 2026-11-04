@@ -1,0 +1,46 @@
+{
+  "type": "LayoutPattern",
+  "id": "P07",
+  "name": "均分圖卡網格",
+  "group": "news-combo",
+  "tags": [
+    "image"
+  ],
+  "arrangement": "grid",
+  "emphasis": "none",
+  "imageText": "stacked",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "card",
+      "count": "rest",
+      "image": [
+        "main"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 9
+  },
+  "responsiveDefault": {
+    "mobile": {
+      "layout": "grid",
+      "cols": 2
+    },
+    "desktop": {
+      "layout": "grid",
+      "cols": 3
+    }
+  },
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots",
+    "responsiveDefault"
+  ]
+}

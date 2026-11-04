@@ -1,0 +1,6 @@
+{
+  "type": "PatternTag",
+  "id": "carousel",
+  "name": "輪播",
+  "rule": "有左右切換"
+}

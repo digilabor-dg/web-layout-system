@@ -1,0 +1,11 @@
+{
+  "name": "from-form",
+  "title": "由表單產生的參數(tw4、集束搜尋、觀點全寬、不放科技)",
+  "preset": "tw4",
+  "blocks": ["headline", "subheadline", "popular", "flash", "video", "world", "politics", "finance", "feature", "society", "opinion", "shorts"],
+  "sidebar": ["popular", "flash"],
+  "fullWidth": ["video", "opinion", "shorts"],
+  "columns": [8, 4],
+  "strategy": "beam",
+  "beamWidth": 3
+}

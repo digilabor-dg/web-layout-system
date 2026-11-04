@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0015",
+  "contentType": "news",
+  "category": "world",
+  "title": "示意:海外港口罷工落幕,航運逐步恢復",
+  "url": "/news/0015",
+  "publishedAt": "2026-11-03T21:15:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0015_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0015_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

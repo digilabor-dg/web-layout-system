@@ -1,0 +1,3446 @@
+{
+  "rows": [
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "A",
+      "pattern": "P01",
+      "kind": "overlay",
+      "blockWidth": 344,
+      "estRatio": 269.33,
+      "estGreedy": 269.33,
+      "measured": 269.33
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "B",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 344,
+      "estRatio": 492.67,
+      "estGreedy": 492.67,
+      "measured": 492.66
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "C",
+      "pattern": "P06",
+      "kind": "list-timeline",
+      "blockWidth": 344,
+      "estRatio": 223,
+      "estGreedy": 223,
+      "measured": 223
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "D",
+      "pattern": "P05",
+      "kind": "list-number",
+      "blockWidth": 344,
+      "estRatio": 422,
+      "estGreedy": 422,
+      "measured": 422
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "E",
+      "pattern": "P12",
+      "kind": "carousel",
+      "blockWidth": 344,
+      "estRatio": 271.75,
+      "estGreedy": 271.75,
+      "measured": 271.73
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "F",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 344,
+      "estRatio": 592.33,
+      "estGreedy": 592.33,
+      "measured": 592.33
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "G",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 344,
+      "estRatio": 592.33,
+      "estGreedy": 592.33,
+      "measured": 592.33
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "H",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 344,
+      "estRatio": 592.33,
+      "estGreedy": 592.33,
+      "measured": 592.33
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "I",
+      "pattern": "P14",
+      "kind": "feature-stack",
+      "blockWidth": 344,
+      "estRatio": 702.67,
+      "estGreedy": 702.67,
+      "measured": 702.66
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "J",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 344,
+      "estRatio": 704,
+      "estGreedy": 704,
+      "measured": 703.98
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "K",
+      "pattern": "P17",
+      "kind": "grid",
+      "blockWidth": 344,
+      "estRatio": 598,
+      "estGreedy": 598,
+      "measured": 598
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "L",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 344,
+      "estRatio": 650,
+      "estGreedy": 677,
+      "measured": 676.98
+    },
+    {
+      "width": 360,
+      "device": "mobile",
+      "code": "M",
+      "pattern": "P13",
+      "kind": "carousel",
+      "blockWidth": 344,
+      "estRatio": 259.82,
+      "estGreedy": 259.82,
+      "measured": 259.81
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "A",
+      "pattern": "P01",
+      "kind": "overlay",
+      "blockWidth": 374,
+      "estRatio": 289.33,
+      "estGreedy": 289.33,
+      "measured": 289.33
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "B",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 374,
+      "estRatio": 458.67,
+      "estGreedy": 485.67,
+      "measured": 485.66
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "C",
+      "pattern": "P06",
+      "kind": "list-timeline",
+      "blockWidth": 374,
+      "estRatio": 196,
+      "estGreedy": 196,
+      "measured": 196
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "D",
+      "pattern": "P05",
+      "kind": "list-number",
+      "blockWidth": 374,
+      "estRatio": 368,
+      "estGreedy": 368,
+      "measured": 368
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "E",
+      "pattern": "P12",
+      "kind": "carousel",
+      "blockWidth": 374,
+      "estRatio": 258.81,
+      "estGreedy": 258.81,
+      "measured": 258.8
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "F",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 374,
+      "estRatio": 612.33,
+      "estGreedy": 612.33,
+      "measured": 612.33
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "G",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 374,
+      "estRatio": 612.33,
+      "estGreedy": 612.33,
+      "measured": 612.33
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "H",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 374,
+      "estRatio": 612.33,
+      "estGreedy": 612.33,
+      "measured": 612.33
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "I",
+      "pattern": "P14",
+      "kind": "feature-stack",
+      "blockWidth": 374,
+      "estRatio": 742.67,
+      "estGreedy": 742.67,
+      "measured": 742.66
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "J",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 374,
+      "estRatio": 680,
+      "estGreedy": 680,
+      "measured": 679.98
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "K",
+      "pattern": "P17",
+      "kind": "grid",
+      "blockWidth": 374,
+      "estRatio": 628,
+      "estGreedy": 628,
+      "measured": 628
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "L",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 374,
+      "estRatio": 680,
+      "estGreedy": 680,
+      "measured": 679.98
+    },
+    {
+      "width": 390,
+      "device": "mobile",
+      "code": "M",
+      "pattern": "P13",
+      "kind": "carousel",
+      "blockWidth": 374,
+      "estRatio": 273.45,
+      "estGreedy": 273.45,
+      "measured": 273.45
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "A",
+      "pattern": "P01",
+      "kind": "overlay",
+      "blockWidth": 704,
+      "estRatio": 509.33,
+      "estGreedy": 509.33,
+      "measured": 509.33
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "B",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 704,
+      "estRatio": 518.67,
+      "estGreedy": 518.67,
+      "measured": 518.66
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "C",
+      "pattern": "P06",
+      "kind": "list-timeline",
+      "blockWidth": 704,
+      "estRatio": 196,
+      "estGreedy": 196,
+      "measured": 196
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "D",
+      "pattern": "P05",
+      "kind": "list-number",
+      "blockWidth": 704,
+      "estRatio": 368,
+      "estGreedy": 368,
+      "measured": 368
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "E",
+      "pattern": "P12",
+      "kind": "carousel",
+      "blockWidth": 704,
+      "estRatio": 413.5,
+      "estGreedy": 413.5,
+      "measured": 413.48
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "F",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 704,
+      "estRatio": 790.33,
+      "estGreedy": 790.33,
+      "measured": 790.33
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "G",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 704,
+      "estRatio": 790.33,
+      "estGreedy": 790.33,
+      "measured": 790.33
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "H",
+      "pattern": "P09",
+      "kind": "lead-stack",
+      "blockWidth": 704,
+      "estRatio": 790.33,
+      "estGreedy": 790.33,
+      "measured": 790.33
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "I",
+      "pattern": "P14",
+      "kind": "feature-stack",
+      "blockWidth": 704,
+      "estRatio": 1158.67,
+      "estGreedy": 1158.67,
+      "measured": 1158.66
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "J",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 704,
+      "estRatio": 929,
+      "estGreedy": 929,
+      "measured": 928.98
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "K",
+      "pattern": "P17",
+      "kind": "grid",
+      "blockWidth": 704,
+      "estRatio": 3232,
+      "estGreedy": 3232,
+      "measured": 3232
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "L",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 704,
+      "estRatio": 929,
+      "estGreedy": 929,
+      "measured": 928.98
+    },
+    {
+      "width": 768,
+      "device": "tablet-V",
+      "code": "M",
+      "pattern": "P13",
+      "kind": "carousel",
+      "blockWidth": 704,
+      "estRatio": 396.45,
+      "estGreedy": 396.45,
+      "measured": 396.45
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "A",
+      "pattern": "P01",
+      "kind": "overlay",
+      "blockWidth": 618.67,
+      "estRatio": 452.44,
+      "estGreedy": 452.44,
+      "measured": 452.44
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "B",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 618.67,
+      "estRatio": 480.74,
+      "estGreedy": 480.74,
+      "measured": 480.72
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "C",
+      "pattern": "P06",
+      "kind": "list-timeline",
+      "blockWidth": 309.33,
+      "estRatio": 250,
+      "estGreedy": 250,
+      "measured": 250
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "D",
+      "pattern": "P05",
+      "kind": "list-number",
+      "blockWidth": 309.33,
+      "estRatio": 557,
+      "estGreedy": 557,
+      "measured": 557
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "E",
+      "pattern": "P12",
+      "kind": "carousel",
+      "blockWidth": 944,
+      "estRatio": 244,
+      "estGreedy": 244,
+      "measured": 244
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "F",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 618.67,
+      "estRatio": 415.85,
+      "estGreedy": 415.85,
+      "measured": 415.84
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "G",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 618.67,
+      "estRatio": 415.85,
+      "estGreedy": 415.85,
+      "measured": 415.84
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "H",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 618.67,
+      "estRatio": 374,
+      "estGreedy": 374,
+      "measured": 374
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "I",
+      "pattern": "P14",
+      "kind": "feature-split",
+      "blockWidth": 618.67,
+      "estRatio": 524.74,
+      "estGreedy": 524.74,
+      "measured": 524.72
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "J",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 618.67,
+      "estRatio": 924.67,
+      "estGreedy": 924.67,
+      "measured": 924.63
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "K",
+      "pattern": "P17",
+      "kind": "list-card",
+      "blockWidth": 309.33,
+      "estRatio": 1656.33,
+      "estGreedy": 1656.33,
+      "measured": 1656.38
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "L",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 944,
+      "estRatio": 1169,
+      "estGreedy": 1169,
+      "measured": 1168.98
+    },
+    {
+      "width": 1024,
+      "device": "tablet-H",
+      "code": "M",
+      "pattern": "P13",
+      "kind": "carousel",
+      "blockWidth": 944,
+      "estRatio": 262,
+      "estGreedy": 262,
+      "measured": 262
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "A",
+      "pattern": "P01",
+      "kind": "overlay",
+      "blockWidth": 738.67,
+      "estRatio": 532.44,
+      "estGreedy": 532.44,
+      "measured": 532.44
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "B",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 738.67,
+      "estRatio": 260.11,
+      "estGreedy": 260.11,
+      "measured": 260.11
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "C",
+      "pattern": "P06",
+      "kind": "list-timeline",
+      "blockWidth": 369.33,
+      "estRatio": 196,
+      "estGreedy": 196,
+      "measured": 196
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "D",
+      "pattern": "P05",
+      "kind": "list-number",
+      "blockWidth": 369.33,
+      "estRatio": 368,
+      "estGreedy": 368,
+      "measured": 368
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "E",
+      "pattern": "P12",
+      "kind": "carousel",
+      "blockWidth": 1124,
+      "estRatio": 269.31,
+      "estGreedy": 269.31,
+      "measured": 269.31
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "F",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 738.67,
+      "estRatio": 469.19,
+      "estGreedy": 469.19,
+      "measured": 469.17
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "G",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 738.67,
+      "estRatio": 469.19,
+      "estGreedy": 469.19,
+      "measured": 469.17
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "H",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 738.67,
+      "estRatio": 427.19,
+      "estGreedy": 427.19,
+      "measured": 427.17
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "I",
+      "pattern": "P14",
+      "kind": "feature-split",
+      "blockWidth": 738.67,
+      "estRatio": 618.07,
+      "estGreedy": 618.07,
+      "measured": 618.06
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "J",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 738.67,
+      "estRatio": 534.07,
+      "estGreedy": 534.07,
+      "measured": 534.06
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "K",
+      "pattern": "P17",
+      "kind": "list-card",
+      "blockWidth": 369.33,
+      "estRatio": 1869.33,
+      "estGreedy": 1869.33,
+      "measured": 1869.38
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "L",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 1124,
+      "estRatio": 651.33,
+      "estGreedy": 651.33,
+      "measured": 651.31
+    },
+    {
+      "width": 1280,
+      "device": "desktop",
+      "code": "M",
+      "pattern": "P13",
+      "kind": "carousel",
+      "blockWidth": 1124,
+      "estRatio": 292,
+      "estGreedy": 292,
+      "measured": 292
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "A",
+      "pattern": "P01",
+      "kind": "overlay",
+      "blockWidth": 858.67,
+      "estRatio": 612.44,
+      "estGreedy": 612.44,
+      "measured": 612.44
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "B",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 858.67,
+      "estRatio": 253.11,
+      "estGreedy": 253.11,
+      "measured": 253.11
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "C",
+      "pattern": "P06",
+      "kind": "list-timeline",
+      "blockWidth": 429.33,
+      "estRatio": 196,
+      "estGreedy": 196,
+      "measured": 196
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "D",
+      "pattern": "P05",
+      "kind": "list-number",
+      "blockWidth": 429.33,
+      "estRatio": 368,
+      "estGreedy": 368,
+      "measured": 368
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "E",
+      "pattern": "P12",
+      "kind": "carousel",
+      "blockWidth": 1304,
+      "estRatio": 267.63,
+      "estGreedy": 267.63,
+      "measured": 267.63
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "F",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 858.67,
+      "estRatio": 480.52,
+      "estGreedy": 480.52,
+      "measured": 480.5
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "G",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 858.67,
+      "estRatio": 480.52,
+      "estGreedy": 480.52,
+      "measured": 480.5
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "H",
+      "pattern": "P09",
+      "kind": "lead-split",
+      "blockWidth": 858.67,
+      "estRatio": 480.52,
+      "estGreedy": 480.52,
+      "measured": 480.5
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "I",
+      "pattern": "P14",
+      "kind": "feature-split",
+      "blockWidth": 858.67,
+      "estRatio": 711.41,
+      "estGreedy": 711.41,
+      "measured": 711.38
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "J",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 858.67,
+      "estRatio": 587.41,
+      "estGreedy": 587.41,
+      "measured": 587.41
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "K",
+      "pattern": "P17",
+      "kind": "list-card",
+      "blockWidth": 429.33,
+      "estRatio": 2109.33,
+      "estGreedy": 2109.33,
+      "measured": 2109.38
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "L",
+      "pattern": "P07",
+      "kind": "grid",
+      "blockWidth": 1304,
+      "estRatio": 731.33,
+      "estGreedy": 731.33,
+      "measured": 731.31
+    },
+    {
+      "width": 1440,
+      "device": "desktop",
+      "code": "M",
+      "pattern": "P13",
+      "kind": "carousel",
+      "blockWidth": 1304,
+      "estRatio": 322,
+      "estGreedy": 322,
+      "measured": 321.98
+    }
+  ],
+  "titleRows": [
+    {
+      "width": 360,
+      "tid": "inst-home-subheadline#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-subheadline#1",
+      "ratio": 3,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-subheadline#2",
+      "ratio": 3,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-subheadline#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-flash#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-flash#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-flash#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-flash#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#6",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-popular#7",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-video-focus#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-video-focus#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-video-focus#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-video-focus#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-world#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-world#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-world#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-world#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-world#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-world#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-politics#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-politics#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-politics#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-politics#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-politics#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-politics#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-finance#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-finance#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-finance#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-finance#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-finance#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-finance#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-feature#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-feature#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-society#0",
+      "ratio": 2,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-society#1",
+      "ratio": 3,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-society#2",
+      "ratio": 3,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-society#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-society#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-society#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-opinion#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-opinion#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-opinion#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-opinion#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-tech#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-tech#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-tech#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-tech#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-tech#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-tech#5",
+      "ratio": 2,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-shorts#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-shorts#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-shorts#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 360,
+      "tid": "inst-home-shorts#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-subheadline#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-subheadline#1",
+      "ratio": 2,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-subheadline#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-subheadline#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-flash#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-flash#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-flash#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-flash#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#6",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-popular#7",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-video-focus#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-video-focus#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-video-focus#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-video-focus#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-world#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-world#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-world#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-world#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-world#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-world#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-politics#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-politics#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-politics#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-politics#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-politics#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-politics#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-finance#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-finance#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-finance#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-finance#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-finance#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-finance#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-feature#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-feature#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-society#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-society#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-society#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-society#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-society#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-society#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-opinion#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-opinion#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-opinion#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-opinion#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-tech#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-tech#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-tech#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-tech#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-tech#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-tech#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-shorts#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-shorts#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-shorts#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 390,
+      "tid": "inst-home-shorts#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-subheadline#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-subheadline#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-subheadline#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-subheadline#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-flash#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-flash#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-flash#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-flash#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#6",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-popular#7",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-video-focus#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-video-focus#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-video-focus#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-video-focus#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-world#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-world#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-world#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-world#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-world#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-world#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-politics#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-politics#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-politics#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-politics#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-politics#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-politics#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-finance#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-finance#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-finance#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-finance#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-finance#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-finance#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-feature#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-feature#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-society#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-society#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-society#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-society#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-society#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-society#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-opinion#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-opinion#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-opinion#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-opinion#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-tech#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-tech#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-tech#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-tech#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-tech#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-tech#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-shorts#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-shorts#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-shorts#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 768,
+      "tid": "inst-home-shorts#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-subheadline#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-subheadline#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-subheadline#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-subheadline#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-flash#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-flash#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-flash#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-flash#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#6",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-popular#7",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-video-focus#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-video-focus#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-video-focus#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-video-focus#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-world#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-world#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-world#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-world#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-world#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-world#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-politics#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-politics#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-politics#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-politics#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-politics#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-politics#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-finance#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-finance#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-finance#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-finance#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-finance#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-finance#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-feature#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-feature#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-society#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-society#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-society#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-society#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-society#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-society#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-opinion#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-opinion#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-opinion#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-opinion#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-tech#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-tech#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-tech#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-tech#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-tech#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-tech#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-shorts#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-shorts#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-shorts#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1024,
+      "tid": "inst-home-shorts#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-subheadline#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-subheadline#1",
+      "ratio": 3,
+      "greedy": 3,
+      "measured": 3
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-subheadline#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-subheadline#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-flash#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-flash#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-flash#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-flash#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#6",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-popular#7",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-video-focus#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-video-focus#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-video-focus#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-video-focus#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-world#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-world#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-world#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-world#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-world#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-world#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-politics#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-politics#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-politics#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-politics#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-politics#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-politics#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-finance#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-finance#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-finance#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-finance#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-finance#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-finance#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-feature#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-feature#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-society#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-society#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-society#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-society#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-society#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-society#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-opinion#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-opinion#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-opinion#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-opinion#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-tech#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-tech#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-tech#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-tech#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-tech#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-tech#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-shorts#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-shorts#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-shorts#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1280,
+      "tid": "inst-home-shorts#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-subheadline#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-subheadline#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-subheadline#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-subheadline#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-flash#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-flash#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-flash#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-flash#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#6",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-popular#7",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-video-focus#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-video-focus#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-video-focus#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-video-focus#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-world#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-world#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-world#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-world#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-world#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-world#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-politics#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-politics#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-politics#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-politics#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-politics#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-politics#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-finance#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-finance#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-finance#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-finance#3",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-finance#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-finance#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-feature#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-feature#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-society#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-society#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-society#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-society#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-society#4",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-society#5",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-opinion#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-opinion#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-opinion#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-opinion#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-tech#0",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-tech#1",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-tech#2",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-tech#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-tech#4",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-tech#5",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-shorts#0",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-shorts#1",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-shorts#2",
+      "ratio": 2,
+      "greedy": 2,
+      "measured": 2
+    },
+    {
+      "width": 1440,
+      "tid": "inst-home-shorts#3",
+      "ratio": 1,
+      "greedy": 1,
+      "measured": 1
+    }
+  ],
+  "checks": [
+    {
+      "width": 360,
+      "scrollOverflow": 0,
+      "badFrames": 0,
+      "probe": {
+        "cjkEm": 1,
+        "latinEm": 0.534,
+        "fontOk": true
+      }
+    },
+    {
+      "width": 390,
+      "scrollOverflow": 0,
+      "badFrames": 0,
+      "probe": {
+        "cjkEm": 1,
+        "latinEm": 0.534,
+        "fontOk": true
+      }
+    },
+    {
+      "width": 768,
+      "scrollOverflow": 0,
+      "badFrames": 0,
+      "probe": {
+        "cjkEm": 1,
+        "latinEm": 0.534,
+        "fontOk": true
+      }
+    },
+    {
+      "width": 1024,
+      "scrollOverflow": 0,
+      "badFrames": 0,
+      "probe": {
+        "cjkEm": 1,
+        "latinEm": 0.534,
+        "fontOk": true
+      }
+    },
+    {
+      "width": 1280,
+      "scrollOverflow": 0,
+      "badFrames": 0,
+      "probe": {
+        "cjkEm": 1,
+        "latinEm": 0.534,
+        "fontOk": true
+      }
+    },
+    {
+      "width": 1440,
+      "scrollOverflow": 0,
+      "badFrames": 0,
+      "probe": {
+        "cjkEm": 1,
+        "latinEm": 0.534,
+        "fontOk": true
+      }
+    }
+  ]
+}

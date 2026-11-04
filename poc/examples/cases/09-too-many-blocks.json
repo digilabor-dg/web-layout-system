@@ -1,0 +1,642 @@
+{
+  "id": "09",
+  "title": "區塊太多",
+  "problem": "頁尾再加 6 塊「更多國際」(P07,各 3 則),整頁 19 塊,超過上限 18 塊。",
+  "fixNote": "拿掉補充區塊,回到 13 塊。",
+  "targets": [
+    "區塊數"
+  ],
+  "shotWidth": 1280,
+  "v1": [
+    {
+      "op": "add",
+      "path": "/block-templates/tpl-extra",
+      "value": {
+        "type": "BlockTemplate",
+        "id": "tpl-extra",
+        "name": "補充區塊",
+        "role": "section",
+        "contentType": {
+          "ref": "news",
+          "category": "world"
+        },
+        "pattern": "P07",
+        "itemCount": 3,
+        "selection": {
+          "mode": "latest"
+        },
+        "responsive": null,
+        "heading": {
+          "title": "更多國際"
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-0-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-0-0",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 1-1",
+        "url": "/news/ex-more-0-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-0-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-0-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-0-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-0-1",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 1-2",
+        "url": "/news/ex-more-0-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-0-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-0-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-0-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-0-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 1-3",
+        "url": "/news/ex-more-0-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-0-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-0-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-extra-0",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-extra-0",
+        "template": "tpl-extra",
+        "overrides": {},
+        "items": [
+          "ex-more-0-0",
+          "ex-more-0-1",
+          "ex-more-0-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/3/blocks/-",
+      "value": {
+        "instance": "inst-home-extra-0",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-1-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-1-0",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 2-1",
+        "url": "/news/ex-more-1-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-1-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-1-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-1-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-1-1",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 2-2",
+        "url": "/news/ex-more-1-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-1-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-1-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-1-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-1-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 2-3",
+        "url": "/news/ex-more-1-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-1-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-1-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-extra-1",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-extra-1",
+        "template": "tpl-extra",
+        "overrides": {},
+        "items": [
+          "ex-more-1-0",
+          "ex-more-1-1",
+          "ex-more-1-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/3/blocks/-",
+      "value": {
+        "instance": "inst-home-extra-1",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-2-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-2-0",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 3-1",
+        "url": "/news/ex-more-2-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-2-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-2-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-2-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-2-1",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 3-2",
+        "url": "/news/ex-more-2-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-2-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-2-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-2-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-2-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 3-3",
+        "url": "/news/ex-more-2-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-2-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-2-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-extra-2",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-extra-2",
+        "template": "tpl-extra",
+        "overrides": {},
+        "items": [
+          "ex-more-2-0",
+          "ex-more-2-1",
+          "ex-more-2-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/3/blocks/-",
+      "value": {
+        "instance": "inst-home-extra-2",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-3-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-3-0",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 4-1",
+        "url": "/news/ex-more-3-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-3-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-3-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-3-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-3-1",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 4-2",
+        "url": "/news/ex-more-3-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-3-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-3-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-3-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-3-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 4-3",
+        "url": "/news/ex-more-3-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-3-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-3-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-extra-3",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-extra-3",
+        "template": "tpl-extra",
+        "overrides": {},
+        "items": [
+          "ex-more-3-0",
+          "ex-more-3-1",
+          "ex-more-3-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/3/blocks/-",
+      "value": {
+        "instance": "inst-home-extra-3",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-4-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-4-0",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 5-1",
+        "url": "/news/ex-more-4-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-4-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-4-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-4-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-4-1",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 5-2",
+        "url": "/news/ex-more-4-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-4-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-4-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-4-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-4-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 5-3",
+        "url": "/news/ex-more-4-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-4-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-4-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-extra-4",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-extra-4",
+        "template": "tpl-extra",
+        "overrides": {},
+        "items": [
+          "ex-more-4-0",
+          "ex-more-4-1",
+          "ex-more-4-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/3/blocks/-",
+      "value": {
+        "instance": "inst-home-extra-4",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-5-0",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-5-0",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 6-1",
+        "url": "/news/ex-more-5-0",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-5-0_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-5-0_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-5-1",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-5-1",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 6-2",
+        "url": "/news/ex-more-5-1",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-5-1_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-5-1_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/content-items/ex-more-5-2",
+      "value": {
+        "type": "ContentItem",
+        "id": "ex-more-5-2",
+        "contentType": "news",
+        "category": "world",
+        "title": "示意:補充國際新聞 6-3",
+        "url": "/news/ex-more-5-2",
+        "publishedAt": "2026-11-03T08:00:00+08:00",
+        "images": {
+          "main": {
+            "src": "/img/ex-more-5-2_3x2.jpg",
+            "width": 1200,
+            "height": 800
+          },
+          "square": {
+            "src": "/img/ex-more-5-2_1x1.jpg",
+            "width": 600,
+            "height": 600
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/block-instances/inst-home-extra-5",
+      "value": {
+        "type": "BlockInstance",
+        "id": "inst-home-extra-5",
+        "template": "tpl-extra",
+        "overrides": {},
+        "items": [
+          "ex-more-5-0",
+          "ex-more-5-1",
+          "ex-more-5-2"
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "path": "/pages/home/sections/3/blocks/-",
+      "value": {
+        "instance": "inst-home-extra-5",
+        "span": {
+          "mobile": 12,
+          "desktop": 12
+        }
+      }
+    }
+  ],
+  "v2": []
+}

@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0042",
+  "contentType": "news",
+  "category": "tech",
+  "title": "示意:開源社群年會登場,聚焦資安議題",
+  "url": "/news/0042",
+  "publishedAt": "2026-11-03T18:06:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0042_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0042_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

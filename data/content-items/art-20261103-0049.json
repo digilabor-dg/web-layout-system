@@ -1,0 +1,25 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0049",
+  "contentType": "video",
+  "title": "示意:記者帶你走訪新開幕的城市公園",
+  "url": "/news/0049",
+  "publishedAt": "2026-11-03T17:17:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0049_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0049_1x1.jpg",
+      "width": 600,
+      "height": 600
+    },
+    "video": {
+      "src": "/img/0049_16x9.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  }
+}

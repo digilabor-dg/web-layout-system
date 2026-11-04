@@ -1,0 +1,36 @@
+{
+  "type": "LayoutPattern",
+  "id": "P36",
+  "name": "重點整理",
+  "group": "text-led",
+  "tags": [
+    "text"
+  ],
+  "arrangement": "list",
+  "emphasis": "none",
+  "imageText": "none",
+  "textAmount": "headline",
+  "interaction": "none",
+  "slots": [
+    {
+      "role": "point",
+      "count": "rest",
+      "image": [
+        "none"
+      ]
+    }
+  ],
+  "items": {
+    "min": 3,
+    "max": 5
+  },
+  "responsiveDefault": null,
+  "inferred": [
+    "arrangement",
+    "emphasis",
+    "imageText",
+    "textAmount",
+    "interaction",
+    "slots"
+  ]
+}

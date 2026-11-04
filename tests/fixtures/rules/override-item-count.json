@@ -1,0 +1,38 @@
+{
+  "rule": "override-item-count",
+  "base": "minimal",
+  "cases": [
+    {
+      "name": "P07 覆寫成 3 則",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-instances/inst-grid/overrides/itemCount",
+          "value": 3
+        }
+      ],
+      "expect": []
+    },
+    {
+      "name": "P09 覆寫成 3 則",
+      "patch": [
+        {
+          "op": "add",
+          "path": "/block-instances/inst-list/overrides/itemCount",
+          "value": 3
+        },
+        {
+          "op": "remove",
+          "path": "/block-instances/inst-list/items/3"
+        }
+      ],
+      "expect": [
+        {
+          "rule": "override-item-count",
+          "id": "inst-list",
+          "severity": "error"
+        }
+      ]
+    }
+  ]
+}

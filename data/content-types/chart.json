@@ -1,0 +1,9 @@
+{
+  "type": "ContentType",
+  "id": "chart",
+  "name": "圖表",
+  "categories": [],
+  "suggestedPatterns": [
+    "P20"
+  ]
+}

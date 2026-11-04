@@ -1,0 +1,21 @@
+{
+  "type": "ContentItem",
+  "id": "art-20261103-0006",
+  "contentType": "news",
+  "category": "finance",
+  "title": "示意:三分鐘看懂新制度的五個重點",
+  "url": "/news/0006",
+  "publishedAt": "2026-11-03T22:18:00+08:00",
+  "images": {
+    "main": {
+      "src": "/img/0006_3x2.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    "square": {
+      "src": "/img/0006_1x1.jpg",
+      "width": 600,
+      "height": 600
+    }
+  }
+}

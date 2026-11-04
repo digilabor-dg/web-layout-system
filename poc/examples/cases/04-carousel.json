@@ -1,0 +1,23 @@
+{
+  "id": "04",
+  "title": "輪播右側留白",
+  "problem": "短影音 M 只有 4 則,但電腦一次顯示 6 張,右側留白。",
+  "fixNote": "電腦改成一次顯示 4 張。",
+  "targets": [
+    "輪播填滿@M"
+  ],
+  "shotWidth": 1280,
+  "v1": [],
+  "fix": [
+    {
+      "op": "replace",
+      "path": "/block-templates/tpl-shorts/responsive",
+      "value": {
+        "desktop": {
+          "layout": "carousel",
+          "perView": 4
+        }
+      }
+    }
+  ]
+}

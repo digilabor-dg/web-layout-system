@@ -1,0 +1,12 @@
+{
+  "type": "BlockInstance",
+  "id": "inst-home-shorts",
+  "template": "tpl-shorts",
+  "overrides": {},
+  "items": [
+    "art-20261103-0052",
+    "art-20261103-0053",
+    "art-20261103-0054",
+    "art-20261103-0055"
+  ]
+}
